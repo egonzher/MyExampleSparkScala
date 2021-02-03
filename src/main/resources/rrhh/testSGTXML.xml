@@ -1,0 +1,767 @@
+<?xml version="1.0"?>
+<catalog>
+
+	<book id="bk101">
+		<author>Gambardella, Matthew</author>
+		<title>XML Developer's Guide</title>
+		<genre>Computer</genre>
+		<price>44.95</price>
+		<publish_date>2000-10-01</publish_date>
+		<description>
+
+
+			An in-depth look at creating applications
+			with XML.This manual describes Oracle XML DB, and how you can use it to store, generate, manipulate, manage,
+			and query XML data in the database.
+
+
+			After introducing you to the heart of Oracle XML DB, namely the XMLType framework and Oracle XML DB repository,
+			the manual provides a brief introduction to design criteria to consider when planning your Oracle XML DB
+			application. It provides examples of how and where you can use Oracle XML DB.
+
+
+			The manual then describes ways you can store and retrieve XML data using Oracle XML DB, APIs for manipulating
+			XMLType data, and ways you can view, generate, transform, and search on existing XML data. The remainder of
+			the manual discusses how to use Oracle XML DB repository, including versioning and security,
+			how to access and manipulate repository resources using protocols, SQL, PL/SQL, or Java, and how to manage
+			your Oracle XML DB application using Oracle Enterprise Manager. It also introduces you to XML messaging and
+			Oracle Streams Advanced Queuing XMLType support.
+		</description>
+		<otherInfo>
+			<pagesCount>100</pagesCount>
+			<language>english</language>
+			<country>India</country>
+			<address>
+				<addressline1>3417 south plaza dr</addressline1>
+				<city>Costa mesa</city>
+				<state>CA</state>
+			</address>
+		</otherInfo>
+		<stores>
+			<store>
+				<name>Costco</name>
+				<location>usa</location>
+			</store>
+			<store>
+				<name>Target</name>
+				<location>UK</location>
+			</store>
+		</stores>
+
+		<wd:Add_Compensation_Grade_Profile wd:Descriptor="ESP HQ14">
+			<wd:ID wd:type="WID">cf95f774f83a01333b4d948d42381a88</wd:ID>
+			<wd:ID wd:type="Compensation_Grade_Profile_ID">ESP_HQ14</wd:ID>
+		</wd:Add_Compensation_Grade_Profile>
+
+		<esquema:Add_Compensation_Grade_Profile>
+			|-- wd:Add_Compensation_Grade_Profile: struct (nullable = true)
+			|    |-- _Descriptor: string (nullable = true)
+			|    |-- wd:ID: array (nullable = true)
+			|    |    |-- element: struct (containsNull = true)
+			|    |    |    |-- _VALUE: string (nullable = true)
+			|    |    |    |-- _type: string (nullable = true)
+		</esquema:Add_Compensation_Grade_Profile>
+
+		<wd:Bank_of_Origin wd:Descriptor="ESP HQ14">
+			<wd:ID wd:parent_id="PIWID" wd:parent_type="PTWID" wd:type="WID">cf95f774f83a01333b4d948d42381a88</wd:ID>
+			<wd:ID wd:parent_id="PIWID" wd:parent_type="PTWID" wd:type="Compensation_Grade_Profile_ID">ESP_HQ14</wd:ID>
+		</wd:Bank_of_Origin>
+
+		<esquema:Bank_of_Origin>
+			|-- wd:Bank_of_Origin: struct (nullable = true)
+			|    |-- _Descriptor: string (nullable = true)
+			|    |-- wd:ID: array (nullable = true)
+			|    |    |-- element: struct (containsNull = true)
+			|    |    |    |-- _VALUE: string (nullable = true)
+			|    |    |    |-- _parent_id: string (nullable = true)
+			|    |    |    |-- _parent_type: string (nullable = true)
+			|    |    |    |-- _type: string (nullable = true)
+		</esquema:Bank_of_Origin>
+
+		<wd:Business_Unit wd:Descriptor="ESP HQ14">
+			<wd:ID wd:type="WID">cf95f774f83a01333b4d948d42381a88</wd:ID>
+			<wd:ID wd:type="Compensation_Grade_Profile_ID">ESP_HQ14</wd:ID>
+		</wd:Business_Unit>
+
+		<esquema:Business_Unit>
+			|-- wd:Business_Unit: struct (nullable = true)
+			|    |-- _Descriptor: string (nullable = true)
+			|    |-- wd:ID: array (nullable = true)
+			|    |    |-- element: struct (containsNull = true)
+			|    |    |    |-- _VALUE: string (nullable = true)
+			|    |    |    |-- _type: string (nullable = true)
+		</esquema:Business_Unit>
+
+		<wd:CF_INT0001_LRV-Employee_Contract_for_Worker_group>
+			<wd:Contract_Description>A1</wd:Contract_Description>
+			<wd:Contract_End_Date>B1</wd:Contract_End_Date>
+			<wd:Contract_ID>C1</wd:Contract_ID>
+			<wd:Contract_Start_Date>D1</wd:Contract_Start_Date>
+			<wd:Contract_Status wd:Descriptor="E1">
+				<wd:ID wd:type="F1">H1</wd:ID>
+				<wd:ID wd:type="G1">I1</wd:ID>
+			</wd:Contract_Status>
+			<wd:Contract_Type wd:Descriptor="J1">
+				<wd:ID wd:type="K1">L1</wd:ID>
+				<wd:ID wd:type="M1">N1</wd:ID>
+			</wd:Contract_Type>
+		</wd:CF_INT0001_LRV-Employee_Contract_for_Worker_group>
+
+		<esquema:CF_INT0001_LRV-Employee_Contract_for_Worker_group>
+			|-- wd:CF_INT0001_LRV-Employee_Contract_for_Worker_group: struct (nullable = true)
+			|    |-- wd:Contract_Description: string (nullable = true)
+			|    |-- wd:Contract_End_Date: string (nullable = true)
+			|    |-- wd:Contract_ID: string (nullable = true)
+			|    |-- wd:Contract_Start_Date: string (nullable = true)
+			|    |-- wd:Contract_Status: struct (nullable = true)
+			|    |    |-- _Descriptor: string (nullable = true)
+			|    |    |-- wd:ID: array (nullable = true)
+			|    |    |    |-- element: struct (containsNull = true)
+			|    |    |    |    |-- _VALUE: string (nullable = true)
+			|    |    |    |    |-- _type: string (nullable = true)
+			|    |-- wd:Contract_Type: struct (nullable = true)
+			|    |    |-- _Descriptor: string (nullable = true)
+			|    |    |-- wd:ID: array (nullable = true)
+			|    |    |    |-- element: struct (containsNull = true)
+			|    |    |    |    |-- _VALUE: string (nullable = true)
+			|    |    |    |    |-- _type: string (nullable = true)
+		</esquema:CF_INT0001_LRV-Employee_Contract_for_Worker_group>
+
+	</book>
+	<book id="bk102">
+		<author>Ralls, Kim</author>
+		<title>Midnight Rain</title>
+		<genre>Fantasy</genre>
+		<price>5.95</price>
+		<publish_date>2000-12-16</publish_date>
+		<description>A former architect battles corporate zombies,
+			an evil sorceress, and her own childhood to become queen
+			of the world.</description>
+		<otherInfo>
+			<pagesCount>100</pagesCount>
+			<language>english</language>
+			<country>India</country>
+			<address>
+				<addressline1>3417 south plaza dr</addressline1>
+				<city>Costa mesa</city>
+				<state>CA</state>
+			</address>
+		</otherInfo>
+		<stores>
+			<store>
+				<name>Costco</name>
+			</store>
+			<store>
+				<name>Target</name>
+			</store>
+			<store>
+				<name>Walmart</name>
+			</store>
+		</stores>
+
+		<wd:Add_Compensation_Grade_Profile wd:Descriptor="ESP HQ15">
+			<wd:ID wd:type="WID">cf95f774f83a01333b4d948d42381b89</wd:ID>
+			<wd:ID wd:type="Compensation_Grade_Profile_ID">ESP_HQ15</wd:ID>
+		</wd:Add_Compensation_Grade_Profile>
+
+		<esquema:Add_Compensation_Grade_Profile>
+			|-- wd:Add_Compensation_Grade_Profile: struct (nullable = true)
+			|    |-- _Descriptor: string (nullable = true)
+			|    |-- wd:ID: array (nullable = true)
+			|    |    |-- element: struct (containsNull = true)
+			|    |    |    |-- _VALUE: string (nullable = true)
+			|    |    |    |-- _type: string (nullable = true)
+		</esquema:Add_Compensation_Grade_Profile>
+
+		<wd:Bank_of_Origin wd:Descriptor="ESP HQ14">
+			<wd:ID wd:parent_id="PIWID" wd:parent_type="PTWID" wd:type="WID">cf95f774f83a01333b4d948d42381a88</wd:ID>
+			<wd:ID wd:parent_id="PIWID" wd:parent_type="PTWID" wd:type="Compensation_Grade_Profile_ID">ESP_HQ14</wd:ID>
+		</wd:Bank_of_Origin>
+
+		<esquema:Bank_of_Origin>
+			|-- wd:Bank_of_Origin: struct (nullable = true)
+			|    |-- _Descriptor: string (nullable = true)
+			|    |-- wd:ID: array (nullable = true)
+			|    |    |-- element: struct (containsNull = true)
+			|    |    |    |-- _VALUE: string (nullable = true)
+			|    |    |    |-- _parent_id: string (nullable = true)
+			|    |    |    |-- _parent_type: string (nullable = true)
+			|    |    |    |-- _type: string (nullable = true)
+		</esquema:Bank_of_Origin>
+
+		<wd:Business_Unit wd:Descriptor="ESP HQ14">
+			<wd:ID wd:type="WID">cf95f774f83a01333b4d948d42381a88</wd:ID>
+			<wd:ID wd:type="Compensation_Grade_Profile_ID">ESP_HQ14</wd:ID>
+		</wd:Business_Unit>
+
+		<esquema:Business_Unit>
+			|-- wd:Business_Unit: struct (nullable = true)
+			|    |-- _Descriptor: string (nullable = true)
+			|    |-- wd:ID: array (nullable = true)
+			|    |    |-- element: struct (containsNull = true)
+			|    |    |    |-- _VALUE: string (nullable = true)
+			|    |    |    |-- _type: string (nullable = true)
+		</esquema:Business_Unit>
+
+		<wd:CF_INT0001_LRV-Employee_Contract_for_Worker_group>
+			<wd:Contract_Description>A2</wd:Contract_Description>
+			<wd:Contract_End_Date>B2</wd:Contract_End_Date>
+			<wd:Contract_ID>C2</wd:Contract_ID>
+			<wd:Contract_Start_Date>D2</wd:Contract_Start_Date>
+			<wd:Contract_Status wd:Descriptor="E2">
+				<wd:ID wd:type="F2">H2</wd:ID>
+				<wd:ID wd:type="G2">I2</wd:ID>
+			</wd:Contract_Status>
+			<wd:Contract_Type wd:Descriptor="J2">
+				<wd:ID wd:type="K2">L2</wd:ID>
+				<wd:ID wd:type="M2">N2</wd:ID>
+			</wd:Contract_Type>
+		</wd:CF_INT0001_LRV-Employee_Contract_for_Worker_group>
+
+		<esquema:CF_INT0001_LRV-Employee_Contract_for_Worker_group>
+			|-- wd:CF_INT0001_LRV-Employee_Contract_for_Worker_group: struct (nullable = true)
+			|    |-- wd:Contract_Description: string (nullable = true)
+			|    |-- wd:Contract_End_Date: string (nullable = true)
+			|    |-- wd:Contract_ID: string (nullable = true)
+			|    |-- wd:Contract_Start_Date: string (nullable = true)
+			|    |-- wd:Contract_Status: struct (nullable = true)
+			|    |    |-- _Descriptor: string (nullable = true)
+			|    |    |-- wd:ID: array (nullable = true)
+			|    |    |    |-- element: struct (containsNull = true)
+			|    |    |    |    |-- _VALUE: string (nullable = true)
+			|    |    |    |    |-- _type: string (nullable = true)
+			|    |-- wd:Contract_Type: struct (nullable = true)
+			|    |    |-- _Descriptor: string (nullable = true)
+			|    |    |-- wd:ID: array (nullable = true)
+			|    |    |    |-- element: struct (containsNull = true)
+			|    |    |    |    |-- _VALUE: string (nullable = true)
+			|    |    |    |    |-- _type: string (nullable = true)
+		</esquema:CF_INT0001_LRV-Employee_Contract_for_Worker_group>
+
+	</book>
+	<book id="bk103">
+		<author>Corets, Eva</author>
+		<title>Maeve Ascendant</title>
+		<genre>Fantasy</genre>
+		<price>5.95</price>
+		<publish_date>2000-11-17</publish_date>
+		<description>After the collapse of a nanotechnology
+			society in England, the young survivors lay the
+			foundation for a new society.</description>
+		<otherInfo>
+			<pagesCount>100</pagesCount>
+			<language>english</language>
+			<country>India</country>
+			<address>
+				<addressline1>3417 south plaza dr</addressline1>
+				<city>Costa mesa</city>
+				<state>CA</state>
+			</address>
+		</otherInfo>
+		<stores>
+			<store>
+				<name>Costco</name>
+			</store>
+		</stores>
+
+		<wd:Add_Compensation_Grade_Profile wd:Descriptor="ESP HQ16">
+			<wd:ID wd:type="WID">cf95f774f83a01333b4d948d42381c90</wd:ID>
+			<wd:ID wd:type="Compensation_Grade_Profile_ID">ESP_HQ16</wd:ID>
+		</wd:Add_Compensation_Grade_Profile>
+
+		<esquema:Add_Compensation_Grade_Profile>
+			|-- wd:Add_Compensation_Grade_Profile: struct (nullable = true)
+			|    |-- _Descriptor: string (nullable = true)
+			|    |-- wd:ID: array (nullable = true)
+			|    |    |-- element: struct (containsNull = true)
+			|    |    |    |-- _VALUE: string (nullable = true)
+			|    |    |    |-- _type: string (nullable = true)
+		</esquema:Add_Compensation_Grade_Profile>
+
+		<wd:Bank_of_Origin wd:Descriptor="ESP HQ14">
+			<wd:ID wd:parent_id="PIWID" wd:parent_type="PTWID" wd:type="WID">cf95f774f83a01333b4d948d42381a88</wd:ID>
+			<wd:ID wd:parent_id="PIWID" wd:parent_type="PTWID" wd:type="Compensation_Grade_Profile_ID">ESP_HQ14</wd:ID>
+		</wd:Bank_of_Origin>
+
+		<esquema:Bank_of_Origin>
+			|-- wd:Bank_of_Origin: struct (nullable = true)
+			|    |-- _Descriptor: string (nullable = true)
+			|    |-- wd:ID: array (nullable = true)
+			|    |    |-- element: struct (containsNull = true)
+			|    |    |    |-- _VALUE: string (nullable = true)
+			|    |    |    |-- _parent_id: string (nullable = true)
+			|    |    |    |-- _parent_type: string (nullable = true)
+			|    |    |    |-- _type: string (nullable = true)
+		</esquema:Bank_of_Origin>
+
+		<wd:Business_Unit wd:Descriptor="ESP HQ14">
+			<wd:ID wd:type="WID">cf95f774f83a01333b4d948d42381a88</wd:ID>
+			<wd:ID wd:type="Compensation_Grade_Profile_ID">ESP_HQ14</wd:ID>
+		</wd:Business_Unit>
+
+		<esquema:Business_Unit>
+			|-- wd:Business_Unit: struct (nullable = true)
+			|    |-- _Descriptor: string (nullable = true)
+			|    |-- wd:ID: array (nullable = true)
+			|    |    |-- element: struct (containsNull = true)
+			|    |    |    |-- _VALUE: string (nullable = true)
+			|    |    |    |-- _type: string (nullable = true)
+		</esquema:Business_Unit>
+
+		<wd:CF_INT0001_LRV-Employee_Contract_for_Worker_group>
+			<wd:Contract_Description>A3</wd:Contract_Description>
+			<wd:Contract_End_Date>B3</wd:Contract_End_Date>
+			<wd:Contract_ID>C3</wd:Contract_ID>
+			<wd:Contract_Start_Date>D3</wd:Contract_Start_Date>
+			<wd:Contract_Status wd:Descriptor="E3">
+				<wd:ID wd:type="F3">H3</wd:ID>
+				<wd:ID wd:type="G3">I3</wd:ID>
+			</wd:Contract_Status>
+			<wd:Contract_Type wd:Descriptor="J3">
+				<wd:ID wd:type="K3">L3</wd:ID>
+				<wd:ID wd:type="M3">N3</wd:ID>
+			</wd:Contract_Type>
+		</wd:CF_INT0001_LRV-Employee_Contract_for_Worker_group>
+
+		<esquema:CF_INT0001_LRV-Employee_Contract_for_Worker_group>
+			|-- wd:CF_INT0001_LRV-Employee_Contract_for_Worker_group: struct (nullable = true)
+			|    |-- wd:Contract_Description: string (nullable = true)
+			|    |-- wd:Contract_End_Date: string (nullable = true)
+			|    |-- wd:Contract_ID: string (nullable = true)
+			|    |-- wd:Contract_Start_Date: string (nullable = true)
+			|    |-- wd:Contract_Status: struct (nullable = true)
+			|    |    |-- _Descriptor: string (nullable = true)
+			|    |    |-- wd:ID: array (nullable = true)
+			|    |    |    |-- element: struct (containsNull = true)
+			|    |    |    |    |-- _VALUE: string (nullable = true)
+			|    |    |    |    |-- _type: string (nullable = true)
+			|    |-- wd:Contract_Type: struct (nullable = true)
+			|    |    |-- _Descriptor: string (nullable = true)
+			|    |    |-- wd:ID: array (nullable = true)
+			|    |    |    |-- element: struct (containsNull = true)
+			|    |    |    |    |-- _VALUE: string (nullable = true)
+			|    |    |    |    |-- _type: string (nullable = true)
+		</esquema:CF_INT0001_LRV-Employee_Contract_for_Worker_group>
+
+	</book>
+	<book id="bk104">
+		<author>Corets, Eva</author>
+		<title>Oberon's Legacy</title>
+		<genre>Fantasy</genre>
+		<price>5.95</price>
+		<publish_date>2001-03-10</publish_date>
+		<description>In post-apocalypse England, the mysterious
+			agent known only as Oberon helps to create a new life
+			for the inhabitants of London. Sequel to Maeve
+			Ascendant.</description>
+		<otherInfo>
+			<pagesCount>100</pagesCount>
+			<language>english</language>
+			<country>India</country>
+			<address>
+				<addressline1>3417 south plaza dr</addressline1>
+				<city>Costa mesa</city>
+				<state>CA</state>
+			</address>
+		</otherInfo>
+		<stores>
+			<store>
+				<name>Costco</name>
+			</store>
+		</stores>
+
+		<wd:Add_Compensation_Grade_Profile wd:Descriptor="ESP HQ17">
+			<wd:ID wd:type="WID">cf95f774f83a01333b4d948d42381d91</wd:ID>
+			<wd:ID wd:type="Compensation_Grade_Profile_ID">ESP_HQ17</wd:ID>
+		</wd:Add_Compensation_Grade_Profile>
+
+		<esquema:Add_Compensation_Grade_Profile>
+			|-- wd:Add_Compensation_Grade_Profile: struct (nullable = true)
+			|    |-- _Descriptor: string (nullable = true)
+			|    |-- wd:ID: array (nullable = true)
+			|    |    |-- element: struct (containsNull = true)
+			|    |    |    |-- _VALUE: string (nullable = true)
+			|    |    |    |-- _type: string (nullable = true)
+		</esquema:Add_Compensation_Grade_Profile>
+
+		<wd:Bank_of_Origin wd:Descriptor="ESP HQ14">
+			<wd:ID wd:parent_id="PIWID" wd:parent_type="PTWID" wd:type="WID">cf95f774f83a01333b4d948d42381a88</wd:ID>
+			<wd:ID wd:parent_id="PIWID" wd:parent_type="PTWID" wd:type="Compensation_Grade_Profile_ID">ESP_HQ14</wd:ID>
+		</wd:Bank_of_Origin>
+
+		<esquema:Bank_of_Origin>
+			|-- wd:Bank_of_Origin: struct (nullable = true)
+			|    |-- _Descriptor: string (nullable = true)
+			|    |-- wd:ID: array (nullable = true)
+			|    |    |-- element: struct (containsNull = true)
+			|    |    |    |-- _VALUE: string (nullable = true)
+			|    |    |    |-- _parent_id: string (nullable = true)
+			|    |    |    |-- _parent_type: string (nullable = true)
+			|    |    |    |-- _type: string (nullable = true)
+		</esquema:Bank_of_Origin>
+
+		<wd:Business_Unit wd:Descriptor="ESP HQ14">
+			<wd:ID wd:type="WID">cf95f774f83a01333b4d948d42381a88</wd:ID>
+			<wd:ID wd:type="Compensation_Grade_Profile_ID">ESP_HQ14</wd:ID>
+		</wd:Business_Unit>
+
+		<esquema:Business_Unit>
+			|-- wd:Business_Unit: struct (nullable = true)
+			|    |-- _Descriptor: string (nullable = true)
+			|    |-- wd:ID: array (nullable = true)
+			|    |    |-- element: struct (containsNull = true)
+			|    |    |    |-- _VALUE: string (nullable = true)
+			|    |    |    |-- _type: string (nullable = true)
+		</esquema:Business_Unit>
+
+		<wd:CF_INT0001_LRV-Employee_Contract_for_Worker_group>
+			<wd:Contract_Description>A4</wd:Contract_Description>
+			<wd:Contract_End_Date>B4</wd:Contract_End_Date>
+			<wd:Contract_ID>C4</wd:Contract_ID>
+			<wd:Contract_Start_Date>D4</wd:Contract_Start_Date>
+			<wd:Contract_Status wd:Descriptor="E4">
+				<wd:ID wd:type="F4">H4</wd:ID>
+				<wd:ID wd:type="G4">I4</wd:ID>
+			</wd:Contract_Status>
+			<wd:Contract_Type wd:Descriptor="J4">
+				<wd:ID wd:type="K4">L4</wd:ID>
+				<wd:ID wd:type="M4">N4</wd:ID>
+			</wd:Contract_Type>
+		</wd:CF_INT0001_LRV-Employee_Contract_for_Worker_group>
+
+		<esquema:CF_INT0001_LRV-Employee_Contract_for_Worker_group>
+			|-- wd:CF_INT0001_LRV-Employee_Contract_for_Worker_group: struct (nullable = true)
+			|    |-- wd:Contract_Description: string (nullable = true)
+			|    |-- wd:Contract_End_Date: string (nullable = true)
+			|    |-- wd:Contract_ID: string (nullable = true)
+			|    |-- wd:Contract_Start_Date: string (nullable = true)
+			|    |-- wd:Contract_Status: struct (nullable = true)
+			|    |    |-- _Descriptor: string (nullable = true)
+			|    |    |-- wd:ID: array (nullable = true)
+			|    |    |    |-- element: struct (containsNull = true)
+			|    |    |    |    |-- _VALUE: string (nullable = true)
+			|    |    |    |    |-- _type: string (nullable = true)
+			|    |-- wd:Contract_Type: struct (nullable = true)
+			|    |    |-- _Descriptor: string (nullable = true)
+			|    |    |-- wd:ID: array (nullable = true)
+			|    |    |    |-- element: struct (containsNull = true)
+			|    |    |    |    |-- _VALUE: string (nullable = true)
+			|    |    |    |    |-- _type: string (nullable = true)
+		</esquema:CF_INT0001_LRV-Employee_Contract_for_Worker_group>
+
+	</book>
+	<book id="bk105">
+		<author>Corets, Eva</author>
+		<title>The Sundered Grail</title>
+		<genre>Fantasy</genre>
+		<price>5.95</price>
+		<publish_date>2001-09-10</publish_date>
+		<description>The two daughters of Maeve, half-sisters,
+			battle one another for control of England. Sequel to
+			Oberon's Legacy.</description>
+		<otherInfo>
+			<pagesCount>100</pagesCount>
+			<language>english</language>
+			<country>India</country>
+			<address>
+				<addressline1>3417 south plaza dr</addressline1>
+				<city>Costa mesa</city>
+				<state>CA</state>
+			</address>
+		</otherInfo>
+		<stores>
+			<store>
+				<name>Costco</name>
+			</store>
+		</stores>
+
+		<wd:Add_Compensation_Grade_Profile wd:Descriptor="ESP HQ18">
+			<wd:ID wd:type="WID">cf95f774f83a01333b4d948d42381e92</wd:ID>
+			<wd:ID wd:type="Compensation_Grade_Profile_ID">ESP_HQ18</wd:ID>
+		</wd:Add_Compensation_Grade_Profile>
+
+		<esquema:Add_Compensation_Grade_Profile>
+			|-- wd:Add_Compensation_Grade_Profile: struct (nullable = true)
+			|    |-- _Descriptor: string (nullable = true)
+			|    |-- wd:ID: array (nullable = true)
+			|    |    |-- element: struct (containsNull = true)
+			|    |    |    |-- _VALUE: string (nullable = true)
+			|    |    |    |-- _type: string (nullable = true)
+		</esquema:Add_Compensation_Grade_Profile>
+
+		<wd:Bank_of_Origin wd:Descriptor="ESP HQ14">
+			<wd:ID wd:parent_id="PIWID" wd:parent_type="PTWID" wd:type="WID">cf95f774f83a01333b4d948d42381a88</wd:ID>
+			<wd:ID wd:parent_id="PIWID" wd:parent_type="PTWID" wd:type="Compensation_Grade_Profile_ID">ESP_HQ14</wd:ID>
+		</wd:Bank_of_Origin>
+
+		<esquema:Bank_of_Origin>
+			|-- wd:Bank_of_Origin: struct (nullable = true)
+			|    |-- _Descriptor: string (nullable = true)
+			|    |-- wd:ID: array (nullable = true)
+			|    |    |-- element: struct (containsNull = true)
+			|    |    |    |-- _VALUE: string (nullable = true)
+			|    |    |    |-- _parent_id: string (nullable = true)
+			|    |    |    |-- _parent_type: string (nullable = true)
+			|    |    |    |-- _type: string (nullable = true)
+		</esquema:Bank_of_Origin>
+
+		<wd:Business_Unit wd:Descriptor="ESP HQ14">
+			<wd:ID wd:type="WID">cf95f774f83a01333b4d948d42381a88</wd:ID>
+			<wd:ID wd:type="Compensation_Grade_Profile_ID">ESP_HQ14</wd:ID>
+		</wd:Business_Unit>
+
+		<esquema:Business_Unit>
+			|-- wd:Business_Unit: struct (nullable = true)
+			|    |-- _Descriptor: string (nullable = true)
+			|    |-- wd:ID: array (nullable = true)
+			|    |    |-- element: struct (containsNull = true)
+			|    |    |    |-- _VALUE: string (nullable = true)
+			|    |    |    |-- _type: string (nullable = true)
+		</esquema:Business_Unit>
+
+		<wd:CF_INT0001_LRV-Employee_Contract_for_Worker_group>
+			<wd:Contract_Description>A5</wd:Contract_Description>
+			<wd:Contract_End_Date>B5</wd:Contract_End_Date>
+			<wd:Contract_ID>C5</wd:Contract_ID>
+			<wd:Contract_Start_Date>D5</wd:Contract_Start_Date>
+			<wd:Contract_Status wd:Descriptor="E5">
+				<wd:ID wd:type="F5">H5</wd:ID>
+				<wd:ID wd:type="G5">I5</wd:ID>
+			</wd:Contract_Status>
+			<wd:Contract_Type wd:Descriptor="J5">
+				<wd:ID wd:type="K5">L5</wd:ID>
+				<wd:ID wd:type="M5">N5</wd:ID>
+			</wd:Contract_Type>
+		</wd:CF_INT0001_LRV-Employee_Contract_for_Worker_group>
+
+		<esquema:CF_INT0001_LRV-Employee_Contract_for_Worker_group>
+			|-- wd:CF_INT0001_LRV-Employee_Contract_for_Worker_group: struct (nullable = true)
+			|    |-- wd:Contract_Description: string (nullable = true)
+			|    |-- wd:Contract_End_Date: string (nullable = true)
+			|    |-- wd:Contract_ID: string (nullable = true)
+			|    |-- wd:Contract_Start_Date: string (nullable = true)
+			|    |-- wd:Contract_Status: struct (nullable = true)
+			|    |    |-- _Descriptor: string (nullable = true)
+			|    |    |-- wd:ID: array (nullable = true)
+			|    |    |    |-- element: struct (containsNull = true)
+			|    |    |    |    |-- _VALUE: string (nullable = true)
+			|    |    |    |    |-- _type: string (nullable = true)
+			|    |-- wd:Contract_Type: struct (nullable = true)
+			|    |    |-- _Descriptor: string (nullable = true)
+			|    |    |-- wd:ID: array (nullable = true)
+			|    |    |    |-- element: struct (containsNull = true)
+			|    |    |    |    |-- _VALUE: string (nullable = true)
+			|    |    |    |    |-- _type: string (nullable = true)
+		</esquema:CF_INT0001_LRV-Employee_Contract_for_Worker_group>
+
+	</book>
+	<book id="bk106">
+		<author>Randall, Cynthia</author>
+		<title>Lover Birds</title>
+		<genre>Romance</genre>
+		<price>4.95</price>
+		<publish_date>2000-09-02</publish_date>
+		<description>When Carla meets Paul at an ornithology
+			conference, tempers fly as feathers get ruffled.</description>
+		<otherInfo>
+			<pagesCount>100</pagesCount>
+			<language>english</language>
+			<country>India</country>
+			<address>
+				<addressline1>3417 south plaza dr</addressline1>
+				<city>Costa mesa</city>
+				<state>CA</state>
+			</address>
+		</otherInfo>
+		<stores>
+			<store>
+				<name>Costco</name>
+			</store>
+		</stores>
+
+		<wd:Add_Compensation_Grade_Profile wd:Descriptor="ESP HQ19">
+			<wd:ID wd:type="WID">cf95f774f83a01333b4d948d42381e93</wd:ID>
+			<wd:ID wd:type="Compensation_Grade_Profile_ID">ESP_HQ19</wd:ID>
+		</wd:Add_Compensation_Grade_Profile>
+
+		<esquema:Add_Compensation_Grade_Profile>
+			|-- wd:Add_Compensation_Grade_Profile: struct (nullable = true)
+			|    |-- _Descriptor: string (nullable = true)
+			|    |-- wd:ID: array (nullable = true)
+			|    |    |-- element: struct (containsNull = true)
+			|    |    |    |-- _VALUE: string (nullable = true)
+			|    |    |    |-- _type: string (nullable = true)
+		</esquema:Add_Compensation_Grade_Profile>
+
+		<wd:Bank_of_Origin wd:Descriptor="ESP HQ14">
+			<wd:ID wd:parent_id="PIWID" wd:parent_type="PTWID" wd:type="WID">cf95f774f83a01333b4d948d42381a88</wd:ID>
+			<wd:ID wd:parent_id="PIWID" wd:parent_type="PTWID" wd:type="Compensation_Grade_Profile_ID">ESP_HQ14</wd:ID>
+		</wd:Bank_of_Origin>
+
+		<esquema:Bank_of_Origin>
+			|-- wd:Bank_of_Origin: struct (nullable = true)
+			|    |-- _Descriptor: string (nullable = true)
+			|    |-- wd:ID: array (nullable = true)
+			|    |    |-- element: struct (containsNull = true)
+			|    |    |    |-- _VALUE: string (nullable = true)
+			|    |    |    |-- _parent_id: string (nullable = true)
+			|    |    |    |-- _parent_type: string (nullable = true)
+			|    |    |    |-- _type: string (nullable = true)
+		</esquema:Bank_of_Origin>
+
+		<wd:Business_Unit wd:Descriptor="ESP HQ14">
+			<wd:ID wd:type="WID">cf95f774f83a01333b4d948d42381a88</wd:ID>
+			<wd:ID wd:type="Compensation_Grade_Profile_ID">ESP_HQ14</wd:ID>
+		</wd:Business_Unit>
+
+		<esquema:Business_Unit>
+			|-- wd:Business_Unit: struct (nullable = true)
+			|    |-- _Descriptor: string (nullable = true)
+			|    |-- wd:ID: array (nullable = true)
+			|    |    |-- element: struct (containsNull = true)
+			|    |    |    |-- _VALUE: string (nullable = true)
+			|    |    |    |-- _type: string (nullable = true)
+		</esquema:Business_Unit>
+
+		<wd:CF_INT0001_LRV-Employee_Contract_for_Worker_group>
+			<wd:Contract_Description>A6</wd:Contract_Description>
+			<wd:Contract_End_Date>B6</wd:Contract_End_Date>
+			<wd:Contract_ID>C6</wd:Contract_ID>
+			<wd:Contract_Start_Date>D6</wd:Contract_Start_Date>
+			<wd:Contract_Status wd:Descriptor="E6">
+				<wd:ID wd:type="F6">H6</wd:ID>
+				<wd:ID wd:type="G6">I6</wd:ID>
+			</wd:Contract_Status>
+			<wd:Contract_Type wd:Descriptor="J6">
+				<wd:ID wd:type="K6">L6</wd:ID>
+				<wd:ID wd:type="M6">N6</wd:ID>
+			</wd:Contract_Type>
+		</wd:CF_INT0001_LRV-Employee_Contract_for_Worker_group>
+
+		<esquema:CF_INT0001_LRV-Employee_Contract_for_Worker_group>
+			|-- wd:CF_INT0001_LRV-Employee_Contract_for_Worker_group: struct (nullable = true)
+			|    |-- wd:Contract_Description: string (nullable = true)
+			|    |-- wd:Contract_End_Date: string (nullable = true)
+			|    |-- wd:Contract_ID: string (nullable = true)
+			|    |-- wd:Contract_Start_Date: string (nullable = true)
+			|    |-- wd:Contract_Status: struct (nullable = true)
+			|    |    |-- _Descriptor: string (nullable = true)
+			|    |    |-- wd:ID: array (nullable = true)
+			|    |    |    |-- element: struct (containsNull = true)
+			|    |    |    |    |-- _VALUE: string (nullable = true)
+			|    |    |    |    |-- _type: string (nullable = true)
+			|    |-- wd:Contract_Type: struct (nullable = true)
+			|    |    |-- _Descriptor: string (nullable = true)
+			|    |    |-- wd:ID: array (nullable = true)
+			|    |    |    |-- element: struct (containsNull = true)
+			|    |    |    |    |-- _VALUE: string (nullable = true)
+			|    |    |    |    |-- _type: string (nullable = true)
+		</esquema:CF_INT0001_LRV-Employee_Contract_for_Worker_group>
+
+	</book>
+	<book id="bk107">
+		<author>Thurman, Paula</author>
+		<title>Splish Splash</title>
+		<genre>Romance</genre>
+		<price>4.95</price>
+		<publish_date>2000-11-02</publish_date>
+		<description>A deep sea diver finds true love twenty
+			thousand leagues beneath the sea.</description>
+		<otherInfo>
+			<pagesCount>100</pagesCount>
+			<language>english</language>
+			<country>India</country>
+			<address>
+				<addressline1>3417 south plaza dr</addressline1>
+				<city>Costa mesa</city>
+				<state>CA</state>
+			</address>
+		</otherInfo>
+		<stores>
+			<store>
+				<name>Costco</name>
+			</store>
+		</stores>
+
+		<wd:Add_Compensation_Grade_Profile wd:Descriptor="ESP HQ20">
+			<wd:ID wd:type="WID">cf95f774f83a01333b4d948d42381e94</wd:ID>
+			<wd:ID wd:type="Compensation_Grade_Profile_ID">ESP_HQ20</wd:ID>
+		</wd:Add_Compensation_Grade_Profile>
+
+		<esquema:Add_Compensation_Grade_Profile>
+			|-- wd:Add_Compensation_Grade_Profile: struct (nullable = true)
+			|    |-- _Descriptor: string (nullable = true)
+			|    |-- wd:ID: array (nullable = true)
+			|    |    |-- element: struct (containsNull = true)
+			|    |    |    |-- _VALUE: string (nullable = true)
+			|    |    |    |-- _type: string (nullable = true)
+		</esquema:Add_Compensation_Grade_Profile>
+
+		<wd:Bank_of_Origin wd:Descriptor="ESP HQ14">
+			<wd:ID wd:parent_id="PIWID" wd:parent_type="PTWID" wd:type="WID">cf95f774f83a01333b4d948d42381a88</wd:ID>
+			<wd:ID wd:parent_id="PIWID" wd:parent_type="PTWID" wd:type="Compensation_Grade_Profile_ID">ESP_HQ14</wd:ID>
+		</wd:Bank_of_Origin>
+
+		<esquema:Bank_of_Origin>
+			|-- wd:Bank_of_Origin: struct (nullable = true)
+			|    |-- _Descriptor: string (nullable = true)
+			|    |-- wd:ID: array (nullable = true)
+			|    |    |-- element: struct (containsNull = true)
+			|    |    |    |-- _VALUE: string (nullable = true)
+			|    |    |    |-- _parent_id: string (nullable = true)
+			|    |    |    |-- _parent_type: string (nullable = true)
+			|    |    |    |-- _type: string (nullable = true)
+		</esquema:Bank_of_Origin>
+
+		<wd:Business_Unit wd:Descriptor="ESP HQ14">
+			<wd:ID wd:type="WID">cf95f774f83a01333b4d948d42381a88</wd:ID>
+			<wd:ID wd:type="Compensation_Grade_Profile_ID">ESP_HQ14</wd:ID>
+		</wd:Business_Unit>
+
+		<esquema:Business_Unit>
+			|-- wd:Business_Unit: struct (nullable = true)
+			|    |-- _Descriptor: string (nullable = true)
+			|    |-- wd:ID: array (nullable = true)
+			|    |    |-- element: struct (containsNull = true)
+			|    |    |    |-- _VALUE: string (nullable = true)
+			|    |    |    |-- _type: string (nullable = true)
+		</esquema:Business_Unit>
+
+		<wd:CF_INT0001_LRV-Employee_Contract_for_Worker_group>
+			<wd:Contract_Description>A7</wd:Contract_Description>
+			<wd:Contract_End_Date>B7</wd:Contract_End_Date>
+			<wd:Contract_ID>C7</wd:Contract_ID>
+			<wd:Contract_Start_Date>D7</wd:Contract_Start_Date>
+			<wd:Contract_Status wd:Descriptor="E7">
+				<wd:ID wd:type="F7">H7</wd:ID>
+				<wd:ID wd:type="G7">I7</wd:ID>
+			</wd:Contract_Status>
+			<wd:Contract_Type wd:Descriptor="J7">
+				<wd:ID wd:type="K7">L7</wd:ID>
+				<wd:ID wd:type="M7">N7</wd:ID>
+			</wd:Contract_Type>
+		</wd:CF_INT0001_LRV-Employee_Contract_for_Worker_group>
+
+		<esquema:CF_INT0001_LRV-Employee_Contract_for_Worker_group>
+			|-- wd:CF_INT0001_LRV-Employee_Contract_for_Worker_group: struct (nullable = true)
+			|    |-- wd:Contract_Description: string (nullable = true)
+			|    |-- wd:Contract_End_Date: string (nullable = true)
+			|    |-- wd:Contract_ID: string (nullable = true)
+			|    |-- wd:Contract_Start_Date: string (nullable = true)
+			|    |-- wd:Contract_Status: struct (nullable = true)
+			|    |    |-- _Descriptor: string (nullable = true)
+			|    |    |-- wd:ID: array (nullable = true)
+			|    |    |    |-- element: struct (containsNull = true)
+			|    |    |    |    |-- _VALUE: string (nullable = true)
+			|    |    |    |    |-- _type: string (nullable = true)
+			|    |-- wd:Contract_Type: struct (nullable = true)
+			|    |    |-- _Descriptor: string (nullable = true)
+			|    |    |-- wd:ID: array (nullable = true)
+			|    |    |    |-- element: struct (containsNull = true)
+			|    |    |    |    |-- _VALUE: string (nullable = true)
+			|    |    |    |    |-- _type: string (nullable = true)
+		</esquema:CF_INT0001_LRV-Employee_Contract_for_Worker_group>
+
+	</book>
+
+</catalog>
