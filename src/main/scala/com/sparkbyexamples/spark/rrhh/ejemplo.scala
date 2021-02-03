@@ -234,8 +234,6 @@ object ejemplo {
 
 
 
-
-
     //Ejemplos que no funcionaron
 
     /*
