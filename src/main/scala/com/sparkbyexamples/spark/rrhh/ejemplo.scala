@@ -13,8 +13,6 @@ object ejemplo {
       .appName("SparkByExample")
       .getOrCreate()
 
-
-
     //Primeros Ejemplos de Práctica
 
     val df_books_withnested_array = spark.sqlContext.read
@@ -247,7 +245,19 @@ object ejemplo {
     //explodedAnidado.show()
 
     println("PrintSchema de df_xml")
-    df_xml.printSchema()
+    //df_xml.printSchema()
+
+    /*
+
+    df_xml
+      .select(
+        col("`wd:Performance_Review_Rating`.`wd:ID`"),
+        col("`wd:Performance_Cero`.`wd:Performance_Uno`.`wd:Performance_Dos`.`wd:Performance_Tres`.`wd:ID`"),
+        col("`wd:Performance_Cero`.`wd:Performance_Uno`.`wd:Performance_Dos`.`wd:ID`")
+      )
+      .show()
+
+    */
 
     val readAllXml = df_xml
       .withColumn("review_rating", explode(col("`wd:Performance_Review_Rating`.`wd:ID`")))
