@@ -27,28 +27,38 @@ object etl_datos_weci_consolid_wd {
     println("Imprimiendo el esquema de df_WeciConsolidWD")
     df_WeciConsolidWD.printSchema()
 
-    /*
-    val df_WeciFinal = df_WeciConsolidWD
-      .withColumn("natio", explode(col("`wd:National_Identifiers_group`")))
-      .withColumn("educ", explode(col("`wd:education_group`")))
-      .withColumn("job_class", explode(col("`wd:Job_Classifications_group`")))
-      .selectExpr(
-        //Estos son los explode necesarios para acceder a los campos array
-        "`natio`.`wd:National_ID_Type` as National_ID_Type",
-        "`educ`.`wd:Education_Is_Highest_Level_of_Education` as Education_Is_Highest_Level_of_Education",
-        "`job_class`.`wd:Job_Classification_Groups`.`_Descriptor` as Job_Classification_Groups",
-        //A partir de estos campos se mantiene igual
-        "`wd:workdayID` as workdayID",
-        "`wd:Hire_Date` as Hire_Date",
-        "`wd:Hire_Reason` as Hire_Reason",
-        "`wd:Original_Hire_Date` as Original_Hire_Date",
-        "`wd:dateOfBirth` as date_of_Birth",
-        "`wd:City_of_Birth` as City_of_Birth",
-        //Este tuve que agregar el nivel inicial wd:Position_group pq o no era capaz de encontrar el .`wd:Home_Country`.`_Descriptor`
-        "`wd:Position_group`.`wd:Home_Country`.`_Descriptor` as Home_Country"
-      ).na.fill(" ")
+/*
+ |    |-- ns1:Person_Identification: struct (nullable = true)
+ |    |    |-- ns1:National_Identifier: array (nullable = true)
+ |    |    |    |-- element: struct (containsNull = true)
+ |    |    |    |    |-- ns1:Country: string (nullable = true)
+ |    |    |    |    |-- ns1:National_ID: string (nullable = true)
+ |    |    |    |    |-- ns1:National_ID_Type: string (nullable = true)
+ |    |    |-- ns1:Other_Identifier: array (nullable = true)
+ |    |    |    |-- element: struct (containsNull = true)
+ |    |    |    |    |-- ns1:Custom_ID_Type: string (nullable = true)
+ |    |    |-- ns1:Passport: string (nullable = true)
+ |    |    |-- ns1:Visa: string (nullable = true)
+ */
 
-    */
+    val df_WeciFinal = df_WeciConsolidWD
+      .withColumn("natioId", explode(col("`ns:Employees`.`ns1:Person_Identification`.`ns1:National_Identifier`")))
+      //.withColumn("job_class", explode(col("`wd:Job_Classifications_group`")))
+      .selectExpr(
+        "`natioId`.`ns1:National_ID_Type` as NATIONAL_ID_TYPE_DESCR",
+        "`ns:Employees`.`ns1:Personal`.`ns1:Date_of_Birth` as BIRTHDATE",
+        "`ns:Employees`.`ns1:Personal`.`ns1:City_of_Birth` as BIRTHPLACE",
+        "`ns:Employees`.`ns1:Personal`.`ns1:Country_of_Birth` as BIRTHCOUNTRY",
+        "`natioId`.`ns1:National_ID` as NATIONALITY_ID",
+        //"`wd:Hire_Reason` as Hire_Reason",
+        //"`wd:Original_Hire_Date` as Original_Hire_Date",
+        //"`wd:dateOfBirth` as date_of_Birth",
+        //"`wd:City_of_Birth` as City_of_Birth",
+        //Este tuve que agregar el nivel inicial wd:Position_group pq o no era capaz de encontrar el .`wd:Home_Country`.`_Descriptor`
+        //"`wd:Position_group`.`wd:Home_Country`.`_Descriptor` as Home_Country"
+      ).na.fill(" ").distinct().show()
+
+
 
 
 
