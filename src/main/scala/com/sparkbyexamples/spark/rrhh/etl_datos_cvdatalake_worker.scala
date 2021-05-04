@@ -3,10 +3,9 @@
 package com.sparkbyexamples.spark.rrhh
 
 import org.apache.spark.sql.SparkSession
-import org.apache.spark.sql.functions.{col, explode, expr}
-import org.apache.spark.sql.types.StringType
+import org.apache.spark.sql.functions.{col, explode}
 
-object etl_datos_weci_consolid_wd {
+object etl_datos_cvdatalake_worker {
 
   def main(args: Array[String]): Unit = {
 
@@ -16,13 +15,13 @@ object etl_datos_weci_consolid_wd {
 
 
     //Trabajando con la nueva integración de weci en consolid_wd
-    val rutaWeciConsolidWD = "src/main/resources/rrhh/example_weci_consolid_wd/*.xml"
+    val rutaCvDatalakeWorker = "src/main/resources/rrhh/example_cvdatalake_worker/*.xml"
 
     val df_WeciConsolidWD = spark.read
       .format("com.databricks.spark.xml")
       .option("excludeAttribute", "false")
       .option("rowTag", "ns1:EMPLOYEE_DELTA_INTEGRATION")
-      .load(rutaWeciConsolidWD)
+      .load(rutaCvDatalakeWorker)
 
     println("Imprimiendo el esquema de df_WeciConsolidWD")
     df_WeciConsolidWD.printSchema()
@@ -38,7 +37,7 @@ object etl_datos_weci_consolid_wd {
  |    |    |    |-- ns1:Location_ID: string (nullable = true)
  |    |    |    |-- ns1:Location_Name: string (nullable = true)
  |    |    |    |-- ns1:Postal_Code: long (nullable = true)
- */
+
 
     val df_WeciFinal = df_WeciConsolidWD
       .withColumn("natioId", explode(col("`ns:Employees`.`ns1:Person_Identification`.`ns1:National_Identifier`")))
@@ -100,7 +99,7 @@ object etl_datos_weci_consolid_wd {
 
       ).na.fill(" ").distinct().show()
 
-
+      */
 
 
 

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns1:EMPLOYEE_DELTA_INTEGRATION xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations">
+    <ns:Employees xmlns:ns="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations" xmlns:wd1="urn:com.workday.report/INT0103_CRI_Organica_Talent_Outbound_-_Chile_Delta" xmlns:wd="urn:com.workday.report/SAN_CRI_Talent_Details" xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/CommonTypes">
+        <ns1:Summary>
+            <ns1:Employee_ID>100000033</ns1:Employee_ID>
+        </ns1:Summary>
+        <ns1:Qualifications>
+            <ns1:Certification_Achievement>
+                <ns1:Certification>134422</ns1:Certification>
+                <ns1:Certification_Country>Mexico</ns1:Certification_Country>
+                <ns1:Certification_Name>Promotor de Fondos de Inversión PFI (Revalidación-Serie100) - Asociacion Mexicana Instituciones Bursatiles</ns1:Certification_Name>
+                <ns1:Certification_Issuer>Asociacion Mexicana Instituciones Bursatiles</ns1:Certification_Issuer>
+                <ns1:Issued_Date>2019-01-25</ns1:Issued_Date>
+            </ns1:Certification_Achievement>
+        </ns1:Qualifications>
+    </ns:Employees>
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
