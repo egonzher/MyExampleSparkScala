@@ -57,17 +57,14 @@ object etl_datos_cvdatalake_worker {
     val df_CvDatalakeWorkerFinal = df_CvDatalakeWorker
       .withColumn("CertAchievement", explode(col("`ns:Employees`.`ns1:Qualifications`.`ns1:Certification_Achievement`")))
       .selectExpr(
-
         //ID para los join
         "`ns:Employees`.`ns1:Summary`.`ns1:Employee_ID` as Employee_ID",
-
         //Campos identificados
         "`CertAchievement`.`ns1:Certification_Country` as Pais_Certificacion",
         "`CertAchievement`.`ns1:Certification` as Certificacion_Tabulada",
         "`CertAchievement`.`ns1:Certification_Name` as Certificacion_No_Tabulada",
         "`CertAchievement`.`ns1:Certification_Issuer` as Entidad_Certificador",
         "`CertAchievement`.`ns1:Issued_Date` as Fecha_Expedicion_Certificacion",
-
         //Campos pendientes de identificar
         "'' as Fecha_Vencimiento_Certificacion",
         "`ns:Employees`.`ns1:Additional_Information`.`ns1:Company` as Empresa_CV",
@@ -77,7 +74,6 @@ object etl_datos_cvdatalake_worker {
         "`ns:Employees`.`ns1:Qualifications`.`ns1:External_Job`.`ns1:Location` as Ubicacion_CV",
         "`ns:Employees`.`ns1:Qualifications`.`ns1:External_Job`.`ns1:Responsibilities_And_Achievements` as Funciones_Logros_CV",
         "'' as Tipo_Mentor"
-
       ).na.fill(" ").distinct().show()
 
 
