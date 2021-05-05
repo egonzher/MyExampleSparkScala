@@ -28,22 +28,20 @@ object etl_datos_weci_consolid_wd {
     df_WeciConsolidWD.printSchema()
 
 /*
- |    |-- ns1:Position: struct (nullable = true)
- |    |    |-- ns1:Business_Site: struct (nullable = true)
- |    |    |    |-- ns1:Address_ID: string (nullable = true)
- |    |    |    |-- ns1:Address_Line_1: string (nullable = true)
- |    |    |    |-- ns1:Address_Line_3: string (nullable = true)
- |    |    |    |-- ns1:City: string (nullable = true)
- |    |    |    |-- ns1:Country: string (nullable = true)
- |    |    |    |-- ns1:Location_ID: string (nullable = true)
- |    |    |    |-- ns1:Location_Name: string (nullable = true)
- |    |    |    |-- ns1:Postal_Code: long (nullable = true)
+ |    |-- ns1:Summary: struct (nullable = true)
+ |    |    |-- ns1:Employee_ID: long (nullable = true)
+ |    |    |-- ns1:Name: string (nullable = true)
+ |    |    |-- ns1:WID: string (nullable = true)
  */
 
     val df_WeciFinal = df_WeciConsolidWD
       .withColumn("natioId", explode(col("`ns:Employees`.`ns1:Person_Identification`.`ns1:National_Identifier`")))
       .withColumn("relatedPerson", explode(col("`ns:Employees`.`ns1:Related_Person`")))
       .selectExpr(
+
+        //Campo ID para realizar el join
+        "`ns:Employees`.`ns1:Summary`.`ns1:Employee_ID` as Employee_ID",
+        "`ns:Employees`.`ns1:Summary`.`ns1:WID` as WID",
 
         //Estos son los de color Blanco que no había dudas
         "`natioId`.`ns1:National_ID_Type` as NATIONAL_ID_TYPE_DESCR",
