@@ -3,7 +3,7 @@
 package com.sparkbyexamples.spark.rrhh
 
 import org.apache.spark.sql.SparkSession
-import org.apache.spark.sql.functions.{col, explode, expr}
+import org.apache.spark.sql.functions.{col, explode, expr,concat}
 import org.apache.spark.sql.types.StringType
 
 object etl_datos_weci_consolid_wd {
@@ -37,10 +37,14 @@ object etl_datos_weci_consolid_wd {
     val df_WeciFinal = df_WeciConsolidWD
       .withColumn("natioId", explode(col("`ns:Employees`.`ns1:Person_Identification`.`ns1:National_Identifier`")))
       .withColumn("relatedPerson", explode(col("`ns:Employees`.`ns1:Related_Person`")))
+      .withColumn("PostalCast",col("`ns:Employees`.`ns1:Position`.`ns1:Business_Site`.`ns1:Postal_Code`").cast("String"))
+      .withColumn("SuperCast",col("`ns:Employees`.`ns1:Position`.`ns1:Supervisor`.`ns1:ID`").cast("String"))
+      .withColumn("IDCast",col("`ns:Employees`.`ns1:Summary`.`ns1:Employee_ID`").cast("String"))
+      .withColumn("concatAddress",concat(col("`ns:Employees`.`ns1:Position`.`ns1:Business_Site`.`ns1:Address_Line_1`"),col("`ns:Employees`.`ns1:Position`.`ns1:Business_Site`.`ns1:Address_Line_3`")))
       .selectExpr(
 
         //Campo ID para realizar el join
-        "`ns:Employees`.`ns1:Summary`.`ns1:Employee_ID` as Employee_ID",
+          "`IDCast` as Employee_ID",
         "`ns:Employees`.`ns1:Summary`.`ns1:WID` as WID",
 
         //Estos son los de color Blanco que no había dudas
@@ -66,8 +70,9 @@ object etl_datos_weci_consolid_wd {
         "`ns:Employees`.`ns1:Position`.`ns1:Business_Site`.`ns1:Address_ID` as ADDRESS1_2_ID",
         "`ns:Employees`.`ns1:Position`.`ns1:Business_Site`.`ns1:Address_Line_1` as ADDRESS1_2_Line_1",
         "`ns:Employees`.`ns1:Position`.`ns1:Business_Site`.`ns1:Address_Line_3` as ADDRESS1_2_Line_3",
+        "`concatAddress` as ADDRESS1_3",
 
-        "`ns:Employees`.`ns1:Position`.`ns1:Business_Site`.`ns1:Postal_Code` as POSTAL",
+        "`PostalCast` as POSTAL",
         "`ns:Employees`.`ns1:Position`.`ns1:Business_Site`.`ns1:City` as CITY",
         "`natioId`.`ns1:Country` as `PERS_COUNTRY`",
 
@@ -83,7 +88,7 @@ object etl_datos_weci_consolid_wd {
         "`ns:Employees`.`ns1:Collective_Agreement`.`ns1:Start_Date` as COLLECTIVE_YN_GLOBAL_EFFDT",
         "`ns:Employees`.`ns1:Collective_Agreement`.`ns1:Start_Date` as COLLECTIVE_YN_LOCAL_EFFDT",
         "`ns:Employees`.`ns1:Position`.`ns1:Organization` as TIP_DEPTID",
-        "`ns:Employees`.`ns1:Position`.`ns1:Supervisor`.`ns1:ID` as SUPERVISOR_EFFDT",
+        "`SuperCast` as SUPERVISOR_EFFDT",
         "`ns:Employees`.`ns1:Collective_Agreement`.`ns1:Collective_Agreement` as COLLECTIVE_AGREEMENT",
         "`ns:Employees`.`ns1:Collective_Agreement`.`ns1:Collective_Agreement_Factor`.`ns1:Factor` as COLLECTIVE_AGREEMENT_FACTOR",
         "`ns:Employees`.`ns1:Position`.`ns1:Organization` as CORP_SEGM_EFFDT",
