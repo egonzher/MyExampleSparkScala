@@ -56,9 +56,10 @@ object etl_datos_cvdatalake_worker {
 
     val df_CvDatalakeWorkerFinal = df_CvDatalakeWorker
       .withColumn("CertAchievement", explode(col("`ns:Employees`.`ns1:Qualifications`.`ns1:Certification_Achievement`")))
+      .withColumn("IDCast",col("`ns:Employees`.`ns1:Summary`.`ns1:Employee_ID`").cast("String"))
       .selectExpr(
         //ID para los join
-        "`ns:Employees`.`ns1:Summary`.`ns1:Employee_ID` as Employee_ID",
+        "IDCast as Employee_ID",
         //Campos identificados
         "`CertAchievement`.`ns1:Certification_Country` as Pais_Certificacion",
         "`CertAchievement`.`ns1:Certification` as Certificacion_Tabulada",

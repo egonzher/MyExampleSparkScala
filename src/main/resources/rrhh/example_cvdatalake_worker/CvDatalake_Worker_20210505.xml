@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+    <ns:Employees>
+        <ns1:Summary>
+            <ns1:Employee_ID>100102964</ns1:Employee_ID>
+        </ns1:Summary>
+        <ns1:Qualifications>
+            <ns1:Certification_Achievement>
+                <ns1:Certification>Certificación LCCI - UNIVERSIDAD DE CANTABRIA</ns1:Certification>
+                <ns1:Certification_Name>Certificación LCCI</ns1:Certification_Name>
+                <ns1:Certification_Issuer>UNIVERSIDAD DE CANTABRIA</ns1:Certification_Issuer>
+            </ns1:Certification_Achievement>
+            <ns1:External_Job>
+                <ns1:Job_Title>Responsable de Contencioso</ns1:Job_Title>
+                <ns1:Company>Banco Santander, S.A.</ns1:Company>
+                <ns1:Start_Date>2018-10-01</ns1:Start_Date>
+                <ns1:Location>GRAN VIA DE LAS CORTS CATALANE</ns1:Location>
+                <ns1:Job_Reference>100038014</ns1:Job_Reference>
+            </ns1:External_Job>
+        </ns1:Qualifications>
+        <ns1:Additional_Information>
+            <ns1:Company>SANES_8014 RECUPERACIONES CATALUÑA</ns1:Company>
+        </ns1:Additional_Information>
+    </ns:Employees>
+</ns1:EMPLOYEE_DELTA_INTEGRATION>

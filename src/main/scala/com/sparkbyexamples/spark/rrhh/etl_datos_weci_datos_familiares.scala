@@ -27,13 +27,14 @@ object etl_datos_weci_datos_familiares {
 
     val df_FamiliaFinal = df_WeciFamiliaWD
       .withColumn("relatedPerson", explode(col("`ns:Employees`.`ns1:Related_Person`")))
-      .withColumn("relatedNacionalID", explode(col("`ns:Employees`.`ns1:Related_Person_Identification`"))).
+      .withColumn("relatedNacionalID", explode(col("`ns:Employees`.`ns1:Related_Person_Identification`")))
+      .withColumn("BenefiCast",col("`relatedPerson`.`ns1:Beneficiary`").cast("String")).
 
       selectExpr(
         "`ns:Employees`.`ns1:Position`.`ns1:Organization` as COMPANY",
         "`relatedPerson`.`ns1:Related_Person_ID` as EMPLID",
         "`relatedPerson`.`ns1:Dependent_ID` as EMPL_RCD",
-        "`relatedPerson`.`ns1:Beneficiary` as DEPENDENT_BENEF",
+        "`BenefiCast` as DEPENDENT_BENEF",
         "`relatedPerson`.`ns1:Relationship_Type` as RELATIONSHIP",
         "`ns:Employees`.`ns1:Position`.`ns1:Organization` as COMPANY_DESCR",
         "`relatedPerson`.`ns1:Relationship_Type` as RELATIONSHIP_DESCR",
