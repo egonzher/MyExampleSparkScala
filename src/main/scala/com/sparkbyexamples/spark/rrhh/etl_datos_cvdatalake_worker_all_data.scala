@@ -70,7 +70,7 @@ object etl_datos_cvdatalake_worker_all_data {
         "`ns:Employees`.`ns1:Qualifications`.`ns1:External_Job`.`ns1:Job_Title` as Job_Title",
         "`ns:Employees`.`ns1:Qualifications`.`ns1:External_Job`.`ns1:Start_Date` as Start_Date",
         "`ns:Employees`.`ns1:Qualifications`.`ns1:External_Job`.`ns1:End_Date` as End_Date",
-        "`ns:Employees`.`ns1:Qualifications`.`ns1:External_Job`.`ns1:Location` as Location",
+        "`ns:Employees`.`ns1:Qualifications`.`ns1:External_Job`.`ns1:Location` as External_Job_Location",
         "`ns:Employees`.`ns1:Qualifications`.`ns1:External_Job`.`ns1:Responsibilities_And_Achievements` as Responsibilities_And_Achievements",
         //Campos que no están mapeados
         "`ns:Employees`.`ns1:Qualifications`.`ns1:External_Job`.`ns1:Company` as External_Job_Company",
