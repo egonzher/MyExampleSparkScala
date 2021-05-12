@@ -1,0 +1,1324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+    <ns:Employees>
+        <ns1:Summary>
+            <ns1:Employee_ID>100035873</ns1:Employee_ID>
+        </ns1:Summary>
+        <ns1:Qualifications>
+            <ns1:Certification_Achievement>
+                <ns1:Certification>Certificación LCCI - UNIVERSIDAD DE CANTABRIA</ns1:Certification>
+                <ns1:Certification_Name>Certificación LCCI</ns1:Certification_Name>
+                <ns1:Certification_Issuer>UNIVERSIDAD DE CANTABRIA</ns1:Certification_Issuer>
+            </ns1:Certification_Achievement>
+            <ns1:Certification_Achievement>
+                <ns1:Certification>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification>
+                <ns1:Certification_Country>Spain</ns1:Certification_Country>
+                <ns1:Certification_Name>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification_Name>
+                <ns1:Certification_Issuer>CNMV (list of accepted titles)</ns1:Certification_Issuer>
+            </ns1:Certification_Achievement>
+            <ns1:External_Job>
+                <ns1:Job_Title>Director Oficina</ns1:Job_Title>
+                <ns1:Start_Date>2018-10-01</ns1:Start_Date>
+                <ns1:Location>MEDINA SIDONIA</ns1:Location>
+            </ns1:External_Job>
+        </ns1:Qualifications>
+        <ns1:Additional_Information>
+            <ns1:Company>SANES_7268 MEDINA-SIDONIA, SAN JUAN 18</ns1:Company>
+        </ns1:Additional_Information>
+    </ns:Employees>
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
+    <ns1:Summary>
+        <ns1:Employee_ID>100035873</ns1:Employee_ID>
+    </ns1:Summary>
+    <ns1:Qualifications>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación LCCI - UNIVERSIDAD DE CANTABRIA</ns1:Certification>
+            <ns1:Certification_Name>Certificación LCCI</ns1:Certification_Name>
+            <ns1:Certification_Issuer>UNIVERSIDAD DE CANTABRIA</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification>
+            <ns1:Certification_Country>Spain</ns1:Certification_Country>
+            <ns1:Certification_Name>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification_Name>
+            <ns1:Certification_Issuer>CNMV (list of accepted titles)</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:External_Job>
+            <ns1:Job_Title>Director Oficina</ns1:Job_Title>
+            <ns1:Start_Date>2018-10-01</ns1:Start_Date>
+            <ns1:Location>MEDINA SIDONIA</ns1:Location>
+        </ns1:External_Job>
+    </ns1:Qualifications>
+    <ns1:Additional_Information>
+        <ns1:Company>SANES_7268 MEDINA-SIDONIA, SAN JUAN 18</ns1:Company>
+    </ns1:Additional_Information>
+</ns:Employees>
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
+    <ns1:Summary>
+        <ns1:Employee_ID>100035875</ns1:Employee_ID>
+    </ns1:Summary>
+    <ns1:Qualifications>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación LCCI - UNIVERSIDAD DE CANTABRIA</ns1:Certification>
+            <ns1:Certification_Name>Certificación LCCI</ns1:Certification_Name>
+            <ns1:Certification_Issuer>UNIVERSIDAD DE CANTABRIA</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification>
+            <ns1:Certification_Country>Spain</ns1:Certification_Country>
+            <ns1:Certification_Name>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification_Name>
+            <ns1:Certification_Issuer>CNMV (list of accepted titles)</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:External_Job>
+            <ns1:Job_Title>Director Adjunto Oficina</ns1:Job_Title>
+            <ns1:Start_Date>2018-10-01</ns1:Start_Date>
+            <ns1:Location>Juan Carlos I</ns1:Location>
+        </ns1:External_Job>
+    </ns1:Qualifications>
+    <ns1:Additional_Information>
+        <ns1:Company>SANES_3975 PTO. DEL CARMEN-TIAS-, JUAN CA</ns1:Company>
+    </ns1:Additional_Information>
+</ns:Employees>
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
+    <ns1:Summary>
+        <ns1:Employee_ID>100035875</ns1:Employee_ID>
+    </ns1:Summary>
+    <ns1:Qualifications>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación LCCI - UNIVERSIDAD DE CANTABRIA</ns1:Certification>
+            <ns1:Certification_Name>Certificación LCCI</ns1:Certification_Name>
+            <ns1:Certification_Issuer>UNIVERSIDAD DE CANTABRIA</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification>
+            <ns1:Certification_Country>Spain</ns1:Certification_Country>
+            <ns1:Certification_Name>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification_Name>
+            <ns1:Certification_Issuer>CNMV (list of accepted titles)</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:External_Job>
+            <ns1:Job_Title>Director Adjunto Oficina</ns1:Job_Title>
+            <ns1:Start_Date>2018-10-01</ns1:Start_Date>
+            <ns1:Location>Juan Carlos I</ns1:Location>
+        </ns1:External_Job>
+    </ns1:Qualifications>
+    <ns1:Additional_Information>
+        <ns1:Company>SANES_3975 PTO. DEL CARMEN-TIAS-, JUAN CA</ns1:Company>
+    </ns1:Additional_Information>
+</ns:Employees>
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
+    <ns1:Summary>
+        <ns1:Employee_ID>100037610</ns1:Employee_ID>
+    </ns1:Summary>
+    <ns1:Qualifications>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification>
+            <ns1:Certification_Country>Spain</ns1:Certification_Country>
+            <ns1:Certification_Name>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification_Name>
+            <ns1:Certification_Issuer>CNMV (list of accepted titles)</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:External_Job>
+            <ns1:Job_Title>Sales Manager I</ns1:Job_Title>
+            <ns1:Start_Date>1992-12-15</ns1:Start_Date>
+            <ns1:Responsibilities_And_Achievements>I was in charge of managing Santander warrants risk in the Equity desk. I was working as a market maker and prop trader in the FX option Desk at Banco Central Hispano before the merge with Banco Santander I managed swaps and forwards as a market maker and prop trader at Central Hipano bank before the merge with Banco Santander I was working in a branch. I had commercial responsabilities in a branch at Central Hispano Bank. I´m responsible for the Link Desk fx. We are in charge of managing fx risks from Commercial Banking Spain and Portugal, hedging fx spots and derivatives.  Link desk has to control every flow from International Transfers and Experto en Cambios, banknotes, autoconversion and credit cards flow.</ns1:Responsibilities_And_Achievements>
+            <ns1:Location>Encinar PG1</ns1:Location>
+        </ns1:External_Job>
+    </ns1:Qualifications>
+    <ns1:Additional_Information>
+        <ns1:Company>SANES_99079 FX SALES</ns1:Company>
+    </ns1:Additional_Information>
+</ns:Employees>
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
+    <ns1:Summary>
+        <ns1:Employee_ID>100037610</ns1:Employee_ID>
+    </ns1:Summary>
+    <ns1:Qualifications>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification>
+            <ns1:Certification_Country>Spain</ns1:Certification_Country>
+            <ns1:Certification_Name>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification_Name>
+            <ns1:Certification_Issuer>CNMV (list of accepted titles)</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:External_Job>
+            <ns1:Job_Title>Sales Manager I</ns1:Job_Title>
+            <ns1:Start_Date>1992-12-15</ns1:Start_Date>
+            <ns1:Responsibilities_And_Achievements>I was in charge of managing Santander warrants risk in the Equity desk. I was working as a market maker and prop trader in the FX option Desk at Banco Central Hispano before the merge with Banco Santander I managed swaps and forwards as a market maker and prop trader at Central Hipano bank before the merge with Banco Santander I was working in a branch. I had commercial responsabilities in a branch at Central Hispano Bank. I´m responsible for the Link Desk fx. We are in charge of managing fx risks from Commercial Banking Spain and Portugal, hedging fx spots and derivatives.  Link desk has to control every flow from International Transfers and Experto en Cambios, banknotes, autoconversion and credit cards flow.</ns1:Responsibilities_And_Achievements>
+            <ns1:Location>Encinar PG1</ns1:Location>
+        </ns1:External_Job>
+    </ns1:Qualifications>
+    <ns1:Additional_Information>
+        <ns1:Company>SANES_99079 FX SALES</ns1:Company>
+    </ns1:Additional_Information>
+</ns:Employees>
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
+    <ns1:Summary>
+        <ns1:Employee_ID>100037728</ns1:Employee_ID>
+    </ns1:Summary>
+    <ns1:Qualifications>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación LCCI - UNIVERSIDAD DE CANTABRIA</ns1:Certification>
+            <ns1:Certification_Name>Certificación LCCI</ns1:Certification_Name>
+            <ns1:Certification_Issuer>UNIVERSIDAD DE CANTABRIA</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification>
+            <ns1:Certification_Country>Spain</ns1:Certification_Country>
+            <ns1:Certification_Name>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification_Name>
+            <ns1:Certification_Issuer>CNMV (list of accepted titles)</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:External_Job>
+            <ns1:Job_Title>RESP NEGOCIOS Y EMPRESAS</ns1:Job_Title>
+            <ns1:Start_Date>1994-03-15</ns1:Start_Date>
+            <ns1:Responsibilities_And_Achievements>DIRECTOR DE ZONA</ns1:Responsibilities_And_Achievements>
+            <ns1:Location>Plaza Puerta De Jerez, 1</ns1:Location>
+        </ns1:External_Job>
+    </ns1:Qualifications>
+    <ns1:Additional_Information>
+        <ns1:Company>SANES_95781 Negocios y Empresas ZONA 04 SE</ns1:Company>
+    </ns1:Additional_Information>
+</ns:Employees>
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
+    <ns1:Summary>
+        <ns1:Employee_ID>100037728</ns1:Employee_ID>
+    </ns1:Summary>
+    <ns1:Qualifications>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación LCCI - UNIVERSIDAD DE CANTABRIA</ns1:Certification>
+            <ns1:Certification_Name>Certificación LCCI</ns1:Certification_Name>
+            <ns1:Certification_Issuer>UNIVERSIDAD DE CANTABRIA</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification>
+            <ns1:Certification_Country>Spain</ns1:Certification_Country>
+            <ns1:Certification_Name>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification_Name>
+            <ns1:Certification_Issuer>CNMV (list of accepted titles)</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:External_Job>
+            <ns1:Job_Title>RESP NEGOCIOS Y EMPRESAS</ns1:Job_Title>
+            <ns1:Start_Date>1994-03-15</ns1:Start_Date>
+            <ns1:Responsibilities_And_Achievements>DIRECTOR DE ZONA</ns1:Responsibilities_And_Achievements>
+            <ns1:Location>Plaza Puerta De Jerez, 1</ns1:Location>
+        </ns1:External_Job>
+    </ns1:Qualifications>
+    <ns1:Additional_Information>
+        <ns1:Company>SANES_95781 Negocios y Empresas ZONA 04 SE</ns1:Company>
+    </ns1:Additional_Information>
+</ns:Employees>
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
+    <ns1:Summary>
+        <ns1:Employee_ID>100037728</ns1:Employee_ID>
+    </ns1:Summary>
+    <ns1:Qualifications>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación LCCI - UNIVERSIDAD DE CANTABRIA</ns1:Certification>
+            <ns1:Certification_Name>Certificación LCCI</ns1:Certification_Name>
+            <ns1:Certification_Issuer>UNIVERSIDAD DE CANTABRIA</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification>
+            <ns1:Certification_Country>Spain</ns1:Certification_Country>
+            <ns1:Certification_Name>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification_Name>
+            <ns1:Certification_Issuer>CNMV (list of accepted titles)</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:External_Job>
+            <ns1:Job_Title>RESP NEGOCIOS Y EMPRESAS</ns1:Job_Title>
+            <ns1:Start_Date>1994-03-15</ns1:Start_Date>
+            <ns1:Responsibilities_And_Achievements>DIRECTOR DE ZONA</ns1:Responsibilities_And_Achievements>
+            <ns1:Location>Plaza Puerta De Jerez, 1</ns1:Location>
+        </ns1:External_Job>
+    </ns1:Qualifications>
+    <ns1:Additional_Information>
+        <ns1:Company>SANES_95781 Negocios y Empresas ZONA 04 SE</ns1:Company>
+    </ns1:Additional_Information>
+</ns:Employees>
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
+    <ns1:Summary>
+        <ns1:Employee_ID>100039063</ns1:Employee_ID>
+    </ns1:Summary>
+    <ns1:Qualifications>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación LCCI - UNIVERSIDAD DE CANTABRIA</ns1:Certification>
+            <ns1:Certification_Name>Certificación LCCI</ns1:Certification_Name>
+            <ns1:Certification_Issuer>UNIVERSIDAD DE CANTABRIA</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification>
+            <ns1:Certification_Country>Spain</ns1:Certification_Country>
+            <ns1:Certification_Name>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification_Name>
+            <ns1:Certification_Issuer>CNMV (list of accepted titles)</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:External_Job>
+            <ns1:Job_Title>Dtor Comercial Adjunto</ns1:Job_Title>
+            <ns1:Start_Date>2013-04-30</ns1:Start_Date>
+            <ns1:Responsibilities_And_Achievements>GESTION PUESTO CAJA RESPONSABLE DEL SEGMENTO EMPRESAS DT, EN DEPENDENCIA DEL DC EMPRESAS, EJECUCION DE LA ESTRATEGIA DEL SEGMENTO EN EL TERRITORIO, SOBRE TODO, RED EMPRESAS. RESPONSABLE TAMBIEN DE LOS ESPECIALISTAS DE PRODUCTO QUE DAN COBERTURA A TODAS LAS REDES Y SEGMENTOS: NEG. INTERNACIONAL, TRANSACCIONALIDAD, MERCADOS, CREDITO, LEASING Y RENTING, MEDIACION. TAREAS ADMINISTRATIVAS EN RELACION A LA GESTION DE EMPRESAS DIRECCION DE LA DIRECCION COMERCIAL QUE INCLUYE SUCURSALES AGRO DE LA DT Y AGENTES, MAS EL NEGOCIO AGROALIMENTARIO DE LA DT. HASTA LA DESAPARICION DEL PUESTO DIRECCION DE LA RED BANESTO ANDALUCIA, INTEGRADA EN UNA SOLA DC, EN NEGOCIO Y MARGEN HASTA LA CULMINACION DE LA INTEGRACION EN B.SANTANDER ESPAÑA CRECIMIENTO NEGOCIO Y MARGEN DE LA PARTE ORIENTAL DE ANDALUCIA. DIRECCION EQUIPOS, ORGANIZACION, RIESGOS, RECUPERACIONES, AREAS NEGOCIO... CRECIMIENTO NEGOCIO Y MARGEN DE LAS DOS COMUNIDADES AUTONOMAS. DIRECCION EQUIPOS, ORGANIZACION, RIESGOS, RECUPERACIONES, AREAS NEGOCIO... CRECIMIENTO NEGOCIO Y MARGEN DE LAS DOS COMUNIDADES AUTONOMAS. DIRECCION EQUIPOS, ORGANIZACION, RIESGOS, RECUPERACIONES, AREAS NEGOCIO... CRECIMIENTO NEGOCIO Y MARGEN DE LA ZONA, A LA PAR QUE MOTIVACION/DIRECCION  DE EQUIPOS. DIRECCION SUCURSAL 8 PERSONAS EN PLAZA 66.000 HABITANTES. OFICINA UNIVERSAL, CON G.EMPRESAS Y ALTA CONCENTRACION RIESGOS DUDOSOS. GESTIONAR EL EQUIPO Y EL NEGOCIO, CONSIGUIENDO RESULTADOS EN MARGEN, ACTIVIDAD, PRODUCTIVIDAD Y TASA MORA. CAPTAR NUEVOS CLIENTES EMPRESAS Y HACER CRECER LA CARTERA DE CLIENTES ACTUALES DE LA SUCURSAL, EN MARGEN Y NEGOCIO</ns1:Responsibilities_And_Achievements>
+            <ns1:Location>Plaza Puerta De Jerez, 1</ns1:Location>
+        </ns1:External_Job>
+    </ns1:Qualifications>
+    <ns1:Additional_Information>
+        <ns1:Company>SANES_8209 D.C. UNIVERSAL ANDALUCIA</ns1:Company>
+    </ns1:Additional_Information>
+</ns:Employees>
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
+    <ns1:Summary>
+        <ns1:Employee_ID>100039063</ns1:Employee_ID>
+    </ns1:Summary>
+    <ns1:Qualifications>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación LCCI - UNIVERSIDAD DE CANTABRIA</ns1:Certification>
+            <ns1:Certification_Name>Certificación LCCI</ns1:Certification_Name>
+            <ns1:Certification_Issuer>UNIVERSIDAD DE CANTABRIA</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification>
+            <ns1:Certification_Country>Spain</ns1:Certification_Country>
+            <ns1:Certification_Name>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification_Name>
+            <ns1:Certification_Issuer>CNMV (list of accepted titles)</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:External_Job>
+            <ns1:Job_Title>Dtor Comercial Adjunto</ns1:Job_Title>
+            <ns1:Start_Date>2013-04-30</ns1:Start_Date>
+            <ns1:Responsibilities_And_Achievements>GESTION PUESTO CAJA RESPONSABLE DEL SEGMENTO EMPRESAS DT, EN DEPENDENCIA DEL DC EMPRESAS, EJECUCION DE LA ESTRATEGIA DEL SEGMENTO EN EL TERRITORIO, SOBRE TODO, RED EMPRESAS. RESPONSABLE TAMBIEN DE LOS ESPECIALISTAS DE PRODUCTO QUE DAN COBERTURA A TODAS LAS REDES Y SEGMENTOS: NEG. INTERNACIONAL, TRANSACCIONALIDAD, MERCADOS, CREDITO, LEASING Y RENTING, MEDIACION. TAREAS ADMINISTRATIVAS EN RELACION A LA GESTION DE EMPRESAS DIRECCION DE LA DIRECCION COMERCIAL QUE INCLUYE SUCURSALES AGRO DE LA DT Y AGENTES, MAS EL NEGOCIO AGROALIMENTARIO DE LA DT. HASTA LA DESAPARICION DEL PUESTO DIRECCION DE LA RED BANESTO ANDALUCIA, INTEGRADA EN UNA SOLA DC, EN NEGOCIO Y MARGEN HASTA LA CULMINACION DE LA INTEGRACION EN B.SANTANDER ESPAÑA CRECIMIENTO NEGOCIO Y MARGEN DE LA PARTE ORIENTAL DE ANDALUCIA. DIRECCION EQUIPOS, ORGANIZACION, RIESGOS, RECUPERACIONES, AREAS NEGOCIO... CRECIMIENTO NEGOCIO Y MARGEN DE LAS DOS COMUNIDADES AUTONOMAS. DIRECCION EQUIPOS, ORGANIZACION, RIESGOS, RECUPERACIONES, AREAS NEGOCIO... CRECIMIENTO NEGOCIO Y MARGEN DE LAS DOS COMUNIDADES AUTONOMAS. DIRECCION EQUIPOS, ORGANIZACION, RIESGOS, RECUPERACIONES, AREAS NEGOCIO... CRECIMIENTO NEGOCIO Y MARGEN DE LA ZONA, A LA PAR QUE MOTIVACION/DIRECCION  DE EQUIPOS. DIRECCION SUCURSAL 8 PERSONAS EN PLAZA 66.000 HABITANTES. OFICINA UNIVERSAL, CON G.EMPRESAS Y ALTA CONCENTRACION RIESGOS DUDOSOS. GESTIONAR EL EQUIPO Y EL NEGOCIO, CONSIGUIENDO RESULTADOS EN MARGEN, ACTIVIDAD, PRODUCTIVIDAD Y TASA MORA. CAPTAR NUEVOS CLIENTES EMPRESAS Y HACER CRECER LA CARTERA DE CLIENTES ACTUALES DE LA SUCURSAL, EN MARGEN Y NEGOCIO</ns1:Responsibilities_And_Achievements>
+            <ns1:Location>Plaza Puerta De Jerez, 1</ns1:Location>
+        </ns1:External_Job>
+    </ns1:Qualifications>
+    <ns1:Additional_Information>
+        <ns1:Company>SANES_8209 D.C. UNIVERSAL ANDALUCIA</ns1:Company>
+    </ns1:Additional_Information>
+</ns:Employees>
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
+    <ns1:Summary>
+        <ns1:Employee_ID>100039063</ns1:Employee_ID>
+    </ns1:Summary>
+    <ns1:Qualifications>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación LCCI - UNIVERSIDAD DE CANTABRIA</ns1:Certification>
+            <ns1:Certification_Name>Certificación LCCI</ns1:Certification_Name>
+            <ns1:Certification_Issuer>UNIVERSIDAD DE CANTABRIA</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification>
+            <ns1:Certification_Country>Spain</ns1:Certification_Country>
+            <ns1:Certification_Name>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification_Name>
+            <ns1:Certification_Issuer>CNMV (list of accepted titles)</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:External_Job>
+            <ns1:Job_Title>Dtor Comercial Adjunto</ns1:Job_Title>
+            <ns1:Start_Date>2013-04-30</ns1:Start_Date>
+            <ns1:Responsibilities_And_Achievements>GESTION PUESTO CAJA RESPONSABLE DEL SEGMENTO EMPRESAS DT, EN DEPENDENCIA DEL DC EMPRESAS, EJECUCION DE LA ESTRATEGIA DEL SEGMENTO EN EL TERRITORIO, SOBRE TODO, RED EMPRESAS. RESPONSABLE TAMBIEN DE LOS ESPECIALISTAS DE PRODUCTO QUE DAN COBERTURA A TODAS LAS REDES Y SEGMENTOS: NEG. INTERNACIONAL, TRANSACCIONALIDAD, MERCADOS, CREDITO, LEASING Y RENTING, MEDIACION. TAREAS ADMINISTRATIVAS EN RELACION A LA GESTION DE EMPRESAS DIRECCION DE LA DIRECCION COMERCIAL QUE INCLUYE SUCURSALES AGRO DE LA DT Y AGENTES, MAS EL NEGOCIO AGROALIMENTARIO DE LA DT. HASTA LA DESAPARICION DEL PUESTO DIRECCION DE LA RED BANESTO ANDALUCIA, INTEGRADA EN UNA SOLA DC, EN NEGOCIO Y MARGEN HASTA LA CULMINACION DE LA INTEGRACION EN B.SANTANDER ESPAÑA CRECIMIENTO NEGOCIO Y MARGEN DE LA PARTE ORIENTAL DE ANDALUCIA. DIRECCION EQUIPOS, ORGANIZACION, RIESGOS, RECUPERACIONES, AREAS NEGOCIO... CRECIMIENTO NEGOCIO Y MARGEN DE LAS DOS COMUNIDADES AUTONOMAS. DIRECCION EQUIPOS, ORGANIZACION, RIESGOS, RECUPERACIONES, AREAS NEGOCIO... CRECIMIENTO NEGOCIO Y MARGEN DE LAS DOS COMUNIDADES AUTONOMAS. DIRECCION EQUIPOS, ORGANIZACION, RIESGOS, RECUPERACIONES, AREAS NEGOCIO... CRECIMIENTO NEGOCIO Y MARGEN DE LA ZONA, A LA PAR QUE MOTIVACION/DIRECCION  DE EQUIPOS. DIRECCION SUCURSAL 8 PERSONAS EN PLAZA 66.000 HABITANTES. OFICINA UNIVERSAL, CON G.EMPRESAS Y ALTA CONCENTRACION RIESGOS DUDOSOS. GESTIONAR EL EQUIPO Y EL NEGOCIO, CONSIGUIENDO RESULTADOS EN MARGEN, ACTIVIDAD, PRODUCTIVIDAD Y TASA MORA. CAPTAR NUEVOS CLIENTES EMPRESAS Y HACER CRECER LA CARTERA DE CLIENTES ACTUALES DE LA SUCURSAL, EN MARGEN Y NEGOCIO</ns1:Responsibilities_And_Achievements>
+            <ns1:Location>Plaza Puerta De Jerez, 1</ns1:Location>
+        </ns1:External_Job>
+    </ns1:Qualifications>
+    <ns1:Additional_Information>
+        <ns1:Company>SANES_8209 D.C. UNIVERSAL ANDALUCIA</ns1:Company>
+    </ns1:Additional_Information>
+</ns:Employees>
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
+    <ns1:Summary>
+        <ns1:Employee_ID>100039363</ns1:Employee_ID>
+    </ns1:Summary>
+    <ns1:Qualifications>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación LCCI - UNIVERSIDAD DE CANTABRIA</ns1:Certification>
+            <ns1:Certification_Name>Certificación LCCI</ns1:Certification_Name>
+            <ns1:Certification_Issuer>UNIVERSIDAD DE CANTABRIA</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification>
+            <ns1:Certification_Country>Spain</ns1:Certification_Country>
+            <ns1:Certification_Name>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification_Name>
+            <ns1:Certification_Issuer>CNMV (list of accepted titles)</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:External_Job>
+            <ns1:Job_Title>Dtor Zona</ns1:Job_Title>
+            <ns1:Start_Date>2013-04-30</ns1:Start_Date>
+            <ns1:Responsibilities_And_Achievements>gestion equipos ( 110 empleados) , y unidad de negocio con unos 1800 mm eur entre activo y pasivo gestion equipo ( 138 empleados) y unos 2.000 mm eur de balance entre activo y pasivo direccion de oficina, gestionando equipo ( 10 empleados), y unidad de negocio de unos 280 mm eur entre activo y pasivo direccion oficina, gestion equipo de 5 empleados y unidad de negocio de unos 100 mm eur entre activo y pasivo gestion cartera de empresas de unos 150 clientes direccion oficina de 5 empleados y volumen de negocio aproximado 60 mm eur entre activo y pasivo</ns1:Responsibilities_And_Achievements>
+            <ns1:Location>Columela</ns1:Location>
+        </ns1:External_Job>
+    </ns1:Qualifications>
+    <ns1:Additional_Information>
+        <ns1:Company>SANES_8183 ZONA 04 CADIZ</ns1:Company>
+    </ns1:Additional_Information>
+</ns:Employees>
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
+    <ns1:Summary>
+        <ns1:Employee_ID>100039363</ns1:Employee_ID>
+    </ns1:Summary>
+    <ns1:Qualifications>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación LCCI - UNIVERSIDAD DE CANTABRIA</ns1:Certification>
+            <ns1:Certification_Name>Certificación LCCI</ns1:Certification_Name>
+            <ns1:Certification_Issuer>UNIVERSIDAD DE CANTABRIA</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification>
+            <ns1:Certification_Country>Spain</ns1:Certification_Country>
+            <ns1:Certification_Name>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification_Name>
+            <ns1:Certification_Issuer>CNMV (list of accepted titles)</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:External_Job>
+            <ns1:Job_Title>Dtor Zona</ns1:Job_Title>
+            <ns1:Start_Date>2013-04-30</ns1:Start_Date>
+            <ns1:Responsibilities_And_Achievements>gestion equipos ( 110 empleados) , y unidad de negocio con unos 1800 mm eur entre activo y pasivo gestion equipo ( 138 empleados) y unos 2.000 mm eur de balance entre activo y pasivo direccion de oficina, gestionando equipo ( 10 empleados), y unidad de negocio de unos 280 mm eur entre activo y pasivo direccion oficina, gestion equipo de 5 empleados y unidad de negocio de unos 100 mm eur entre activo y pasivo gestion cartera de empresas de unos 150 clientes direccion oficina de 5 empleados y volumen de negocio aproximado 60 mm eur entre activo y pasivo</ns1:Responsibilities_And_Achievements>
+            <ns1:Location>Columela</ns1:Location>
+        </ns1:External_Job>
+    </ns1:Qualifications>
+    <ns1:Additional_Information>
+        <ns1:Company>SANES_8183 ZONA 04 CADIZ</ns1:Company>
+    </ns1:Additional_Information>
+</ns:Employees>
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
+    <ns1:Summary>
+        <ns1:Employee_ID>100039363</ns1:Employee_ID>
+    </ns1:Summary>
+    <ns1:Qualifications>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación LCCI - UNIVERSIDAD DE CANTABRIA</ns1:Certification>
+            <ns1:Certification_Name>Certificación LCCI</ns1:Certification_Name>
+            <ns1:Certification_Issuer>UNIVERSIDAD DE CANTABRIA</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification>
+            <ns1:Certification_Country>Spain</ns1:Certification_Country>
+            <ns1:Certification_Name>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification_Name>
+            <ns1:Certification_Issuer>CNMV (list of accepted titles)</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:External_Job>
+            <ns1:Job_Title>Dtor Zona</ns1:Job_Title>
+            <ns1:Start_Date>2013-04-30</ns1:Start_Date>
+            <ns1:Responsibilities_And_Achievements>gestion equipos ( 110 empleados) , y unidad de negocio con unos 1800 mm eur entre activo y pasivo gestion equipo ( 138 empleados) y unos 2.000 mm eur de balance entre activo y pasivo direccion de oficina, gestionando equipo ( 10 empleados), y unidad de negocio de unos 280 mm eur entre activo y pasivo direccion oficina, gestion equipo de 5 empleados y unidad de negocio de unos 100 mm eur entre activo y pasivo gestion cartera de empresas de unos 150 clientes direccion oficina de 5 empleados y volumen de negocio aproximado 60 mm eur entre activo y pasivo</ns1:Responsibilities_And_Achievements>
+            <ns1:Location>Columela</ns1:Location>
+        </ns1:External_Job>
+    </ns1:Qualifications>
+    <ns1:Additional_Information>
+        <ns1:Company>SANES_8183 ZONA 04 CADIZ</ns1:Company>
+    </ns1:Additional_Information>
+</ns:Employees>
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
+    <ns1:Summary>
+        <ns1:Employee_ID>100039443</ns1:Employee_ID>
+    </ns1:Summary>
+    <ns1:Qualifications>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación LCCI - UNIVERSIDAD DE CANTABRIA</ns1:Certification>
+            <ns1:Certification_Name>Certificación LCCI</ns1:Certification_Name>
+            <ns1:Certification_Issuer>UNIVERSIDAD DE CANTABRIA</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification>
+            <ns1:Certification_Country>Spain</ns1:Certification_Country>
+            <ns1:Certification_Name>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification_Name>
+            <ns1:Certification_Issuer>CNMV (list of accepted titles)</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:External_Job>
+            <ns1:Job_Title>Director Oficina</ns1:Job_Title>
+            <ns1:Start_Date>2013-04-30</ns1:Start_Date>
+            <ns1:Location>Avda. Reina Mercedes, 25</ns1:Location>
+        </ns1:External_Job>
+    </ns1:Qualifications>
+    <ns1:Additional_Information>
+        <ns1:Company>SANES_0919 SEVILLA, AV. REINA MERCEDES, 1</ns1:Company>
+    </ns1:Additional_Information>
+</ns:Employees>
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
+    <ns1:Summary>
+        <ns1:Employee_ID>100039443</ns1:Employee_ID>
+    </ns1:Summary>
+    <ns1:Qualifications>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación LCCI - UNIVERSIDAD DE CANTABRIA</ns1:Certification>
+            <ns1:Certification_Name>Certificación LCCI</ns1:Certification_Name>
+            <ns1:Certification_Issuer>UNIVERSIDAD DE CANTABRIA</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification>
+            <ns1:Certification_Country>Spain</ns1:Certification_Country>
+            <ns1:Certification_Name>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification_Name>
+            <ns1:Certification_Issuer>CNMV (list of accepted titles)</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:External_Job>
+            <ns1:Job_Title>Director Oficina</ns1:Job_Title>
+            <ns1:Start_Date>2013-04-30</ns1:Start_Date>
+            <ns1:Location>Avda. Reina Mercedes, 25</ns1:Location>
+        </ns1:External_Job>
+    </ns1:Qualifications>
+    <ns1:Additional_Information>
+        <ns1:Company>SANES_0919 SEVILLA, AV. REINA MERCEDES, 1</ns1:Company>
+    </ns1:Additional_Information>
+</ns:Employees>
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
+    <ns1:Summary>
+        <ns1:Employee_ID>100039454</ns1:Employee_ID>
+    </ns1:Summary>
+    <ns1:Qualifications>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación LCCI - UNIVERSIDAD DE CANTABRIA</ns1:Certification>
+            <ns1:Certification_Name>Certificación LCCI</ns1:Certification_Name>
+            <ns1:Certification_Issuer>UNIVERSIDAD DE CANTABRIA</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification>
+            <ns1:Certification_Country>Spain</ns1:Certification_Country>
+            <ns1:Certification_Name>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification_Name>
+            <ns1:Certification_Issuer>CNMV (list of accepted titles)</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:External_Job>
+            <ns1:Job_Title>Director Comercial Universal</ns1:Job_Title>
+            <ns1:Start_Date>2013-04-30</ns1:Start_Date>
+            <ns1:Responsibilities_And_Achievements>DIRECTOR ZONA TENERIFE DIRECTOR ZONA POZUELO DIRECTOR OFICINA PLAZA DE ESPAÑA DIRECTOR OFICINA DIRECTOR OFICINA SUPERVISOR IBERIA DIRECTOR COMERCIAL UNIVERSAL DIRECTOR ZONA TENERIFE</ns1:Responsibilities_And_Achievements>
+            <ns1:Location>Jose Franchy y Roca, 4</ns1:Location>
+        </ns1:External_Job>
+    </ns1:Qualifications>
+    <ns1:Additional_Information>
+        <ns1:Company>SANES_8353 D.C. UNIVERSAL CANARIAS</ns1:Company>
+    </ns1:Additional_Information>
+</ns:Employees>
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
+    <ns1:Summary>
+        <ns1:Employee_ID>100039454</ns1:Employee_ID>
+    </ns1:Summary>
+    <ns1:Qualifications>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación LCCI - UNIVERSIDAD DE CANTABRIA</ns1:Certification>
+            <ns1:Certification_Name>Certificación LCCI</ns1:Certification_Name>
+            <ns1:Certification_Issuer>UNIVERSIDAD DE CANTABRIA</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification>
+            <ns1:Certification_Country>Spain</ns1:Certification_Country>
+            <ns1:Certification_Name>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification_Name>
+            <ns1:Certification_Issuer>CNMV (list of accepted titles)</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:External_Job>
+            <ns1:Job_Title>Director Comercial Universal</ns1:Job_Title>
+            <ns1:Start_Date>2013-04-30</ns1:Start_Date>
+            <ns1:Responsibilities_And_Achievements>DIRECTOR ZONA TENERIFE DIRECTOR ZONA POZUELO DIRECTOR OFICINA PLAZA DE ESPAÑA DIRECTOR OFICINA DIRECTOR OFICINA SUPERVISOR IBERIA DIRECTOR COMERCIAL UNIVERSAL DIRECTOR ZONA TENERIFE</ns1:Responsibilities_And_Achievements>
+            <ns1:Location>Jose Franchy y Roca, 4</ns1:Location>
+        </ns1:External_Job>
+    </ns1:Qualifications>
+    <ns1:Additional_Information>
+        <ns1:Company>SANES_8353 D.C. UNIVERSAL CANARIAS</ns1:Company>
+    </ns1:Additional_Information>
+</ns:Employees>
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
+    <ns1:Summary>
+        <ns1:Employee_ID>100039454</ns1:Employee_ID>
+    </ns1:Summary>
+    <ns1:Qualifications>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación LCCI - UNIVERSIDAD DE CANTABRIA</ns1:Certification>
+            <ns1:Certification_Name>Certificación LCCI</ns1:Certification_Name>
+            <ns1:Certification_Issuer>UNIVERSIDAD DE CANTABRIA</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification>
+            <ns1:Certification_Country>Spain</ns1:Certification_Country>
+            <ns1:Certification_Name>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification_Name>
+            <ns1:Certification_Issuer>CNMV (list of accepted titles)</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:External_Job>
+            <ns1:Job_Title>Director Comercial Universal</ns1:Job_Title>
+            <ns1:Start_Date>2013-04-30</ns1:Start_Date>
+            <ns1:Responsibilities_And_Achievements>DIRECTOR ZONA TENERIFE DIRECTOR ZONA POZUELO DIRECTOR OFICINA PLAZA DE ESPAÑA DIRECTOR OFICINA DIRECTOR OFICINA SUPERVISOR IBERIA DIRECTOR COMERCIAL UNIVERSAL DIRECTOR ZONA TENERIFE</ns1:Responsibilities_And_Achievements>
+            <ns1:Location>Jose Franchy y Roca, 4</ns1:Location>
+        </ns1:External_Job>
+    </ns1:Qualifications>
+    <ns1:Additional_Information>
+        <ns1:Company>SANES_8353 D.C. UNIVERSAL CANARIAS</ns1:Company>
+    </ns1:Additional_Information>
+</ns:Employees>
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
+    <ns1:Summary>
+        <ns1:Employee_ID>100039481</ns1:Employee_ID>
+    </ns1:Summary>
+    <ns1:Qualifications>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification>
+            <ns1:Certification_Country>Spain</ns1:Certification_Country>
+            <ns1:Certification_Name>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification_Name>
+            <ns1:Certification_Issuer>CNMV (list of accepted titles)</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:External_Job>
+            <ns1:Job_Title>Dtor Unidad Operaciones</ns1:Job_Title>
+            <ns1:Start_Date>2019-07-03</ns1:Start_Date>
+            <ns1:Location>Merrimarck III P04</ns1:Location>
+        </ns1:External_Job>
+    </ns1:Qualifications>
+    <ns1:Additional_Information>
+        <ns1:Company>SANES_29653 Hipotecas y Admisión Centralizada</ns1:Company>
+    </ns1:Additional_Information>
+</ns:Employees>
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
+    <ns1:Summary>
+        <ns1:Employee_ID>100039501</ns1:Employee_ID>
+    </ns1:Summary>
+    <ns1:Qualifications>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación LCCI - UNIVERSIDAD DE CANTABRIA</ns1:Certification>
+            <ns1:Certification_Name>Certificación LCCI</ns1:Certification_Name>
+            <ns1:Certification_Issuer>UNIVERSIDAD DE CANTABRIA</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification>
+            <ns1:Certification_Country>Spain</ns1:Certification_Country>
+            <ns1:Certification_Name>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification_Name>
+            <ns1:Certification_Issuer>CNMV (list of accepted titles)</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:External_Job>
+            <ns1:Job_Title>Dtor Comercial Banca Privada</ns1:Job_Title>
+            <ns1:Start_Date>2003-06-23</ns1:Start_Date>
+            <ns1:Responsibilities_And_Achievements>BANQUERO PRIVADO CAPTACION Y GESTION DE PATRIMONIOS DIRECTOR COMERCIAL SANTANDER PRIVATE BANKING DIRECTOR COMERCIAL DEL EQUIPO DE 32 BANQUEROS +11 OPERATIVOS +3 AGENTES  DE LOS TRES CENTROS ESPECIALIZADOS DE BANCA PRIVADA. TUTELA EQUIPO BANCA PRIVADA GUIPUZCOA Y ALAVA RESPONSABLE PATRIMONIOS PAIS VASCO RESPONSABLE EQUIPO BANCA PRIVADA GUIPUZCOA 4 PERSONAS BANQUERO GESTION DE PATRIMONIO Y CAPTACION</ns1:Responsibilities_And_Achievements>
+            <ns1:Location>Plaza Jado, 1</ns1:Location>
+        </ns1:External_Job>
+    </ns1:Qualifications>
+    <ns1:Additional_Information>
+        <ns1:Company>SANES_9232 D.C. BANCA PRIVADA PAIS VASCO</ns1:Company>
+    </ns1:Additional_Information>
+</ns:Employees>
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
+    <ns1:Summary>
+        <ns1:Employee_ID>100039501</ns1:Employee_ID>
+    </ns1:Summary>
+    <ns1:Qualifications>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación LCCI - UNIVERSIDAD DE CANTABRIA</ns1:Certification>
+            <ns1:Certification_Name>Certificación LCCI</ns1:Certification_Name>
+            <ns1:Certification_Issuer>UNIVERSIDAD DE CANTABRIA</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification>
+            <ns1:Certification_Country>Spain</ns1:Certification_Country>
+            <ns1:Certification_Name>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification_Name>
+            <ns1:Certification_Issuer>CNMV (list of accepted titles)</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:External_Job>
+            <ns1:Job_Title>Dtor Comercial Banca Privada</ns1:Job_Title>
+            <ns1:Start_Date>2003-06-23</ns1:Start_Date>
+            <ns1:Responsibilities_And_Achievements>BANQUERO PRIVADO CAPTACION Y GESTION DE PATRIMONIOS DIRECTOR COMERCIAL SANTANDER PRIVATE BANKING DIRECTOR COMERCIAL DEL EQUIPO DE 32 BANQUEROS +11 OPERATIVOS +3 AGENTES  DE LOS TRES CENTROS ESPECIALIZADOS DE BANCA PRIVADA. TUTELA EQUIPO BANCA PRIVADA GUIPUZCOA Y ALAVA RESPONSABLE PATRIMONIOS PAIS VASCO RESPONSABLE EQUIPO BANCA PRIVADA GUIPUZCOA 4 PERSONAS BANQUERO GESTION DE PATRIMONIO Y CAPTACION</ns1:Responsibilities_And_Achievements>
+            <ns1:Location>Plaza Jado, 1</ns1:Location>
+        </ns1:External_Job>
+    </ns1:Qualifications>
+    <ns1:Additional_Information>
+        <ns1:Company>SANES_9232 D.C. BANCA PRIVADA PAIS VASCO</ns1:Company>
+    </ns1:Additional_Information>
+</ns:Employees>
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
+    <ns1:Summary>
+        <ns1:Employee_ID>100039501</ns1:Employee_ID>
+    </ns1:Summary>
+    <ns1:Qualifications>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación LCCI - UNIVERSIDAD DE CANTABRIA</ns1:Certification>
+            <ns1:Certification_Name>Certificación LCCI</ns1:Certification_Name>
+            <ns1:Certification_Issuer>UNIVERSIDAD DE CANTABRIA</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification>
+            <ns1:Certification_Country>Spain</ns1:Certification_Country>
+            <ns1:Certification_Name>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification_Name>
+            <ns1:Certification_Issuer>CNMV (list of accepted titles)</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:External_Job>
+            <ns1:Job_Title>Dtor Comercial Banca Privada</ns1:Job_Title>
+            <ns1:Start_Date>2003-06-23</ns1:Start_Date>
+            <ns1:Responsibilities_And_Achievements>BANQUERO PRIVADO CAPTACION Y GESTION DE PATRIMONIOS DIRECTOR COMERCIAL SANTANDER PRIVATE BANKING DIRECTOR COMERCIAL DEL EQUIPO DE 32 BANQUEROS +11 OPERATIVOS +3 AGENTES  DE LOS TRES CENTROS ESPECIALIZADOS DE BANCA PRIVADA. TUTELA EQUIPO BANCA PRIVADA GUIPUZCOA Y ALAVA RESPONSABLE PATRIMONIOS PAIS VASCO RESPONSABLE EQUIPO BANCA PRIVADA GUIPUZCOA 4 PERSONAS BANQUERO GESTION DE PATRIMONIO Y CAPTACION</ns1:Responsibilities_And_Achievements>
+            <ns1:Location>Plaza Jado, 1</ns1:Location>
+        </ns1:External_Job>
+    </ns1:Qualifications>
+    <ns1:Additional_Information>
+        <ns1:Company>SANES_9232 D.C. BANCA PRIVADA PAIS VASCO</ns1:Company>
+    </ns1:Additional_Information>
+</ns:Employees>
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
+    <ns1:Summary>
+        <ns1:Employee_ID>100039501</ns1:Employee_ID>
+    </ns1:Summary>
+    <ns1:Qualifications>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación LCCI - UNIVERSIDAD DE CANTABRIA</ns1:Certification>
+            <ns1:Certification_Name>Certificación LCCI</ns1:Certification_Name>
+            <ns1:Certification_Issuer>UNIVERSIDAD DE CANTABRIA</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification>
+            <ns1:Certification_Country>Spain</ns1:Certification_Country>
+            <ns1:Certification_Name>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification_Name>
+            <ns1:Certification_Issuer>CNMV (list of accepted titles)</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:External_Job>
+            <ns1:Job_Title>Dtor Comercial Banca Privada</ns1:Job_Title>
+            <ns1:Start_Date>2003-06-23</ns1:Start_Date>
+            <ns1:Responsibilities_And_Achievements>BANQUERO PRIVADO CAPTACION Y GESTION DE PATRIMONIOS DIRECTOR COMERCIAL SANTANDER PRIVATE BANKING DIRECTOR COMERCIAL DEL EQUIPO DE 32 BANQUEROS +11 OPERATIVOS +3 AGENTES  DE LOS TRES CENTROS ESPECIALIZADOS DE BANCA PRIVADA. TUTELA EQUIPO BANCA PRIVADA GUIPUZCOA Y ALAVA RESPONSABLE PATRIMONIOS PAIS VASCO RESPONSABLE EQUIPO BANCA PRIVADA GUIPUZCOA 4 PERSONAS BANQUERO GESTION DE PATRIMONIO Y CAPTACION</ns1:Responsibilities_And_Achievements>
+            <ns1:Location>Plaza Jado, 1</ns1:Location>
+        </ns1:External_Job>
+    </ns1:Qualifications>
+    <ns1:Additional_Information>
+        <ns1:Company>SANES_9232 D.C. BANCA PRIVADA PAIS VASCO</ns1:Company>
+    </ns1:Additional_Information>
+</ns:Employees>
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
+    <ns1:Summary>
+        <ns1:Employee_ID>100039501</ns1:Employee_ID>
+    </ns1:Summary>
+    <ns1:Qualifications>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación LCCI - UNIVERSIDAD DE CANTABRIA</ns1:Certification>
+            <ns1:Certification_Name>Certificación LCCI</ns1:Certification_Name>
+            <ns1:Certification_Issuer>UNIVERSIDAD DE CANTABRIA</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification>
+            <ns1:Certification_Country>Spain</ns1:Certification_Country>
+            <ns1:Certification_Name>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification_Name>
+            <ns1:Certification_Issuer>CNMV (list of accepted titles)</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:External_Job>
+            <ns1:Job_Title>Dtor Comercial Banca Privada</ns1:Job_Title>
+            <ns1:Start_Date>2003-06-23</ns1:Start_Date>
+            <ns1:Responsibilities_And_Achievements>BANQUERO PRIVADO CAPTACION Y GESTION DE PATRIMONIOS DIRECTOR COMERCIAL SANTANDER PRIVATE BANKING DIRECTOR COMERCIAL DEL EQUIPO DE 32 BANQUEROS +11 OPERATIVOS +3 AGENTES  DE LOS TRES CENTROS ESPECIALIZADOS DE BANCA PRIVADA. TUTELA EQUIPO BANCA PRIVADA GUIPUZCOA Y ALAVA RESPONSABLE PATRIMONIOS PAIS VASCO RESPONSABLE EQUIPO BANCA PRIVADA GUIPUZCOA 4 PERSONAS BANQUERO GESTION DE PATRIMONIO Y CAPTACION</ns1:Responsibilities_And_Achievements>
+            <ns1:Location>Plaza Jado, 1</ns1:Location>
+        </ns1:External_Job>
+    </ns1:Qualifications>
+    <ns1:Additional_Information>
+        <ns1:Company>SANES_9232 D.C. BANCA PRIVADA PAIS VASCO</ns1:Company>
+    </ns1:Additional_Information>
+</ns:Employees>
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
+    <ns1:Summary>
+        <ns1:Employee_ID>100039532</ns1:Employee_ID>
+    </ns1:Summary>
+    <ns1:Qualifications>
+        <ns1:External_Job>
+            <ns1:Job_Title>Dtor Planes Negocios</ns1:Job_Title>
+            <ns1:Start_Date>2014-02-01</ns1:Start_Date>
+            <ns1:Responsibilities_And_Achievements>Consultoria de sistemas en servico financieros, desde las distintas posiciones de la carrera profesional. Promoción y ejecucion de proyectos de consultoria, diseño, implantacion en diferentes clientes, areas, tecnolgias.  Gestión de proyectos y equipos, labor comercial y preparación de propuestas, desarrollo de iniciatias internas de gestión de prácticas y desarrollo de personas, elaboración de presupuestos. Todos estos  proyectos en el sector bancario: Argentaria, Caja España, Caja Toledo, Banco Santander, Caixa General de depositos.   Promoción y venta de Alnova en Europa, Africa, y ME. Diseño y soporte a proyectos de implantacion. Responsable de la gestión de la tecnología y operaciones de las área locales de finanzas (control de gestión, gestora de titulizaciones ), RRHH, Organización y costes, secretaría técnica ( Prevención de blanqueo, cumplimiento, SAC)   Adicioanmente, se realiza la coordinación con las unidades corporativas de Tyops correspondientes para aquellas áreas de negocio de gestión corporativa en su relación con Santander España ( Intervención, gestión Financiera, Secretaría general )o locales cuya gestión Tyops no han sido traspasada por sus características (auditoría y asesoría jurídica fundamentalmente) Incorporación en Tecnología corporativa como responsable de los proyectos de implantación de plataformas ligadas a estrategias de transformación tecnológica del Grupo, concretamente Cahoot y posteriormete Empresas UK  - Asegurando la correcta Arquitecturización de acuerdo con las estrategias corporativas del mapa de sistemas y las necesidades del negocio  - Optimizando el modelo de relación entre Arquitectura y unidades globales de implantación Partenón y Alhambra.  - Impulsando junto a Metodología y UGI/UGASla sistematización y estandarización de los procesos, métodos y documentación necesariós para una eficiente implantación de plataformas en proyectos de transformación tecnológica.  - Garantizando la implantaciónen tiempo y forma e las nuevas plataformas  Posteriormente, en octubre 2.012 , tras finalizar el proyecto de Empresas UK, asume la responsabilida de la coordinación de las cincu UGAs de Riesgos minorista ( estructurales, sistemas de informacion, carterizados, industrializados y estandarizados) con la misión cordial del lanzamiento, coordinación y ejecución de los Planes de transformación de riesgos (en los cuatro principales paises del grupo) easí como de la definción y desarrollo de las componentes de SW necsarias para ello. Liderando el área de Sistemas de Gestión para Banco Santander y Banesto, responsabilizándose tanto de los nuevos proyectos como de los mantenimientos y el desarrollo de la práctica. Responsable del área de desarrollo de los sistemas de gestión finnaciara, de control y de negocio. Principaes funciones asegurar el nivel de servicio y la integración de banco Santander en l aplataforma Partenon</ns1:Responsibilities_And_Achievements>
+            <ns1:Location>Edificio Abelias P06</ns1:Location>
+        </ns1:External_Job>
+    </ns1:Qualifications>
+    <ns1:Additional_Information>
+        <ns1:Company>SANES_9278 UNIDADES DE NEGOCIO</ns1:Company>
+    </ns1:Additional_Information>
+</ns:Employees>
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
+    <ns1:Summary>
+        <ns1:Employee_ID>100039533</ns1:Employee_ID>
+    </ns1:Summary>
+    <ns1:Qualifications>
+        <ns1:External_Job>
+            <ns1:Job_Title>Director Gestión Riesgos</ns1:Job_Title>
+            <ns1:Start_Date>2004-02-02</ns1:Start_Date>
+            <ns1:Responsibilities_And_Achievements>Leading a strategic digital corporate initiative to build a new business for the Group and suppport our cloud strategy definition. Still a confidetial matter not to be disclosed Diseño y puesta en marcha de la Experiencia de Marca Santander. A partir del posicionamiento de la marca y del análisis de la voz de emempleados, clientes, etc se ha definido una Experiencia Santander, un estilo Santander diferencial y homogéneo en puntos de contacto y países que transmita nuestra manera de hacer banca y ayude a la vinculación de los clientes. Su puesta en marcha se ha basado en la coordinación de acciones con RRHH, países y divisiones, el lanzamiento de iniciativas específicas y la medición e identificación de palancas de  generadoras de promotores y fans de la marca Santander por país y a nivel Grupo Identificación y desarrollo de oportunidades de negocio y mejoras estratégicas para Banca Privada, Seguros, y otros sectores. Lanzamiento de nuevos negocios apalancados en tecnología e internet Desarrollo de la multicanalidad en Santander España como elemento de vinculación comercial de los clientes y lanzamiento de acciones comerciales para la captación de clientes multicanales. Explotación comercial de los canales (ej. venta on-line préstamos consumos on-line, venta cruzada de tarjetas de crédito en llamadas inbound) y lanzamiento de la primera banca móvil en Santander Análisis de necesidades de IT&amp;Ops de Consumo, Negocio Hipotecario, Particulares y otras áreas de Banca Comercial España, diseño conceptual de soluciones y seguimiento de planes de implantación de mejoras. Diseño de Operaciones y soporte tecnológico para Queremos Ser Tu Banco Diseño y gestión de la puesta en marcha de nuevas salas de Tesorería y Mercado de Capitales (ej. Sala de Tesorería de BBVA en vía de los poblados en Madrid). Diseño, reorganización y optimización de departamentos centrales de valores y otros departamentos de entidades financieras Diseño y lanzamiento de la Unidad de Productos como elemento clave en la estandarización y parametrización de nuevos productos de particulares. Análisis y diseño de nuevos productos con las unidades comerciales y coordinación con resto de áreas (ej. Intervención General, Control de Gestión, IT&amp;Ops, etc) para su comercialización desde el Catálogo de Productos del banco.</ns1:Responsibilities_And_Achievements>
+            <ns1:Location>JUAN IGNACIO LUCA DE TENA P03</ns1:Location>
+        </ns1:External_Job>
+    </ns1:Qualifications>
+    <ns1:Additional_Information>
+        <ns1:Company>SANES_86209 ESTRATEGIA Y TRANSFORMACION</ns1:Company>
+    </ns1:Additional_Information>
+</ns:Employees>
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
+    <ns1:Summary>
+        <ns1:Employee_ID>100039537</ns1:Employee_ID>
+    </ns1:Summary>
+    <ns1:Qualifications>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación LCCI - UNIVERSIDAD DE CANTABRIA</ns1:Certification>
+            <ns1:Certification_Name>Certificación LCCI</ns1:Certification_Name>
+            <ns1:Certification_Issuer>UNIVERSIDAD DE CANTABRIA</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación en Información en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification>
+            <ns1:Certification_Country>Spain</ns1:Certification_Country>
+            <ns1:Certification_Name>Certificación en Información en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification_Name>
+            <ns1:Certification_Issuer>CNMV (list of accepted titles)</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification>
+            <ns1:Certification_Country>Spain</ns1:Certification_Country>
+            <ns1:Certification_Name>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification_Name>
+            <ns1:Certification_Issuer>CNMV (list of accepted titles)</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:External_Job>
+            <ns1:Job_Title>Gerente Negocios II</ns1:Job_Title>
+            <ns1:Start_Date>2013-04-30</ns1:Start_Date>
+            <ns1:Location>Avda. Reina Mercedes, 25</ns1:Location>
+        </ns1:External_Job>
+    </ns1:Qualifications>
+    <ns1:Additional_Information>
+        <ns1:Company>SANES_0919 SEVILLA, AV. REINA MERCEDES, 1</ns1:Company>
+    </ns1:Additional_Information>
+</ns:Employees>
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
+    <ns1:Summary>
+        <ns1:Employee_ID>100039537</ns1:Employee_ID>
+    </ns1:Summary>
+    <ns1:Qualifications>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación LCCI - UNIVERSIDAD DE CANTABRIA</ns1:Certification>
+            <ns1:Certification_Name>Certificación LCCI</ns1:Certification_Name>
+            <ns1:Certification_Issuer>UNIVERSIDAD DE CANTABRIA</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación en Información en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification>
+            <ns1:Certification_Country>Spain</ns1:Certification_Country>
+            <ns1:Certification_Name>Certificación en Información en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification_Name>
+            <ns1:Certification_Issuer>CNMV (list of accepted titles)</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification>
+            <ns1:Certification_Country>Spain</ns1:Certification_Country>
+            <ns1:Certification_Name>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification_Name>
+            <ns1:Certification_Issuer>CNMV (list of accepted titles)</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:External_Job>
+            <ns1:Job_Title>Gerente Negocios II</ns1:Job_Title>
+            <ns1:Start_Date>2013-04-30</ns1:Start_Date>
+            <ns1:Location>Avda. Reina Mercedes, 25</ns1:Location>
+        </ns1:External_Job>
+    </ns1:Qualifications>
+    <ns1:Additional_Information>
+        <ns1:Company>SANES_0919 SEVILLA, AV. REINA MERCEDES, 1</ns1:Company>
+    </ns1:Additional_Information>
+</ns:Employees>
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
+    <ns1:Summary>
+        <ns1:Employee_ID>100039537</ns1:Employee_ID>
+    </ns1:Summary>
+    <ns1:Qualifications>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación LCCI - UNIVERSIDAD DE CANTABRIA</ns1:Certification>
+            <ns1:Certification_Name>Certificación LCCI</ns1:Certification_Name>
+            <ns1:Certification_Issuer>UNIVERSIDAD DE CANTABRIA</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación en Información en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification>
+            <ns1:Certification_Country>Spain</ns1:Certification_Country>
+            <ns1:Certification_Name>Certificación en Información en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification_Name>
+            <ns1:Certification_Issuer>CNMV (list of accepted titles)</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification>
+            <ns1:Certification_Country>Spain</ns1:Certification_Country>
+            <ns1:Certification_Name>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification_Name>
+            <ns1:Certification_Issuer>CNMV (list of accepted titles)</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:External_Job>
+            <ns1:Job_Title>Gerente Negocios II</ns1:Job_Title>
+            <ns1:Start_Date>2013-04-30</ns1:Start_Date>
+            <ns1:Location>Avda. Reina Mercedes, 25</ns1:Location>
+        </ns1:External_Job>
+    </ns1:Qualifications>
+    <ns1:Additional_Information>
+        <ns1:Company>SANES_0919 SEVILLA, AV. REINA MERCEDES, 1</ns1:Company>
+    </ns1:Additional_Information>
+</ns:Employees>
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
+    <ns1:Summary>
+        <ns1:Employee_ID>100039565</ns1:Employee_ID>
+    </ns1:Summary>
+    <ns1:Qualifications>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification>
+            <ns1:Certification_Country>Spain</ns1:Certification_Country>
+            <ns1:Certification_Name>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification_Name>
+            <ns1:Certification_Issuer>CNMV (list of accepted titles)</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:External_Job>
+            <ns1:Job_Title>Sales Manager II</ns1:Job_Title>
+            <ns1:Start_Date>2004-07-12</ns1:Start_Date>
+            <ns1:Responsibilities_And_Achievements>Responsable de Ventas de Derivados para Banca Comercial España Ventas de derivados para Corporates Venta de derivados para UGE Cataluña y Valencia Sesion formativa sobre Gestion de Carteras de Renta Fija, divisa, Swaps y Cross Currency Swaps Apoyo en préstamos sindicados (estructuración, ejecución, sindicación). Elaboración de modelos financieros, presentaciones, y propuestas.  Análisis macroeconómico de países y crediticio de empresas en Latam. Gestión de carteras de Renta Fija; Co-autor libro publicado por McGraw-Hill. "El comportamiento de las bolsas asiáticas"; Artículo Harvard-Deusto. Valoración de una empresa por descuento de flujos y comparables. Head of Corporate &amp; Commercial Banking Sales Head of Corporate &amp; Commercial Banking Sales in Spain Responsable Negocio de Ventas de Rates para Corporates en Iberia</ns1:Responsibilities_And_Achievements>
+            <ns1:Location>Encinar PG1</ns1:Location>
+        </ns1:External_Job>
+    </ns1:Qualifications>
+    <ns1:Additional_Information>
+        <ns1:Company>SANES_9907 C&amp;CB SOLUTIONS GROUP</ns1:Company>
+    </ns1:Additional_Information>
+</ns:Employees>
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
+    <ns1:Summary>
+        <ns1:Employee_ID>100039565</ns1:Employee_ID>
+    </ns1:Summary>
+    <ns1:Qualifications>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification>
+            <ns1:Certification_Country>Spain</ns1:Certification_Country>
+            <ns1:Certification_Name>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification_Name>
+            <ns1:Certification_Issuer>CNMV (list of accepted titles)</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:External_Job>
+            <ns1:Job_Title>Sales Manager II</ns1:Job_Title>
+            <ns1:Start_Date>2004-07-12</ns1:Start_Date>
+            <ns1:Responsibilities_And_Achievements>Responsable de Ventas de Derivados para Banca Comercial España Ventas de derivados para Corporates Venta de derivados para UGE Cataluña y Valencia Sesion formativa sobre Gestion de Carteras de Renta Fija, divisa, Swaps y Cross Currency Swaps Apoyo en préstamos sindicados (estructuración, ejecución, sindicación). Elaboración de modelos financieros, presentaciones, y propuestas.  Análisis macroeconómico de países y crediticio de empresas en Latam. Gestión de carteras de Renta Fija; Co-autor libro publicado por McGraw-Hill. "El comportamiento de las bolsas asiáticas"; Artículo Harvard-Deusto. Valoración de una empresa por descuento de flujos y comparables. Head of Corporate &amp; Commercial Banking Sales Head of Corporate &amp; Commercial Banking Sales in Spain Responsable Negocio de Ventas de Rates para Corporates en Iberia</ns1:Responsibilities_And_Achievements>
+            <ns1:Location>Encinar PG1</ns1:Location>
+        </ns1:External_Job>
+    </ns1:Qualifications>
+    <ns1:Additional_Information>
+        <ns1:Company>SANES_9907 C&amp;CB SOLUTIONS GROUP</ns1:Company>
+    </ns1:Additional_Information>
+</ns:Employees>
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
+    <ns1:Summary>
+        <ns1:Employee_ID>100039584</ns1:Employee_ID>
+    </ns1:Summary>
+    <ns1:Qualifications>
+        <ns1:External_Job>
+            <ns1:Start_Date>2004-09-06</ns1:Start_Date>
+            <ns1:End_Date>2020-12-31</ns1:End_Date>
+            <ns1:Responsibilities_And_Achievements>Analista de Inversiones. Inicialmente se dedica a  apoyar el desarrollo de la función de riesgos en Brasil, asegurando un crecimiento sostenible del negocio en el contexto de la integración y la implantación de los modelos corporativos de riesgos dentro de la División de Riesgos, el Área Corporativa de Riesgos Brasil.   Actualmente es el responsable de Responsable adjunto de la función de Riesgos del Grupo. Dependencia jerárquica directa de las áreas de Riesgos de Crédito, Riesgos de Mercado y Estructurales, Riesgo Operacional, Riesgo Negocios Globales, Riesgo Santander Consumer Finance y Riesgos División Recuperaciones y Saneamiento de Activos. Responsable global de riesgos de crédito del negocio de banca mayorista y responsable de riesgos de los negocios globales (Banca Privada, Seguros y Gestión de Activos)         Presidente de los comités de riesgos de Banca Mayorista, de Aseguramientos y Productos estructurados, etc. Responsable de la admision de operaciones de clientes corporativos.  Junto con su equipo, y con mucha visión de negocio,  dan apoyo a Banca Mayorista.  Analizan y siguen de cerca cada grupo corporativo Responsable del negocio de ECM del Grupo Santander en Europa Coordinación negocio primario y originación en Latinoamérica. Gestión del proceso de aprobación interna. Asistencia a comités de riesgos, etc. Creacion de los equipos de Equity Research y apoyo en operaciones corporativas Durante 4 años estuvo en BBVA, primero en M&amp;A cubriendoa los clientes de los sectores TMT y siderurgia,  y luego en FFEE originando operaciones con medianas empresas clientes de la red de sucursales Desarrollo Corporativo para Terra España. Cubriendo Colombia, Venezuela y Perú.</ns1:Responsibilities_And_Achievements>
+        </ns1:External_Job>
+    </ns1:Qualifications>
+    <ns1:Additional_Information>
+        <ns1:Company>SANES_8620 RIESGOS</ns1:Company>
+    </ns1:Additional_Information>
+</ns:Employees>
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
+    <ns1:Summary>
+        <ns1:Employee_ID>100039599</ns1:Employee_ID>
+    </ns1:Summary>
+    <ns1:Qualifications>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification>
+            <ns1:Certification_Country>Spain</ns1:Certification_Country>
+            <ns1:Certification_Name>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification_Name>
+            <ns1:Certification_Issuer>CNMV (list of accepted titles)</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:External_Job>
+            <ns1:Job_Title>Sales III</ns1:Job_Title>
+            <ns1:Start_Date>2019-01-01</ns1:Start_Date>
+            <ns1:Responsibilities_And_Achievements>- Reforzar y consolidar el equipo de sales / salestrading en la contratación de renta variable institucional en España / Andorra, potenciando la eficiencia operativa en los procesos de ejecución y desarrollando las laborales comerciales de manera personalizad, basada en los principios de mejora continua y contacto permanente.  - Búsqueda de nuevas cuentas mediante un exhaustivo programa de marketing, incluyendo nuevas altas de conexiones de distintos routings de contratación.  - Cobertura de ventas en cuentas de algunos clientes institucionales domésticos sobre nuestro research y reuniones con analistas.   - Elaboración de un informe diario sobre el resumen de la jornada en el ámbito de la renta variable.   - Servicio a clientes institucionales españoles de renta variable nacional e internacional, proporcionándoles todo tipo de información, basándonos en estudios de análisis fundamental, técnico,... etc, y en función del perfil de cada cliente. Apoyo al equipo de salestrading internacional.  - Gestión de operaciones en los distintos mercados de equity, y empleando diversas plataformas de ejecución (Fidessa; GL; Visual Trader… etc.). Ejecución especial de operaciones de tipo hedge (contado-futuro).  - Control de conectividad (routings), tanto para órdenes a cuidar como DMA, y en diversas plataformas. - Asentar las bases del  nuevo equipo de contratación de renta variable institucional en España.   - Adentrar y ganar cuota de mercado en el mercado de renta variable institucional. Apertura de cuentas y seguimiento de marketing.  - Organizar y reestructurar los canales de liquidación y comunicación de operaciones con los distintos clientes.  - Ejecución y control de operaciones tanto en el SIBE como en  mercados internacionales para clientes de la plataforma global del grupo.   - Servicio a los mismos sobre flujo de noticias e información diaria de los mercados.  - Cobertura a los salestraders del departamento.  - Soporte a los distintos market makers de la plataforma en Londres. - Ejecución y control de la liquidación de las operaciones en renta variable internacional.  - Gestión de saldos y garantías en mercados de derivados  - Seguimiento diario sobre facturas pendientes  - Desarrollar nuevos sistemas de liquidación en renta variable internacional.   - Implementar nuevas herramientas de organización de clientes institucionales vs minoristas.  - Liquidar y controlar saldos pendientes de facturación con distintas entidades internacionales y en diferentes productos financieros.</ns1:Responsibilities_And_Achievements>
+            <ns1:Location>Encinar P01</ns1:Location>
+        </ns1:External_Job>
+    </ns1:Qualifications>
+    <ns1:Additional_Information>
+        <ns1:Company>SANES_989912 SECURITIES SALES</ns1:Company>
+    </ns1:Additional_Information>
+</ns:Employees>
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
+    <ns1:Summary>
+        <ns1:Employee_ID>100039599</ns1:Employee_ID>
+    </ns1:Summary>
+    <ns1:Qualifications>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification>
+            <ns1:Certification_Country>Spain</ns1:Certification_Country>
+            <ns1:Certification_Name>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification_Name>
+            <ns1:Certification_Issuer>CNMV (list of accepted titles)</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:External_Job>
+            <ns1:Job_Title>Sales III</ns1:Job_Title>
+            <ns1:Start_Date>2019-01-01</ns1:Start_Date>
+            <ns1:Responsibilities_And_Achievements>- Reforzar y consolidar el equipo de sales / salestrading en la contratación de renta variable institucional en España / Andorra, potenciando la eficiencia operativa en los procesos de ejecución y desarrollando las laborales comerciales de manera personalizad, basada en los principios de mejora continua y contacto permanente.  - Búsqueda de nuevas cuentas mediante un exhaustivo programa de marketing, incluyendo nuevas altas de conexiones de distintos routings de contratación.  - Cobertura de ventas en cuentas de algunos clientes institucionales domésticos sobre nuestro research y reuniones con analistas.   - Elaboración de un informe diario sobre el resumen de la jornada en el ámbito de la renta variable.   - Servicio a clientes institucionales españoles de renta variable nacional e internacional, proporcionándoles todo tipo de información, basándonos en estudios de análisis fundamental, técnico,... etc, y en función del perfil de cada cliente. Apoyo al equipo de salestrading internacional.  - Gestión de operaciones en los distintos mercados de equity, y empleando diversas plataformas de ejecución (Fidessa; GL; Visual Trader… etc.). Ejecución especial de operaciones de tipo hedge (contado-futuro).  - Control de conectividad (routings), tanto para órdenes a cuidar como DMA, y en diversas plataformas. - Asentar las bases del  nuevo equipo de contratación de renta variable institucional en España.   - Adentrar y ganar cuota de mercado en el mercado de renta variable institucional. Apertura de cuentas y seguimiento de marketing.  - Organizar y reestructurar los canales de liquidación y comunicación de operaciones con los distintos clientes.  - Ejecución y control de operaciones tanto en el SIBE como en  mercados internacionales para clientes de la plataforma global del grupo.   - Servicio a los mismos sobre flujo de noticias e información diaria de los mercados.  - Cobertura a los salestraders del departamento.  - Soporte a los distintos market makers de la plataforma en Londres. - Ejecución y control de la liquidación de las operaciones en renta variable internacional.  - Gestión de saldos y garantías en mercados de derivados  - Seguimiento diario sobre facturas pendientes  - Desarrollar nuevos sistemas de liquidación en renta variable internacional.   - Implementar nuevas herramientas de organización de clientes institucionales vs minoristas.  - Liquidar y controlar saldos pendientes de facturación con distintas entidades internacionales y en diferentes productos financieros.</ns1:Responsibilities_And_Achievements>
+            <ns1:Location>Encinar P01</ns1:Location>
+        </ns1:External_Job>
+    </ns1:Qualifications>
+    <ns1:Additional_Information>
+        <ns1:Company>SANES_989912 SECURITIES SALES</ns1:Company>
+    </ns1:Additional_Information>
+</ns:Employees>
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
+    <ns1:Summary>
+        <ns1:Employee_ID>100039615</ns1:Employee_ID>
+    </ns1:Summary>
+    <ns1:Qualifications>
+        <ns1:External_Job>
+            <ns1:Job_Title>Dtor Unidades Auditoria</ns1:Job_Title>
+            <ns1:Start_Date>2004-12-09</ns1:Start_Date>
+            <ns1:Responsibilities_And_Achievements>- Review and oversight on audits in Corporate Center and subsidiaries. Partially specialized in Works related to IT Governance, IT Management, IT Risk management and Identity and Access management (User Access)  - Internal methodology development (work programs content and structure, rating models and report models)  - Audit risk assessment (definition, management and oversight)  - IT audit anual planning  - Teams management  - External auditor relationships management in regards to IT review Gestión de personas y equipos. Gestión de la planificación anual de auditoría. Apertura, seguimiento y cierre de trabajos con unidades. Soporte a la dirección del departamento y del área. Jefe de equipo de auditoría interna en el departamento de riesgos tecnológicos.     Consistente la gestión de un equipo de unas 5 personas en la ejecución de los trabajos de auditoría desde su comunicación y apertura con las unidades, planificación y planteamiento de pruebas, supervisión y conclusión incluyendo la negociación de recomendaciones y confección de los informes correspondientes.     Recientemente (el pasado mes) mis funciones han evolucionado, tras reincorporarme desde Santander España al área corporativa de riesgos tecnológicos en la división, a funciones de soporte a la dirección del departamento y ayuda en la coordinación y supervisión de informes de las unidades locales de auditoría. Jefe de equipo de auditoría interna. Jefe de equipo de auditoría interna, especializado en trabajos de revisión del cumplimiento de Basilea II en las diferentes unidades del Grupo. Desde la ejecución de pruebas y obtención de conclusiones hasta supervisión de los miembros del equipo con menos experiencia. Análisis y desarrollo de software en entidades financieras. Desarrollo aplicativo core Altamira para entidades financieras. (ALNOVA)  Evolución y optimización de la aplicación de mantenimiento de aeronaves (EADS-CASA)</ns1:Responsibilities_And_Achievements>
+            <ns1:Location>JUAN IGNACIO LUCA DE TENA PG1</ns1:Location>
+        </ns1:External_Job>
+    </ns1:Qualifications>
+    <ns1:Additional_Information>
+        <ns1:Company>SANES_96563 RIESGOS TECNOLOGICOS</ns1:Company>
+    </ns1:Additional_Information>
+</ns:Employees>
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
+    <ns1:Summary>
+        <ns1:Employee_ID>100039639</ns1:Employee_ID>
+    </ns1:Summary>
+    <ns1:Qualifications>
+        <ns1:External_Job>
+            <ns1:Job_Title>DIR SANTANDER PERSONAL &amp; CC</ns1:Job_Title>
+            <ns1:Start_Date>2013-12-01</ns1:Start_Date>
+            <ns1:Responsibilities_And_Achievements>Definición y desarrollo de la política de riesgos y prevención del fraude y responsable del outsourcing de la gestión de recobro Puesta en marcha del Servicio de Atención al Cliente y Facturación en un proceso de startup Responsable de la distribución telefónica de servicios de transporte a nivel nacional Desarrollar un modelo de mejora continua de experiencia de cliente Estrategia de ejecución de canales asistidos en su completitud (Servicio, Venta y Recobro) Desarrollo del Plan de Negocio de la Sociedad y gestión de la cuenta de resultados. Prestación de servicios a las Áreas de negocio del Banco así como a clientes externos (Orange, Jazztel, Iberdrola, MeetLife...) Gestión del Contact Center de Banesto. El paso por Reintegra coincidió con el cierre de la Sociedad Gescoban Soluciones y la función desempeñada fue el cierre ordenado de las actividades prestadas por Gescoban hasta la migración operativa de clientes de Banesto a Santander (diciembre de 2013)</ns1:Responsibilities_And_Achievements>
+            <ns1:Location>Edificio JOSEFA VALCÁRCEL 36 P01</ns1:Location>
+        </ns1:External_Job>
+    </ns1:Qualifications>
+    <ns1:Additional_Information>
+        <ns1:Company>SANES_9265 SANTANDER PERSONAL &amp; CC</ns1:Company>
+    </ns1:Additional_Information>
+</ns:Employees>
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
+    <ns1:Summary>
+        <ns1:Employee_ID>100039649</ns1:Employee_ID>
+    </ns1:Summary>
+    <ns1:Qualifications>
+        <ns1:External_Job>
+            <ns1:Job_Title>Jefe Equipo Operaciones II</ns1:Job_Title>
+            <ns1:Start_Date>2017-07-01</ns1:Start_Date>
+            <ns1:Responsibilities_And_Achievements>Coordinación de los Departamento de Previsión Colectiva (desde Junio2010)  y Prestaciones (desde  Junio de 2017) dentro del Área de Fondos y Planes de IIC’s y Previsión Colectiva Coordinación del Departamento de Prestaciones de los planes de pensiones y Epsv´s gestionados por Sanatnder Pensiones (planes individuales y asociados). Coordinación del área de Previsión Colectiva de Planes de Empleo en su tarea Administrativa, lo que implica la gestión y coordinación de aportaciones, traspasos, prestaciones. Adapatación a la normativa, temas contables, auditorias, comunicaciones a organismos oficiales, a Promotores. Atención a clientes,...etc Tareas vinculadas con el traspaso, iniciándo en traspasos de planes de pensiones para la red Banesto, hasta realizar gestiones globales para todas las redes. Posteriormente pase de planes a fondos de inversión, llegando a realizar tareas globales dentro del departamento (traspasos, conciliación, trato con comercializadores,...)</ns1:Responsibilities_And_Achievements>
+            <ns1:Location>Edificio Abelias P03</ns1:Location>
+        </ns1:External_Job>
+    </ns1:Qualifications>
+    <ns1:Additional_Information>
+        <ns1:Company>SANES_29651 O-Inv. y B. Privada</ns1:Company>
+    </ns1:Additional_Information>
+</ns:Employees>
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
+    <ns1:Summary>
+        <ns1:Employee_ID>100039689</ns1:Employee_ID>
+    </ns1:Summary>
+    <ns1:Qualifications>
+        <ns1:External_Job>
+            <ns1:Job_Title>Dtor As Juridica Udes. Negocio</ns1:Job_Title>
+            <ns1:Start_Date>2005-05-04</ns1:Start_Date>
+            <ns1:Responsibilities_And_Achievements>Gestión de las obligaciones de índole fiscal de clientes Fundamentalmente reviso la fiscalidad del Grupo en lo concerniente a la tributación indirecta. Adicionalmente, entre otras funciones, tengo sociedades del grupo asignadas para revisar su impuesto sobre sociedades y gestiono expedientes de índole fiscal abiertos por las distintas Administraciones tanto al Banco como a las distintas entidades del Grupo. Elaboración de declaraciones del IRPF de los empleados de entidades clientes de la firma. Revisión de los pagos fraccionados de los clientes personas jurídicas Asesoro a las distintas áreas de negocio del Grupo trasladándoles los criterios que son de su interés y asistiéndoles en la formalización de sus operaciones de tal manera que tengan un tratamiento fiscal eficiente.
+                Responsable de la fiscalidad indirecta del Grupo con especial dedicación al Régimen Especial de Entidades de IVA
+                Asistencia durante todo el año a las sociedades que tengo asignadas para que cumplan con todas sus obligaciones de naturaleza tributaria.
+                Participación en los procedimientos de naturaleza tributaria de las sociedades del Grupo</ns1:Responsibilities_And_Achievements>
+            <ns1:Location>JUAN IGNACIO LUCA DE TENA P04</ns1:Location>
+        </ns1:External_Job>
+    </ns1:Qualifications>
+    <ns1:Additional_Information>
+        <ns1:Company>SANES_95833 AJ FISCAL</ns1:Company>
+    </ns1:Additional_Information>
+</ns:Employees>
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
+    <ns1:Summary>
+        <ns1:Employee_ID>100039794</ns1:Employee_ID>
+    </ns1:Summary>
+    <ns1:Qualifications>
+        <ns1:External_Job>
+            <ns1:Job_Title>Dtor Negocio Recuperaciones</ns1:Job_Title>
+            <ns1:Start_Date>2005-10-01</ns1:Start_Date>
+            <ns1:Responsibilities_And_Achievements>responsabilidades Comercialización, negociación y venta de Carteras de activos del Grupo Santander Gestión de clientes del sector Fondos de Infraestructura y Private Equities Gestión de clientes del sector Bancos y Aseguradoras Gestión de proyectos, elaboración planes estrategicos y seguimiento de negocios dentro del equipo de Estrategia del Director General Comercialización, negociación y venta de Carteras de activos del Grupo Santander Gestión de proyectos de consultoría tecnológica Desarrollo, prueba y puesta en marcha de sistemas de control en la industria del Petróleo</ns1:Responsibilities_And_Achievements>
+            <ns1:Location>JUAN IGNACIO LUCA DE TENA P01</ns1:Location>
+        </ns1:External_Job>
+    </ns1:Qualifications>
+    <ns1:Additional_Information>
+        <ns1:Company>SANES_98493 PLANIFICACION Y PROYECTOS</ns1:Company>
+    </ns1:Additional_Information>
+</ns:Employees>
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
+    <ns1:Summary>
+        <ns1:Employee_ID>100039833</ns1:Employee_ID>
+    </ns1:Summary>
+    <ns1:Qualifications>
+        <ns1:External_Job>
+            <ns1:Job_Title>Director Unidad Riesgos</ns1:Job_Title>
+            <ns1:Start_Date>2005-10-17</ns1:Start_Date>
+            <ns1:Responsibilities_And_Achievements>Non-exclusive project relation.  Project Management   *For a mobile phone service provider in Spain: Responsible in charge of coordination and work group management, follow up and results assessment in:  *The elaboration of the operational plan for the development of data services: segmentation and prioritizing of target clients, offer design and product pricing strategy, sale channels, customer support, communication and sales efforts for the customer base.   *Negotiations with the Ministry of Science and Technology for the modification of license terms and commitments of UMTS.  Strategy  *For a mayor worldwide telecommunications provider: support for the Executive Chairman and CEO’s advisory team in the elaboration of the presentation for the Investor Conference (2005). (https://www.telefonica.com/documents/162467/195726/barcelona2005_apertura.pdf/d59f7173-6e6a-410e-bff3-38ac29fcf764).  *For a mobile communications service provider in Spain: business strategy planning for five years, including competitive position assessment, market forecasts and the definition of growth objectives, income and profitability.   *For an incumbent operator in the telecommunications sector: strategy design in the acquisition of broadband contents and its relation model with the providers, lent support in the commercial negotiations and the implementation of a pilot project.   *For a developer of railway superstructures in the north of Europe: analysis of the demand evolution of railways in the Spanish and Portuguese markets with the aim of assessing potential opportunities (work produced in Spain, Portugal and UK).   *For a passenger transportation provider in North Europe: analysis of the Spanish and Portuguese urban transportation market with the aim of assessing the competitive viability and introduction in the market (work performed in Spain, Portugal and France).  Sales and Marketing  *For a mobile telephone provider in Spain: annual Marketing Plan, including specific action plans for existing and new services, communication / advertising and brand evolution.   *For a mobile telephone provider in Spain: analysis and optimization of brand profile with a trade-off model (Strategic Choice Analysis) for market research.  Organization and Operations  *For a telecommunications service provider: cost optimization of main operating companies (work implemented in Portugal)   *For a media company in South Europe: redefinition of new organization structure of its affiliate in the management of music contents identifying improvement areas and cost reduction. For a steal manufacturer leader in the sector: analysis of expansion opportunities in LatAm. Support in annual budgeting and monthly deviations monitoring (Planning and Financial Analysis Department) *Manage the GCB credit portfolio comprised of 2,199 groups and 605 projects with a EUR 230 Bn risk exposure, with the objective of guaranteeing the attainment of forecasted objectives. These results are achieved by complying with the risk appetite and optimization of capital which requires:  1. Integral view and ongoing / early monitoring of the credit portfolio in order to provide strategic advice for the decision-making process while overseeing and controlling: early detection of risks, opportunities and trends, which could affect the results of the forecasted objectives, while ensuring compliance with risk limits.   2. Safeguard of the Global Model consistency (consistency and homogeneity, management tools) and definition of policies (concentration limits) and consolidation of commercial strategic plans as a basic tool to define the business strategy and budget.   3. Periodic evaluation support for the utilized models (capital and profitability): appropriate use, predictive capacity and accurate performance.  *Comprehensive supervision of strategic regulatory projects for the Division: IFRS9 (Impairment) and TRIM for Low Default Portfolio (coordinating involved areas: Methodology, Capital, Model Owner, Model Risk, Risk MI, and Internal Validation).   *Reporting for the Group’s Top Management (first tier committees), Regulator and stakeholders.  *Management, supervision and direct assessment of a thirteen-member work group, seven consultants and coordination and supervision of fourteen geographic locations. *Global responsible for sector and credit analysis of the corporate clients belonging to the Telecommunications, Media, IT, Business Services, Aerospace, Engineering and Electronic Equipment Sectors (Portfolio Exposure: EUR 20 Bn).  *Participated in the GCB Risk Committees and the Group’s Risk Delegated Commission (presided by the first vice-president and the CEO).  *Interviewed with clients (especially those under preventive management)  *Developed the projects aimed to improve the area and support for the top management.   *Managed, supervised and evaluated a staff of seven. *Responsible for debt purchase approval for third parties and post-deal calculations of the CVA, as well as the analysis of the admission of proposals for “go-to-market” (I.e. IPOs, capital increase) and structured products. Participant in the assessment of new products (Commercialization Committee for the New Products presided by the Group’s General Secretary).  *Analysis, presentation and advisor for the market risk operations for the Top Management and the Group´s Delegated Risk Commission.  *Development of projects to improve the area: creation of tutorials on CVA calculation, improvement of procedures for the submittal of debt purchase (via the system of delegated authorities). *Responsible in charge of the non-standardized credit risk analysis inside Santander Consumer Finance (thirteen European countries).   *Participation in the Risk Committee and Executive Commission of Santander Consumer Finance as well as the Delegated Risk Commission of the Group.   *Definition, implementation and supervision of standards for all geographies (analysis, follow-ups and procedures). *Global responsible for the portfolio of Infrastructure, Oil &amp;Gas, Water and Waste, PPPs / PFIs, Telecommunications and Media, as well as, for the implantation of the management model for the social and environmental risk.  *Support for the structuring of financing proposals.   *Participation in GCB Risk Committees and the Group’s Risk Delegated Commission (presided by the first vice-president and the CEO).  *Management, supervision and assessment of a staff of two. *In charge of sector and credit analysis of the corporate clients belonging to the Telecommunications and Media sectors.  *Participated in the GCB Risk Committees   *Developed projects for the area improvement.</ns1:Responsibilities_And_Achievements>
+            <ns1:Location>JUAN IGNACIO LUCA DE TENA PG1</ns1:Location>
+        </ns1:External_Job>
+    </ns1:Qualifications>
+    <ns1:Additional_Information>
+        <ns1:Company>SANES_862093 MRM</ns1:Company>
+    </ns1:Additional_Information>
+</ns:Employees>
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
+    <ns1:Summary>
+        <ns1:Employee_ID>100039838</ns1:Employee_ID>
+    </ns1:Summary>
+    <ns1:Qualifications>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification>
+            <ns1:Certification_Country>Spain</ns1:Certification_Country>
+            <ns1:Certification_Name>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification_Name>
+            <ns1:Certification_Issuer>CNMV (list of accepted titles)</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:External_Job>
+            <ns1:Job_Title>Product Manager I</ns1:Job_Title>
+            <ns1:Start_Date>2005-10-17</ns1:Start_Date>
+            <ns1:Responsibilities_And_Achievements>Distribución y Venta de coberturas de Tipos de interés, Divisa e Inflación a clientes de Banca Comercial España. Búsqueda, generación y seguimiento de oportunidades personalizadas por cliente y vendedor, dando soluciones a medida para &gt;500 mil € y creando campañas para el resto. Lanzamiento y Governance del Plan Estratégico SGC del 2006 al 2009, habilitando un departamento de SGC en cada área: Riesgos, Back Office y Tecnología Creación Mesa de Commodities y Crédito, así como responsable del cierre de P&amp;L diario. Consultor funcional de la mesa de Tesorería. Responsable Infraestructuras de clientes de Banca Comercial, del módulo Pricing y de la relación con Murex. Diferentes puestos relacionados con la venta comercial y administrativos, tanto financieros como contables en diferentes empresas compaginadas con los periodos de formación. Responsable de la creación de la Estructura Funcional, Tecnológica y Operativa del Proyecto de Distribución de Derivados a Banca Comercia - Santander Global Connect (SGC). Socorrista de piscina pública y privada durante diferentes veranos. Experto en el módulo de Pricing de eTradepad. Distribución y Venta de coberturas de Tipos de interés a clientes de Banca Comercial España. Distribución y Venta de coberturas de Tipos de interés a clientes de Banca Comercial España.</ns1:Responsibilities_And_Achievements>
+            <ns1:Location>Encinar P01</ns1:Location>
+        </ns1:External_Job>
+    </ns1:Qualifications>
+    <ns1:Additional_Information>
+        <ns1:Company>SANES_98881 BP&amp;I</ns1:Company>
+    </ns1:Additional_Information>
+</ns:Employees>
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
+    <ns1:Summary>
+        <ns1:Employee_ID>100039838</ns1:Employee_ID>
+    </ns1:Summary>
+    <ns1:Qualifications>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification>
+            <ns1:Certification_Country>Spain</ns1:Certification_Country>
+            <ns1:Certification_Name>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification_Name>
+            <ns1:Certification_Issuer>CNMV (list of accepted titles)</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:External_Job>
+            <ns1:Job_Title>Product Manager I</ns1:Job_Title>
+            <ns1:Start_Date>2005-10-17</ns1:Start_Date>
+            <ns1:Responsibilities_And_Achievements>Distribución y Venta de coberturas de Tipos de interés, Divisa e Inflación a clientes de Banca Comercial España. Búsqueda, generación y seguimiento de oportunidades personalizadas por cliente y vendedor, dando soluciones a medida para &gt;500 mil € y creando campañas para el resto. Lanzamiento y Governance del Plan Estratégico SGC del 2006 al 2009, habilitando un departamento de SGC en cada área: Riesgos, Back Office y Tecnología Creación Mesa de Commodities y Crédito, así como responsable del cierre de P&amp;L diario. Consultor funcional de la mesa de Tesorería. Responsable Infraestructuras de clientes de Banca Comercial, del módulo Pricing y de la relación con Murex. Diferentes puestos relacionados con la venta comercial y administrativos, tanto financieros como contables en diferentes empresas compaginadas con los periodos de formación. Responsable de la creación de la Estructura Funcional, Tecnológica y Operativa del Proyecto de Distribución de Derivados a Banca Comercia - Santander Global Connect (SGC). Socorrista de piscina pública y privada durante diferentes veranos. Experto en el módulo de Pricing de eTradepad. Distribución y Venta de coberturas de Tipos de interés a clientes de Banca Comercial España. Distribución y Venta de coberturas de Tipos de interés a clientes de Banca Comercial España.</ns1:Responsibilities_And_Achievements>
+            <ns1:Location>Encinar P01</ns1:Location>
+        </ns1:External_Job>
+    </ns1:Qualifications>
+    <ns1:Additional_Information>
+        <ns1:Company>SANES_98881 BP&amp;I</ns1:Company>
+    </ns1:Additional_Information>
+</ns:Employees>
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
+    <ns1:Summary>
+        <ns1:Employee_ID>100040101</ns1:Employee_ID>
+    </ns1:Summary>
+    <ns1:Qualifications>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación LCCI - UNIVERSIDAD DE CANTABRIA</ns1:Certification>
+            <ns1:Certification_Name>Certificación LCCI</ns1:Certification_Name>
+            <ns1:Certification_Issuer>UNIVERSIDAD DE CANTABRIA</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification>
+            <ns1:Certification_Country>Spain</ns1:Certification_Country>
+            <ns1:Certification_Name>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification_Name>
+            <ns1:Certification_Issuer>CNMV (list of accepted titles)</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:External_Job>
+            <ns1:Job_Title>Director Oficina</ns1:Job_Title>
+            <ns1:Start_Date>2006-01-16</ns1:Start_Date>
+            <ns1:Location>PUERTA DEL SUR,7</ns1:Location>
+        </ns1:External_Job>
+    </ns1:Qualifications>
+    <ns1:Additional_Information>
+        <ns1:Company>SANES_3339 JEREZ, AV. PUERTA DEL SUR, 7</ns1:Company>
+    </ns1:Additional_Information>
+</ns:Employees>
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
+    <ns1:Summary>
+        <ns1:Employee_ID>100040101</ns1:Employee_ID>
+    </ns1:Summary>
+    <ns1:Qualifications>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación LCCI - UNIVERSIDAD DE CANTABRIA</ns1:Certification>
+            <ns1:Certification_Name>Certificación LCCI</ns1:Certification_Name>
+            <ns1:Certification_Issuer>UNIVERSIDAD DE CANTABRIA</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification>
+            <ns1:Certification_Country>Spain</ns1:Certification_Country>
+            <ns1:Certification_Name>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification_Name>
+            <ns1:Certification_Issuer>CNMV (list of accepted titles)</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:External_Job>
+            <ns1:Job_Title>Director Oficina</ns1:Job_Title>
+            <ns1:Start_Date>2006-01-16</ns1:Start_Date>
+            <ns1:Location>PUERTA DEL SUR,7</ns1:Location>
+        </ns1:External_Job>
+    </ns1:Qualifications>
+    <ns1:Additional_Information>
+        <ns1:Company>SANES_3339 JEREZ, AV. PUERTA DEL SUR, 7</ns1:Company>
+    </ns1:Additional_Information>
+</ns:Employees>
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
+    <ns1:Summary>
+        <ns1:Employee_ID>100040448</ns1:Employee_ID>
+    </ns1:Summary>
+    <ns1:Qualifications>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification>
+            <ns1:Certification_Country>Spain</ns1:Certification_Country>
+            <ns1:Certification_Name>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification_Name>
+            <ns1:Certification_Issuer>CNMV (list of accepted titles)</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:External_Job>
+            <ns1:Job_Title>DIRECTOR PRODUTOS EMPRESAS</ns1:Job_Title>
+            <ns1:Start_Date>2013-04-30</ns1:Start_Date>
+            <ns1:Responsibilities_And_Achievements>Responsable del equipo de Originación de Financiación corporativa (sindicada o bilateral estructurada).   Cobertura a clientes MRG y BCE.  Coordinación de los especialistas de crédito de la red. Originación y estructuración de Préstamos Sindicados para clientes de Banca Corporativa Local España.   Deals significaciones: El Corte Inglés 4bn, Grupo Planeta 1,3bn Originación y estructuración de financiaciones de proyectos.  Ponente en CDR y CE de las operaciones y de la evolución de la cartera con los cambios regulatorios.  Deals significativos: Refinanciación del PF y posterior emisión Bono Castor 1,4bn; Acciona Energía 1,4bn (eólico y mini hidráulico), biomasas de Ence, termosolares Abengoa, fotovoltaicos con Gestamp e Isolux con estructuras fiscales, etc Originación y estructuración de Sindicados para clientes de Banca de Empresas. Coordinación del resto de productos de Mercado de Capitales (Leveraged Finance y Project Finance) para clientes del segmento Empresas Originación y estructuración de financiaciones sindicadas corporativas para Banca Corporativa   Estructuración y negociación de reestructuraciones de gran tamaño  Ponente en Comisión Delegada y Ejecutiva de las reestructuraciones y miembro permanente del Comité de Restructuraciones.  Deals significativos: Reestructuraciones de Reyal Urbis 4bn, Prisa 4bn, Celsa 3bn, Planeta 1.5bn. Sindicados corporativos: IBE, TEF, ACS, Ferrovial, FCC, Isolux, Gestamp, Ence, etc. Gestión de la relación con 20 grupos empresariales con dependencia direct del Director de la oficina Colaboración con el departamento de compras. Implementación de un sistema informático de control de pedidos y ofertas</ns1:Responsibilities_And_Achievements>
+            <ns1:Location>JUAN IGNACIO LUCA DE TENA P03</ns1:Location>
+        </ns1:External_Job>
+    </ns1:Qualifications>
+    <ns1:Additional_Information>
+        <ns1:Company>SANES_8671 PRODUCTOS EMPRESAS</ns1:Company>
+    </ns1:Additional_Information>
+</ns:Employees>
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
+    <ns1:Summary>
+        <ns1:Employee_ID>100040448</ns1:Employee_ID>
+    </ns1:Summary>
+    <ns1:Qualifications>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification>
+            <ns1:Certification_Country>Spain</ns1:Certification_Country>
+            <ns1:Certification_Name>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification_Name>
+            <ns1:Certification_Issuer>CNMV (list of accepted titles)</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:External_Job>
+            <ns1:Job_Title>DIRECTOR PRODUTOS EMPRESAS</ns1:Job_Title>
+            <ns1:Start_Date>2013-04-30</ns1:Start_Date>
+            <ns1:Responsibilities_And_Achievements>Responsable del equipo de Originación de Financiación corporativa (sindicada o bilateral estructurada).   Cobertura a clientes MRG y BCE.  Coordinación de los especialistas de crédito de la red. Originación y estructuración de Préstamos Sindicados para clientes de Banca Corporativa Local España.   Deals significaciones: El Corte Inglés 4bn, Grupo Planeta 1,3bn Originación y estructuración de financiaciones de proyectos.  Ponente en CDR y CE de las operaciones y de la evolución de la cartera con los cambios regulatorios.  Deals significativos: Refinanciación del PF y posterior emisión Bono Castor 1,4bn; Acciona Energía 1,4bn (eólico y mini hidráulico), biomasas de Ence, termosolares Abengoa, fotovoltaicos con Gestamp e Isolux con estructuras fiscales, etc Originación y estructuración de Sindicados para clientes de Banca de Empresas. Coordinación del resto de productos de Mercado de Capitales (Leveraged Finance y Project Finance) para clientes del segmento Empresas Originación y estructuración de financiaciones sindicadas corporativas para Banca Corporativa   Estructuración y negociación de reestructuraciones de gran tamaño  Ponente en Comisión Delegada y Ejecutiva de las reestructuraciones y miembro permanente del Comité de Restructuraciones.  Deals significativos: Reestructuraciones de Reyal Urbis 4bn, Prisa 4bn, Celsa 3bn, Planeta 1.5bn. Sindicados corporativos: IBE, TEF, ACS, Ferrovial, FCC, Isolux, Gestamp, Ence, etc. Gestión de la relación con 20 grupos empresariales con dependencia direct del Director de la oficina Colaboración con el departamento de compras. Implementación de un sistema informático de control de pedidos y ofertas</ns1:Responsibilities_And_Achievements>
+            <ns1:Location>JUAN IGNACIO LUCA DE TENA P03</ns1:Location>
+        </ns1:External_Job>
+    </ns1:Qualifications>
+    <ns1:Additional_Information>
+        <ns1:Company>SANES_8671 PRODUCTOS EMPRESAS</ns1:Company>
+    </ns1:Additional_Information>
+</ns:Employees>
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
+    <ns1:Summary>
+        <ns1:Employee_ID>100040454</ns1:Employee_ID>
+    </ns1:Summary>
+    <ns1:Qualifications>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification>
+            <ns1:Certification_Country>Spain</ns1:Certification_Country>
+            <ns1:Certification_Name>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification_Name>
+            <ns1:Certification_Issuer>CNMV (list of accepted titles)</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:External_Job>
+            <ns1:Job_Title>Dtor Desarrollo Negocio</ns1:Job_Title>
+            <ns1:Start_Date>2013-04-30</ns1:Start_Date>
+            <ns1:Responsibilities_And_Achievements>-Realización de un proyecto de reorganización interno en dependencia de la Dirección General de la entidad. Diseño y organización de toda la estructura de la entidad, definición de plan estratégico, coordinación con las direcciones de las diversas áreas -Originación y ejecución de operaciones de fusiones y adquisiciones (procesos de compra y de venta),  financiación (LBO, bonos) y operaciones relativas a estructuración de capital  -Experiencia en la realización de modelos financieros, análisis detallados de valoración financiera, estructuras de financiación, capacidad de endeudamiento, coordinación de procesos, presentaciones  -Análisis de sectores y compañías para búsqueda de oportunidades de negocio Responsable orginación, estructuración y ejecución de Préstamos Sindicados para clientes MRG España y Portugal. Presupuesto 2017: €45m; balance gestionado: €10bn. Responsable originación, estructuración y ejecución de Préstamos Sindicados para clientes MRG de España y Portugal. Originación, estructuración y ejecución de Préstamos Sindicados para clientes MRG de España y Portugal. Originación, estructuración y ejecución de Préstamos Sindicados para clientes de Italia y Portugal. Originación, estructuración y ejecución de Préstamos Sindicados, Reestructuraciones de Deuda y LBO´s para clientes de banca de empresas. Responsable Territorial de Madrid y Cataluña. Originación, estructuración y ejecución de Préstamos Sindicados, Reestructuraciones de Deuda y LBO´s para clientes de banca de empresas. Responsable Territorial de Madrid y Cataluña. -Originación de operaciones: niveles de precios de transacciones precedentes, estructuras en operaciones recientes, niveles de covenants, análisis de compañías  -Realización de análisis de liquidez del mercado, definición de estrategias de sindicación   -Coordinación de procesos de sindicación, bookrunning   -Desarrollo de las relaciones con instituciones financieras nacionales e internacionales   -Distribución en mercado secundario</ns1:Responsibilities_And_Achievements>
+            <ns1:Location>JUAN IGNACIO LUCA DE TENA P03</ns1:Location>
+        </ns1:External_Job>
+    </ns1:Qualifications>
+    <ns1:Additional_Information>
+        <ns1:Company>SANES_86715 ACTIVO</ns1:Company>
+    </ns1:Additional_Information>
+</ns:Employees>
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
+    <ns1:Summary>
+        <ns1:Employee_ID>100040454</ns1:Employee_ID>
+    </ns1:Summary>
+    <ns1:Qualifications>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification>
+            <ns1:Certification_Country>Spain</ns1:Certification_Country>
+            <ns1:Certification_Name>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification_Name>
+            <ns1:Certification_Issuer>CNMV (list of accepted titles)</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:External_Job>
+            <ns1:Job_Title>Dtor Desarrollo Negocio</ns1:Job_Title>
+            <ns1:Start_Date>2013-04-30</ns1:Start_Date>
+            <ns1:Responsibilities_And_Achievements>-Realización de un proyecto de reorganización interno en dependencia de la Dirección General de la entidad. Diseño y organización de toda la estructura de la entidad, definición de plan estratégico, coordinación con las direcciones de las diversas áreas -Originación y ejecución de operaciones de fusiones y adquisiciones (procesos de compra y de venta),  financiación (LBO, bonos) y operaciones relativas a estructuración de capital  -Experiencia en la realización de modelos financieros, análisis detallados de valoración financiera, estructuras de financiación, capacidad de endeudamiento, coordinación de procesos, presentaciones  -Análisis de sectores y compañías para búsqueda de oportunidades de negocio Responsable orginación, estructuración y ejecución de Préstamos Sindicados para clientes MRG España y Portugal. Presupuesto 2017: €45m; balance gestionado: €10bn. Responsable originación, estructuración y ejecución de Préstamos Sindicados para clientes MRG de España y Portugal. Originación, estructuración y ejecución de Préstamos Sindicados para clientes MRG de España y Portugal. Originación, estructuración y ejecución de Préstamos Sindicados para clientes de Italia y Portugal. Originación, estructuración y ejecución de Préstamos Sindicados, Reestructuraciones de Deuda y LBO´s para clientes de banca de empresas. Responsable Territorial de Madrid y Cataluña. Originación, estructuración y ejecución de Préstamos Sindicados, Reestructuraciones de Deuda y LBO´s para clientes de banca de empresas. Responsable Territorial de Madrid y Cataluña. -Originación de operaciones: niveles de precios de transacciones precedentes, estructuras en operaciones recientes, niveles de covenants, análisis de compañías  -Realización de análisis de liquidez del mercado, definición de estrategias de sindicación   -Coordinación de procesos de sindicación, bookrunning   -Desarrollo de las relaciones con instituciones financieras nacionales e internacionales   -Distribución en mercado secundario</ns1:Responsibilities_And_Achievements>
+            <ns1:Location>JUAN IGNACIO LUCA DE TENA P03</ns1:Location>
+        </ns1:External_Job>
+    </ns1:Qualifications>
+    <ns1:Additional_Information>
+        <ns1:Company>SANES_86715 ACTIVO</ns1:Company>
+    </ns1:Additional_Information>
+</ns:Employees>
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
+    <ns1:Summary>
+        <ns1:Employee_ID>100040465</ns1:Employee_ID>
+    </ns1:Summary>
+    <ns1:Qualifications>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación LCCI - UNIVERSIDAD DE CANTABRIA</ns1:Certification>
+            <ns1:Certification_Name>Certificación LCCI</ns1:Certification_Name>
+            <ns1:Certification_Issuer>UNIVERSIDAD DE CANTABRIA</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification>
+            <ns1:Certification_Country>Spain</ns1:Certification_Country>
+            <ns1:Certification_Name>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification_Name>
+            <ns1:Certification_Issuer>CNMV (list of accepted titles)</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:External_Job>
+            <ns1:Job_Title>Dtor Zona</ns1:Job_Title>
+            <ns1:Start_Date>2013-04-30</ns1:Start_Date>
+            <ns1:Responsibilities_And_Achievements>Funciones diversas en oficina; gestor comercial principalmente. Practicas despacho de abogados en Viena dentro  de la Beca Leonardo. Responsable de compras para la empresa de catering Do&amp;Co en Austria y en varios eventos internacionales: Volvo Master Golf Valderrama, ATP Caja Mágica Madrid. Director de oficina Director en las oficinas de Los Cristianos y Santa Cruz de La Palma. Como apoderado en la oficina de Playa Blanca (Lanzarote) y como gestor comercial en la oficina de Costa Calma (Fuerteventura) Director de Oficina Director de oficina</ns1:Responsibilities_And_Achievements>
+            <ns1:Location>LEON Y CASTILLO 17-19</ns1:Location>
+        </ns1:External_Job>
+    </ns1:Qualifications>
+    <ns1:Additional_Information>
+        <ns1:Company>SANES_8197 ZONA 02 LAS PALMAS-LANZAROTE-FUERTEVENTURA</ns1:Company>
+    </ns1:Additional_Information>
+</ns:Employees>
+</ns1:EMPLOYEE_DELTA_INTEGRATION>

@@ -111,19 +111,6 @@ object etl_datos_cvdatalake_worker {
         s"'$dataDatePart' as data_date_part").na.fill(" ").distinct().show()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
   }
 
 }

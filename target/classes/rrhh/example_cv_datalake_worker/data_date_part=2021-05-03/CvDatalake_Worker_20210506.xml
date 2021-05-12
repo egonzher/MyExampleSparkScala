@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns1:EMPLOYEE_DELTA_INTEGRATION >
+    <ns:Employees >
+        <ns1:Summary>
+            <ns1:Employee_ID>100035327</ns1:Employee_ID>
+        </ns1:Summary>
+        <ns1:Qualifications>
+            <ns1:External_Job>
+                <ns1:Job_Title>Chief Operating Officer</ns1:Job_Title>
+                <ns1:Company>Director T&amp;O España</ns1:Company>
+                <ns1:Start_Date>2021-01-03</ns1:Start_Date>
+                <ns1:End_Date>2021-01-04</ns1:End_Date>
+                <ns1:Responsibilities_And_Achievements>IT Consultant</ns1:Responsibilities_And_Achievements>
+                <ns1:Location>Chief Operating Officer</ns1:Location>
+            </ns1:External_Job>
+        </ns1:Qualifications>
+        <ns1:Additional_Information>
+            <ns1:Company>ESP_SANCO_8888</ns1:Company>
+        </ns1:Additional_Information>
+    </ns:Employees>
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<ns1:EMPLOYEE_DELTA_INTEGRATION >
+    <ns:Employees >
+    <ns1:Summary>
+        <ns1:Employee_ID>100035327</ns1:Employee_ID>
+    </ns1:Summary>
+    <ns1:Qualifications>
+        <ns1:External_Job>
+            <ns1:Job_Title>Chief Operating Officer</ns1:Job_Title>
+            <ns1:Company>Director T&amp;O España</ns1:Company>
+            <ns1:Start_Date>2021-01-03</ns1:Start_Date>
+            <ns1:End_Date>2021-01-04</ns1:End_Date>
+            <ns1:Responsibilities_And_Achievements>IT Consultant</ns1:Responsibilities_And_Achievements>
+            <ns1:Location>Chief Operating Officer</ns1:Location>
+        </ns1:External_Job>
+    </ns1:Qualifications>
+    <ns1:Additional_Information>
+        <ns1:Company>ESP_SANCO_8888</ns1:Company>
+    </ns1:Additional_Information>
+</ns:Employees>
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<ns1:EMPLOYEE_DELTA_INTEGRATION >
+    <ns:Employees >
+    <ns1:Summary>
+        <ns1:Employee_ID>100035327</ns1:Employee_ID>
+    </ns1:Summary>
+    <ns1:Qualifications>
+        <ns1:External_Job>
+            <ns1:Job_Title>Chief Operating Officer</ns1:Job_Title>
+            <ns1:Company>Director T&amp;O España</ns1:Company>
+            <ns1:Start_Date>2021-01-03</ns1:Start_Date>
+            <ns1:End_Date>2021-01-04</ns1:End_Date>
+            <ns1:Responsibilities_And_Achievements>IT Consultant</ns1:Responsibilities_And_Achievements>
+            <ns1:Location>Chief Operating Officer</ns1:Location>
+        </ns1:External_Job>
+    </ns1:Qualifications>
+    <ns1:Additional_Information>
+        <ns1:Company>ESP_SANES_8901</ns1:Company>
+    </ns1:Additional_Information>
+</ns:Employees>
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<ns1:EMPLOYEE_DELTA_INTEGRATION >
+    <ns:Employees >
+    <ns1:Summary>
+        <ns1:Employee_ID>100099243</ns1:Employee_ID>
+    </ns1:Summary>
+    <ns1:Qualifications>
+        <ns1:External_Job>
+            <ns1:Job_Title>Responsable formación directiva SE</ns1:Job_Title>
+            <ns1:Company>Directora de Compensación y Beneficios</ns1:Company>
+            <ns1:Start_Date>2021-01-03</ns1:Start_Date>
+            <ns1:End_Date>2021-01-04</ns1:End_Date>
+            <ns1:Responsibilities_And_Achievements>Directora de Compensación, Beneficios e Innovación</ns1:Responsibilities_And_Achievements>
+            <ns1:Location>Responsable comercial de Banca Minorista Grupo</ns1:Location>
+        </ns1:External_Job>
+    </ns1:Qualifications>
+    <ns1:Additional_Information>
+        <ns1:Company>ESP_SANES_8901</ns1:Company>
+    </ns1:Additional_Information>
+</ns:Employees>
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<ns1:EMPLOYEE_DELTA_INTEGRATION >
+    <ns:Employees >
+    <ns1:Summary>
+        <ns1:Employee_ID>100099472</ns1:Employee_ID>
+    </ns1:Summary>
+    <ns1:Qualifications>
+        <ns1:External_Job>
+            <ns1:Job_Title>Delivery Senior Manager</ns1:Job_Title>
+            <ns1:Company>Jefe de Proyecto</ns1:Company>
+            <ns1:Start_Date>2021-01-03</ns1:Start_Date>
+            <ns1:End_Date>2021-01-04</ns1:End_Date>
+            <ns1:Responsibilities_And_Achievements>Delivery Senior Manager</ns1:Responsibilities_And_Achievements>
+            <ns1:Location>Directora de Desarrollo IT - Información de Gestión y regulatoria</ns1:Location>
+        </ns1:External_Job>
+    </ns1:Qualifications>
+    <ns1:Additional_Information>
+        <ns1:Company>CUSTOM_ORGANIZATION-3-73192</ns1:Company>
+    </ns1:Additional_Information>
+</ns:Employees>
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<ns1:EMPLOYEE_DELTA_INTEGRATION >
+    <ns:Employees >
+    <ns1:Summary>
+        <ns1:Employee_ID>100102618</ns1:Employee_ID>
+    </ns1:Summary>
+    <ns1:Qualifications>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación LCCI - UNIVERSIDAD DE CANTABRIA</ns1:Certification>
+            <ns1:Certification_Name>Certificación LCCI</ns1:Certification_Name>
+            <ns1:Certification_Issuer>UNIVERSIDAD DE CANTABRIA</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification>
+            <ns1:Certification_Country>Spain</ns1:Certification_Country>
+            <ns1:Certification_Name>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification_Name>
+            <ns1:Certification_Issuer>CNMV (list of accepted titles)</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:External_Job />
+    </ns1:Qualifications>
+    <ns1:Additional_Information>
+        <ns1:Company>CUSTOM_ORGANIZATION-3-73192</ns1:Company>
+    </ns1:Additional_Information>
+</ns:Employees>
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<ns1:EMPLOYEE_DELTA_INTEGRATION >
+    <ns:Employees >
+    <ns1:Summary>
+        <ns1:Employee_ID>100105063</ns1:Employee_ID>
+    </ns1:Summary>
+    <ns1:Qualifications>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación LCCI - UNIVERSIDAD DE CANTABRIA</ns1:Certification>
+            <ns1:Certification_Name>Certificación LCCI</ns1:Certification_Name>
+            <ns1:Certification_Issuer>UNIVERSIDAD DE CANTABRIA</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification>
+            <ns1:Certification_Country>Spain</ns1:Certification_Country>
+            <ns1:Certification_Name>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification_Name>
+            <ns1:Certification_Issuer>CNMV (list of accepted titles)</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:External_Job>
+            <ns1:Job_Title>CONTABLE</ns1:Job_Title>
+            <ns1:Company>CONTABLE</ns1:Company>
+            <ns1:Start_Date>2021-01-03</ns1:Start_Date>
+            <ns1:End_Date>2021-01-04</ns1:End_Date>
+            <ns1:Responsibilities_And_Achievements>CONTABLE</ns1:Responsibilities_And_Achievements>
+            <ns1:Location>WAREHOUSE OPERATIVE</ns1:Location>
+        </ns1:External_Job>
+    </ns1:Qualifications>
+    <ns1:Additional_Information>
+        <ns1:Company>ESP_SANCO_8756</ns1:Company>
+    </ns1:Additional_Information>
+</ns:Employees>
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<ns1:EMPLOYEE_DELTA_INTEGRATION >
+    <ns:Employees >
+    <ns1:Summary>
+        <ns1:Employee_ID>100108268</ns1:Employee_ID>
+    </ns1:Summary>
+    <ns1:Qualifications>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación LCCI - UNIVERSIDAD DE CANTABRIA</ns1:Certification>
+            <ns1:Certification_Name>Certificación LCCI</ns1:Certification_Name>
+            <ns1:Certification_Issuer>UNIVERSIDAD DE CANTABRIA</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:Certification_Achievement>
+            <ns1:Certification>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification>
+            <ns1:Certification_Country>Spain</ns1:Certification_Country>
+            <ns1:Certification_Name>Certificación en Asesoramietno en Servicios Financieros - CNMV (list of accepted titles)</ns1:Certification_Name>
+            <ns1:Certification_Issuer>CNMV (list of accepted titles)</ns1:Certification_Issuer>
+        </ns1:Certification_Achievement>
+        <ns1:External_Job />
+    </ns1:Qualifications>
+    <ns1:Additional_Information>
+        <ns1:Company>ESP_SANCO_8756</ns1:Company>
+    </ns1:Additional_Information>
+</ns:Employees>
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
