@@ -20,39 +20,38 @@ object etl_datos_weci_datos_familiares {
       .option("rowTag", "ns1:EMPLOYEE_DELTA_INTEGRATION")
       .load(rutaWeciDatosFamiliares)
 
-    println("Imprimiendo el esquema de df_WeciConsolidWD")
+    println("Imprimiendo el esquema de df_WeciFamiliaWD")
     df_WeciFamiliaWD.printSchema()
 
 
 
     val df_FamiliaFinal = df_WeciFamiliaWD
       .withColumn("relatedPerson", explode(col("`ns:Employees`.`ns1:Related_Person`")))
-      .withColumn("relatedNacionalID", explode(col("`ns:Employees`.`ns1:Related_Person_Identification`")))
-      .withColumn("BenefiCast",col("`relatedPerson`.`ns1:Beneficiary`").cast("String")).
+      .withColumn("relatedNacionalID", explode(col("`ns:Employees`.`ns1:Related_Person_Identification`"))).
 
       selectExpr(
-        "`ns:Employees`.`ns1:Position`.`ns1:Organization` as COMPANY",
-        "`relatedPerson`.`ns1:Related_Person_ID` as EMPLID",
-        "`relatedPerson`.`ns1:Dependent_ID` as EMPL_RCD",
-        "`BenefiCast` as DEPENDENT_BENEF",
-        "`relatedPerson`.`ns1:Relationship_Type` as RELATIONSHIP",
-        "`ns:Employees`.`ns1:Position`.`ns1:Organization` as COMPANY_DESCR",
-        "`relatedPerson`.`ns1:Relationship_Type` as RELATIONSHIP_DESCR",
-        "`relatedPerson`.`ns1:Legal_Name`.`ns1:First_Name` as FIRST_NAME",
-        "`relatedPerson`.`ns1:Legal_Name`.`ns1:Last_Name` as LAST_NAME",
-        "`relatedPerson`.`ns1:Legal_Name`.`ns1:Secondary_Last_Name` as SECOND_LAST_NAME",
-        "'' as MIDDLE_NAME ",
-        "`relatedPerson`.`ns1:Birth_Date` as BIRTHDATE ",
-        "'' as DT_OF_DEATH",
-        "'' as TIPMINUS",
-        "'' as TIPMINUS_DESCR",
-        "'' as MAR_STATUS",
-        "'' as MAR_STATUS_DESCR",
-        "'' as MAR_STATUS_DT",
-        "`relatedNacionalID`.`ns1:National_Identifier`.`ns1:National_ID_Type` as NATIONAL_ID_TYPE",
-        "`relatedNacionalID`.`ns1:National_Identifier`.`ns1:National_ID_Type` as NATIONAL_ID_TYPE_DESCR",
-        "`relatedNacionalID`.`ns1:National_Identifier`.`ns1:National_ID` as NATIONAL_ID",
-        "'' as FECHA"
+        "`relatedPerson`.`ns1:Dependent_ID` as ID_FAMILIAR",
+        "`relatedPerson`.`ns1:Related_Person_ID` as TIPO_DE_PARENTESCO", //
+        "`relatedPerson`.`ns1:Legal_Name`.`ns1:First_Name` as NOMBRE_FAMILIAR",
+        "`relatedPerson`.`ns1:Legal_Name`.`ns1:Last_Name` as PRIMER_APELLIDO",
+        "`relatedPerson`.`ns1:Legal_Name`.`ns1:Secondary_Last_Name` as SEGUNDO_APELLIDO",
+        "'' as SEGUNDO_NOMBRE ",
+        "`relatedPerson`.`ns1:Birth_Date` as FECHA_NACIMIENTO ",
+        "'' as FECHA_DEFUNCION",
+        "'' as GRADO_MINUSVALIA",
+        "`relatedNacionalID`.`ns1:National_Identifier`.`ns1:Country` as PAIS_DOCUMENTO_FAMILIAR",
+        "`relatedNacionalID`.`ns1:National_Identifier`.`ns1:National_ID_Type` as TIPO_DOCUMENTO_FAMILIAR",
+        "`relatedNacionalID`.`ns1:National_Identifier`.`ns1:National_ID` as CODIGO_DOCUMENTO_FAMILIAR",
+        "`relatedPerson`.`ns1:Gender` as GENERO_DEL_DEPENDIENTE",
+        "'' as PAIS_DE_NACIMIENTO",
+        "'' as CIUDAD_DE_NACIMIENTO",
+        "`relatedNacionalID`.`ns1:Other_Identifier`.`ns1:Custom_ID_Type` as ESTADO_CIVIL_DEPENDIENTE",
+        "`relatedNacionalID`.`ns1:Other_Identifier`.`ns1:Custom_ID_Type` as SITUACION_FAMILIAR_DEPENDIENTE",
+        "`relatedNacionalID`.`ns1:Other_Identifier`.`ns1:Custom_ID_Type` as NUMERO_MATRICULA_DEPENDIENTE",
+        "'' as NUMERO_MATRICULA_DEPENDIENTE_CALCULADA",
+        "'' as NOMBRE_CONTACTO_EMERGENCIA",
+        "'' as APELLIDO_CONTACTO_EMERGENCIA",
+        "'' as TELEFONO_CONTACTO_EMERGENCIA",
       ).na.fill(" ").distinct().show()
 
 

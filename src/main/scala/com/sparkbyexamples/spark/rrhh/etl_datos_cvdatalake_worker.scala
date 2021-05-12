@@ -15,7 +15,9 @@ object etl_datos_cvdatalake_worker {
 
 
     //Trabajando con la nueva integración de cvdatalake_worker
-    val rutaCvDatalakeWorker = "src/main/resources/rrhh/example_cvdatalake_worker/*.xml"
+    val dataDatePart = "2021-05-03"
+    val rutaCvDatalakeWorker = s"src/main/resources/rrhh/example_cv_datalake_worker/data_date_part=$dataDatePart/*.xml"
+
 
     val df_CvDatalakeWorker = spark.read
       .format("com.databricks.spark.xml")
@@ -54,6 +56,8 @@ object etl_datos_cvdatalake_worker {
  |    |    |-- ns1:Employee_ID: long (nullable = true)
 */
 
+    /*
+
     val df_CvDatalakeWorkerFinal = df_CvDatalakeWorker
       .withColumn("CertAchievement", explode(col("`ns:Employees`.`ns1:Qualifications`.`ns1:Certification_Achievement`")))
       .withColumn("IDCast",col("`ns:Employees`.`ns1:Summary`.`ns1:Employee_ID`").cast("String"))
@@ -77,8 +81,34 @@ object etl_datos_cvdatalake_worker {
         "'' as Tipo_Mentor"
       ).na.fill(" ").distinct().show()
 
+      */
 
-
+    val df_CvDatalakeWorkerFinal = df_CvDatalakeWorker
+      .withColumn("CertAchievement", explode(col("`ns:Employees`.`ns1:Qualifications`.`ns1:Certification_Achievement`")))
+      .withColumn("IDCast",col("`ns:Employees`.`ns1:Summary`.`ns1:Employee_ID`").cast("String"))
+      .withColumn("External_Job_Reference",col("`ns:Employees`.`ns1:Qualifications`.`ns1:External_Job`.`ns1:Job_Reference`").cast("String"))
+      .selectExpr(
+        //ID para los join
+        "IDCast as Employee_ID",
+        //Campos identificados
+        "`CertAchievement`.`ns1:Certification_Country` as Pais_Certificacion",
+        "`CertAchievement`.`ns1:Certification` as Certificacion_Tabulada",
+        "`CertAchievement`.`ns1:Certification_Name` as Certificacion_No_Tabulada",
+        "`CertAchievement`.`ns1:Certification_Issuer` as Entidad_Certificador",
+        "`CertAchievement`.`ns1:Issued_Date` as Fecha_Expedicion_Certificacion",
+        //Campos pendientes de identificar
+        "'' as Fecha_Vencimiento_Certificacion",
+        "`ns:Employees`.`ns1:Additional_Information`.`ns1:Company` as Empresa_CV",
+        "`ns:Employees`.`ns1:Qualifications`.`ns1:External_Job`.`ns1:Job_Title` as Titulo_Puesto_CV",
+        "`ns:Employees`.`ns1:Qualifications`.`ns1:External_Job`.`ns1:Start_Date` as Fecha_Inicio_CV",
+        "`ns:Employees`.`ns1:Qualifications`.`ns1:External_Job`.`ns1:End_Date` as Fecha_Fin_CV",
+        "`ns:Employees`.`ns1:Qualifications`.`ns1:External_Job`.`ns1:Location` as Ubicacion_CV",
+        "`ns:Employees`.`ns1:Qualifications`.`ns1:External_Job`.`ns1:Responsibilities_And_Achievements` as Funciones_Logros_CV",
+        "'' as Tipo_Mentor",
+        //Campos que no están mapeados
+        "`ns:Employees`.`ns1:Qualifications`.`ns1:External_Job`.`ns1:Company` as External_Job_Company",
+        "External_Job_Reference",
+        s"'$dataDatePart' as data_date_part").na.fill(" ").distinct().show()
 
 
 

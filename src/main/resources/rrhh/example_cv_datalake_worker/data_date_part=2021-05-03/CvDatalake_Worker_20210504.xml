@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ns1:EMPLOYEE_DELTA_INTEGRATION xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations">
-    <ns:Employees xmlns:ns="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations" xmlns:wd2="urn:com.workday.report/INT0088_CRI_CV_Outbound_-_Spain_Delta" xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/CommonTypes">
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+    <ns:Employees>
         <ns1:Summary>
             <ns1:Employee_ID>100035873</ns1:Employee_ID>
         </ns1:Summary>
@@ -26,9 +26,9 @@
             <ns1:Company>SANES_7268 MEDINA-SIDONIA, SAN JUAN 18</ns1:Company>
         </ns1:Additional_Information>
     </ns:Employees>
-</ns1:EMPLOYEE_DELTA_INTEGRATION><?xml version="1.0" encoding="UTF-8"?>
-<ns1:EMPLOYEE_DELTA_INTEGRATION xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations">
-<ns:Employees xmlns:ns="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations" xmlns:wd2="urn:com.workday.report/INT0088_CRI_CV_Outbound_-_Spain_Delta" xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/CommonTypes">
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
     <ns1:Summary>
         <ns1:Employee_ID>100035873</ns1:Employee_ID>
     </ns1:Summary>
@@ -54,9 +54,9 @@
         <ns1:Company>SANES_7268 MEDINA-SIDONIA, SAN JUAN 18</ns1:Company>
     </ns1:Additional_Information>
 </ns:Employees>
-</ns1:EMPLOYEE_DELTA_INTEGRATION><?xml version="1.0" encoding="UTF-8"?>
-<ns1:EMPLOYEE_DELTA_INTEGRATION xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations">
-<ns:Employees xmlns:ns="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations" xmlns:wd2="urn:com.workday.report/INT0088_CRI_CV_Outbound_-_Spain_Delta" xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/CommonTypes">
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
     <ns1:Summary>
         <ns1:Employee_ID>100035875</ns1:Employee_ID>
     </ns1:Summary>
@@ -82,9 +82,9 @@
         <ns1:Company>SANES_3975 PTO. DEL CARMEN-TIAS-, JUAN CA</ns1:Company>
     </ns1:Additional_Information>
 </ns:Employees>
-</ns1:EMPLOYEE_DELTA_INTEGRATION><?xml version="1.0" encoding="UTF-8"?>
-<ns1:EMPLOYEE_DELTA_INTEGRATION xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations">
-<ns:Employees xmlns:ns="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations" xmlns:wd2="urn:com.workday.report/INT0088_CRI_CV_Outbound_-_Spain_Delta" xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/CommonTypes">
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
     <ns1:Summary>
         <ns1:Employee_ID>100035875</ns1:Employee_ID>
     </ns1:Summary>
@@ -110,9 +110,9 @@
         <ns1:Company>SANES_3975 PTO. DEL CARMEN-TIAS-, JUAN CA</ns1:Company>
     </ns1:Additional_Information>
 </ns:Employees>
-</ns1:EMPLOYEE_DELTA_INTEGRATION><?xml version="1.0" encoding="UTF-8"?>
-<ns1:EMPLOYEE_DELTA_INTEGRATION xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations">
-<ns:Employees xmlns:ns="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations" xmlns:wd2="urn:com.workday.report/INT0088_CRI_CV_Outbound_-_Spain_Delta" xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/CommonTypes">
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
     <ns1:Summary>
         <ns1:Employee_ID>100037610</ns1:Employee_ID>
     </ns1:Summary>
@@ -134,9 +134,9 @@
         <ns1:Company>SANES_99079 FX SALES</ns1:Company>
     </ns1:Additional_Information>
 </ns:Employees>
-</ns1:EMPLOYEE_DELTA_INTEGRATION><?xml version="1.0" encoding="UTF-8"?>
-<ns1:EMPLOYEE_DELTA_INTEGRATION xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations">
-<ns:Employees xmlns:ns="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations" xmlns:wd2="urn:com.workday.report/INT0088_CRI_CV_Outbound_-_Spain_Delta" xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/CommonTypes">
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
     <ns1:Summary>
         <ns1:Employee_ID>100037610</ns1:Employee_ID>
     </ns1:Summary>
@@ -158,9 +158,9 @@
         <ns1:Company>SANES_99079 FX SALES</ns1:Company>
     </ns1:Additional_Information>
 </ns:Employees>
-</ns1:EMPLOYEE_DELTA_INTEGRATION><?xml version="1.0" encoding="UTF-8"?>
-<ns1:EMPLOYEE_DELTA_INTEGRATION xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations">
-<ns:Employees xmlns:ns="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations" xmlns:wd2="urn:com.workday.report/INT0088_CRI_CV_Outbound_-_Spain_Delta" xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/CommonTypes">
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
     <ns1:Summary>
         <ns1:Employee_ID>100037728</ns1:Employee_ID>
     </ns1:Summary>
@@ -187,9 +187,9 @@
         <ns1:Company>SANES_95781 Negocios y Empresas ZONA 04 SE</ns1:Company>
     </ns1:Additional_Information>
 </ns:Employees>
-</ns1:EMPLOYEE_DELTA_INTEGRATION><?xml version="1.0" encoding="UTF-8"?>
-<ns1:EMPLOYEE_DELTA_INTEGRATION xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations">
-<ns:Employees xmlns:ns="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations" xmlns:wd2="urn:com.workday.report/INT0088_CRI_CV_Outbound_-_Spain_Delta" xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/CommonTypes">
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
     <ns1:Summary>
         <ns1:Employee_ID>100037728</ns1:Employee_ID>
     </ns1:Summary>
@@ -216,9 +216,9 @@
         <ns1:Company>SANES_95781 Negocios y Empresas ZONA 04 SE</ns1:Company>
     </ns1:Additional_Information>
 </ns:Employees>
-</ns1:EMPLOYEE_DELTA_INTEGRATION><?xml version="1.0" encoding="UTF-8"?>
-<ns1:EMPLOYEE_DELTA_INTEGRATION xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations">
-<ns:Employees xmlns:ns="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations" xmlns:wd2="urn:com.workday.report/INT0088_CRI_CV_Outbound_-_Spain_Delta" xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/CommonTypes">
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
     <ns1:Summary>
         <ns1:Employee_ID>100037728</ns1:Employee_ID>
     </ns1:Summary>
@@ -245,9 +245,9 @@
         <ns1:Company>SANES_95781 Negocios y Empresas ZONA 04 SE</ns1:Company>
     </ns1:Additional_Information>
 </ns:Employees>
-</ns1:EMPLOYEE_DELTA_INTEGRATION><?xml version="1.0" encoding="UTF-8"?>
-<ns1:EMPLOYEE_DELTA_INTEGRATION xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations">
-<ns:Employees xmlns:ns="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations" xmlns:wd2="urn:com.workday.report/INT0088_CRI_CV_Outbound_-_Spain_Delta" xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/CommonTypes">
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
     <ns1:Summary>
         <ns1:Employee_ID>100039063</ns1:Employee_ID>
     </ns1:Summary>
@@ -274,9 +274,9 @@
         <ns1:Company>SANES_8209 D.C. UNIVERSAL ANDALUCIA</ns1:Company>
     </ns1:Additional_Information>
 </ns:Employees>
-</ns1:EMPLOYEE_DELTA_INTEGRATION><?xml version="1.0" encoding="UTF-8"?>
-<ns1:EMPLOYEE_DELTA_INTEGRATION xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations">
-<ns:Employees xmlns:ns="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations" xmlns:wd2="urn:com.workday.report/INT0088_CRI_CV_Outbound_-_Spain_Delta" xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/CommonTypes">
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
     <ns1:Summary>
         <ns1:Employee_ID>100039063</ns1:Employee_ID>
     </ns1:Summary>
@@ -303,9 +303,9 @@
         <ns1:Company>SANES_8209 D.C. UNIVERSAL ANDALUCIA</ns1:Company>
     </ns1:Additional_Information>
 </ns:Employees>
-</ns1:EMPLOYEE_DELTA_INTEGRATION><?xml version="1.0" encoding="UTF-8"?>
-<ns1:EMPLOYEE_DELTA_INTEGRATION xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations">
-<ns:Employees xmlns:ns="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations" xmlns:wd2="urn:com.workday.report/INT0088_CRI_CV_Outbound_-_Spain_Delta" xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/CommonTypes">
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
     <ns1:Summary>
         <ns1:Employee_ID>100039063</ns1:Employee_ID>
     </ns1:Summary>
@@ -332,9 +332,9 @@
         <ns1:Company>SANES_8209 D.C. UNIVERSAL ANDALUCIA</ns1:Company>
     </ns1:Additional_Information>
 </ns:Employees>
-</ns1:EMPLOYEE_DELTA_INTEGRATION><?xml version="1.0" encoding="UTF-8"?>
-<ns1:EMPLOYEE_DELTA_INTEGRATION xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations">
-<ns:Employees xmlns:ns="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations" xmlns:wd2="urn:com.workday.report/INT0088_CRI_CV_Outbound_-_Spain_Delta" xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/CommonTypes">
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
     <ns1:Summary>
         <ns1:Employee_ID>100039363</ns1:Employee_ID>
     </ns1:Summary>
@@ -361,9 +361,9 @@
         <ns1:Company>SANES_8183 ZONA 04 CADIZ</ns1:Company>
     </ns1:Additional_Information>
 </ns:Employees>
-</ns1:EMPLOYEE_DELTA_INTEGRATION><?xml version="1.0" encoding="UTF-8"?>
-<ns1:EMPLOYEE_DELTA_INTEGRATION xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations">
-<ns:Employees xmlns:ns="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations" xmlns:wd2="urn:com.workday.report/INT0088_CRI_CV_Outbound_-_Spain_Delta" xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/CommonTypes">
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
     <ns1:Summary>
         <ns1:Employee_ID>100039363</ns1:Employee_ID>
     </ns1:Summary>
@@ -390,9 +390,9 @@
         <ns1:Company>SANES_8183 ZONA 04 CADIZ</ns1:Company>
     </ns1:Additional_Information>
 </ns:Employees>
-</ns1:EMPLOYEE_DELTA_INTEGRATION><?xml version="1.0" encoding="UTF-8"?>
-<ns1:EMPLOYEE_DELTA_INTEGRATION xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations">
-<ns:Employees xmlns:ns="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations" xmlns:wd2="urn:com.workday.report/INT0088_CRI_CV_Outbound_-_Spain_Delta" xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/CommonTypes">
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
     <ns1:Summary>
         <ns1:Employee_ID>100039363</ns1:Employee_ID>
     </ns1:Summary>
@@ -419,9 +419,9 @@
         <ns1:Company>SANES_8183 ZONA 04 CADIZ</ns1:Company>
     </ns1:Additional_Information>
 </ns:Employees>
-</ns1:EMPLOYEE_DELTA_INTEGRATION><?xml version="1.0" encoding="UTF-8"?>
-<ns1:EMPLOYEE_DELTA_INTEGRATION xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations">
-<ns:Employees xmlns:ns="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations" xmlns:wd2="urn:com.workday.report/INT0088_CRI_CV_Outbound_-_Spain_Delta" xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/CommonTypes">
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
     <ns1:Summary>
         <ns1:Employee_ID>100039443</ns1:Employee_ID>
     </ns1:Summary>
@@ -447,9 +447,9 @@
         <ns1:Company>SANES_0919 SEVILLA, AV. REINA MERCEDES, 1</ns1:Company>
     </ns1:Additional_Information>
 </ns:Employees>
-</ns1:EMPLOYEE_DELTA_INTEGRATION><?xml version="1.0" encoding="UTF-8"?>
-<ns1:EMPLOYEE_DELTA_INTEGRATION xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations">
-<ns:Employees xmlns:ns="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations" xmlns:wd2="urn:com.workday.report/INT0088_CRI_CV_Outbound_-_Spain_Delta" xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/CommonTypes">
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
     <ns1:Summary>
         <ns1:Employee_ID>100039443</ns1:Employee_ID>
     </ns1:Summary>
@@ -475,9 +475,9 @@
         <ns1:Company>SANES_0919 SEVILLA, AV. REINA MERCEDES, 1</ns1:Company>
     </ns1:Additional_Information>
 </ns:Employees>
-</ns1:EMPLOYEE_DELTA_INTEGRATION><?xml version="1.0" encoding="UTF-8"?>
-<ns1:EMPLOYEE_DELTA_INTEGRATION xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations">
-<ns:Employees xmlns:ns="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations" xmlns:wd2="urn:com.workday.report/INT0088_CRI_CV_Outbound_-_Spain_Delta" xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/CommonTypes">
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
     <ns1:Summary>
         <ns1:Employee_ID>100039454</ns1:Employee_ID>
     </ns1:Summary>
@@ -504,9 +504,9 @@
         <ns1:Company>SANES_8353 D.C. UNIVERSAL CANARIAS</ns1:Company>
     </ns1:Additional_Information>
 </ns:Employees>
-</ns1:EMPLOYEE_DELTA_INTEGRATION><?xml version="1.0" encoding="UTF-8"?>
-<ns1:EMPLOYEE_DELTA_INTEGRATION xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations">
-<ns:Employees xmlns:ns="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations" xmlns:wd2="urn:com.workday.report/INT0088_CRI_CV_Outbound_-_Spain_Delta" xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/CommonTypes">
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
     <ns1:Summary>
         <ns1:Employee_ID>100039454</ns1:Employee_ID>
     </ns1:Summary>
@@ -533,9 +533,9 @@
         <ns1:Company>SANES_8353 D.C. UNIVERSAL CANARIAS</ns1:Company>
     </ns1:Additional_Information>
 </ns:Employees>
-</ns1:EMPLOYEE_DELTA_INTEGRATION><?xml version="1.0" encoding="UTF-8"?>
-<ns1:EMPLOYEE_DELTA_INTEGRATION xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations">
-<ns:Employees xmlns:ns="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations" xmlns:wd2="urn:com.workday.report/INT0088_CRI_CV_Outbound_-_Spain_Delta" xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/CommonTypes">
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
     <ns1:Summary>
         <ns1:Employee_ID>100039454</ns1:Employee_ID>
     </ns1:Summary>
@@ -562,9 +562,9 @@
         <ns1:Company>SANES_8353 D.C. UNIVERSAL CANARIAS</ns1:Company>
     </ns1:Additional_Information>
 </ns:Employees>
-</ns1:EMPLOYEE_DELTA_INTEGRATION><?xml version="1.0" encoding="UTF-8"?>
-<ns1:EMPLOYEE_DELTA_INTEGRATION xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations">
-<ns:Employees xmlns:ns="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations" xmlns:wd2="urn:com.workday.report/INT0088_CRI_CV_Outbound_-_Spain_Delta" xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/CommonTypes">
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
     <ns1:Summary>
         <ns1:Employee_ID>100039481</ns1:Employee_ID>
     </ns1:Summary>
@@ -585,9 +585,9 @@
         <ns1:Company>SANES_29653 Hipotecas y Admisión Centralizada</ns1:Company>
     </ns1:Additional_Information>
 </ns:Employees>
-</ns1:EMPLOYEE_DELTA_INTEGRATION><?xml version="1.0" encoding="UTF-8"?>
-<ns1:EMPLOYEE_DELTA_INTEGRATION xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations">
-<ns:Employees xmlns:ns="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations" xmlns:wd2="urn:com.workday.report/INT0088_CRI_CV_Outbound_-_Spain_Delta" xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/CommonTypes">
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
     <ns1:Summary>
         <ns1:Employee_ID>100039501</ns1:Employee_ID>
     </ns1:Summary>
@@ -614,9 +614,9 @@
         <ns1:Company>SANES_9232 D.C. BANCA PRIVADA PAIS VASCO</ns1:Company>
     </ns1:Additional_Information>
 </ns:Employees>
-</ns1:EMPLOYEE_DELTA_INTEGRATION><?xml version="1.0" encoding="UTF-8"?>
-<ns1:EMPLOYEE_DELTA_INTEGRATION xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations">
-<ns:Employees xmlns:ns="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations" xmlns:wd2="urn:com.workday.report/INT0088_CRI_CV_Outbound_-_Spain_Delta" xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/CommonTypes">
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
     <ns1:Summary>
         <ns1:Employee_ID>100039501</ns1:Employee_ID>
     </ns1:Summary>
@@ -643,9 +643,9 @@
         <ns1:Company>SANES_9232 D.C. BANCA PRIVADA PAIS VASCO</ns1:Company>
     </ns1:Additional_Information>
 </ns:Employees>
-</ns1:EMPLOYEE_DELTA_INTEGRATION><?xml version="1.0" encoding="UTF-8"?>
-<ns1:EMPLOYEE_DELTA_INTEGRATION xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations">
-<ns:Employees xmlns:ns="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations" xmlns:wd2="urn:com.workday.report/INT0088_CRI_CV_Outbound_-_Spain_Delta" xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/CommonTypes">
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
     <ns1:Summary>
         <ns1:Employee_ID>100039501</ns1:Employee_ID>
     </ns1:Summary>
@@ -672,9 +672,9 @@
         <ns1:Company>SANES_9232 D.C. BANCA PRIVADA PAIS VASCO</ns1:Company>
     </ns1:Additional_Information>
 </ns:Employees>
-</ns1:EMPLOYEE_DELTA_INTEGRATION><?xml version="1.0" encoding="UTF-8"?>
-<ns1:EMPLOYEE_DELTA_INTEGRATION xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations">
-<ns:Employees xmlns:ns="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations" xmlns:wd2="urn:com.workday.report/INT0088_CRI_CV_Outbound_-_Spain_Delta" xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/CommonTypes">
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
     <ns1:Summary>
         <ns1:Employee_ID>100039501</ns1:Employee_ID>
     </ns1:Summary>
@@ -701,9 +701,9 @@
         <ns1:Company>SANES_9232 D.C. BANCA PRIVADA PAIS VASCO</ns1:Company>
     </ns1:Additional_Information>
 </ns:Employees>
-</ns1:EMPLOYEE_DELTA_INTEGRATION><?xml version="1.0" encoding="UTF-8"?>
-<ns1:EMPLOYEE_DELTA_INTEGRATION xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations">
-<ns:Employees xmlns:ns="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations" xmlns:wd2="urn:com.workday.report/INT0088_CRI_CV_Outbound_-_Spain_Delta" xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/CommonTypes">
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
     <ns1:Summary>
         <ns1:Employee_ID>100039501</ns1:Employee_ID>
     </ns1:Summary>
@@ -730,9 +730,9 @@
         <ns1:Company>SANES_9232 D.C. BANCA PRIVADA PAIS VASCO</ns1:Company>
     </ns1:Additional_Information>
 </ns:Employees>
-</ns1:EMPLOYEE_DELTA_INTEGRATION><?xml version="1.0" encoding="UTF-8"?>
-<ns1:EMPLOYEE_DELTA_INTEGRATION xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations">
-<ns:Employees xmlns:ns="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations" xmlns:wd2="urn:com.workday.report/INT0088_CRI_CV_Outbound_-_Spain_Delta" xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/CommonTypes">
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
     <ns1:Summary>
         <ns1:Employee_ID>100039532</ns1:Employee_ID>
     </ns1:Summary>
@@ -748,9 +748,9 @@
         <ns1:Company>SANES_9278 UNIDADES DE NEGOCIO</ns1:Company>
     </ns1:Additional_Information>
 </ns:Employees>
-</ns1:EMPLOYEE_DELTA_INTEGRATION><?xml version="1.0" encoding="UTF-8"?>
-<ns1:EMPLOYEE_DELTA_INTEGRATION xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations">
-<ns:Employees xmlns:ns="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations" xmlns:wd2="urn:com.workday.report/INT0088_CRI_CV_Outbound_-_Spain_Delta" xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/CommonTypes">
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
     <ns1:Summary>
         <ns1:Employee_ID>100039533</ns1:Employee_ID>
     </ns1:Summary>
@@ -766,9 +766,9 @@
         <ns1:Company>SANES_86209 ESTRATEGIA Y TRANSFORMACION</ns1:Company>
     </ns1:Additional_Information>
 </ns:Employees>
-</ns1:EMPLOYEE_DELTA_INTEGRATION><?xml version="1.0" encoding="UTF-8"?>
-<ns1:EMPLOYEE_DELTA_INTEGRATION xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations">
-<ns:Employees xmlns:ns="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations" xmlns:wd2="urn:com.workday.report/INT0088_CRI_CV_Outbound_-_Spain_Delta" xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/CommonTypes">
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
     <ns1:Summary>
         <ns1:Employee_ID>100039537</ns1:Employee_ID>
     </ns1:Summary>
@@ -800,9 +800,9 @@
         <ns1:Company>SANES_0919 SEVILLA, AV. REINA MERCEDES, 1</ns1:Company>
     </ns1:Additional_Information>
 </ns:Employees>
-</ns1:EMPLOYEE_DELTA_INTEGRATION><?xml version="1.0" encoding="UTF-8"?>
-<ns1:EMPLOYEE_DELTA_INTEGRATION xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations">
-<ns:Employees xmlns:ns="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations" xmlns:wd2="urn:com.workday.report/INT0088_CRI_CV_Outbound_-_Spain_Delta" xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/CommonTypes">
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
     <ns1:Summary>
         <ns1:Employee_ID>100039537</ns1:Employee_ID>
     </ns1:Summary>
@@ -834,9 +834,9 @@
         <ns1:Company>SANES_0919 SEVILLA, AV. REINA MERCEDES, 1</ns1:Company>
     </ns1:Additional_Information>
 </ns:Employees>
-</ns1:EMPLOYEE_DELTA_INTEGRATION><?xml version="1.0" encoding="UTF-8"?>
-<ns1:EMPLOYEE_DELTA_INTEGRATION xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations">
-<ns:Employees xmlns:ns="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations" xmlns:wd2="urn:com.workday.report/INT0088_CRI_CV_Outbound_-_Spain_Delta" xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/CommonTypes">
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
     <ns1:Summary>
         <ns1:Employee_ID>100039537</ns1:Employee_ID>
     </ns1:Summary>
@@ -868,9 +868,9 @@
         <ns1:Company>SANES_0919 SEVILLA, AV. REINA MERCEDES, 1</ns1:Company>
     </ns1:Additional_Information>
 </ns:Employees>
-</ns1:EMPLOYEE_DELTA_INTEGRATION><?xml version="1.0" encoding="UTF-8"?>
-<ns1:EMPLOYEE_DELTA_INTEGRATION xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations">
-<ns:Employees xmlns:ns="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations" xmlns:wd2="urn:com.workday.report/INT0088_CRI_CV_Outbound_-_Spain_Delta" xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/CommonTypes">
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
     <ns1:Summary>
         <ns1:Employee_ID>100039565</ns1:Employee_ID>
     </ns1:Summary>
@@ -892,9 +892,9 @@
         <ns1:Company>SANES_9907 C&amp;CB SOLUTIONS GROUP</ns1:Company>
     </ns1:Additional_Information>
 </ns:Employees>
-</ns1:EMPLOYEE_DELTA_INTEGRATION><?xml version="1.0" encoding="UTF-8"?>
-<ns1:EMPLOYEE_DELTA_INTEGRATION xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations">
-<ns:Employees xmlns:ns="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations" xmlns:wd2="urn:com.workday.report/INT0088_CRI_CV_Outbound_-_Spain_Delta" xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/CommonTypes">
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
     <ns1:Summary>
         <ns1:Employee_ID>100039565</ns1:Employee_ID>
     </ns1:Summary>
@@ -916,9 +916,9 @@
         <ns1:Company>SANES_9907 C&amp;CB SOLUTIONS GROUP</ns1:Company>
     </ns1:Additional_Information>
 </ns:Employees>
-</ns1:EMPLOYEE_DELTA_INTEGRATION><?xml version="1.0" encoding="UTF-8"?>
-<ns1:EMPLOYEE_DELTA_INTEGRATION xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations">
-<ns:Employees xmlns:ns="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations" xmlns:wd2="urn:com.workday.report/INT0088_CRI_CV_Outbound_-_Spain_Delta" xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/CommonTypes">
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
     <ns1:Summary>
         <ns1:Employee_ID>100039584</ns1:Employee_ID>
     </ns1:Summary>
@@ -933,9 +933,9 @@
         <ns1:Company>SANES_8620 RIESGOS</ns1:Company>
     </ns1:Additional_Information>
 </ns:Employees>
-</ns1:EMPLOYEE_DELTA_INTEGRATION><?xml version="1.0" encoding="UTF-8"?>
-<ns1:EMPLOYEE_DELTA_INTEGRATION xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations">
-<ns:Employees xmlns:ns="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations" xmlns:wd2="urn:com.workday.report/INT0088_CRI_CV_Outbound_-_Spain_Delta" xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/CommonTypes">
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
     <ns1:Summary>
         <ns1:Employee_ID>100039599</ns1:Employee_ID>
     </ns1:Summary>
@@ -957,9 +957,9 @@
         <ns1:Company>SANES_989912 SECURITIES SALES</ns1:Company>
     </ns1:Additional_Information>
 </ns:Employees>
-</ns1:EMPLOYEE_DELTA_INTEGRATION><?xml version="1.0" encoding="UTF-8"?>
-<ns1:EMPLOYEE_DELTA_INTEGRATION xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations">
-<ns:Employees xmlns:ns="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations" xmlns:wd2="urn:com.workday.report/INT0088_CRI_CV_Outbound_-_Spain_Delta" xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/CommonTypes">
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
     <ns1:Summary>
         <ns1:Employee_ID>100039599</ns1:Employee_ID>
     </ns1:Summary>
@@ -981,9 +981,9 @@
         <ns1:Company>SANES_989912 SECURITIES SALES</ns1:Company>
     </ns1:Additional_Information>
 </ns:Employees>
-</ns1:EMPLOYEE_DELTA_INTEGRATION><?xml version="1.0" encoding="UTF-8"?>
-<ns1:EMPLOYEE_DELTA_INTEGRATION xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations">
-<ns:Employees xmlns:ns="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations" xmlns:wd2="urn:com.workday.report/INT0088_CRI_CV_Outbound_-_Spain_Delta" xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/CommonTypes">
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
     <ns1:Summary>
         <ns1:Employee_ID>100039615</ns1:Employee_ID>
     </ns1:Summary>
@@ -999,9 +999,9 @@
         <ns1:Company>SANES_96563 RIESGOS TECNOLOGICOS</ns1:Company>
     </ns1:Additional_Information>
 </ns:Employees>
-</ns1:EMPLOYEE_DELTA_INTEGRATION><?xml version="1.0" encoding="UTF-8"?>
-<ns1:EMPLOYEE_DELTA_INTEGRATION xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations">
-<ns:Employees xmlns:ns="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations" xmlns:wd2="urn:com.workday.report/INT0088_CRI_CV_Outbound_-_Spain_Delta" xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/CommonTypes">
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
     <ns1:Summary>
         <ns1:Employee_ID>100039639</ns1:Employee_ID>
     </ns1:Summary>
@@ -1017,9 +1017,9 @@
         <ns1:Company>SANES_9265 SANTANDER PERSONAL &amp; CC</ns1:Company>
     </ns1:Additional_Information>
 </ns:Employees>
-</ns1:EMPLOYEE_DELTA_INTEGRATION><?xml version="1.0" encoding="UTF-8"?>
-<ns1:EMPLOYEE_DELTA_INTEGRATION xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations">
-<ns:Employees xmlns:ns="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations" xmlns:wd2="urn:com.workday.report/INT0088_CRI_CV_Outbound_-_Spain_Delta" xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/CommonTypes">
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
     <ns1:Summary>
         <ns1:Employee_ID>100039649</ns1:Employee_ID>
     </ns1:Summary>
@@ -1035,9 +1035,9 @@
         <ns1:Company>SANES_29651 O-Inv. y B. Privada</ns1:Company>
     </ns1:Additional_Information>
 </ns:Employees>
-</ns1:EMPLOYEE_DELTA_INTEGRATION><?xml version="1.0" encoding="UTF-8"?>
-<ns1:EMPLOYEE_DELTA_INTEGRATION xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations">
-<ns:Employees xmlns:ns="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations" xmlns:wd2="urn:com.workday.report/INT0088_CRI_CV_Outbound_-_Spain_Delta" xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/CommonTypes">
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
     <ns1:Summary>
         <ns1:Employee_ID>100039689</ns1:Employee_ID>
     </ns1:Summary>
@@ -1056,9 +1056,9 @@
         <ns1:Company>SANES_95833 AJ FISCAL</ns1:Company>
     </ns1:Additional_Information>
 </ns:Employees>
-</ns1:EMPLOYEE_DELTA_INTEGRATION><?xml version="1.0" encoding="UTF-8"?>
-<ns1:EMPLOYEE_DELTA_INTEGRATION xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations">
-<ns:Employees xmlns:ns="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations" xmlns:wd2="urn:com.workday.report/INT0088_CRI_CV_Outbound_-_Spain_Delta" xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/CommonTypes">
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
     <ns1:Summary>
         <ns1:Employee_ID>100039794</ns1:Employee_ID>
     </ns1:Summary>
@@ -1074,9 +1074,9 @@
         <ns1:Company>SANES_98493 PLANIFICACION Y PROYECTOS</ns1:Company>
     </ns1:Additional_Information>
 </ns:Employees>
-</ns1:EMPLOYEE_DELTA_INTEGRATION><?xml version="1.0" encoding="UTF-8"?>
-<ns1:EMPLOYEE_DELTA_INTEGRATION xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations">
-<ns:Employees xmlns:ns="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations" xmlns:wd2="urn:com.workday.report/INT0088_CRI_CV_Outbound_-_Spain_Delta" xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/CommonTypes">
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
     <ns1:Summary>
         <ns1:Employee_ID>100039833</ns1:Employee_ID>
     </ns1:Summary>
@@ -1092,9 +1092,9 @@
         <ns1:Company>SANES_862093 MRM</ns1:Company>
     </ns1:Additional_Information>
 </ns:Employees>
-</ns1:EMPLOYEE_DELTA_INTEGRATION><?xml version="1.0" encoding="UTF-8"?>
-<ns1:EMPLOYEE_DELTA_INTEGRATION xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations">
-<ns:Employees xmlns:ns="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations" xmlns:wd2="urn:com.workday.report/INT0088_CRI_CV_Outbound_-_Spain_Delta" xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/CommonTypes">
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
     <ns1:Summary>
         <ns1:Employee_ID>100039838</ns1:Employee_ID>
     </ns1:Summary>
@@ -1116,9 +1116,9 @@
         <ns1:Company>SANES_98881 BP&amp;I</ns1:Company>
     </ns1:Additional_Information>
 </ns:Employees>
-</ns1:EMPLOYEE_DELTA_INTEGRATION><?xml version="1.0" encoding="UTF-8"?>
-<ns1:EMPLOYEE_DELTA_INTEGRATION xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations">
-<ns:Employees xmlns:ns="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations" xmlns:wd2="urn:com.workday.report/INT0088_CRI_CV_Outbound_-_Spain_Delta" xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/CommonTypes">
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
     <ns1:Summary>
         <ns1:Employee_ID>100039838</ns1:Employee_ID>
     </ns1:Summary>
@@ -1140,9 +1140,9 @@
         <ns1:Company>SANES_98881 BP&amp;I</ns1:Company>
     </ns1:Additional_Information>
 </ns:Employees>
-</ns1:EMPLOYEE_DELTA_INTEGRATION><?xml version="1.0" encoding="UTF-8"?>
-<ns1:EMPLOYEE_DELTA_INTEGRATION xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations">
-<ns:Employees xmlns:ns="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations" xmlns:wd2="urn:com.workday.report/INT0088_CRI_CV_Outbound_-_Spain_Delta" xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/CommonTypes">
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
     <ns1:Summary>
         <ns1:Employee_ID>100040101</ns1:Employee_ID>
     </ns1:Summary>
@@ -1168,9 +1168,9 @@
         <ns1:Company>SANES_3339 JEREZ, AV. PUERTA DEL SUR, 7</ns1:Company>
     </ns1:Additional_Information>
 </ns:Employees>
-</ns1:EMPLOYEE_DELTA_INTEGRATION><?xml version="1.0" encoding="UTF-8"?>
-<ns1:EMPLOYEE_DELTA_INTEGRATION xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations">
-<ns:Employees xmlns:ns="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations" xmlns:wd2="urn:com.workday.report/INT0088_CRI_CV_Outbound_-_Spain_Delta" xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/CommonTypes">
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
     <ns1:Summary>
         <ns1:Employee_ID>100040101</ns1:Employee_ID>
     </ns1:Summary>
@@ -1196,9 +1196,9 @@
         <ns1:Company>SANES_3339 JEREZ, AV. PUERTA DEL SUR, 7</ns1:Company>
     </ns1:Additional_Information>
 </ns:Employees>
-</ns1:EMPLOYEE_DELTA_INTEGRATION><?xml version="1.0" encoding="UTF-8"?>
-<ns1:EMPLOYEE_DELTA_INTEGRATION xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations">
-<ns:Employees xmlns:ns="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations" xmlns:wd2="urn:com.workday.report/INT0088_CRI_CV_Outbound_-_Spain_Delta" xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/CommonTypes">
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
     <ns1:Summary>
         <ns1:Employee_ID>100040448</ns1:Employee_ID>
     </ns1:Summary>
@@ -1220,9 +1220,9 @@
         <ns1:Company>SANES_8671 PRODUCTOS EMPRESAS</ns1:Company>
     </ns1:Additional_Information>
 </ns:Employees>
-</ns1:EMPLOYEE_DELTA_INTEGRATION><?xml version="1.0" encoding="UTF-8"?>
-<ns1:EMPLOYEE_DELTA_INTEGRATION xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations">
-<ns:Employees xmlns:ns="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations" xmlns:wd2="urn:com.workday.report/INT0088_CRI_CV_Outbound_-_Spain_Delta" xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/CommonTypes">
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
     <ns1:Summary>
         <ns1:Employee_ID>100040448</ns1:Employee_ID>
     </ns1:Summary>
@@ -1244,9 +1244,9 @@
         <ns1:Company>SANES_8671 PRODUCTOS EMPRESAS</ns1:Company>
     </ns1:Additional_Information>
 </ns:Employees>
-</ns1:EMPLOYEE_DELTA_INTEGRATION><?xml version="1.0" encoding="UTF-8"?>
-<ns1:EMPLOYEE_DELTA_INTEGRATION xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations">
-<ns:Employees xmlns:ns="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations" xmlns:wd2="urn:com.workday.report/INT0088_CRI_CV_Outbound_-_Spain_Delta" xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/CommonTypes">
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
     <ns1:Summary>
         <ns1:Employee_ID>100040454</ns1:Employee_ID>
     </ns1:Summary>
@@ -1268,9 +1268,9 @@
         <ns1:Company>SANES_86715 ACTIVO</ns1:Company>
     </ns1:Additional_Information>
 </ns:Employees>
-</ns1:EMPLOYEE_DELTA_INTEGRATION><?xml version="1.0" encoding="UTF-8"?>
-<ns1:EMPLOYEE_DELTA_INTEGRATION xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations">
-<ns:Employees xmlns:ns="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations" xmlns:wd2="urn:com.workday.report/INT0088_CRI_CV_Outbound_-_Spain_Delta" xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/CommonTypes">
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
     <ns1:Summary>
         <ns1:Employee_ID>100040454</ns1:Employee_ID>
     </ns1:Summary>
@@ -1292,9 +1292,9 @@
         <ns1:Company>SANES_86715 ACTIVO</ns1:Company>
     </ns1:Additional_Information>
 </ns:Employees>
-</ns1:EMPLOYEE_DELTA_INTEGRATION><?xml version="1.0" encoding="UTF-8"?>
-<ns1:EMPLOYEE_DELTA_INTEGRATION xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations">
-<ns:Employees xmlns:ns="http://Santander.com/Schemas/Integrations/CommonDataModel/WorkerIntegrations" xmlns:wd2="urn:com.workday.report/INT0088_CRI_CV_Outbound_-_Spain_Delta" xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/CommonTypes">
+</ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns1:EMPLOYEE_DELTA_INTEGRATION>
+<ns:Employees>
     <ns1:Summary>
         <ns1:Employee_ID>100040465</ns1:Employee_ID>
     </ns1:Summary>
