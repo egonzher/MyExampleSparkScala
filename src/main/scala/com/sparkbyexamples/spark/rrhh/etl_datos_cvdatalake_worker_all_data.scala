@@ -29,13 +29,7 @@ object etl_datos_cvdatalake_worker_all_data {
     df_CvDatalakeWorker.printSchema()
 
 /*
- |-- _ns1: string (nullable = true)
  |-- ns:Employees: struct (nullable = true)
- |    |-- _ns: string (nullable = true)
- |    |-- _ns1: string (nullable = true)
- |    |-- _wd: string (nullable = true)
- |    |-- _wd1: string (nullable = true)
- |    |-- _wd2: string (nullable = true)
  |    |-- ns1:Additional_Information: struct (nullable = true)
  |    |    |-- ns1:Company: string (nullable = true)
  |    |-- ns1:Qualifications: struct (nullable = true)
@@ -47,7 +41,9 @@ object etl_datos_cvdatalake_worker_all_data {
  |    |    |    |    |-- ns1:Certification_Name: string (nullable = true)
  |    |    |    |    |-- ns1:Issued_Date: string (nullable = true)
  |    |    |-- ns1:External_Job: struct (nullable = true)
+ |    |    |    |-- ns1:Company: string (nullable = true)
  |    |    |    |-- ns1:End_Date: string (nullable = true)
+ |    |    |    |-- ns1:Job_Reference: long (nullable = true)
  |    |    |    |-- ns1:Job_Title: string (nullable = true)
  |    |    |    |-- ns1:Location: string (nullable = true)
  |    |    |    |-- ns1:Responsibilities_And_Achievements: string (nullable = true)
@@ -58,11 +54,11 @@ object etl_datos_cvdatalake_worker_all_data {
 
     val df_CvDatalakeWorkerFinal = df_CvDatalakeWorker
       .withColumn("CertAchievement", explode(col("`ns:Employees`.`ns1:Qualifications`.`ns1:Certification_Achievement`")))
-      .withColumn("Employee_ID",col("`ns:Employees`.`ns1:Summary`.`ns1:Employee_ID`").cast("String"))
-      .withColumn("External_Job_Issued_Date",col("`ns:Employees`.`ns1:Qualifications`.`ns1:External_Job`.`ns1:Issued_Date`").cast("String"))
+      .withColumn("IDCast",col("`ns:Employees`.`ns1:Summary`.`ns1:Employee_ID`").cast("String"))
+      .withColumn("External_Job_Reference",col("`ns:Employees`.`ns1:Qualifications`.`ns1:External_Job`.`ns1:Job_Reference`").cast("String"))
       .selectExpr(
         //ID para los join
-        "Employee_ID as Employee_ID",
+        "IDCast as Employee_ID",
         //Campos identificados
         "`CertAchievement`.`ns1:Certification_Country` as Certification_Country",
         "`CertAchievement`.`ns1:Certification` as Certification",
@@ -78,11 +74,10 @@ object etl_datos_cvdatalake_worker_all_data {
         "`ns:Employees`.`ns1:Qualifications`.`ns1:External_Job`.`ns1:Responsibilities_And_Achievements` as Responsibilities_And_Achievements",
         //Campos que no están mapeados
         "`ns:Employees`.`ns1:Qualifications`.`ns1:External_Job`.`ns1:Company` as External_Job_Company",
-        "External_Job_Issued_Date",
+        "External_Job_Reference",
         s"'$dataDatePart' as data_date_part").na.fill(" ").distinct()
 
     df_CvDatalakeWorkerFinal.show()
-
 
   }
 
