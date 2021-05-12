@@ -16,9 +16,11 @@ object etl_datos_weci_consolid_wd {
 
 
     //Trabajando con la nueva integración de weci en consolid_wd
-    val rutaWeciConsolidWD = "src/main/resources/rrhh/example_weci_consolid_wd/*.xml"
+    val dataDatePart = "2021-05-03"
+    val rutaWeciConsolidWD = s"src/main/resources/rrhh/example_weci_consolid_wd/data_date_part=$dataDatePart/*.xml"
 
-    val df_WeciConsolidWD = spark.read
+
+      val df_WeciConsolidWD = spark.read
       .format("com.databricks.spark.xml")
       .option("excludeAttribute", "false")
       .option("rowTag", "ns1:EMPLOYEE_DELTA_INTEGRATION")
@@ -40,12 +42,12 @@ object etl_datos_weci_consolid_wd {
       .withColumn("PostalCast",col("`ns:Employees`.`ns1:Position`.`ns1:Business_Site`.`ns1:Postal_Code`").cast("String"))
       .withColumn("SuperCast",col("`ns:Employees`.`ns1:Position`.`ns1:Supervisor`.`ns1:ID`").cast("String"))
       .withColumn("IDCast",col("`ns:Employees`.`ns1:Summary`.`ns1:Employee_ID`").cast("String"))
-      .withColumn("concatAddress",concat(col("`ns:Employees`.`ns1:Position`.`ns1:Business_Site`.`ns1:Address_Line_1`"),col("`ns:Employees`.`ns1:Position`.`ns1:Business_Site`.`ns1:Address_Line_3`")))
+      //.withColumn("concatAddress",concat(col("`ns:Employees`.`ns1:Position`.`ns1:Business_Site`.`ns1:Address_Line_1`"),col("`ns:Employees`.`ns1:Position`.`ns1:Business_Site`.`ns1:Address_Line_3`")))
       .selectExpr(
 
         //Campo ID para realizar el join
           "`IDCast` as Employee_ID",
-        "`ns:Employees`.`ns1:Summary`.`ns1:WID` as WID",
+        //"`ns:Employees`.`ns1:Summary`.`ns1:WID` as WID",
 
         //Estos son los de color Blanco que no había dudas
         "`natioId`.`ns1:National_ID_Type` as NATIONAL_ID_TYPE_DESCR",
@@ -67,10 +69,11 @@ object etl_datos_weci_consolid_wd {
         "`ns:Employees`.`ns1:Employee_Contract`.`ns1:Contract_Type` as `CONTRACT_TYPE_DESCR`",
 
         //Duda sobre si hay que concatenar todos los address en una sola columna
-        "`ns:Employees`.`ns1:Position`.`ns1:Business_Site`.`ns1:Address_ID` as ADDRESS1_2_ID",
+        //Respondida la duda no hay que concatenar
+        //"`ns:Employees`.`ns1:Position`.`ns1:Business_Site`.`ns1:Address_ID` as ADDRESS1_2_ID",
         "`ns:Employees`.`ns1:Position`.`ns1:Business_Site`.`ns1:Address_Line_1` as ADDRESS1_2_Line_1",
         "`ns:Employees`.`ns1:Position`.`ns1:Business_Site`.`ns1:Address_Line_3` as ADDRESS1_2_Line_3",
-        "`concatAddress` as ADDRESS1_3",
+        //"`concatAddress` as ADDRESS1_3",
 
         "`PostalCast` as POSTAL",
         "`ns:Employees`.`ns1:Position`.`ns1:Business_Site`.`ns1:City` as CITY",
@@ -100,25 +103,8 @@ object etl_datos_weci_consolid_wd {
         "`ns:Employees`.`ns1:Worker_Status`.`ns1:Seniority_Date` as `TRIENIOS_JEFATURA_EFFDT`",
         "`ns:Employees`.`ns1:Compensation`.`ns1:Compensation_Grade` as `ESCALA_ADMIN_DT`",
         "`ns:Employees`.`ns1:Worker_Status`.`ns1:Seniority_Date` as `ZBANK_SENIORITY_DT`",
-
+        s"'$dataDatePart' as data_date_part"
       ).na.fill(" ").distinct().show()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   }
 
