@@ -16,16 +16,17 @@ object etl_datos_weci_all_date {
     val rutaCvDatalakeWorker = s"src/main/resources/rrhh/example_weci_consolid_wd/data_date_part=$dataDatePart/*.xml"
 
 
-    val df_todo_weci = spark.read
+    val df_WeciReadXML = spark.read
       .format("com.databricks.spark.xml")
       .option("excludeAttribute", "false")
       .option("rowTag", "ns1:EMPLOYEE_DELTA_INTEGRATION")
       .load(rutaCvDatalakeWorker)
 
-    println("Imprimiendo el esquema de df_CvDatalakeWorker")
+    println("Imprimiendo el esquema de df_WeciReadXML")
+    df_WeciReadXML.printSchema()
 
 
-    val df_WeciFinal = df_todo_weci
+    val df_WeciFinal = df_WeciReadXML
       .withColumn("natioId", explode(col("`ns:Employees`.`ns1:Person_Identification`.`ns1:National_Identifier`")))
       .withColumn("relatedPerson", explode(col("`ns:Employees`.`ns1:Related_Person`")))
       .withColumn("relatedNacionalID", explode(col("`ns:Employees`.`ns1:Related_Person_Identification`")))
@@ -35,7 +36,6 @@ object etl_datos_weci_all_date {
       .withColumn("PostalCast",col("`ns:Employees`.`ns1:Position`.`ns1:Business_Site`.`ns1:Postal_Code`").cast("String"))
       .withColumn("SuperCast",col("`ns:Employees`.`ns1:Position`.`ns1:Supervisor`.`ns1:ID`").cast("String"))
       .withColumn("IDCast",col("`ns:Employees`.`ns1:Summary`.`ns1:Employee_ID`").cast("String"))
-      // .withColumn("concatAddress",concat(col("`ns:Employees`.`ns1:Position`.`ns1:Business_Site`.`ns1:Address_Line_1`"),col("`ns:Employees`.`ns1:Position`.`ns1:Business_Site`.`ns1:Address_Line_3`")))
       .withColumn("cast1",col("`ns:Employees`.`ns1:Compensation`.`ns1:Compensation_Summary_Based_on_Compensation_Grade`.`ns1:Primary_Compensation_Basis`").cast("String"))
       .withColumn("cast2",col("`ns:Employees`.`ns1:Compensation`.`ns1:Compensation_Summary_Based_on_Compensation_Grade`.`ns1:Total_Base_Pay`").cast("String"))
       .withColumn("cast3",col("`ns:Employees`.`ns1:Compensation`.`ns1:Compensation_Summary_in_Annualized_Frequency`.`ns1:Primary_Compensation_Basis`").cast("String"))
@@ -74,14 +74,10 @@ object etl_datos_weci_all_date {
       .withColumn("cast37",col("`ns:Employees`.`ns1:Worker_Status`.`ns1:Regrettable_Termination`").cast("String"))
       .withColumn("cast38",col("`ns:Employees`.`ns1:Worker_Status`.`ns1:Return_Unknown`").cast("String"))
       .withColumn("cast39",col("`ns:Employees`.`ns1:Worker_Status`.`ns1:Terminated`").cast("String"))
-
-
       .selectExpr(
-
         //Campo ID para realizar el join
         "`IDCast` as Employee_ID",
         "`ns:Employees`.`ns1:Summary`.`ns1:WID` as WID",
-
         //Estos son los de color Blanco que no había dudas
         "`natioId`.`ns1:National_ID_Type` as NATIONAL_ID_TYPE_DESCR",
         "`ns:Employees`.`ns1:Personal`.`ns1:Date_of_Birth` as BIRTHDATE",
@@ -100,68 +96,41 @@ object etl_datos_weci_all_date {
         "`ns:Employees`.`ns1:Position`.`ns1:Business_Site`.`ns1:Location_ID` as BUSINESS_UNIT_DESCR",
         "`ns:Employees`.`ns1:Employee_Contract`.`ns1:Contract_ID` as CONTRACT_TYPE",
         "`ns:Employees`.`ns1:Employee_Contract`.`ns1:Contract_Type` as `CONTRACT_TYPE_DESCR`",
-
-        //Duda sobre si hay que concatenar todos los address en una sola columna
-        "`ns:Employees`.`ns1:Position`.`ns1:Business_Site`.`ns1:Address_ID` as ADDRESS1_2_ID",
-        "`ns:Employees`.`ns1:Position`.`ns1:Business_Site`.`ns1:Address_Line_1` as ADDRESS1_2_Line_1",
-        "`ns:Employees`.`ns1:Position`.`ns1:Business_Site`.`ns1:Address_Line_3` as ADDRESS1_2_Line_3",
-        // "`concatAddress` as ADDRESS1_3",
-
-        "`PostalCast` as POSTAL",
-        "`ns:Employees`.`ns1:Position`.`ns1:Business_Site`.`ns1:City` as CITY",
-        "`natioId`.`ns1:Country` as `PERS_COUNTRY`",
-
+        "`ns:Employees`.`ns1:Position`.`ns1:Business_Site`.`ns1:Address_ID` as Address_ID",
+        "`ns:Employees`.`ns1:Position`.`ns1:Business_Site`.`ns1:Address_Line_1` as Address_Line_1",
+        "`ns:Employees`.`ns1:Position`.`ns1:Business_Site`.`ns1:Address_Line_3` as Address_Line_3",
+        "`PostalCast` as PostalCast",
+        "`ns:Employees`.`ns1:Position`.`ns1:Business_Site`.`ns1:City` as Business_Site_City",
+        "`natioId`.`ns1:Country` as natioId_Country",
         //Estos son los de color Amarillo que si había dudas
-        "`ns:Employees`.`ns1:Worker_Status`.`ns1:Active_Status_Date` as `EMPL_STATUS_EFFDT`",
-        "`ns:Employees`.`ns1:Personal`.`ns1:Preferred_Language` as LANG_CD",
-        "`ns:Employees`.`ns1:Personal`.`ns1:Gender` as GENDER",
-        "`ns:Employees`.`ns1:Personal`.`ns1:Disability_Status` as DISABLE_TYPE_ESP",
-        "`ns:Employees`.`ns1:Personal`.`ns1:Disability_Status` as DISABLE_TYPE_ESP_DESCR",
-        "`relatedPerson`.`ns1:Dependent_ID` as EMPLID_CONYUGE",
-        /*
-                "`ns:Employees`.`ns1:Worker_Status`.`ns1:Hire_Date` as COMPANY_EFFDT",
-        */
-        "`ns:Employees`.`ns1:Worker_Status`.`ns1:Original_Hire_Date` as ZING_GRUPO_DT",
-        "`ns:Employees`.`ns1:Collective_Agreement`.`ns1:Start_Date` as COLLECTIVE_YN_GLOBAL_EFFDT",
-        "`ns:Employees`.`ns1:Collective_Agreement`.`ns1:Start_Date` as COLLECTIVE_YN_LOCAL_EFFDT",
-        "`ns:Employees`.`ns1:Position`.`ns1:Organization` as TIP_DEPTID",
-        "`SuperCast` as SUPERVISOR_EFFDT",
-        "`ns:Employees`.`ns1:Collective_Agreement`.`ns1:Collective_Agreement` as COLLECTIVE_AGREEMENT",
-        "`ns:Employees`.`ns1:Collective_Agreement`.`ns1:Collective_Agreement_Factor`.`ns1:Factor` as COLLECTIVE_AGREEMENT_FACTOR",
-        "`ns:Employees`.`ns1:Position`.`ns1:Organization` as CORP_SEGM_EFFDT",
-        "`ns:Employees`.`ns1:Worker_Status`.`ns1:First_Day_of_Work` as `MOTIVO_ALTA_HR_EFFDT`",
-        "`ns:Employees`.`ns1:Position`.`ns1:Job_Classification`.`ns1:Job_Classification_Description` as `ESCALA_JEFATURA_DT`",
-        "`ns:Employees`.`ns1:Worker_Status`.`ns1:Seniority_Date` as `TRIENIOS_DT`",
-        "`ns:Employees`.`ns1:Worker_Status`.`ns1:Seniority_Date` as `TRIENIOS_EFFDT`",
-        "`ns:Employees`.`ns1:Worker_Status`.`ns1:Seniority_Date` as `TRIENIOS_JEFATURA_DT`",
-        "`ns:Employees`.`ns1:Worker_Status`.`ns1:Seniority_Date` as `TRIENIOS_JEFATURA_EFFDT`",
-        "`ns:Employees`.`ns1:Compensation`.`ns1:Compensation_Grade` as `ESCALA_ADMIN_DT`",
-        "`ns:Employees`.`ns1:Worker_Status`.`ns1:Seniority_Date` as `ZBANK_SENIORITY_DT`",
-
+        "`ns:Employees`.`ns1:Worker_Status`.`ns1:Active_Status_Date` as Worker_Status_Active_Status_Date",
+        "`ns:Employees`.`ns1:Personal`.`ns1:Preferred_Language` as Preferred_Language",
+        "`ns:Employees`.`ns1:Personal`.`ns1:Gender` as Gender",
+        "`ns:Employees`.`ns1:Personal`.`ns1:Disability_Status` as Disability_Status",
+        "`relatedPerson`.`ns1:Dependent_ID` as Dependent_ID",
+        "`ns:Employees`.`ns1:Worker_Status`.`ns1:Original_Hire_Date` as Worker_Status_Original_Hire_Date",
+        "`ns:Employees`.`ns1:Collective_Agreement`.`ns1:Start_Date` as Collective_Agreement_Start_Date",
+        "`ns:Employees`.`ns1:Position`.`ns1:Organization` as Position_Organization",
+        "`SuperCast` as SUPERVISOR_ID",
+        "`ns:Employees`.`ns1:Collective_Agreement`.`ns1:Collective_Agreement` as Collective_Agreement",
+        "`ns:Employees`.`ns1:Collective_Agreement`.`ns1:Collective_Agreement_Factor`.`ns1:Factor` as Collective_Agreement_Factor",
+        "`ns:Employees`.`ns1:Position`.`ns1:Organization` as Position_Organization",
+        "`ns:Employees`.`ns1:Worker_Status`.`ns1:First_Day_of_Work` as `Worker_Status_First_Day_of_Work`",
+        "`ns:Employees`.`ns1:Position`.`ns1:Job_Classification`.`ns1:Job_Classification_Description` as `Job_Classification_Description`",
+        "`ns:Employees`.`ns1:Worker_Status`.`ns1:Seniority_Date` as `Worker_Status_Seniority_Date`",
+        "`ns:Employees`.`ns1:Compensation`.`ns1:Compensation_Grade` as `Compensation_Grade`",
         // a partir de aqui son weci datos familiares
-        "`relatedPerson`.`ns1:Dependent_ID` as ID_FAMILIAR",
-        "`relatedPerson`.`ns1:Related_Person_ID` as TIPO_DE_PARENTESCO",
-        "`relatedPerson`.`ns1:Legal_Name`.`ns1:First_Name` as NOMBRE_FAMILIAR",
-        "`relatedPerson`.`ns1:Legal_Name`.`ns1:Last_Name` as PRIMER_APELLIDO",
-        "`relatedPerson`.`ns1:Legal_Name`.`ns1:Secondary_Last_Name` as SEGUNDO_APELLIDO",
-        "'' as SEGUNDO_NOMBRE ",
-        "`relatedPerson`.`ns1:Birth_Date` as FECHA_NACIMIENTO ",
-        "'' as FECHA_DEFUNCION",
-        "'' as GRADO_MINUSVALIA",
-        "`relatedNacionalID`.`ns1:National_Identifier`.`ns1:Country` as PAIS_DOCUMENTO_FAMILIAR",
-        "`relatedNacionalID`.`ns1:National_Identifier`.`ns1:National_ID_Type` as TIPO_DOCUMENTO_FAMILIAR",
-        "`relatedNacionalID`.`ns1:National_Identifier`.`ns1:National_ID` as CODIGO_DOCUMENTO_FAMILIAR",
-        "`relatedPerson`.`ns1:Gender` as GENERO_DEL_DEPENDIENTE",
-        "'' as PAIS_DE_NACIMIENTO",
-        "'' as CIUDAD_DE_NACIMIENTO",
-        "`relatedNacionalID`.`ns1:Other_Identifier`.`ns1:Custom_ID_Type` as ESTADO_CIVIL_DEPENDIENTE",
-        "`relatedNacionalID`.`ns1:Other_Identifier`.`ns1:Custom_ID_Type` as SITUACION_FAMILIAR_DEPENDIENTE",
-        "`relatedNacionalID`.`ns1:Other_Identifier`.`ns1:Custom_ID_Type` as NUMERO_MATRICULA_DEPENDIENTE",
-        "'' as NUMERO_MATRICULA_DEPENDIENTE_CALCULADA",
-        "'' as NOMBRE_CONTACTO_EMERGENCIA",
-        "'' as APELLIDO_CONTACTO_EMERGENCIA",
-        "'' as TELEFONO_CONTACTO_EMERGENCIA",
-
+        "`relatedPerson`.`ns1:Dependent_ID` as relatedPerson_Dependent_ID",
+        "`relatedPerson`.`ns1:Related_Person_ID` as Related_Person_ID",
+        "`relatedPerson`.`ns1:Legal_Name`.`ns1:First_Name` as Legal_Name_First_Name",
+        "`relatedPerson`.`ns1:Legal_Name`.`ns1:Last_Name` as Legal_Name_Last_Name",
+        "`relatedPerson`.`ns1:Legal_Name`.`ns1:Secondary_Last_Name` as Legal_Name_Secondary_Last_Name",
+        "`relatedPerson`.`ns1:Birth_Date` as relatedPerson_Birth_Date",
+        "`relatedNacionalID`.`ns1:National_Identifier`.`ns1:Country` as National_Identifier_Country",
+        "`relatedNacionalID`.`ns1:National_Identifier`.`ns1:National_ID_Type` as National_Identifier_National_ID_Type",
+        "`relatedNacionalID`.`ns1:National_Identifier`.`ns1:National_ID` as National_Identifier_National_ID",
+        "`relatedPerson`.`ns1:Gender` as relatedPerson_Gender",
+        "`relatedNacionalID`.`ns1:Other_Identifier`.`ns1:Custom_ID_Type` as Other_Identifier_Custom_ID_Type",
         // Campos que no estan mapeados
         "`ns:Employees`.`ns1:Additional_Information`.`ns1:Company` as `Additional_Information_Company`",
         "`ns:Employees`.`ns1:Collective_Agreement`.`ns1:Position_ID` as Collective_Agreement_Position_ID",
@@ -268,7 +237,6 @@ object etl_datos_weci_all_date {
       ).na.fill(" ").distinct()
 
     df_WeciFinal.show()
-    df_WeciFinal.printSchema()
 
 
   }
