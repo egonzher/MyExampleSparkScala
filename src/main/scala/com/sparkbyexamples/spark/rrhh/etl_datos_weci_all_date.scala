@@ -1,7 +1,7 @@
 package com.sparkbyexamples.spark.rrhh
 
 import org.apache.spark.sql.SparkSession
-import org.apache.spark.sql.functions.{col, explode}
+import org.apache.spark.sql.functions.{col, explode, explode_outer}
 
 object etl_datos_weci_all_date {
   def main(args: Array[String]): Unit = {
@@ -27,12 +27,12 @@ object etl_datos_weci_all_date {
 
 
     val df_WeciFinal = df_WeciReadXML
-      .withColumn("natioId", explode(col("`ns:Employees`.`ns1:Person_Identification`.`ns1:National_Identifier`")))
-      .withColumn("relatedPerson", explode(col("`ns:Employees`.`ns1:Related_Person`")))
-      .withColumn("relatedNacionalID", explode(col("`ns:Employees`.`ns1:Related_Person_Identification`")))
-      .withColumn("allowance_plan", explode(col("`ns:Employees`.`ns1:Compensation_Plans`.`ns1:Allowance_Plan`")))
-      .withColumn("job_family", explode(col("`ns:Employees`.`ns1:Position`.`ns1:Job_Family`")))
-      .withColumn("related_communication", explode(col("`ns:Employees`.`ns1:Related_Person_Communication`")))
+      .withColumn("natioId", explode_outer(col("`ns:Employees`.`ns1:Person_Identification`.`ns1:National_Identifier`")))
+      .withColumn("relatedPerson", explode_outer(col("`ns:Employees`.`ns1:Related_Person`")))
+      .withColumn("relatedNacionalID", explode_outer(col("`ns:Employees`.`ns1:Related_Person_Identification`")))
+      .withColumn("allowance_plan", explode_outer(col("`ns:Employees`.`ns1:Compensation_Plans`.`ns1:Allowance_Plan`")))
+      .withColumn("job_family", explode_outer(col("`ns:Employees`.`ns1:Position`.`ns1:Job_Family`")))
+      .withColumn("related_communication", explode_outer(col("`ns:Employees`.`ns1:Related_Person_Communication`")))
       .withColumn("PostalCast",col("`ns:Employees`.`ns1:Position`.`ns1:Business_Site`.`ns1:Postal_Code`").cast("String"))
       .withColumn("SuperCast",col("`ns:Employees`.`ns1:Position`.`ns1:Supervisor`.`ns1:ID`").cast("String"))
       .withColumn("IDCast",col("`ns:Employees`.`ns1:Summary`.`ns1:Employee_ID`").cast("String"))

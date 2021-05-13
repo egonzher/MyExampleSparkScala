@@ -3,7 +3,7 @@
 package com.sparkbyexamples.spark.rrhh
 
 import org.apache.spark.sql.SparkSession
-import org.apache.spark.sql.functions.{col, explode, expr,concat}
+import org.apache.spark.sql.functions.{col, concat, explode, explode_outer, expr}
 import org.apache.spark.sql.types.StringType
 
 object etl_datos_weci_consolid_wd {
@@ -37,8 +37,8 @@ object etl_datos_weci_consolid_wd {
  */
 
     val df_WeciFinal = df_WeciConsolidWD
-      .withColumn("natioId", explode(col("`ns:Employees`.`ns1:Person_Identification`.`ns1:National_Identifier`")))
-      .withColumn("relatedPerson", explode(col("`ns:Employees`.`ns1:Related_Person`")))
+      .withColumn("natioId", explode_outer(col("`ns:Employees`.`ns1:Person_Identification`.`ns1:National_Identifier`")))
+      .withColumn("relatedPerson", explode_outer(col("`ns:Employees`.`ns1:Related_Person`")))
       .withColumn("PostalCast",col("`ns:Employees`.`ns1:Position`.`ns1:Business_Site`.`ns1:Postal_Code`").cast("String"))
       .withColumn("SuperCast",col("`ns:Employees`.`ns1:Position`.`ns1:Supervisor`.`ns1:ID`").cast("String"))
       .withColumn("IDCast",col("`ns:Employees`.`ns1:Summary`.`ns1:Employee_ID`").cast("String"))

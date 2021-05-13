@@ -1,7 +1,7 @@
 package com.sparkbyexamples.spark.rrhh
 
 import org.apache.spark.sql.SparkSession
-import org.apache.spark.sql.functions.{col, concat, explode, expr}
+import org.apache.spark.sql.functions.{col, concat, explode, explode_outer, expr}
 import org.apache.spark.sql.types.StringType
 object etl_datos_weci_datos_familiares {
   def main(args: Array[String]): Unit = {
@@ -26,8 +26,8 @@ object etl_datos_weci_datos_familiares {
 
 
     val df_FamiliaFinal = df_WeciFamiliaWD
-      .withColumn("relatedPerson", explode(col("`ns:Employees`.`ns1:Related_Person`")))
-      .withColumn("relatedNacionalID", explode(col("`ns:Employees`.`ns1:Related_Person_Identification`"))).
+      .withColumn("relatedPerson", explode_outer(col("`ns:Employees`.`ns1:Related_Person`")))
+      .withColumn("relatedNacionalID", explode_outer(col("`ns:Employees`.`ns1:Related_Person_Identification`"))).
 
       selectExpr(
         "`relatedPerson`.`ns1:Dependent_ID` as ID_FAMILIAR",
