@@ -18,15 +18,24 @@ object etl_datos_weci_all_date {
     //val dataDatePart = "2021-04-29"
     //val dataDatePart = "2021-05-04"
     //val dataDatePart = "2021-05-06"
-    val dataDatePart = "2021-05-13"
-    val rutaCvDatalakeWorker = s"src/main/resources/rrhh/example_weci_consolid_wd/data_date_part=$dataDatePart/*.xml"
+    //val dataDatePart = "2021-05-13"
+    //val dataDatePart = "2021-05-15"
+    val dataDatePart = "2021-05-17"
 
+    val dataTimeStampPart= s"src/main/resources/rrhh/example_weci_consolid_wd/data_date_part=$dataDatePart/*"
+    val rutaCvDatalakeWorker = s"src/main/resources/rrhh/example_weci_consolid_wd/data_date_part=$dataDatePart/*/*.xml"
+
+      //val f = new Nothing("C:\\Hello\\AnotherFolder\\The File Name.PDF")
+      //System.out.println(f.getName)
 
     val df_WeciReadXML = spark.read
       .format("com.databricks.spark.xml")
       .option("excludeAttribute", "false")
       .option("rowTag", "ns1:EMPLOYEE_DELTA_INTEGRATION")
       .load(rutaCvDatalakeWorker)
+
+      println("Imprimiendo la ruta del dataTimeStampPart")
+      println(dataTimeStampPart)
 
     println("Imprimiendo el esquema de df_WeciReadXML")
     df_WeciReadXML.printSchema()
