@@ -67,7 +67,8 @@ object etl_datos_weci_all_date_test {
 
         var df_WeciFinal = df_WeciReadXML
 
-          //20210517130502, 20210517150502, 20210517173002, 20210517193002, 20210517202102
+          //20210517193002 error
+          //20210517130502, 20210517150502, 20210517173002, 20210517202102
 
        if (dataDatePart == "2021-05-17") {
             df_WeciFinal = df_WeciReadXML
@@ -78,20 +79,20 @@ object etl_datos_weci_all_date_test {
               //.withColumn("job_family", explode_outer(col("`ns:Employees`.`ns1:Position`.`ns1:Job_Family`")))
               //.withColumn("related_communication", explode_outer(col("`ns:Employees`.`ns1:Related_Person_Communication`")))
               // nuevos withcolumn
-              .withColumn("compensationPlan", explode_outer(col("`ns:Employees`.`ns1:Compensation_Plans`")))
-              .withColumn("allowance", explode_outer(col("`compensationPlan`.`ns1:Allowance_Plan`")))
-              .withColumn("bonus_plan", explode_outer(col("`compensationPlan`.`ns1:Bonus_Plan`")))
-              .withColumn("salary_plan", explode_outer(col("`compensationPlan`.`ns1:Salary_and_Hourly_Plan`")))
-              .withColumn("other", explode_outer(col("`ns:Employees`.`ns1:Person_Identification`.`ns1:Other_Identifier`")))
-              .withColumn("position", explode_outer(col("`ns:Employees`.`ns1:Position`")))
-              .withColumn("job_family", explode_outer(col("`position`.`ns1:Job_Family`")))
+              .withColumn("compensationPlan", col("`ns:Employees`.`ns1:Compensation_Plans`"))
+              .withColumn("allowance", col("`compensationPlan`.`ns1:Allowance_Plan`"))
+              .withColumn("bonus_plan", col("`compensationPlan`.`ns1:Bonus_Plan`"))
+              .withColumn("salary_plan", col("`compensationPlan`.`ns1:Salary_and_Hourly_Plan`"))
+              //.withColumn("other", explode_outer(col("`ns:Employees`.`ns1:Person_Identification`.`ns1:Other_Identifier`")))
+              //.withColumn("position", explode_outer(col("`ns:Employees`.`ns1:Position`")))
+              //.withColumn("job_family", explode_outer(col("`position`.`ns1:Job_Family`")))
               .withColumn("compensation", explode_outer(col("`ns:Employees`.`ns1:Compensation`")))
               //.withColumn("relatedOther", explode_outer(col("`relatedNacionalID`.`ns1:Other_Identifier`")))
               // nuevos mas nuevos withcolumns
               .withColumn("collective", explode_outer(col("`ns:Employees`.`ns1:Collective_Agreement`")))
               .withColumn("contract", explode_outer(col("`ns:Employees`.`ns1:Employee_Contract`")))
-              .withColumn("supervisor", explode_outer(col("`position`.`ns1:Supervisor`")))
-              .withColumn("PostalCast", col("`position`.`ns1:Business_Site`.`ns1:Postal_Code`").cast("String"))
+              //.withColumn("supervisor", explode_outer(col("`position`.`ns1:Supervisor`")))
+              //.withColumn("PostalCast", col("`position`.`ns1:Business_Site`.`ns1:Postal_Code`").cast("String"))
               .withColumn("SuperCast", col("`supervisor`.`ns1:ID`").cast("String"))
               .withColumn("IDCast", col("`ns:Employees`.`ns1:Summary`.`ns1:Employee_ID`").cast("String"))
               .withColumn("cast1", col("`compensation`.`ns1:Compensation_Summary_Based_on_Compensation_Grade`.`ns1:Primary_Compensation_Basis`").cast("String"))
@@ -111,8 +112,8 @@ object etl_datos_weci_all_date_test {
               //.withColumn("cast16", col("`ns:Employees`.`ns1:Personal`.`ns1:Local_Hukou`").cast("String"))
               .withColumn("cast17", col("`ns:Employees`.`ns1:Personal`.`ns1:Number_of_Payroll_Dependents`").cast("String"))
               .withColumn("cast18", col("`ns:Employees`.`ns1:Personal`.`ns1:Uses_Tobacco`").cast("String"))
-              .withColumn("cast19", col("`position`.`ns1:Job_Classification`.`ns1:Job_Classification_ID`").cast("String"))
-              .withColumn("cast20", col("`job_family`.`ns1:ID`").cast("String"))
+              //.withColumn("cast19", col("`position`.`ns1:Job_Classification`.`ns1:Job_Classification_ID`").cast("String"))
+              //.withColumn("cast20", col("`job_family`.`ns1:ID`").cast("String"))
               //.withColumn("cast21",col("`relatedPerson`.`ns1:Allowed_for_Tax_Deduction`").cast("String"))
               //.withColumn("cast22",col("`relatedPerson`.`ns1:Annual_Income_Amount`").cast("String"))
               //.withColumn("cast23",col("`relatedPerson`.`ns1:Beneficiary`").cast("String"))
@@ -241,10 +242,10 @@ object etl_datos_weci_all_date_test {
                   "'' as National_Identifier_Issued_Date",
                   // fin campos ID
                   "'' as National_Identifier_National_ID",
-                  "`natioId`.`ns1:National_ID_Type` as National_Identifier_National_ID_Type",
-                  "`natioId`.`ns1:Verification_Date` as National_Identifier_Verification_Date",
+                  "'' as National_Identifier_National_ID_Type",
+                  "'' as National_Identifier_Verification_Date",
                   "`cast15` as National_Identifier_Verified_By",
-                  "`other`.`ns1:Custom_ID_Type` as Other_Identifier_Custom_ID_Type",
+                  "'' as Other_Identifier_Custom_ID_Type",
                   "'' as Person_Identification_Passport",
                   "'' as Person_Identification_Visa",
                   "`ns:Employees`.`ns1:Personal`.`ns1:City_of_Birth` as Personal_City_of_Birth",
@@ -288,8 +289,8 @@ object etl_datos_weci_all_date_test {
                   "`cast19` as Job_Classification_ID",
                   "`position`.`ns1:Job_Classification`.`ns1:Mapped_Value` as Job_Classification_Mapped_Value",
                   "`cast20` as Job_Family_ID",
-                  "`job_family`.`ns1:Mapped_Value` as Job_Family_Mapped_Value",
-                  "`job_family`.`ns1:Name` as Job_Family_Name",
+                  "''.`ns1:Mapped_Value` as Job_Family_Mapped_Value",
+                  "''.`ns1:Name` as Job_Family_Name",
                   "`position`.`ns1:Job_Profile` as Position_Job_Profile",
                   "`position`.`ns1:Management_Level` as Position_Management_Level",
                   "`position`.`ns1:Position_ID` as Position_Position_ID",
