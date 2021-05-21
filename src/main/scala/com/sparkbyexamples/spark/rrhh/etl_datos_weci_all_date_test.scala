@@ -1,8 +1,11 @@
 package com.sparkbyexamples.spark.rrhh
 
+import com.databricks.spark.xml.util.XSDToSchema
 import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.functions._
 import org.apache.spark.sql.types.StructType
+
+import java.nio.file.Paths
 
 object etl_datos_weci_all_date_test {
   def main(args: Array[String]): Unit = {
@@ -39,11 +42,12 @@ object etl_datos_weci_all_date_test {
     //Pruebas para importar el esquema xsd
 
     //val schema = XSDToSchema.read(Paths.get("src/main/resources/rrhh/example_weci_consolid_wd/schema-test/CDM_PayrollIntegrations.xsd"))
+    val schema = XSDToSchema.read(Paths.get("src/main/resources/rrhh/example_weci_consolid_wd/schema-test/CDM_CommonTypes.xsd"))
 
     //println(schema)
 
     var df_TestPayRoll = spark.read
-      //.schema(schema)
+      .schema(schema)
       .format("com.databricks.spark.xml")
       .option("excludeAttribute", "false")
       //Importante esta opción permite convertir todos los campos del xml a string para no tener que trabajar con otro tipo de datos
@@ -55,7 +59,7 @@ object etl_datos_weci_all_date_test {
 
     //println("Imprimiendo el df de df_TestPayRoll")
     //df_TestPayRoll.show()
-    //df_TestPayRoll.printSchema()
+    df_TestPayRoll.printSchema()
 
     //////////////////////////////////////////////////////////////////////////////
 
@@ -148,7 +152,7 @@ object etl_datos_weci_all_date_test {
     //println("Imprimiendo el df de nivel 2")
     //df_WeciAllNivel2.show()
     //df_WeciAllNivel2.printSchema()
-    df_WeciAllEmployeeIDNivel2.show()
+    //df_WeciAllEmployeeIDNivel2.show()
     //df_WeciAllEmployeeIDNivel2.printSchema()
 
 
@@ -211,7 +215,7 @@ object etl_datos_weci_all_date_test {
     }
 
     //println("Imprimiendo el df de nivel 3")
-    df_WeciAllNivel2.show()
+    //df_WeciAllNivel2.show()
     //df_WeciAllNivel2.printSchema()
 
 

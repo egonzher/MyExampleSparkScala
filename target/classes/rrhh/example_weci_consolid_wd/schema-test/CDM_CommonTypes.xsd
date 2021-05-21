@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<xs:schema version="1.1.0"
-           xmlns="http://Santander.com/Schemas/Integrations/CommonDataModel/CommonTypes"
-           xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           attributeFormDefault="qualified"
-           elementFormDefault="qualified"
+<xs:schema version="1.1.0" xmlns="http://Santander.com/Schemas/Integrations/CommonDataModel/CommonTypes"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified"
            targetNamespace="http://Santander.com/Schemas/Integrations/CommonDataModel/CommonTypes">
     <xs:simpleType name="YearType">
         <xs:restriction base="xs:integer">
