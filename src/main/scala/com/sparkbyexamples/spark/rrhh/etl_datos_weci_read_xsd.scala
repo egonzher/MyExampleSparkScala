@@ -2,6 +2,7 @@ package com.sparkbyexamples.spark.rrhh
 
 import com.databricks.spark.xml.util.XSDToSchema
 import org.apache.spark.sql.SparkSession
+import org.apache.spark.sql.catalyst.dsl.expressions.{DslExpression, StringToAttributeConversionHelper}
 import org.apache.spark.sql.functions._
 
 import java.nio.file.Paths
@@ -167,8 +168,8 @@ object etl_datos_weci_read_xsd {
         .option("rowTag", "ns2:EMPLOYEE_DELTA_INTEGRATION")
         .load(rutaCvDatalakeWorker) //
 
-      df_TestPayRoll.show()
-      df_TestPayRoll.printSchema()
+      //df_TestPayRoll.show()
+      //df_TestPayRoll.printSchema()
 
       if (df_TestPayRoll.columns.contains("Worker")) {
         df_TestPayRoll = spark.read
@@ -190,7 +191,7 @@ object etl_datos_weci_read_xsd {
             s"'$dataDatePart' as data_date_part",
           ).na.fill(" ").distinct()
 
-        df_final_nuevo.show()
+        //df_final_nuevo.show()
 
         // Accediendo a los campos de worker
         var df_nuevos_weci_worker = spark.read
@@ -208,9 +209,20 @@ object etl_datos_weci_read_xsd {
           .withColumn("Worker_Status_Active_VALUE", col("`Worker_Status`.`Active`.`_VALUE`"))
           .withColumn("Worker_Status_Active_priorValue", col("`Worker_Status`.`Active`.`_priorValue`"))
 
-        df_nuevos_weci_worker.show()
+        df_nuevos_weci_worker = df_nuevos_weci_worker.selectExpr(
+          "`Summary_Employee_ID` as Summary_Employee_ID ",
+          "`Summary_WID` as Summary_WID ",
+          "`Worker_Status_Active_VALUE` as Worker_Status_Active_VALUE ",
+          "`Worker_Status_Active_priorValue` as Worker_Status_Active_priorValue ",
+        )
+
+        val df_all = df_final_nuevo.join(df_nuevos_weci_worker,df_final_nuevo("WID_VALUE") === df_nuevos_weci_worker("Summary_WID") ,"left")
+
+        //df_nuevos_weci_worker.show()
         //df_nuevos_weci_worker.printSchema()
 
+        print("imprimiendo join de los dataframe")
+        df_all.show(false)
       }
       else {
         df_TestPayRoll = spark.read
