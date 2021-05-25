@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <xs:schema xmlns="http://Santander.com/Schemas/Integrations/CommonDataModel/PayrollIntegrations"
            xmlns:ct="http://Santander.com/Schemas/Integrations/CommonDataModel/CommonTypes"
-           xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           attributeFormDefault="qualified"
+           elementFormDefault="qualified"
            targetNamespace="http://Santander.com/Schemas/Integrations/CommonDataModel/PayrollIntegrations">
+
     <xs:import namespace="http://Santander.com/Schemas/Integrations/CommonDataModel/CommonTypes"
                schemaLocation="./CDM_CommonTypes.xsd"/>
 

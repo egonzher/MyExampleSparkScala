@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xs:schema version="1.1.0"
+           xmlns="http://Santander.com/Schemas/Integrations/CommonDataModel/CommonTypes"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           attributeFormDefault="qualified"
+           elementFormDefault="qualified"
+           targetNamespace="http://Santander.com/Schemas/Integrations/CommonDataModel/CommonTypes">
+    <!--Worker and PECI -->
+    <xs:simpleType name="YearType">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0"/>
+            <xs:maxInclusive value="9999"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <!--Worker and PECI -->
+    <xs:element  name="Worker_Status" type="Worker_StatusType"/>
+    <xs:element name="Worker" type="WorkerType" />
+    <xs:element  name="Summary" type="SummaryType"/>
+    <xs:complexType name="SummaryType">
+        <xs:sequence>
+            <xs:element maxOccurs="1" minOccurs="1" name="Employee_ID" type="StringType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="WID" type="StringType"></xs:element>
+
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="WorkerType">
+        <xs:sequence>
+            <xs:element name="Worker_Summary" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+
+                        <xs:element name="Employee_ID"
+                                    type="xs:string" minOccurs="1"/>
+                        <xs:element name="WID"
+                                    type="xs:string" minOccurs="0"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="Worker_StatusType">
+        <xs:annotation>
+            <xs:documentation>This section includes the worker’s employment status information</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element maxOccurs="1" minOccurs="0" name="Staffing_Event" type="TextFieldType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Staffing_Event_Date" type="DateFieldType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Status" type="TextFieldType">
+                <xs:annotation>
+                    <xs:documentation>Mapped with Employee_Status</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element maxOccurs="1" minOccurs="0" name="Active" type="BooleanFieldType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Active_Status_Date" type="DateFieldType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Terminated" type="BooleanFieldType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Termination_Date" nillable="true" type="DateFieldType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Not_Eligible_for_Hire" type="BooleanFieldType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Hire_Date" type="DateFieldType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Original_Hire_Date" type="DateFieldType" nillable="true"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Hire_Reason" type="TextFieldType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Is_Rehire" type="BooleanFieldType">
+                <xs:annotation>
+                    <xs:documentation>Returns "1" if the processing worker is a rehire at the processing moment. A
+                        worker is considered to be a rehire if they have been hired more than once in the past and they
+                        are not terminated.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element maxOccurs="1" minOccurs="0" name="End_Employment_Date" type="DateFieldType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Continuous_Service_Date" type="DateFieldType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="First_Day_of_Work" type="DateFieldType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Expected_Retirement_Date" type="DateFieldType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Retirement_Eligibility_Date" type="DateFieldType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Seniority_Date" type="DateFieldType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Union_Seniority_Date" type="DateFieldType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Severance_Date" type="DateFieldType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Retired" type="BooleanFieldType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Retirement_Date" type="DateFieldType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Benefits_Service_Date" type="DateFieldType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Company_Service_Date" type="DateFieldType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Vesting_Date" type="DateFieldType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Time_Off_Service_Date" type="DateFieldType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Pay_Through_Date" type="DateFieldType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Resignation_Date" type="DateFieldType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Termination_Involuntary" type="BooleanFieldType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Primary_Termination_Reason" type="TextFieldType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Primary_Termination_Category" type="TextFieldType"/>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="Secondary_Termination_Reason"
+                        type="Worker_Status-Secondary_Termination_ReasonType">
+                <xs:annotation>
+                    <xs:documentation>Worker will only have one.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element maxOccurs="1" minOccurs="0" name="Local_Termination_Reason" type="TextFieldType">
+                <xs:annotation>
+                    <xs:documentation>Not avalaible in Worker</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element maxOccurs="1" minOccurs="0" name="Regrettable_Termination" type="TextFieldType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Termination_Last_Day_of_Work" type="DateFieldType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Date_Entered_Workforce" type="DateFieldType">
+                <xs:annotation>
+                    <xs:documentation>Not available in worker</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element maxOccurs="1" minOccurs="0" name="Last_Date_for_Which_Paid" type="DateFieldType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Expected_Date_of_Return" type="DateFieldType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Not_Returning" type="TextFieldType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Return_Unknown" type="TextFieldType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Probation_Start_Date" type="DateFieldType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Probation_End_Date" type="DateFieldType">
+                <xs:annotation>
+                    <xs:documentation>Only for Worker</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element maxOccurs="1" minOccurs="0" name="Academic_Tenure_Date" type="DateFieldType">
+                <xs:annotation>
+                    <xs:documentation>Only for Worker</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element maxOccurs="1" minOccurs="0" name="Has_International_Assignment" type="BooleanFieldType">
+                <xs:annotation>
+                    <xs:documentation>Only for Worker</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element maxOccurs="1" minOccurs="0" name="Home_Country" type="TextFieldType">
+                <xs:annotation>
+                    <xs:documentation>Only for Worker</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element maxOccurs="1" minOccurs="0" name="Host_Country" type="TextFieldType">
+                <xs:annotation>
+                    <xs:documentation>Only for Worker</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element maxOccurs="1" minOccurs="0" name="Original_Company_Code" type="TextFieldType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Original_Company" type="TextFieldType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Rehire_Date" type="DateFieldType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="HR_Partner" type="HRPartnerType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="About_Worker" type="TextFieldType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Status_Date" type="DateFieldType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Termination_History_Approved_Trending" type="xs:string"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Promoted" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="is_Transfer" type="xs:boolean"/>
+            <xs:element name="BP_Comments_Change_Job" type="TextFieldType" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="BP_Comments_Termination" type="TextFieldType" minOccurs="0" maxOccurs="1"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Hire_Date_and_Time_Initiated" type="StringType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Termination_Date_and_Time_Initiated" type="StringType"/>
+            <xs:element name="Hire_Status" type="StringType" maxOccurs="1" minOccurs="0"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="RehireTermDate" type="DateFieldType"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="TextFieldType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="isAdded" type="xs:boolean"/>
+                <xs:attribute name="isDeleted" type="xs:boolean"/>
+                <xs:attribute name="priorValue" type="xs:string"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="Related_Person-Legal_NameType">
+        <xs:sequence>
+            <xs:element maxOccurs="1" minOccurs="0" name="Country" type="TextFieldType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="First_Name" type="TextFieldType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Middle_Name" type="TextFieldType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Last_Name" type="TextFieldType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Secondary_Last_Name" type="TextFieldType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="First_Name_Local" type="TextFieldType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Middle_Name_Local" type="TextFieldType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Last_Name_Local" type="TextFieldType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Secondary_Last_Name_Local" type="TextFieldType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="First_Name_Local_2" type="TextFieldType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Middle_Name_Local_2" type="TextFieldType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Last_Name_Local_2" type="TextFieldType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Secondary_Last_Name_Local_2" type="TextFieldType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Tertiary_Last_Name" type="TextFieldType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Hereditary" type="TextFieldType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Salutation" type="TextFieldType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Social_Suffix" type="TextFieldType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Title" type="TextFieldType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Full_Name_Malaysia_Singapore" type="TextFieldType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="General_Display_Name" type="TextFieldType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Name_in_Local_Script" type="TextFieldType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Formatted_Name" type="TextFieldType"></xs:element>
+            <xs:element maxOccurs="1" minOccurs="0" name="Reporting_Name" type="TextFieldType"></xs:element>
+            <xs:element maxOccurs="1" minOccurs="0" name="Full_Legal_Name" type="TextFieldType"></xs:element>
+            <xs:element maxOccurs="1" minOccurs="0" name="Marital_Status" type="TextFieldType"/>
+        </xs:sequence>
+        <xs:attribute name="isAdded" type="xs:boolean"/>
+        <xs:attribute name="isDeleted" type="xs:boolean"/>
+        <xs:attribute name="isUpdated" type="xs:boolean"/>
+        <xs:attribute name="IID" type="xs:string"/>
+    </xs:complexType>
+    <xs:complexType name="Related_Person-CitizenshipType">
+        <xs:sequence>
+            <xs:element maxOccurs="1" minOccurs="0" name="Citizenship_Status_ID" type="TextFieldType"/>
+        </xs:sequence>
+        <xs:attribute name="isAdded" type="xs:boolean"/>
+        <xs:attribute name="isDeleted" type="xs:boolean"/>
+        <xs:attribute name="isUpdated" type="xs:boolean"/>
+        <xs:attribute name="IID" type="xs:string"/>
+    </xs:complexType>
+    <xs:complexType name="DateFieldType">
+        <xs:simpleContent>
+            <xs:extension base="xs:date">
+                <xs:attribute name="isAdded" type="xs:boolean"/>
+                <xs:attribute name="isDeleted" type="xs:boolean"/>
+                <xs:attribute name="priorValue" type="xs:string"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="BooleanFieldType">
+        <xs:simpleContent>
+            <xs:extension base="xs:boolean">
+                <xs:attribute name="isAdded" type="xs:boolean"/>
+                <xs:attribute name="isDeleted" type="xs:boolean"/>
+                <xs:attribute name="priorValue" type="xs:string"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="NumericFieldType">
+        <xs:simpleContent>
+            <xs:extension base="RestrictedDecimal">
+                <xs:attribute name="isAdded" type="xs:boolean"/>
+                <xs:attribute name="isDeleted" type="xs:boolean"/>
+                <xs:attribute name="priorValue" type="xs:string"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:simpleType name="RestrictedDecimal">
+        <xs:restriction base="xs:decimal">
+            <xs:totalDigits value="26"/>
+            <xs:fractionDigits value="6"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:complexType name="Related_Person-Disability_DataType">
+        <xs:sequence>
+            <xs:element maxOccurs="1" minOccurs="0" name="Disability" type="TextFieldType">
+                <xs:annotation>
+                    <xs:documentation>The dependent's disability description.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element maxOccurs="1" minOccurs="0" name="Status_Date" type="DateFieldType">
+                <xs:annotation>
+                    <xs:documentation>The dependent's disability status date.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element maxOccurs="1" minOccurs="0" name="Date_Known" type="DateFieldType">
+                <xs:annotation>
+                    <xs:documentation>The dependent's disability date known.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element maxOccurs="1" minOccurs="0" name="End_Date" type="DateFieldType">
+                <xs:annotation>
+                    <xs:documentation>The dependent's disability end date.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element maxOccurs="1" minOccurs="0" name="Grade" type="TextFieldType">
+                <xs:annotation>
+                    <xs:documentation>The dependent's disability grade.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="isAdded" type="xs:boolean"/>
+        <xs:attribute name="isDeleted" type="xs:boolean"/>
+        <xs:attribute name="isUpdated" type="xs:boolean"/>
+        <xs:attribute name="IID" type="xs:string"/>
+    </xs:complexType>
+    <xs:complexType name="StringType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="PriorValue" type="xs:string"/>
+                <xs:attribute name="truncated" type="xs:boolean"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="Worker_Status-Secondary_Termination_ReasonType">
+        <xs:sequence>
+            <xs:element maxOccurs="1" minOccurs="0" name="Termination_Reason" type="TextFieldType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Termination_Category" type="TextFieldType"/>
+        </xs:sequence>
+        <xs:attribute name="isAdded" type="xs:boolean"/>
+        <xs:attribute name="isDeleted" type="xs:boolean"/>
+        <xs:attribute name="isUpdated" type="xs:boolean"/>
+        <xs:attribute name="IID" type="xs:string"/>
+    </xs:complexType>
+    <xs:complexType name="HRPartnerType">
+        <xs:sequence>
+            <xs:element maxOccurs="1" minOccurs="0" name="HR_Partner_Employe_ID" type="TextFieldType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="HR_Partner_Name" type="TextFieldType"></xs:element>
+            <xs:element maxOccurs="1" minOccurs="0" name="HR_Partner_Email" type="TextFieldType"></xs:element>
+            <xs:element maxOccurs="1" minOccurs="0" name="HR_Partner_Phone" type="TextFieldType"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
