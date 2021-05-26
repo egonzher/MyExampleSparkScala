@@ -1,0 +1,825 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ns2:EMPLOYEE_DELTA_INTEGRATION xmlns:ns2="http://Santander.com/Schemas/Integrations/CommonDataModel/PayrollIntegrations">
+    <ns2:Worker xmlns:weci="urn:com.workday/weci" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wtdf="urn:com.workday/weci/tdf" xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/CommonTypes" xmlns:ns2="http://Santander.com/Schemas/Integrations/CommonDataModel/PayrollIntegrations">
+    <ns2:Worker_Summary>
+        <ns2:WID>2eb4cc783e3d0126561be245c301a8c0</ns2:WID>
+        <ns2:Employee_ID>100036575</ns2:Employee_ID>
+        <ns2:Name>Sr. ALBERTO CABRERA PLATA</ns2:Name>
+    </ns2:Worker_Summary>
+    <ns2:Employees ns1:Sequence="0">
+        <ns1:Summary>
+            <ns1:WID>2eb4cc783e3d0126561be245c301a8c0</ns1:WID>
+            <ns1:Employee_ID />
+        </ns1:Summary>
+        <ns1:Derived_Event_Code>DTA</ns1:Derived_Event_Code>
+        <ns1:Effective_Moment>2021-01-15T00:00:00-08:00</ns1:Effective_Moment>
+        <ns1:Entry_Moment>2021-05-21T04:34:04.502-07:00</ns1:Entry_Moment>
+        <ns1:Worker_Status>
+            <ns1:Status>Active</ns1:Status>
+            <ns1:Active>true</ns1:Active>
+            <ns1:Active_Status_Date>2019-01-18-08:00</ns1:Active_Status_Date>
+            <ns1:Terminated>false</ns1:Terminated>
+            <ns1:Hire_Date>2019-01-18-08:00</ns1:Hire_Date>
+            <ns1:Original_Hire_Date ns1:priorValue="">2019-01-18-08:00</ns1:Original_Hire_Date>
+            <ns1:Is_Rehire>false</ns1:Is_Rehire>
+            <ns1:Continuous_Service_Date ns1:priorValue="">2019-01-18-08:00</ns1:Continuous_Service_Date>
+            <ns1:First_Day_of_Work ns1:priorValue="">2019-01-18-08:00</ns1:First_Day_of_Work>
+            <ns1:Seniority_Date ns1:priorValue="">2019-01-18-08:00</ns1:Seniority_Date>
+            <ns1:Regrettable_Termination>0</ns1:Regrettable_Termination>
+            <ns1:Not_Returning>0</ns1:Not_Returning>
+            <ns1:Return_Unknown>0</ns1:Return_Unknown>
+        </ns1:Worker_Status>
+        <ns1:Personal>
+            <ns1:Name>
+                <ns1:Country>ES</ns1:Country>
+                <ns1:First_Name>ALBERTO</ns1:First_Name>
+                <ns1:Last_Name>CABRERA</ns1:Last_Name>
+                <ns1:Secondary_Last_Name>PLATA</ns1:Secondary_Last_Name>
+                <ns1:Title>Sr.</ns1:Title>
+                <ns1:General_Display_Name>ALBERTO CABRERA PLATA</ns1:General_Display_Name>
+            </ns1:Name>
+            <ns1:Gender>Male</ns1:Gender>
+            <ns1:Date_of_Birth ns1:priorValue="">1997-11-29-08:00</ns1:Date_of_Birth>
+            <ns1:Country_of_Birth>ES</ns1:Country_of_Birth>
+            <ns1:City_of_Birth>ALCALA DE HENARES</ns1:City_of_Birth>
+            <ns1:Nationality>ES</ns1:Nationality>
+            <ns1:Number_of_Payroll_Dependents ns1:priorValue="">0.0</ns1:Number_of_Payroll_Dependents>
+            <ns1:Preferred_Language>es</ns1:Preferred_Language>
+            <ns1:Preferred_Locale>es_ES</ns1:Preferred_Locale>
+            <ns1:Workday_Account>n230097@gruposantander.com</ns1:Workday_Account>
+        </ns1:Personal>
+        <ns1:Person_Communication />
+        <ns1:Person_Identification />
+        <ns1:Compensation ns1:isUpdated="true">
+            <ns1:Position_ID>Pos0036575</ns1:Position_ID>
+            <ns1:Compensation_Grade>Compensation_Grade_H</ns1:Compensation_Grade>
+            <ns1:Compensation_Change_Reason ns1:priorValue="Request_Compensation_Change_Compensation_Change_Ad_Hoc">Request_Compensation_Change_Compensation_Change_Responsibility_Change</ns1:Compensation_Change_Reason>
+            <ns1:Compensation_Summary_Based_on_Compensation_Grade ns1:isUpdated="true">
+                <ns1:Total_Base_Pay ns1:priorValue="32000">37000.0</ns1:Total_Base_Pay>
+                <ns1:Primary_Compensation_Basis ns1:priorValue="37600">42600.0</ns1:Primary_Compensation_Basis>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+            </ns1:Compensation_Summary_Based_on_Compensation_Grade>
+            <ns1:Compensation_Summary_in_Annualized_Frequency ns1:isUpdated="true">
+                <ns1:Total_Base_Pay ns1:priorValue="32000">37000.0</ns1:Total_Base_Pay>
+                <ns1:Primary_Compensation_Basis ns1:priorValue="37600">42600.0</ns1:Primary_Compensation_Basis>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+            </ns1:Compensation_Summary_in_Annualized_Frequency>
+        </ns1:Compensation>
+        <ns1:Compensation_Plans ns1:isUpdated="true">
+            <ns1:Position_ID>Pos0036575</ns1:Position_ID>
+            <ns1:Allowance_Plan>
+                <ns1:Compensation_Plan>ESP_CH2_Complemento_H_S_Gross</ns1:Compensation_Plan>
+                <ns1:Amount ns1:priorValue="">6500.0</ns1:Amount>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+                <ns1:Start_Date ns1:priorValue="">2020-09-01-07:00</ns1:Start_Date>
+            </ns1:Allowance_Plan>
+            <ns1:Salary_and_Hourly_Plan ns1:isAdded="true">
+                <ns1:Compensation_Plan>Salary</ns1:Compensation_Plan>
+                <ns1:Amount ns1:priorValue="">37000.0</ns1:Amount>
+                <ns1:Prorated_Amount ns1:priorValue="">37000.0</ns1:Prorated_Amount>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+                <ns1:Start_Date ns1:priorValue="">2021-01-15-08:00</ns1:Start_Date>
+            </ns1:Salary_and_Hourly_Plan>
+            <ns1:Salary_and_Hourly_Plan ns1:isUpdated="true">
+                <ns1:Compensation_Plan>Salary</ns1:Compensation_Plan>
+                <ns1:Amount ns1:priorValue="">32000.0</ns1:Amount>
+                <ns1:Prorated_Amount ns1:priorValue="">32000.0</ns1:Prorated_Amount>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+                <ns1:Start_Date ns1:priorValue="">2019-01-18-08:00</ns1:Start_Date>
+                <ns1:End_Date ns1:isAdded="true" ns1:priorValue="">2021-01-14-08:00</ns1:End_Date>
+            </ns1:Salary_and_Hourly_Plan>
+            <ns1:Bonus_Plan>
+                <ns1:Compensation_Plan>HQ_Bonus_Amount_Plan</ns1:Compensation_Plan>
+                <ns1:Amount ns1:priorValue="">2800.0</ns1:Amount>
+                <ns1:Prorated_Amount>2800.0</ns1:Prorated_Amount>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+                <ns1:Start_Date ns1:priorValue="">2020-01-01-08:00</ns1:Start_Date>
+            </ns1:Bonus_Plan>
+            <ns1:Bonus_Plan>
+                <ns1:Compensation_Plan>Bonus_Target_Amount_based</ns1:Compensation_Plan>
+                <ns1:Amount ns1:priorValue="">2800.0</ns1:Amount>
+                <ns1:Prorated_Amount>2800.0</ns1:Prorated_Amount>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+                <ns1:Start_Date ns1:priorValue="">2019-01-18-08:00</ns1:Start_Date>
+            </ns1:Bonus_Plan>
+        </ns1:Compensation_Plans>
+        <ns1:Payment_Election>
+            <ns1:Order ns1:PriorValue="">1</ns1:Order>
+            <ns1:Payment_Type>Direct_Deposit</ns1:Payment_Type>
+            <ns1:Country>ES</ns1:Country>
+            <ns1:Currency>EUR</ns1:Currency>
+            <ns1:Bank_Account_Nickname>Cuenta de Nómina</ns1:Bank_Account_Nickname>
+            <ns1:Bank_Account_Name>Cuenta de Nómina</ns1:Bank_Account_Name>
+            <ns1:Account_Number>2810242616</ns1:Account_Number>
+            <ns1:Account_Type>DDA</ns1:Account_Type>
+            <ns1:Bank_Name>Banco Santander</ns1:Bank_Name>
+            <ns1:IBAN>ES7100491770952810242616</ns1:IBAN>
+            <ns1:Bank_ID>0049</ns1:Bank_ID>
+            <ns1:Branch_ID>1770</ns1:Branch_ID>
+            <ns1:Check_Digit>95</ns1:Check_Digit>
+        </ns1:Payment_Election>
+        <ns1:Additional_Information />
+        <ns1:Transaction_Log>
+            <ns1:Is_Rescind_Or_Rescinded>false</ns1:Is_Rescind_Or_Rescinded>
+        </ns1:Transaction_Log>
+        <ns1:Weci>
+            <ns1:Preferred_Name>
+                <ns1:Country>ES</ns1:Country>
+                <ns1:First_Name>ALBERTO</ns1:First_Name>
+                <ns1:Last_Name>CABRERA</ns1:Last_Name>
+                <ns1:Secondary_Last_Name>PLATA</ns1:Secondary_Last_Name>
+                <ns1:Title>Sr.</ns1:Title>
+                <ns1:General_Display_Name>ALBERTO CABRERA PLATA</ns1:General_Display_Name>
+            </ns1:Preferred_Name>
+            <ns1:Marital_Status_ID>MARITAL_STATUS-6-14-Soltero (S)</ns1:Marital_Status_ID>
+            <ns1:Cash_Range_Max>41,875.00 EUR Annual</ns1:Cash_Range_Max>
+            <ns1:Cash_Range_Min>22,612.50 EUR</ns1:Cash_Range_Min>
+            <ns1:Target_Bonus_Total_Amount>5600.0</ns1:Target_Bonus_Total_Amount>
+            <ns1:Country>Spain</ns1:Country>
+            <ns1:Job_Family_Group ns1:Descriptor="Audit">
+                <ns1:Id>WID</ns1:Id>
+            </ns1:Job_Family_Group>
+            <ns1:Contract_Type ns1:Descriptor="Permanent Contract">
+                <ns1:Id>WID</ns1:Id>
+            </ns1:Contract_Type>
+            <ns1:Compensation_Grade_Profile ns1:Descriptor="ESP HQ8">
+                <ns1:Id>WID</ns1:Id>
+            </ns1:Compensation_Grade_Profile>
+            <ns1:Employee_Type ns1:Descriptor="Regular">
+                <ns1:Id>WID</ns1:Id>
+            </ns1:Employee_Type>
+            <ns1:Job_Family ns1:Descriptor="Internal Control (2nd and 3rd LoD)">
+                <ns1:Id>WID</ns1:Id>
+            </ns1:Job_Family>
+        </ns1:Weci>
+    </ns2:Employees>
+    <ns2:Employees ns1:Sequence="1">
+        <ns1:Summary>
+            <ns1:WID>2eb4cc783e3d0126561be245c301a8c0</ns1:WID>
+            <ns1:Employee_ID />
+        </ns1:Summary>
+        <ns1:Derived_Event_Code>DTA</ns1:Derived_Event_Code>
+        <ns1:Effective_Moment>2021-02-01T00:00:00-08:00</ns1:Effective_Moment>
+        <ns1:Entry_Moment>2021-05-21T04:36:47.115-07:00</ns1:Entry_Moment>
+        <ns1:Worker_Status>
+            <ns1:Status>Active</ns1:Status>
+            <ns1:Active>true</ns1:Active>
+            <ns1:Active_Status_Date>2019-01-18-08:00</ns1:Active_Status_Date>
+            <ns1:Terminated>false</ns1:Terminated>
+            <ns1:Hire_Date>2019-01-18-08:00</ns1:Hire_Date>
+            <ns1:Original_Hire_Date ns1:priorValue="">2019-01-18-08:00</ns1:Original_Hire_Date>
+            <ns1:Is_Rehire>false</ns1:Is_Rehire>
+            <ns1:Continuous_Service_Date ns1:priorValue="">2019-01-18-08:00</ns1:Continuous_Service_Date>
+            <ns1:First_Day_of_Work ns1:priorValue="">2019-01-18-08:00</ns1:First_Day_of_Work>
+            <ns1:Seniority_Date ns1:priorValue="">2019-01-18-08:00</ns1:Seniority_Date>
+            <ns1:Regrettable_Termination>0</ns1:Regrettable_Termination>
+            <ns1:Not_Returning>0</ns1:Not_Returning>
+            <ns1:Return_Unknown>0</ns1:Return_Unknown>
+        </ns1:Worker_Status>
+        <ns1:Personal>
+            <ns1:Name>
+                <ns1:Country>ES</ns1:Country>
+                <ns1:First_Name>ALBERTO</ns1:First_Name>
+                <ns1:Last_Name>CABRERA</ns1:Last_Name>
+                <ns1:Secondary_Last_Name>PLATA</ns1:Secondary_Last_Name>
+                <ns1:Title>Sr.</ns1:Title>
+                <ns1:General_Display_Name>ALBERTO CABRERA PLATA</ns1:General_Display_Name>
+            </ns1:Name>
+            <ns1:Gender>Male</ns1:Gender>
+            <ns1:Date_of_Birth ns1:priorValue="">1997-11-29-08:00</ns1:Date_of_Birth>
+            <ns1:Country_of_Birth>ES</ns1:Country_of_Birth>
+            <ns1:City_of_Birth>ALCALA DE HENARES</ns1:City_of_Birth>
+            <ns1:Nationality>ES</ns1:Nationality>
+            <ns1:Number_of_Payroll_Dependents ns1:priorValue="">0.0</ns1:Number_of_Payroll_Dependents>
+            <ns1:Preferred_Language>es</ns1:Preferred_Language>
+            <ns1:Preferred_Locale>es_ES</ns1:Preferred_Locale>
+            <ns1:Workday_Account>n230097@gruposantander.com</ns1:Workday_Account>
+        </ns1:Personal>
+        <ns1:Person_Communication />
+        <ns1:Person_Identification />
+        <ns1:Compensation ns1:isUpdated="true">
+            <ns1:Position_ID>Pos0036575</ns1:Position_ID>
+            <ns1:Compensation_Grade>Compensation_Grade_H</ns1:Compensation_Grade>
+            <ns1:Compensation_Change_Reason>Request_Compensation_Change_Compensation_Change_Responsibility_Change</ns1:Compensation_Change_Reason>
+            <ns1:Compensation_Summary_Based_on_Compensation_Grade ns1:isUpdated="true">
+                <ns1:Total_Base_Pay ns1:priorValue="37000">40000.0</ns1:Total_Base_Pay>
+                <ns1:Primary_Compensation_Basis ns1:priorValue="42600">45600.0</ns1:Primary_Compensation_Basis>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+            </ns1:Compensation_Summary_Based_on_Compensation_Grade>
+            <ns1:Compensation_Summary_in_Annualized_Frequency ns1:isUpdated="true">
+                <ns1:Total_Base_Pay ns1:priorValue="37000">40000.0</ns1:Total_Base_Pay>
+                <ns1:Primary_Compensation_Basis ns1:priorValue="42600">45600.0</ns1:Primary_Compensation_Basis>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+            </ns1:Compensation_Summary_in_Annualized_Frequency>
+        </ns1:Compensation>
+        <ns1:Compensation_Plans ns1:isUpdated="true">
+            <ns1:Position_ID>Pos0036575</ns1:Position_ID>
+            <ns1:Allowance_Plan>
+                <ns1:Compensation_Plan>ESP_CH2_Complemento_H_S_Gross</ns1:Compensation_Plan>
+                <ns1:Amount ns1:priorValue="">6500.0</ns1:Amount>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+                <ns1:Start_Date ns1:priorValue="">2020-09-01-07:00</ns1:Start_Date>
+            </ns1:Allowance_Plan>
+            <ns1:Salary_and_Hourly_Plan ns1:isAdded="true">
+                <ns1:Compensation_Plan>Salary</ns1:Compensation_Plan>
+                <ns1:Amount ns1:priorValue="">40000.0</ns1:Amount>
+                <ns1:Prorated_Amount ns1:priorValue="">40000.0</ns1:Prorated_Amount>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+                <ns1:Start_Date ns1:priorValue="">2021-02-01-08:00</ns1:Start_Date>
+            </ns1:Salary_and_Hourly_Plan>
+            <ns1:Salary_and_Hourly_Plan ns1:isUpdated="true">
+                <ns1:Compensation_Plan>Salary</ns1:Compensation_Plan>
+                <ns1:Amount ns1:priorValue="">37000.0</ns1:Amount>
+                <ns1:Prorated_Amount ns1:priorValue="">37000.0</ns1:Prorated_Amount>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+                <ns1:Start_Date ns1:priorValue="">2021-01-15-08:00</ns1:Start_Date>
+                <ns1:End_Date ns1:isAdded="true" ns1:priorValue="">2021-01-31-08:00</ns1:End_Date>
+            </ns1:Salary_and_Hourly_Plan>
+            <ns1:Bonus_Plan>
+                <ns1:Compensation_Plan>HQ_Bonus_Amount_Plan</ns1:Compensation_Plan>
+                <ns1:Amount ns1:priorValue="">2800.0</ns1:Amount>
+                <ns1:Prorated_Amount>2800.0</ns1:Prorated_Amount>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+                <ns1:Start_Date ns1:priorValue="">2020-01-01-08:00</ns1:Start_Date>
+            </ns1:Bonus_Plan>
+            <ns1:Bonus_Plan>
+                <ns1:Compensation_Plan>Bonus_Target_Amount_based</ns1:Compensation_Plan>
+                <ns1:Amount ns1:priorValue="">2800.0</ns1:Amount>
+                <ns1:Prorated_Amount>2800.0</ns1:Prorated_Amount>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+                <ns1:Start_Date ns1:priorValue="">2019-01-18-08:00</ns1:Start_Date>
+            </ns1:Bonus_Plan>
+        </ns1:Compensation_Plans>
+        <ns1:Payment_Election>
+            <ns1:Order ns1:PriorValue="">1</ns1:Order>
+            <ns1:Payment_Type>Direct_Deposit</ns1:Payment_Type>
+            <ns1:Country>ES</ns1:Country>
+            <ns1:Currency>EUR</ns1:Currency>
+            <ns1:Bank_Account_Nickname>Cuenta de Nómina</ns1:Bank_Account_Nickname>
+            <ns1:Bank_Account_Name>Cuenta de Nómina</ns1:Bank_Account_Name>
+            <ns1:Account_Number>2810242616</ns1:Account_Number>
+            <ns1:Account_Type>DDA</ns1:Account_Type>
+            <ns1:Bank_Name>Banco Santander</ns1:Bank_Name>
+            <ns1:IBAN>ES7100491770952810242616</ns1:IBAN>
+            <ns1:Bank_ID>0049</ns1:Bank_ID>
+            <ns1:Branch_ID>1770</ns1:Branch_ID>
+            <ns1:Check_Digit>95</ns1:Check_Digit>
+        </ns1:Payment_Election>
+        <ns1:Additional_Information />
+        <ns1:Transaction_Log>
+            <ns1:Is_Rescind_Or_Rescinded>false</ns1:Is_Rescind_Or_Rescinded>
+        </ns1:Transaction_Log>
+        <ns1:Weci>
+            <ns1:Preferred_Name>
+                <ns1:Country>ES</ns1:Country>
+                <ns1:First_Name>ALBERTO</ns1:First_Name>
+                <ns1:Last_Name>CABRERA</ns1:Last_Name>
+                <ns1:Secondary_Last_Name>PLATA</ns1:Secondary_Last_Name>
+                <ns1:Title>Sr.</ns1:Title>
+                <ns1:General_Display_Name>ALBERTO CABRERA PLATA</ns1:General_Display_Name>
+            </ns1:Preferred_Name>
+            <ns1:Marital_Status_ID>MARITAL_STATUS-6-14-Soltero (S)</ns1:Marital_Status_ID>
+            <ns1:Cash_Range_Max>41,875.00 EUR Annual</ns1:Cash_Range_Max>
+            <ns1:Cash_Range_Min>22,612.50 EUR</ns1:Cash_Range_Min>
+            <ns1:Target_Bonus_Total_Amount>5600.0</ns1:Target_Bonus_Total_Amount>
+            <ns1:Country>Spain</ns1:Country>
+            <ns1:Job_Family_Group ns1:Descriptor="Audit">
+                <ns1:Id>WID</ns1:Id>
+            </ns1:Job_Family_Group>
+            <ns1:Contract_Type ns1:Descriptor="Permanent Contract">
+                <ns1:Id>WID</ns1:Id>
+            </ns1:Contract_Type>
+            <ns1:Compensation_Grade_Profile ns1:Descriptor="ESP HQ8">
+                <ns1:Id>WID</ns1:Id>
+            </ns1:Compensation_Grade_Profile>
+            <ns1:Employee_Type ns1:Descriptor="Regular">
+                <ns1:Id>WID</ns1:Id>
+            </ns1:Employee_Type>
+            <ns1:Job_Family ns1:Descriptor="Internal Control (2nd and 3rd LoD)">
+                <ns1:Id>WID</ns1:Id>
+            </ns1:Job_Family>
+        </ns1:Weci>
+    </ns2:Employees>
+</ns2:Worker><ns2:Worker xmlns:weci="urn:com.workday/weci" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wtdf="urn:com.workday/weci/tdf" xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/CommonTypes" xmlns:ns2="http://Santander.com/Schemas/Integrations/CommonDataModel/PayrollIntegrations">
+    <ns2:Worker_Summary>
+        <ns2:WID>2eb4cc783e3d01b5ede368dac4016c29</ns2:WID>
+        <ns2:Employee_ID>100039542</ns2:Employee_ID>
+        <ns2:Name>Sr. ISRAEL MARTINEZ LACABE</ns2:Name>
+    </ns2:Worker_Summary>
+    <ns2:Employees ns1:Sequence="0">
+        <ns1:Summary>
+            <ns1:WID>2eb4cc783e3d01b5ede368dac4016c29</ns1:WID>
+            <ns1:Employee_ID />
+        </ns1:Summary>
+        <ns1:Derived_Event_Code>DTA</ns1:Derived_Event_Code>
+        <ns1:Effective_Moment>2021-05-26T00:00:00-07:00</ns1:Effective_Moment>
+        <ns1:Entry_Moment>2021-05-21T04:08:01.979-07:00</ns1:Entry_Moment>
+        <ns1:Worker_Status>
+            <ns1:Status>Active</ns1:Status>
+            <ns1:Active>true</ns1:Active>
+            <ns1:Active_Status_Date>2004-04-19-07:00</ns1:Active_Status_Date>
+            <ns1:Terminated>false</ns1:Terminated>
+            <ns1:Hire_Date>2004-04-19-07:00</ns1:Hire_Date>
+            <ns1:Original_Hire_Date ns1:priorValue="">2004-04-19-07:00</ns1:Original_Hire_Date>
+            <ns1:Is_Rehire>false</ns1:Is_Rehire>
+            <ns1:Continuous_Service_Date ns1:priorValue="">2004-04-19-07:00</ns1:Continuous_Service_Date>
+            <ns1:First_Day_of_Work ns1:priorValue="">2004-04-19-07:00</ns1:First_Day_of_Work>
+            <ns1:Seniority_Date ns1:priorValue="">2004-04-19-07:00</ns1:Seniority_Date>
+            <ns1:Regrettable_Termination>0</ns1:Regrettable_Termination>
+            <ns1:Not_Returning>0</ns1:Not_Returning>
+            <ns1:Return_Unknown>0</ns1:Return_Unknown>
+        </ns1:Worker_Status>
+        <ns1:Personal>
+            <ns1:Name>
+                <ns1:Country>ES</ns1:Country>
+                <ns1:First_Name>ISRAEL</ns1:First_Name>
+                <ns1:Last_Name>MARTINEZ</ns1:Last_Name>
+                <ns1:Secondary_Last_Name>LACABE</ns1:Secondary_Last_Name>
+                <ns1:Title>Sr.</ns1:Title>
+                <ns1:General_Display_Name>ISRAEL MARTINEZ LACABE</ns1:General_Display_Name>
+            </ns1:Name>
+            <ns1:Gender>Male</ns1:Gender>
+            <ns1:Date_of_Birth ns1:priorValue="">1979-01-11-08:00</ns1:Date_of_Birth>
+            <ns1:Country_of_Birth>ES</ns1:Country_of_Birth>
+            <ns1:City_of_Birth>BARCELONA</ns1:City_of_Birth>
+            <ns1:Marital_Status_Date ns1:priorValue="">2015-10-30-07:00</ns1:Marital_Status_Date>
+            <ns1:Nationality>ES</ns1:Nationality>
+            <ns1:Number_of_Payroll_Dependents ns1:priorValue="">0.0</ns1:Number_of_Payroll_Dependents>
+            <ns1:Preferred_Language>es</ns1:Preferred_Language>
+            <ns1:Preferred_Locale>es_ES</ns1:Preferred_Locale>
+            <ns1:Workday_Account>n49800@gruposantander.com</ns1:Workday_Account>
+        </ns1:Personal>
+        <ns1:Person_Communication />
+        <ns1:Person_Identification />
+        <ns1:Compensation ns1:isUpdated="true">
+            <ns1:Position_ID>Pos0039542</ns1:Position_ID>
+            <ns1:Compensation_Grade>Compensation_Grade_E</ns1:Compensation_Grade>
+            <ns1:Compensation_Change_Reason ns1:priorValue="Request_Compensation_Change_Allowance_Adjustment_Ad_Hoc">Request_Compensation_Change_Bonus_Variable_Assign_Bonus_or_Variable</ns1:Compensation_Change_Reason>
+            <ns1:Compensation_Summary_Based_on_Compensation_Grade ns1:isUpdated="true">
+                <ns1:Total_Base_Pay ns1:priorValue="72000">80000.0</ns1:Total_Base_Pay>
+                <ns1:Primary_Compensation_Basis ns1:priorValue="108000">116000.0</ns1:Primary_Compensation_Basis>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+            </ns1:Compensation_Summary_Based_on_Compensation_Grade>
+            <ns1:Compensation_Summary_in_Annualized_Frequency ns1:isUpdated="true">
+                <ns1:Total_Base_Pay ns1:priorValue="72000">80000.0</ns1:Total_Base_Pay>
+                <ns1:Primary_Compensation_Basis ns1:priorValue="108000">116000.0</ns1:Primary_Compensation_Basis>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+            </ns1:Compensation_Summary_in_Annualized_Frequency>
+        </ns1:Compensation>
+        <ns1:Compensation_Plans ns1:isUpdated="true">
+            <ns1:Position_ID>Pos0039542</ns1:Position_ID>
+            <ns1:Allowance_Plan>
+                <ns1:Compensation_Plan>ESP_F01_F03_F07_Comp_Beneficios_Sociales_Gross</ns1:Compensation_Plan>
+                <ns1:Amount ns1:priorValue="">526.71</ns1:Amount>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+                <ns1:Start_Date ns1:priorValue="">2020-08-01-07:00</ns1:Start_Date>
+            </ns1:Allowance_Plan>
+            <ns1:Allowance_Plan>
+                <ns1:Compensation_Plan>ESP_F83_Economato_Carbon/Gas_Gross</ns1:Compensation_Plan>
+                <ns1:Amount ns1:priorValue="">152.59</ns1:Amount>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+                <ns1:Start_Date ns1:priorValue="">2020-04-01-07:00</ns1:Start_Date>
+            </ns1:Allowance_Plan>
+            <ns1:Allowance_Plan>
+                <ns1:Compensation_Plan>ESP_CH2_Complemento_H_S_Gross</ns1:Compensation_Plan>
+                <ns1:Amount ns1:priorValue="">20000.0</ns1:Amount>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+                <ns1:Start_Date ns1:priorValue="">2020-04-01-07:00</ns1:Start_Date>
+            </ns1:Allowance_Plan>
+            <ns1:Allowance_Plan>
+                <ns1:Compensation_Plan>ESP_F87_Compensacion_Economato_Gross</ns1:Compensation_Plan>
+                <ns1:Amount ns1:priorValue="">237.7</ns1:Amount>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+                <ns1:Start_Date ns1:priorValue="">2020-04-01-07:00</ns1:Start_Date>
+            </ns1:Allowance_Plan>
+            <ns1:Salary_and_Hourly_Plan ns1:isAdded="true">
+                <ns1:Compensation_Plan>Salary</ns1:Compensation_Plan>
+                <ns1:Amount ns1:priorValue="">80000.0</ns1:Amount>
+                <ns1:Prorated_Amount ns1:priorValue="">80000.0</ns1:Prorated_Amount>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+                <ns1:Start_Date ns1:priorValue="">2021-05-26-07:00</ns1:Start_Date>
+            </ns1:Salary_and_Hourly_Plan>
+            <ns1:Salary_and_Hourly_Plan ns1:isUpdated="true">
+                <ns1:Compensation_Plan>Salary</ns1:Compensation_Plan>
+                <ns1:Amount ns1:priorValue="">72000.0</ns1:Amount>
+                <ns1:Prorated_Amount ns1:priorValue="">72000.0</ns1:Prorated_Amount>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+                <ns1:Start_Date ns1:priorValue="">2020-05-01-07:00</ns1:Start_Date>
+                <ns1:End_Date ns1:isAdded="true" ns1:priorValue="">2021-05-25-07:00</ns1:End_Date>
+            </ns1:Salary_and_Hourly_Plan>
+            <ns1:Bonus_Plan>
+                <ns1:Compensation_Plan>HQ_Bonus_Amount_Plan</ns1:Compensation_Plan>
+                <ns1:Amount ns1:priorValue="">18000.0</ns1:Amount>
+                <ns1:Prorated_Amount>18000.0</ns1:Prorated_Amount>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+                <ns1:Start_Date ns1:priorValue="">2020-01-01-08:00</ns1:Start_Date>
+            </ns1:Bonus_Plan>
+            <ns1:Bonus_Plan>
+                <ns1:Compensation_Plan>Bonus_Target_Amount_based</ns1:Compensation_Plan>
+                <ns1:Amount ns1:priorValue="">18000.0</ns1:Amount>
+                <ns1:Prorated_Amount>18000.0</ns1:Prorated_Amount>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+                <ns1:Start_Date ns1:priorValue="">2020-01-01-08:00</ns1:Start_Date>
+            </ns1:Bonus_Plan>
+        </ns1:Compensation_Plans>
+        <ns1:Payment_Election>
+            <ns1:Order ns1:PriorValue="">1</ns1:Order>
+            <ns1:Payment_Type>Direct_Deposit</ns1:Payment_Type>
+            <ns1:Country>ES</ns1:Country>
+            <ns1:Currency>EUR</ns1:Currency>
+            <ns1:Bank_Account_Nickname>Nómina</ns1:Bank_Account_Nickname>
+            <ns1:Bank_Account_Name>Nómina</ns1:Bank_Account_Name>
+            <ns1:Account_Number>2595136255</ns1:Account_Number>
+            <ns1:Account_Type>DDA</ns1:Account_Type>
+            <ns1:Bank_Name>Banco Santander</ns1:Bank_Name>
+            <ns1:IBAN>ES4700495182062595136255</ns1:IBAN>
+            <ns1:Bank_ID>0049</ns1:Bank_ID>
+            <ns1:Branch_Name>LAS ROZAS DE MADRID, AV. REAL,</ns1:Branch_Name>
+            <ns1:Branch_ID>5182</ns1:Branch_ID>
+            <ns1:Check_Digit>06</ns1:Check_Digit>
+        </ns1:Payment_Election>
+        <ns1:Additional_Information />
+        <ns1:Transaction_Log>
+            <ns1:Is_Rescind_Or_Rescinded>false</ns1:Is_Rescind_Or_Rescinded>
+        </ns1:Transaction_Log>
+        <ns1:Weci>
+            <ns1:Preferred_Name>
+                <ns1:Country>ES</ns1:Country>
+                <ns1:First_Name>ISRAEL</ns1:First_Name>
+                <ns1:Last_Name>MARTINEZ</ns1:Last_Name>
+                <ns1:Secondary_Last_Name>LACABE</ns1:Secondary_Last_Name>
+                <ns1:Title>Sr.</ns1:Title>
+                <ns1:General_Display_Name>ISRAEL MARTINEZ LACABE</ns1:General_Display_Name>
+            </ns1:Preferred_Name>
+            <ns1:Marital_Status_ID>MARITAL_STATUS-6-13-Casado (M)</ns1:Marital_Status_ID>
+            <ns1:Cash_Range_Max>163,750.00 EUR Annual</ns1:Cash_Range_Max>
+            <ns1:Cash_Range_Min>88,425.00 EUR</ns1:Cash_Range_Min>
+            <ns1:Target_Bonus_Total_Amount>36000.0</ns1:Target_Bonus_Total_Amount>
+            <ns1:Country>Spain</ns1:Country>
+            <ns1:Job_Family_Group ns1:Descriptor="Audit">
+                <ns1:Id>WID</ns1:Id>
+            </ns1:Job_Family_Group>
+            <ns1:Contract_Type ns1:Descriptor="Permanent Contract">
+                <ns1:Id>WID</ns1:Id>
+            </ns1:Contract_Type>
+            <ns1:Compensation_Grade_Profile ns1:Descriptor="ESP HQ16">
+                <ns1:Id>WID</ns1:Id>
+            </ns1:Compensation_Grade_Profile>
+            <ns1:Employee_Type ns1:Descriptor="Regular">
+                <ns1:Id>WID</ns1:Id>
+            </ns1:Employee_Type>
+            <ns1:Job_Family ns1:Descriptor="Internal Control (2nd and 3rd LoD)">
+                <ns1:Id>WID</ns1:Id>
+            </ns1:Job_Family>
+        </ns1:Weci>
+    </ns2:Employees>
+</ns2:Worker><ns2:Worker xmlns:weci="urn:com.workday/weci" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wtdf="urn:com.workday/weci/tdf" xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/CommonTypes" xmlns:ns2="http://Santander.com/Schemas/Integrations/CommonDataModel/PayrollIntegrations">
+    <ns2:Worker_Summary>
+        <ns2:WID>2eb4cc783e3d011a1b1b33a5c50186de</ns2:WID>
+        <ns2:Employee_ID>100041066</ns2:Employee_ID>
+        <ns2:Name>Sr. RUBEN HERNANDEZ DIAZ</ns2:Name>
+    </ns2:Worker_Summary>
+    <ns2:Employees ns1:Sequence="0">
+        <ns1:Summary>
+            <ns1:WID>2eb4cc783e3d011a1b1b33a5c50186de</ns1:WID>
+            <ns1:Employee_ID />
+        </ns1:Summary>
+        <ns1:Derived_Event_Code>DTA</ns1:Derived_Event_Code>
+        <ns1:Effective_Moment>2021-06-01T00:00:00-07:00</ns1:Effective_Moment>
+        <ns1:Entry_Moment>2021-05-21T04:16:35.993-07:00</ns1:Entry_Moment>
+        <ns1:Worker_Status>
+            <ns1:Status>Active</ns1:Status>
+            <ns1:Active>true</ns1:Active>
+            <ns1:Active_Status_Date>2006-09-11-07:00</ns1:Active_Status_Date>
+            <ns1:Terminated>false</ns1:Terminated>
+            <ns1:Hire_Date>2006-09-11-07:00</ns1:Hire_Date>
+            <ns1:Original_Hire_Date ns1:priorValue="">2006-09-11-07:00</ns1:Original_Hire_Date>
+            <ns1:Is_Rehire>false</ns1:Is_Rehire>
+            <ns1:Continuous_Service_Date ns1:priorValue="">2006-09-11-07:00</ns1:Continuous_Service_Date>
+            <ns1:First_Day_of_Work ns1:priorValue="">2006-09-11-07:00</ns1:First_Day_of_Work>
+            <ns1:Seniority_Date ns1:priorValue="">2006-09-11-07:00</ns1:Seniority_Date>
+            <ns1:Regrettable_Termination>0</ns1:Regrettable_Termination>
+            <ns1:Not_Returning>0</ns1:Not_Returning>
+            <ns1:Return_Unknown>0</ns1:Return_Unknown>
+        </ns1:Worker_Status>
+        <ns1:Personal>
+            <ns1:Name>
+                <ns1:Country>ES</ns1:Country>
+                <ns1:First_Name>RUBEN</ns1:First_Name>
+                <ns1:Last_Name>HERNANDEZ</ns1:Last_Name>
+                <ns1:Secondary_Last_Name>DIAZ</ns1:Secondary_Last_Name>
+                <ns1:Title>Sr.</ns1:Title>
+                <ns1:General_Display_Name>RUBEN HERNANDEZ DIAZ</ns1:General_Display_Name>
+            </ns1:Name>
+            <ns1:Gender>Male</ns1:Gender>
+            <ns1:Date_of_Birth ns1:priorValue="">1983-04-07-08:00</ns1:Date_of_Birth>
+            <ns1:Country_of_Birth>ES</ns1:Country_of_Birth>
+            <ns1:City_of_Birth>MADRID</ns1:City_of_Birth>
+            <ns1:Marital_Status_Date ns1:priorValue="">2020-09-05-07:00</ns1:Marital_Status_Date>
+            <ns1:Nationality>ES</ns1:Nationality>
+            <ns1:Number_of_Payroll_Dependents ns1:priorValue="">0.0</ns1:Number_of_Payroll_Dependents>
+            <ns1:Preferred_Language>es</ns1:Preferred_Language>
+            <ns1:Preferred_Locale>es_ES</ns1:Preferred_Locale>
+            <ns1:Workday_Account>n58608@gruposantander.com</ns1:Workday_Account>
+        </ns1:Personal>
+        <ns1:Person_Communication />
+        <ns1:Person_Identification />
+        <ns1:Compensation ns1:isUpdated="true">
+            <ns1:Position_ID>Pos0041066</ns1:Position_ID>
+            <ns1:Compensation_Grade>Compensation_Grade_F</ns1:Compensation_Grade>
+            <ns1:Compensation_Change_Reason ns1:priorValue="Request_Compensation_Change_Allowance_Adjustment_Ad_Hoc">Request_Compensation_Change_Bonus_Variable_Assign_Bonus_or_Variable</ns1:Compensation_Change_Reason>
+            <ns1:Compensation_Summary_Based_on_Compensation_Grade ns1:isUpdated="true">
+                <ns1:Total_Base_Pay ns1:priorValue="">56215.0</ns1:Total_Base_Pay>
+                <ns1:Primary_Compensation_Basis ns1:priorValue="78215">70215.0</ns1:Primary_Compensation_Basis>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+            </ns1:Compensation_Summary_Based_on_Compensation_Grade>
+            <ns1:Compensation_Summary_in_Annualized_Frequency ns1:isUpdated="true">
+                <ns1:Total_Base_Pay ns1:priorValue="">56215.0</ns1:Total_Base_Pay>
+                <ns1:Primary_Compensation_Basis ns1:priorValue="78215">70215.0</ns1:Primary_Compensation_Basis>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+            </ns1:Compensation_Summary_in_Annualized_Frequency>
+        </ns1:Compensation>
+        <ns1:Compensation_Plans ns1:isUpdated="true">
+            <ns1:Position_ID>Pos0041066</ns1:Position_ID>
+            <ns1:Allowance_Plan>
+                <ns1:Compensation_Plan>ESP_F01_F03_F07_Comp_Beneficios_Sociales_Gross</ns1:Compensation_Plan>
+                <ns1:Amount ns1:priorValue="">526.71</ns1:Amount>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+                <ns1:Start_Date ns1:priorValue="">2020-08-01-07:00</ns1:Start_Date>
+            </ns1:Allowance_Plan>
+            <ns1:Allowance_Plan>
+                <ns1:Compensation_Plan>ESP_Complemento_Funcional_Hot_Skills_Gross</ns1:Compensation_Plan>
+                <ns1:Amount ns1:priorValue="">13500.0</ns1:Amount>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+                <ns1:Start_Date ns1:priorValue="">2020-04-01-07:00</ns1:Start_Date>
+            </ns1:Allowance_Plan>
+            <ns1:Allowance_Plan>
+                <ns1:Compensation_Plan>ESP_F83_Economato_Carbon/Gas_Gross</ns1:Compensation_Plan>
+                <ns1:Amount ns1:priorValue="">152.59</ns1:Amount>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+                <ns1:Start_Date ns1:priorValue="">2020-04-01-07:00</ns1:Start_Date>
+            </ns1:Allowance_Plan>
+            <ns1:Allowance_Plan>
+                <ns1:Compensation_Plan>ESP_F87_Compensacion_Economato_Gross</ns1:Compensation_Plan>
+                <ns1:Amount ns1:priorValue="">237.7</ns1:Amount>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+                <ns1:Start_Date ns1:priorValue="">2020-04-01-07:00</ns1:Start_Date>
+            </ns1:Allowance_Plan>
+            <ns1:Salary_and_Hourly_Plan>
+                <ns1:Compensation_Plan>Salary</ns1:Compensation_Plan>
+                <ns1:Amount ns1:priorValue="">56215.0</ns1:Amount>
+                <ns1:Prorated_Amount ns1:priorValue="">56215.0</ns1:Prorated_Amount>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+                <ns1:Start_Date ns1:priorValue="">2020-05-01-07:00</ns1:Start_Date>
+            </ns1:Salary_and_Hourly_Plan>
+            <ns1:Bonus_Plan ns1:isAdded="true">
+                <ns1:Compensation_Plan>Bonus_Target_Amount_based</ns1:Compensation_Plan>
+                <ns1:Amount ns1:priorValue="">14000.0</ns1:Amount>
+                <ns1:Prorated_Amount>14000.0</ns1:Prorated_Amount>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+                <ns1:Start_Date ns1:priorValue="">2021-06-01-07:00</ns1:Start_Date>
+            </ns1:Bonus_Plan>
+            <ns1:Bonus_Plan ns1:isUpdated="true">
+                <ns1:Compensation_Plan>Bonus_Target_Amount_based</ns1:Compensation_Plan>
+                <ns1:Amount ns1:priorValue="">11000.0</ns1:Amount>
+                <ns1:Prorated_Amount>11000.0</ns1:Prorated_Amount>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+                <ns1:Start_Date ns1:priorValue="">2019-01-01-08:00</ns1:Start_Date>
+                <ns1:End_Date ns1:isAdded="true" ns1:priorValue="">2021-05-31-07:00</ns1:End_Date>
+            </ns1:Bonus_Plan>
+            <ns1:Bonus_Plan ns1:isUpdated="true">
+                <ns1:Compensation_Plan>HQ_Bonus_Amount_Plan</ns1:Compensation_Plan>
+                <ns1:Amount ns1:priorValue="">11000.0</ns1:Amount>
+                <ns1:Prorated_Amount>11000.0</ns1:Prorated_Amount>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+                <ns1:Start_Date ns1:priorValue="">2020-01-01-08:00</ns1:Start_Date>
+                <ns1:End_Date ns1:isAdded="true" ns1:priorValue="">2021-05-31-07:00</ns1:End_Date>
+            </ns1:Bonus_Plan>
+        </ns1:Compensation_Plans>
+        <ns1:Payment_Election>
+            <ns1:Order ns1:PriorValue="">1</ns1:Order>
+            <ns1:Payment_Type>Direct_Deposit</ns1:Payment_Type>
+            <ns1:Country>ES</ns1:Country>
+            <ns1:Currency>EUR</ns1:Currency>
+            <ns1:Bank_Account_Nickname>Cuenta de Nómina</ns1:Bank_Account_Nickname>
+            <ns1:Bank_Account_Name>Cuenta de Nómina</ns1:Bank_Account_Name>
+            <ns1:Account_Number>2410052841</ns1:Account_Number>
+            <ns1:Account_Type>DDA</ns1:Account_Type>
+            <ns1:Bank_Name>Banco Santander</ns1:Bank_Name>
+            <ns1:IBAN>ES3200491770992410052841</ns1:IBAN>
+            <ns1:Bank_ID>0049</ns1:Bank_ID>
+            <ns1:Branch_ID>1770</ns1:Branch_ID>
+            <ns1:Check_Digit>99</ns1:Check_Digit>
+        </ns1:Payment_Election>
+        <ns1:Additional_Information />
+        <ns1:Transaction_Log>
+            <ns1:Is_Rescind_Or_Rescinded>false</ns1:Is_Rescind_Or_Rescinded>
+        </ns1:Transaction_Log>
+        <ns1:Weci>
+            <ns1:Preferred_Name>
+                <ns1:Country>ES</ns1:Country>
+                <ns1:First_Name>RUBEN</ns1:First_Name>
+                <ns1:Last_Name>HERNANDEZ</ns1:Last_Name>
+                <ns1:Secondary_Last_Name>DIAZ</ns1:Secondary_Last_Name>
+                <ns1:Title>Sr.</ns1:Title>
+                <ns1:General_Display_Name>RUBEN HERNANDEZ DIAZ</ns1:General_Display_Name>
+            </ns1:Preferred_Name>
+            <ns1:Marital_Status_ID>MARITAL_STATUS-6-13-Casado (M)</ns1:Marital_Status_ID>
+            <ns1:Cash_Range_Max>106,250.00 EUR Annual</ns1:Cash_Range_Max>
+            <ns1:Cash_Range_Min>57,375.00 EUR</ns1:Cash_Range_Min>
+            <ns1:Target_Bonus_Total_Amount>14000.0</ns1:Target_Bonus_Total_Amount>
+            <ns1:Country>Spain</ns1:Country>
+            <ns1:Job_Family_Group ns1:Descriptor="Audit">
+                <ns1:Id>WID</ns1:Id>
+            </ns1:Job_Family_Group>
+            <ns1:Contract_Type ns1:Descriptor="Permanent Contract">
+                <ns1:Id>WID</ns1:Id>
+            </ns1:Contract_Type>
+            <ns1:Compensation_Grade_Profile ns1:Descriptor="ESP HQ14">
+                <ns1:Id>WID</ns1:Id>
+            </ns1:Compensation_Grade_Profile>
+            <ns1:Employee_Type ns1:Descriptor="Regular">
+                <ns1:Id>WID</ns1:Id>
+            </ns1:Employee_Type>
+            <ns1:Job_Family ns1:Descriptor="Internal Control (2nd and 3rd LoD)">
+                <ns1:Id>WID</ns1:Id>
+            </ns1:Job_Family>
+        </ns1:Weci>
+    </ns2:Employees>
+</ns2:Worker><ns2:Worker xmlns:weci="urn:com.workday/weci" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wtdf="urn:com.workday/weci/tdf" xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/CommonTypes" xmlns:ns2="http://Santander.com/Schemas/Integrations/CommonDataModel/PayrollIntegrations">
+    <ns2:Worker_Summary>
+        <ns2:WID>2eb4cc783e3d015bb82ab28bc701c090</ns2:WID>
+        <ns2:Employee_ID>100044738</ns2:Employee_ID>
+        <ns2:Name>Sr. ALEJANDRO CARLOS CHILLARON OLIVA</ns2:Name>
+    </ns2:Worker_Summary>
+    <ns2:Employees ns1:Sequence="0">
+        <ns1:Summary>
+            <ns1:WID>2eb4cc783e3d015bb82ab28bc701c090</ns1:WID>
+            <ns1:Employee_ID />
+        </ns1:Summary>
+        <ns1:Derived_Event_Code>DTA</ns1:Derived_Event_Code>
+        <ns1:Effective_Moment>2021-04-01T00:00:00-07:00</ns1:Effective_Moment>
+        <ns1:Entry_Moment>2021-05-21T04:20:31.581-07:00</ns1:Entry_Moment>
+        <ns1:Worker_Status>
+            <ns1:Status>Active</ns1:Status>
+            <ns1:Active>true</ns1:Active>
+            <ns1:Active_Status_Date>2018-07-01-07:00</ns1:Active_Status_Date>
+            <ns1:Terminated>false</ns1:Terminated>
+            <ns1:Hire_Date>2018-07-01-07:00</ns1:Hire_Date>
+            <ns1:Original_Hire_Date ns1:priorValue="">2011-05-23-07:00</ns1:Original_Hire_Date>
+            <ns1:Is_Rehire>false</ns1:Is_Rehire>
+            <ns1:Continuous_Service_Date ns1:priorValue="">2011-05-23-07:00</ns1:Continuous_Service_Date>
+            <ns1:First_Day_of_Work ns1:priorValue="">2018-07-01-07:00</ns1:First_Day_of_Work>
+            <ns1:Seniority_Date ns1:priorValue="">2011-05-23-07:00</ns1:Seniority_Date>
+            <ns1:Regrettable_Termination>0</ns1:Regrettable_Termination>
+            <ns1:Not_Returning>0</ns1:Not_Returning>
+            <ns1:Return_Unknown>0</ns1:Return_Unknown>
+        </ns1:Worker_Status>
+        <ns1:Personal>
+            <ns1:Name>
+                <ns1:Country>ES</ns1:Country>
+                <ns1:First_Name>ALEJANDRO CARLOS</ns1:First_Name>
+                <ns1:Last_Name>CHILLARON</ns1:Last_Name>
+                <ns1:Secondary_Last_Name>OLIVA</ns1:Secondary_Last_Name>
+                <ns1:Title>Sr.</ns1:Title>
+                <ns1:General_Display_Name>ALEJANDRO CARLOS CHILLARON OLIVA</ns1:General_Display_Name>
+            </ns1:Name>
+            <ns1:Gender>Male</ns1:Gender>
+            <ns1:Date_of_Birth ns1:priorValue="">1986-04-10-08:00</ns1:Date_of_Birth>
+            <ns1:Country_of_Birth>ES</ns1:Country_of_Birth>
+            <ns1:City_of_Birth>MADRID</ns1:City_of_Birth>
+            <ns1:Nationality>ES</ns1:Nationality>
+            <ns1:Number_of_Payroll_Dependents ns1:priorValue="">0.0</ns1:Number_of_Payroll_Dependents>
+            <ns1:Preferred_Language>es</ns1:Preferred_Language>
+            <ns1:Preferred_Locale>es_ES</ns1:Preferred_Locale>
+            <ns1:Workday_Account>n93622@gruposantander.com</ns1:Workday_Account>
+        </ns1:Personal>
+        <ns1:Person_Communication />
+        <ns1:Person_Identification />
+        <ns1:Compensation_Plans ns1:isUpdated="true">
+            <ns1:Position_ID>Pos0044738</ns1:Position_ID>
+            <ns1:Allowance_Plan ns1:isAdded="true">
+                <ns1:Compensation_Plan>ESP_Complemento_Funcional_Hot_Skills_Gross</ns1:Compensation_Plan>
+                <ns1:Amount ns1:priorValue="">20000.0</ns1:Amount>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+                <ns1:Start_Date ns1:priorValue="">2021-04-01-07:00</ns1:Start_Date>
+            </ns1:Allowance_Plan>
+            <ns1:Allowance_Plan ns1:isAdded="true">
+                <ns1:Compensation_Plan>ESP_H_Ayuda_Comida_ACO_ACX_Gross</ns1:Compensation_Plan>
+                <ns1:Amount ns1:priorValue="">10000.0</ns1:Amount>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+                <ns1:Start_Date ns1:priorValue="">2021-04-01-07:00</ns1:Start_Date>
+            </ns1:Allowance_Plan>
+            <ns1:Allowance_Plan ns1:isUpdated="true">
+                <ns1:Compensation_Plan>ESP_Complemento_Funcional_Hot_Skills_Gross</ns1:Compensation_Plan>
+                <ns1:Amount ns1:priorValue="">10000.0</ns1:Amount>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+                <ns1:Start_Date ns1:priorValue="">2020-04-01-07:00</ns1:Start_Date>
+                <ns1:End_Date ns1:isAdded="true" ns1:priorValue="">2021-03-31-07:00</ns1:End_Date>
+            </ns1:Allowance_Plan>
+            <ns1:Salary_and_Hourly_Plan>
+                <ns1:Compensation_Plan>Salary</ns1:Compensation_Plan>
+                <ns1:Amount ns1:priorValue="">46000.0</ns1:Amount>
+                <ns1:Prorated_Amount ns1:priorValue="">46000.0</ns1:Prorated_Amount>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+                <ns1:Start_Date ns1:priorValue="">2018-07-01-07:00</ns1:Start_Date>
+            </ns1:Salary_and_Hourly_Plan>
+            <ns1:Bonus_Plan>
+                <ns1:Compensation_Plan>HQ_Bonus_Amount_Plan</ns1:Compensation_Plan>
+                <ns1:Amount ns1:priorValue="">5000.0</ns1:Amount>
+                <ns1:Prorated_Amount>5000.0</ns1:Prorated_Amount>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+                <ns1:Start_Date ns1:priorValue="">2020-06-01-07:00</ns1:Start_Date>
+            </ns1:Bonus_Plan>
+        </ns1:Compensation_Plans>
+        <ns1:Payment_Election>
+            <ns1:Order ns1:PriorValue="">1</ns1:Order>
+            <ns1:Payment_Type>Direct_Deposit</ns1:Payment_Type>
+            <ns1:Country>ES</ns1:Country>
+            <ns1:Currency>EUR</ns1:Currency>
+            <ns1:Bank_Account_Nickname>Nómina</ns1:Bank_Account_Nickname>
+            <ns1:Bank_Account_Name>Nómina</ns1:Bank_Account_Name>
+            <ns1:Account_Number>2614168892</ns1:Account_Number>
+            <ns1:Account_Type>DDA</ns1:Account_Type>
+            <ns1:Bank_Name>Banco Santander</ns1:Bank_Name>
+            <ns1:IBAN>ES5100493660142614168892</ns1:IBAN>
+            <ns1:Bank_ID>0049</ns1:Bank_ID>
+            <ns1:Branch_Name>MADRID, AV. JUAN ANDRES, 30 (S</ns1:Branch_Name>
+            <ns1:Branch_ID>3660</ns1:Branch_ID>
+            <ns1:Check_Digit>14</ns1:Check_Digit>
+        </ns1:Payment_Election>
+        <ns1:Additional_Information />
+        <ns1:Transaction_Log>
+            <ns1:Is_Rescind_Or_Rescinded>false</ns1:Is_Rescind_Or_Rescinded>
+        </ns1:Transaction_Log>
+        <ns1:Weci>
+            <ns1:Preferred_Name>
+                <ns1:Country>ES</ns1:Country>
+                <ns1:First_Name>ALEJANDRO CARLOS</ns1:First_Name>
+                <ns1:Last_Name>CHILLARON</ns1:Last_Name>
+                <ns1:Secondary_Last_Name>OLIVA</ns1:Secondary_Last_Name>
+                <ns1:Title>Sr.</ns1:Title>
+                <ns1:General_Display_Name>ALEJANDRO CARLOS CHILLARON OLIVA</ns1:General_Display_Name>
+            </ns1:Preferred_Name>
+            <ns1:Marital_Status_ID>MARITAL_STATUS-6-13-Casado (M)</ns1:Marital_Status_ID>
+            <ns1:Cash_Range_Max>71,875.00 EUR Annual</ns1:Cash_Range_Max>
+            <ns1:Cash_Range_Min>38,812.50 EUR</ns1:Cash_Range_Min>
+            <ns1:Target_Bonus_Total_Amount>5000.0</ns1:Target_Bonus_Total_Amount>
+            <ns1:Country>Spain</ns1:Country>
+            <ns1:Job_Family_Group ns1:Descriptor="Audit">
+                <ns1:Id>WID</ns1:Id>
+            </ns1:Job_Family_Group>
+            <ns1:Contract_Type ns1:Descriptor="Permanent Contract">
+                <ns1:Id>WID</ns1:Id>
+            </ns1:Contract_Type>
+            <ns1:Compensation_Grade_Profile ns1:Descriptor="ESP HQ12">
+                <ns1:Id>WID</ns1:Id>
+            </ns1:Compensation_Grade_Profile>
+            <ns1:Employee_Type ns1:Descriptor="Regular">
+                <ns1:Id>WID</ns1:Id>
+            </ns1:Employee_Type>
+            <ns1:Job_Family ns1:Descriptor="Internal Control (2nd and 3rd LoD)">
+                <ns1:Id>WID</ns1:Id>
+            </ns1:Job_Family>
+        </ns1:Weci>
+    </ns2:Employees>
+</ns2:Worker></ns2:EMPLOYEE_DELTA_INTEGRATION>
