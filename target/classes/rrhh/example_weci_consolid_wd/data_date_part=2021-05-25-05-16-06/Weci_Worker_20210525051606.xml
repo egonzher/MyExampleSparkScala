@@ -1,0 +1,1247 @@
+<?xml version='1.0' encoding='UTF-8'?><ns2:EMPLOYEE_DELTA_INTEGRATION xmlns:ns2="http://Santander.com/Schemas/Integrations/CommonDataModel/PayrollIntegrations"><ns2:Worker xmlns:weci="urn:com.workday/weci" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wtdf="urn:com.workday/weci/tdf" xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/CommonTypes" xmlns:ns2="http://Santander.com/Schemas/Integrations/CommonDataModel/PayrollIntegrations">
+    <ns2:Worker_Summary>
+        <ns2:WID>2eb4cc783e3d01909f5fae41c5016285</ns2:WID>
+        <ns2:Employee_ID>100040308</ns2:Employee_ID>
+        <ns2:Name>Sr. DANIEL JESUS SANZ CANDILEJO</ns2:Name>
+    </ns2:Worker_Summary>
+    <ns2:Employees ns1:Sequence="0">
+        <ns1:Summary>
+            <ns1:WID>2eb4cc783e3d01909f5fae41c5016285</ns1:WID>
+            <ns1:Employee_ID />
+        </ns1:Summary>
+        <ns1:Derived_Event_Code>DTA</ns1:Derived_Event_Code>
+        <ns1:Effective_Moment>2021-03-01T00:00:00-08:00</ns1:Effective_Moment>
+        <ns1:Entry_Moment>2021-05-24T03:38:12.11-07:00</ns1:Entry_Moment>
+        <ns1:Worker_Status>
+            <ns1:Status>Active</ns1:Status>
+            <ns1:Active>true</ns1:Active>
+            <ns1:Active_Status_Date>2017-01-01-08:00</ns1:Active_Status_Date>
+            <ns1:Terminated>false</ns1:Terminated>
+            <ns1:Hire_Date>2017-01-01-08:00</ns1:Hire_Date>
+            <ns1:Original_Hire_Date ns1:priorValue="">2015-01-15-08:00</ns1:Original_Hire_Date>
+            <ns1:Is_Rehire>false</ns1:Is_Rehire>
+            <ns1:Continuous_Service_Date ns1:priorValue="">2015-01-15-08:00</ns1:Continuous_Service_Date>
+            <ns1:First_Day_of_Work ns1:priorValue="">2017-01-01-08:00</ns1:First_Day_of_Work>
+            <ns1:Seniority_Date ns1:priorValue="">2015-01-15-08:00</ns1:Seniority_Date>
+            <ns1:Regrettable_Termination>0</ns1:Regrettable_Termination>
+            <ns1:Not_Returning>0</ns1:Not_Returning>
+            <ns1:Return_Unknown>0</ns1:Return_Unknown>
+        </ns1:Worker_Status>
+        <ns1:Personal>
+            <ns1:Name>
+                <ns1:Country>ES</ns1:Country>
+                <ns1:First_Name>DANIEL JESUS</ns1:First_Name>
+                <ns1:Last_Name>SANZ</ns1:Last_Name>
+                <ns1:Secondary_Last_Name>CANDILEJO</ns1:Secondary_Last_Name>
+                <ns1:Title>Sr.</ns1:Title>
+                <ns1:General_Display_Name>DANIEL JESUS SANZ CANDILEJO</ns1:General_Display_Name>
+            </ns1:Name>
+            <ns1:Gender>Male</ns1:Gender>
+            <ns1:Date_of_Birth ns1:priorValue="">1986-12-22-08:00</ns1:Date_of_Birth>
+            <ns1:Country_of_Birth>ES</ns1:Country_of_Birth>
+            <ns1:City_of_Birth>MADRID</ns1:City_of_Birth>
+            <ns1:Nationality>ES</ns1:Nationality>
+            <ns1:Number_of_Payroll_Dependents ns1:priorValue="">0.0</ns1:Number_of_Payroll_Dependents>
+            <ns1:Preferred_Language>en_US</ns1:Preferred_Language>
+            <ns1:Preferred_Locale>es_ES</ns1:Preferred_Locale>
+            <ns1:Workday_Account>n54995@gruposantander.com</ns1:Workday_Account>
+        </ns1:Personal>
+        <ns1:Person_Communication />
+        <ns1:Person_Identification />
+        <ns1:Position ns1:isUpdated="true">
+            <ns1:Position_ID>ESP_28004029116</ns1:Position_ID>
+            <ns1:Primary_Job>true</ns1:Primary_Job>
+            <ns1:Business_Title>Management &amp; Control IT Sr Analyst II</ns1:Business_Title>
+            <ns1:Worker_Type>EE</ns1:Worker_Type>
+            <ns1:Position_Time_Type>Full_time</ns1:Position_Time_Type>
+            <ns1:Scheduled_Weekly_Hours>35.0</ns1:Scheduled_Weekly_Hours>
+            <ns1:Default_Weekly_Hours>35.0</ns1:Default_Weekly_Hours>
+            <ns1:Full_Time_Equivalent_Percentage>1.0</ns1:Full_Time_Equivalent_Percentage>
+            <ns1:Job_Classification>
+                <ns1:Job_Classification_Group>JOB_CLASSIFICATION_GROUP-6-2421</ns1:Job_Classification_Group>
+                <ns1:Job_Classification_ID>13</ns1:Job_Classification_ID>
+                <ns1:Job_Classiication ns1:priorValue="">13 HAY LEVEL SPAIN</ns1:Job_Classiication>
+                <ns1:Job_Classification_Description>13 HAY LEVEL SPAIN</ns1:Job_Classification_Description>
+                <ns1:Mapped_Value>ESP_13</ns1:Mapped_Value>
+            </ns1:Job_Classification>
+            <ns1:Work_Shift>ESP_Banco Santander SSCC_K_</ns1:Work_Shift>
+            <ns1:Management_Level>MANAGEMENT_LEVEL_Sr_AnalystII</ns1:Management_Level>
+            <ns1:Job_Profile>ESP_SANCO_W00393_1</ns1:Job_Profile>
+            <ns1:Job_Family>
+                <ns1:ID>000023_Management&amp;Control_IT</ns1:ID>
+                <ns1:Name>Management &amp; Control IT</ns1:Name>
+                <ns1:Mapped_Value>000023_Management&amp;Control_IT</ns1:Mapped_Value>
+            </ns1:Job_Family>
+            <ns1:Job_Family>
+                <ns1:ID>000006_IT_Enterprise</ns1:ID>
+                <ns1:Name>IT - Enterprise</ns1:Name>
+                <ns1:Mapped_Value>000006_IT_Enterprise</ns1:Mapped_Value>
+            </ns1:Job_Family>
+            <ns1:Business_Site>
+                <ns1:Location_ID>ESBOA3NP01</ns1:Location_ID>
+                <ns1:Location_Name>Pampa P01</ns1:Location_Name>
+                <ns1:Address_ID>ADDRESS_REFERENCE-6-729359</ns1:Address_ID>
+                <ns1:Address_Line_1>Cantabria s-n</ns1:Address_Line_1>
+                <ns1:Address_Line_3>Av</ns1:Address_Line_3>
+                <ns1:City>Boadilla del Monte</ns1:City>
+                <ns1:Postal_Code>28660</ns1:Postal_Code>
+                <ns1:Country>ES</ns1:Country>
+            </ns1:Business_Site>
+            <ns1:Supervisor>
+                <ns1:ID>100044789</ns1:ID>
+                <ns1:Name>Sr. RAMON URRUTIA FERNANDEZ DE PINEDO</ns1:Name>
+            </ns1:Supervisor>
+            <ns1:Annual_Work_Period_Work_Percent_Of_Year>0.0</ns1:Annual_Work_Period_Work_Percent_Of_Year>
+            <ns1:Organization ns1:isAdded="true">
+                <ns1:Organization_ID>ESP_SANCO_9638</ns1:Organization_ID>
+                <ns1:Organization_Type>Custom_Organization_Type_Organizational_Structure</ns1:Organization_Type>
+                <ns1:Organization_Code>SANCO_9638</ns1:Organization_Code>
+                <ns1:Organization_Name>AREA RIESGOS NO FINANCIEROS</ns1:Organization_Name>
+                <ns1:Mapped_Value>ESP_SANCO_9638</ns1:Mapped_Value>
+            </ns1:Organization>
+            <ns1:Organization>
+                <ns1:Organization_ID>SUPORG043194</ns1:Organization_ID>
+                <ns1:Organization_Type>Supervisory</ns1:Organization_Type>
+                <ns1:Organization_Name>WD Wave 2</ns1:Organization_Name>
+                <ns1:Mapped_Value>SUPORG043194</ns1:Mapped_Value>
+            </ns1:Organization>
+            <ns1:Organization>
+                <ns1:Organization_ID>ESP_Agile_team_member_Participant</ns1:Organization_ID>
+                <ns1:Organization_Type>Custom_Organization_Type_Agile_Role</ns1:Organization_Type>
+                <ns1:Organization_Name>Agile team member - Participant</ns1:Organization_Name>
+                <ns1:Mapped_Value>ESP_Agile_team_member_Participant</ns1:Mapped_Value>
+            </ns1:Organization>
+            <ns1:Organization ns1:isDeleted="true">
+                <ns1:Organization_ID>ESP_SCH_9261</ns1:Organization_ID>
+                <ns1:Organization_Type>Cost_Center</ns1:Organization_Type>
+                <ns1:Organization_Code>SCH_9261</ns1:Organization_Code>
+                <ns1:Organization_Name>AREA T&amp;O CENTRO CORPORATIVO</ns1:Organization_Name>
+                <ns1:Mapped_Value>ESP_SCH_9261</ns1:Mapped_Value>
+            </ns1:Organization>
+            <ns1:Organization ns1:isAdded="true">
+                <ns1:Organization_ID>ESP_SCH_9638</ns1:Organization_ID>
+                <ns1:Organization_Type>Cost_Center</ns1:Organization_Type>
+                <ns1:Organization_Code>SCH_9638</ns1:Organization_Code>
+                <ns1:Organization_Name>AREA RIESGOS NO FINANCIEROS</ns1:Organization_Name>
+                <ns1:Mapped_Value>ESP_SCH_9638</ns1:Mapped_Value>
+            </ns1:Organization>
+            <ns1:Organization>
+                <ns1:Organization_ID>ESP_SCH</ns1:Organization_ID>
+                <ns1:Organization_Type>Company</ns1:Organization_Type>
+                <ns1:Organization_Code>SCH</ns1:Organization_Code>
+                <ns1:Organization_Name>Banco Santander, S.A.</ns1:Organization_Name>
+                <ns1:Mapped_Value>ESP_SCH</ns1:Mapped_Value>
+            </ns1:Organization>
+            <ns1:Organization>
+                <ns1:Organization_ID>ESP_Payroll_Company</ns1:Organization_ID>
+                <ns1:Organization_Type>External_Payroll_Company</ns1:Organization_Type>
+                <ns1:Organization_Name>ESP Payroll Company</ns1:Organization_Name>
+                <ns1:Mapped_Value>ESP_Payroll_Company</ns1:Mapped_Value>
+            </ns1:Organization>
+            <ns1:Organization>
+                <ns1:Organization_ID>HQ</ns1:Organization_ID>
+                <ns1:Organization_Type>Business_Unit</ns1:Organization_Type>
+                <ns1:Organization_Name>Headquarters (HQ)</ns1:Organization_Name>
+                <ns1:Mapped_Value>HQ</ns1:Mapped_Value>
+            </ns1:Organization>
+            <ns1:Organization>
+                <ns1:Organization_ID>ESP_SCH_BANCO_SANTANDER,_S.A.</ns1:Organization_ID>
+                <ns1:Organization_Type>Pay_Group</ns1:Organization_Type>
+                <ns1:Organization_Code>ESP SCH BANCO SANTANDER, S.A.</ns1:Organization_Code>
+                <ns1:Organization_Name>BANCO SANTANDER, S.A.</ns1:Organization_Name>
+                <ns1:Mapped_Value>ESP_SCH_BANCO_SANTANDER,_S.A.</ns1:Mapped_Value>
+            </ns1:Organization>
+            <ns1:Organization>
+                <ns1:Organization_ID>ESP_SCH_BANCO_SANTANDER_SA</ns1:Organization_ID>
+                <ns1:Organization_Type>Cost_Center_Hierarchy</ns1:Organization_Type>
+                <ns1:Organization_Code>SCH</ns1:Organization_Code>
+                <ns1:Organization_Name>SCH_BANCO SANTANDER, S.A.</ns1:Organization_Name>
+                <ns1:Mapped_Value>ESP_SCH_BANCO_SANTANDER_SA</ns1:Mapped_Value>
+            </ns1:Organization>
+            <ns1:Organization>
+                <ns1:Organization_ID>Not_Corporate</ns1:Organization_ID>
+                <ns1:Organization_Type>Custom_Organization_Type_Corporate_Segment</ns1:Organization_Type>
+                <ns1:Organization_Name>Not Corporate</ns1:Organization_Name>
+                <ns1:Mapped_Value>Not_Corporate</ns1:Mapped_Value>
+            </ns1:Organization>
+            <ns1:Organization>
+                <ns1:Organization_ID>Location Hierarchy_ESP_CGS - Ciudad Grupo Santander</ns1:Organization_ID>
+                <ns1:Organization_Type>Location_Hierarchy</ns1:Organization_Type>
+                <ns1:Organization_Name>CGS - Ciudad Grupo Santander</ns1:Organization_Name>
+                <ns1:Mapped_Value>Location Hierarchy_ESP_CGS - Ciudad Grupo Santander</ns1:Mapped_Value>
+            </ns1:Organization>
+            <ns1:Organization>
+                <ns1:Organization_ID>Company_Hierarchy_Spain</ns1:Organization_ID>
+                <ns1:Organization_Type>Company_Hierarchy</ns1:Organization_Type>
+                <ns1:Organization_Name>Spain</ns1:Organization_Name>
+                <ns1:Mapped_Value>Company_Hierarchy_Spain</ns1:Mapped_Value>
+            </ns1:Organization>
+            <ns1:Organization ns1:isDeleted="true">
+                <ns1:Organization_ID>ESP_SANCO_16038</ns1:Organization_ID>
+                <ns1:Organization_Type>Custom_Organization_Type_Organizational_Structure</ns1:Organization_Type>
+                <ns1:Organization_Code>SANCO_16038</ns1:Organization_Code>
+                <ns1:Organization_Name>Workday</ns1:Organization_Name>
+                <ns1:Mapped_Value>ESP_SANCO_16038</ns1:Mapped_Value>
+            </ns1:Organization>
+            <ns1:Organization>
+                <ns1:Organization_ID>HQ_T&amp;O-CorporateCenter_C5_RUI BARRENTO</ns1:Organization_ID>
+                <ns1:Organization_Type>Spain_Annual_Comp_Process</ns1:Organization_Type>
+                <ns1:Organization_Code>HQ_T&amp;O-CorporateCenter_C5_RUI BARRENTO</ns1:Organization_Code>
+                <ns1:Organization_Name>T&amp;O-CorporateCenter_C5_RUI BARRENTO</ns1:Organization_Name>
+                <ns1:Mapped_Value>HQ_T&amp;O-CorporateCenter_C5_RUI BARRENTO</ns1:Mapped_Value>
+            </ns1:Organization>
+            <ns1:Organization>
+                <ns1:Organization_ID>ESP_Product_Corporate_Center</ns1:Organization_ID>
+                <ns1:Organization_Type>Custom_Organization_Type_Product</ns1:Organization_Type>
+                <ns1:Organization_Name>T&amp;O - Corporate Center</ns1:Organization_Name>
+                <ns1:Mapped_Value>ESP_Product_Corporate_Center</ns1:Mapped_Value>
+            </ns1:Organization>
+            <ns1:Work_Space>ESBOA3NP015063</ns1:Work_Space>
+        </ns1:Position>
+        <ns1:Compensation_Plans>
+            <ns1:Position_ID>Pos0040308</ns1:Position_ID>
+            <ns1:Allowance_Plan>
+                <ns1:Compensation_Plan>ESP_F01_F03_F07_Comp_Beneficios_Sociales_Gross</ns1:Compensation_Plan>
+                <ns1:Amount ns1:priorValue="">832.01</ns1:Amount>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+                <ns1:Start_Date ns1:priorValue="">2020-08-01-07:00</ns1:Start_Date>
+            </ns1:Allowance_Plan>
+            <ns1:Salary_and_Hourly_Plan>
+                <ns1:Compensation_Plan>Salary</ns1:Compensation_Plan>
+                <ns1:Amount ns1:priorValue="">42000.0</ns1:Amount>
+                <ns1:Prorated_Amount ns1:priorValue="">42000.0</ns1:Prorated_Amount>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+                <ns1:Start_Date ns1:priorValue="">2019-01-01-08:00</ns1:Start_Date>
+            </ns1:Salary_and_Hourly_Plan>
+            <ns1:Bonus_Plan>
+                <ns1:Compensation_Plan>Bonus_Target_Amount_based</ns1:Compensation_Plan>
+                <ns1:Amount ns1:priorValue="">7500.0</ns1:Amount>
+                <ns1:Prorated_Amount>7500.0</ns1:Prorated_Amount>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+                <ns1:Start_Date ns1:priorValue="">2019-01-01-08:00</ns1:Start_Date>
+            </ns1:Bonus_Plan>
+            <ns1:Bonus_Plan>
+                <ns1:Compensation_Plan>HQ_Bonus_Amount_Plan</ns1:Compensation_Plan>
+                <ns1:Amount ns1:priorValue="">7500.0</ns1:Amount>
+                <ns1:Prorated_Amount>7500.0</ns1:Prorated_Amount>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+                <ns1:Start_Date ns1:priorValue="">2020-01-01-08:00</ns1:Start_Date>
+            </ns1:Bonus_Plan>
+        </ns1:Compensation_Plans>
+        <ns1:Payment_Election>
+            <ns1:Order ns1:PriorValue="">1</ns1:Order>
+            <ns1:Payment_Type>Direct_Deposit</ns1:Payment_Type>
+            <ns1:Country>ES</ns1:Country>
+            <ns1:Currency>EUR</ns1:Currency>
+            <ns1:Bank_Account_Nickname>Nómina</ns1:Bank_Account_Nickname>
+            <ns1:Bank_Account_Name>Nómina</ns1:Bank_Account_Name>
+            <ns1:Account_Number>2010169374</ns1:Account_Number>
+            <ns1:Account_Type>DDA</ns1:Account_Type>
+            <ns1:Bank_Name>Banco Santander</ns1:Bank_Name>
+            <ns1:IBAN>ES9400491770922010169374</ns1:IBAN>
+            <ns1:Bank_ID>0049</ns1:Bank_ID>
+            <ns1:Branch_ID>1770</ns1:Branch_ID>
+            <ns1:Check_Digit>92</ns1:Check_Digit>
+        </ns1:Payment_Election>
+        <ns1:Additional_Information />
+        <ns1:Transaction_Log>
+            <ns1:Is_Rescind_Or_Rescinded>false</ns1:Is_Rescind_Or_Rescinded>
+        </ns1:Transaction_Log>
+        <ns1:Weci>
+            <ns1:Preferred_Name>
+                <ns1:Country>ES</ns1:Country>
+                <ns1:First_Name>DANIEL JESUS</ns1:First_Name>
+                <ns1:Last_Name>SANZ</ns1:Last_Name>
+                <ns1:Secondary_Last_Name>CANDILEJO</ns1:Secondary_Last_Name>
+                <ns1:Title>Sr.</ns1:Title>
+                <ns1:General_Display_Name>DANIEL JESUS SANZ CANDILEJO</ns1:General_Display_Name>
+            </ns1:Preferred_Name>
+            <ns1:Marital_Status_ID>MARITAL_STATUS-6-13-Casado (M)</ns1:Marital_Status_ID>
+            <ns1:Cash_Range_Max>85,625.00 EUR Annual</ns1:Cash_Range_Max>
+            <ns1:Cash_Range_Min>46,237.50 EUR</ns1:Cash_Range_Min>
+            <ns1:Target_Bonus_Total_Amount>15000.0</ns1:Target_Bonus_Total_Amount>
+            <ns1:Country>Spain</ns1:Country>
+            <ns1:Job_Family_Group ns1:Descriptor="Management &amp; Control IT">
+                <ns1:Id>WID</ns1:Id>
+            </ns1:Job_Family_Group>
+            <ns1:Contract_Type ns1:Descriptor="Permanent Contract">
+                <ns1:Id>WID</ns1:Id>
+            </ns1:Contract_Type>
+            <ns1:Compensation_Grade_Profile ns1:Descriptor="ESP HQ13">
+                <ns1:Id>WID</ns1:Id>
+            </ns1:Compensation_Grade_Profile>
+            <ns1:Employee_Type ns1:Descriptor="Regular">
+                <ns1:Id>WID</ns1:Id>
+            </ns1:Employee_Type>
+            <ns1:Job_Family ns1:Descriptor="IT - Enterprise">
+                <ns1:Id>WID</ns1:Id>
+            </ns1:Job_Family>
+        </ns1:Weci>
+    </ns2:Employees>
+    <ns2:Employees ns1:Sequence="1">
+        <ns1:Summary>
+            <ns1:WID>2eb4cc783e3d01909f5fae41c5016285</ns1:WID>
+            <ns1:Employee_ID />
+        </ns1:Summary>
+        <ns1:Derived_Event_Code>DTA</ns1:Derived_Event_Code>
+        <ns1:Effective_Moment>2021-05-24T03:39:18.088-07:00</ns1:Effective_Moment>
+        <ns1:Entry_Moment>2021-05-24T03:39:18.088-07:00</ns1:Entry_Moment>
+        <ns1:Worker_Status>
+            <ns1:Status>Active</ns1:Status>
+            <ns1:Active>true</ns1:Active>
+            <ns1:Active_Status_Date>2017-01-01-08:00</ns1:Active_Status_Date>
+            <ns1:Terminated>false</ns1:Terminated>
+            <ns1:Hire_Date>2017-01-01-08:00</ns1:Hire_Date>
+            <ns1:Original_Hire_Date ns1:priorValue="">2015-01-15-08:00</ns1:Original_Hire_Date>
+            <ns1:Is_Rehire>false</ns1:Is_Rehire>
+            <ns1:Continuous_Service_Date ns1:priorValue="">2015-01-15-08:00</ns1:Continuous_Service_Date>
+            <ns1:First_Day_of_Work ns1:priorValue="">2017-01-01-08:00</ns1:First_Day_of_Work>
+            <ns1:Seniority_Date ns1:priorValue="">2015-01-15-08:00</ns1:Seniority_Date>
+            <ns1:Regrettable_Termination>0</ns1:Regrettable_Termination>
+            <ns1:Not_Returning>0</ns1:Not_Returning>
+            <ns1:Return_Unknown>0</ns1:Return_Unknown>
+        </ns1:Worker_Status>
+        <ns1:Personal ns1:isUpdated="true">
+            <ns1:Name>
+                <ns1:Country>ES</ns1:Country>
+                <ns1:First_Name>DANIEL JESUS</ns1:First_Name>
+                <ns1:Last_Name>SANZ</ns1:Last_Name>
+                <ns1:Secondary_Last_Name>CANDILEJO</ns1:Secondary_Last_Name>
+                <ns1:Title>Sr.</ns1:Title>
+                <ns1:General_Display_Name>DANIEL JESUS SANZ CANDILEJO</ns1:General_Display_Name>
+            </ns1:Name>
+            <ns1:Gender>Male</ns1:Gender>
+            <ns1:Date_of_Birth ns1:priorValue="">1986-12-22-08:00</ns1:Date_of_Birth>
+            <ns1:Country_of_Birth>ES</ns1:Country_of_Birth>
+            <ns1:City_of_Birth ns1:priorValue="MADRID">GUADARRAMA</ns1:City_of_Birth>
+            <ns1:Nationality>ES</ns1:Nationality>
+            <ns1:Number_of_Payroll_Dependents ns1:priorValue="">0.0</ns1:Number_of_Payroll_Dependents>
+            <ns1:Preferred_Language>en_US</ns1:Preferred_Language>
+            <ns1:Preferred_Locale>es_ES</ns1:Preferred_Locale>
+            <ns1:Workday_Account>n54995@gruposantander.com</ns1:Workday_Account>
+        </ns1:Personal>
+        <ns1:Person_Communication />
+        <ns1:Person_Identification />
+        <ns1:Compensation_Plans>
+            <ns1:Position_ID>Pos0040308</ns1:Position_ID>
+            <ns1:Allowance_Plan>
+                <ns1:Compensation_Plan>ESP_F01_F03_F07_Comp_Beneficios_Sociales_Gross</ns1:Compensation_Plan>
+                <ns1:Amount ns1:priorValue="">832.01</ns1:Amount>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+                <ns1:Start_Date ns1:priorValue="">2020-08-01-07:00</ns1:Start_Date>
+            </ns1:Allowance_Plan>
+            <ns1:Salary_and_Hourly_Plan>
+                <ns1:Compensation_Plan>Salary</ns1:Compensation_Plan>
+                <ns1:Amount ns1:priorValue="">42000.0</ns1:Amount>
+                <ns1:Prorated_Amount ns1:priorValue="">42000.0</ns1:Prorated_Amount>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+                <ns1:Start_Date ns1:priorValue="">2019-01-01-08:00</ns1:Start_Date>
+            </ns1:Salary_and_Hourly_Plan>
+            <ns1:Bonus_Plan>
+                <ns1:Compensation_Plan>Bonus_Target_Amount_based</ns1:Compensation_Plan>
+                <ns1:Amount ns1:priorValue="">7500.0</ns1:Amount>
+                <ns1:Prorated_Amount>7500.0</ns1:Prorated_Amount>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+                <ns1:Start_Date ns1:priorValue="">2019-01-01-08:00</ns1:Start_Date>
+            </ns1:Bonus_Plan>
+            <ns1:Bonus_Plan>
+                <ns1:Compensation_Plan>HQ_Bonus_Amount_Plan</ns1:Compensation_Plan>
+                <ns1:Amount ns1:priorValue="">7500.0</ns1:Amount>
+                <ns1:Prorated_Amount>7500.0</ns1:Prorated_Amount>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+                <ns1:Start_Date ns1:priorValue="">2020-01-01-08:00</ns1:Start_Date>
+            </ns1:Bonus_Plan>
+        </ns1:Compensation_Plans>
+        <ns1:Payment_Election>
+            <ns1:Order ns1:PriorValue="">1</ns1:Order>
+            <ns1:Payment_Type>Direct_Deposit</ns1:Payment_Type>
+            <ns1:Country>ES</ns1:Country>
+            <ns1:Currency>EUR</ns1:Currency>
+            <ns1:Bank_Account_Nickname>Nómina</ns1:Bank_Account_Nickname>
+            <ns1:Bank_Account_Name>Nómina</ns1:Bank_Account_Name>
+            <ns1:Account_Number>2010169374</ns1:Account_Number>
+            <ns1:Account_Type>DDA</ns1:Account_Type>
+            <ns1:Bank_Name>Banco Santander</ns1:Bank_Name>
+            <ns1:IBAN>ES9400491770922010169374</ns1:IBAN>
+            <ns1:Bank_ID>0049</ns1:Bank_ID>
+            <ns1:Branch_ID>1770</ns1:Branch_ID>
+            <ns1:Check_Digit>92</ns1:Check_Digit>
+        </ns1:Payment_Election>
+        <ns1:Additional_Information />
+        <ns1:Transaction_Log>
+            <ns1:Is_Rescind_Or_Rescinded>false</ns1:Is_Rescind_Or_Rescinded>
+        </ns1:Transaction_Log>
+        <ns1:Weci>
+            <ns1:Preferred_Name>
+                <ns1:Country>ES</ns1:Country>
+                <ns1:First_Name>DANIEL JESUS</ns1:First_Name>
+                <ns1:Last_Name>SANZ</ns1:Last_Name>
+                <ns1:Secondary_Last_Name>CANDILEJO</ns1:Secondary_Last_Name>
+                <ns1:Title>Sr.</ns1:Title>
+                <ns1:General_Display_Name>DANIEL JESUS SANZ CANDILEJO</ns1:General_Display_Name>
+            </ns1:Preferred_Name>
+            <ns1:Marital_Status_ID>MARITAL_STATUS-6-13-Casado (M)</ns1:Marital_Status_ID>
+            <ns1:Cash_Range_Max>85,625.00 EUR Annual</ns1:Cash_Range_Max>
+            <ns1:Cash_Range_Min>46,237.50 EUR</ns1:Cash_Range_Min>
+            <ns1:Target_Bonus_Total_Amount>15000.0</ns1:Target_Bonus_Total_Amount>
+            <ns1:Country>Spain</ns1:Country>
+            <ns1:Job_Family_Group ns1:Descriptor="Management &amp; Control IT">
+                <ns1:Id>WID</ns1:Id>
+            </ns1:Job_Family_Group>
+            <ns1:Contract_Type ns1:Descriptor="Permanent Contract">
+                <ns1:Id>WID</ns1:Id>
+            </ns1:Contract_Type>
+            <ns1:Compensation_Grade_Profile ns1:Descriptor="ESP HQ13">
+                <ns1:Id>WID</ns1:Id>
+            </ns1:Compensation_Grade_Profile>
+            <ns1:Employee_Type ns1:Descriptor="Regular">
+                <ns1:Id>WID</ns1:Id>
+            </ns1:Employee_Type>
+            <ns1:Job_Family ns1:Descriptor="IT - Enterprise">
+                <ns1:Id>WID</ns1:Id>
+            </ns1:Job_Family>
+        </ns1:Weci>
+    </ns2:Employees>
+    <ns2:Employees ns1:Sequence="2">
+        <ns1:Summary>
+            <ns1:WID>2eb4cc783e3d01909f5fae41c5016285</ns1:WID>
+            <ns1:Employee_ID />
+        </ns1:Summary>
+        <ns1:Derived_Event_Code>DTA</ns1:Derived_Event_Code>
+        <ns1:Effective_Moment>2021-06-01T00:00:00-07:00</ns1:Effective_Moment>
+        <ns1:Entry_Moment>2021-05-24T03:37:01.677-07:00</ns1:Entry_Moment>
+        <ns1:Worker_Status>
+            <ns1:Status>Active</ns1:Status>
+            <ns1:Active>true</ns1:Active>
+            <ns1:Active_Status_Date>2017-01-01-08:00</ns1:Active_Status_Date>
+            <ns1:Terminated>false</ns1:Terminated>
+            <ns1:Hire_Date>2017-01-01-08:00</ns1:Hire_Date>
+            <ns1:Original_Hire_Date ns1:priorValue="">2015-01-15-08:00</ns1:Original_Hire_Date>
+            <ns1:Is_Rehire>false</ns1:Is_Rehire>
+            <ns1:Continuous_Service_Date ns1:priorValue="">2015-01-15-08:00</ns1:Continuous_Service_Date>
+            <ns1:First_Day_of_Work ns1:priorValue="">2017-01-01-08:00</ns1:First_Day_of_Work>
+            <ns1:Seniority_Date ns1:priorValue="">2015-01-15-08:00</ns1:Seniority_Date>
+            <ns1:Regrettable_Termination>0</ns1:Regrettable_Termination>
+            <ns1:Not_Returning>0</ns1:Not_Returning>
+            <ns1:Return_Unknown>0</ns1:Return_Unknown>
+        </ns1:Worker_Status>
+        <ns1:Personal>
+            <ns1:Name>
+                <ns1:Country>ES</ns1:Country>
+                <ns1:First_Name>DANIEL JESUS</ns1:First_Name>
+                <ns1:Last_Name>SANZ</ns1:Last_Name>
+                <ns1:Secondary_Last_Name>CANDILEJO</ns1:Secondary_Last_Name>
+                <ns1:Title>Sr.</ns1:Title>
+                <ns1:General_Display_Name>DANIEL JESUS SANZ CANDILEJO</ns1:General_Display_Name>
+            </ns1:Name>
+            <ns1:Gender>Male</ns1:Gender>
+            <ns1:Date_of_Birth ns1:priorValue="">1986-12-22-08:00</ns1:Date_of_Birth>
+            <ns1:Country_of_Birth>ES</ns1:Country_of_Birth>
+            <ns1:City_of_Birth>GUADARRAMA</ns1:City_of_Birth>
+            <ns1:Nationality>ES</ns1:Nationality>
+            <ns1:Number_of_Payroll_Dependents ns1:priorValue="">0.0</ns1:Number_of_Payroll_Dependents>
+            <ns1:Preferred_Language>en_US</ns1:Preferred_Language>
+            <ns1:Preferred_Locale>es_ES</ns1:Preferred_Locale>
+            <ns1:Workday_Account>n54995@gruposantander.com</ns1:Workday_Account>
+        </ns1:Personal>
+        <ns1:Person_Communication ns1:isUpdated="true">
+            <ns1:Address ns1:isUpdated="true">
+                <ns1:Address_Type>HOME</ns1:Address_Type>
+                <ns1:Address_ID>ADDRESS_REFERENCE-6-60392</ns1:Address_ID>
+                <ns1:Location_ID />
+                <ns1:Location_Name />
+                <ns1:Address_Line_1 ns1:priorValue="Guadarrama">Guadarrama EDIT</ns1:Address_Line_1>
+                <ns1:Address_Line_3>CL</ns1:Address_Line_3>
+                <ns1:Address_Line_5 ns1:priorValue="77">77 EDIT</ns1:Address_Line_5>
+                <ns1:City ns1:priorValue="Guadarrama">Navacerrada</ns1:City>
+                <ns1:Postal_Code>28440</ns1:Postal_Code>
+                <ns1:Country>ES</ns1:Country>
+                <ns1:Country_Region>ESP-M</ns1:Country_Region>
+                <ns1:State_Province>Madrid</ns1:State_Province>
+                <ns1:Usage>
+                    <ns1:Usage_Behavior_ID>Other_Home</ns1:Usage_Behavior_ID>
+                </ns1:Usage>
+            </ns1:Address>
+            <ns1:Address>
+                <ns1:Address_Type>WORK</ns1:Address_Type>
+                <ns1:Address_ID>ADDRESS_REFERENCE-6-873879</ns1:Address_ID>
+                <ns1:Location_ID />
+                <ns1:Location_Name />
+                <ns1:Address_Line_1>Cantabria</ns1:Address_Line_1>
+                <ns1:Address_Line_3>Av</ns1:Address_Line_3>
+                <ns1:Address_Line_5>s-n</ns1:Address_Line_5>
+                <ns1:City>Boadilla del Monte</ns1:City>
+                <ns1:Postal_Code>28660</ns1:Postal_Code>
+                <ns1:Country>ES</ns1:Country>
+                <ns1:Country_Region>ESP-M</ns1:Country_Region>
+                <ns1:State_Province>Madrid</ns1:State_Province>
+            </ns1:Address>
+            <ns1:Phone>
+                <ns1:Usage_Type>WORK</ns1:Usage_Type>
+                <ns1:Phone_Device_Type>Mobile_Device_Type</ns1:Phone_Device_Type>
+                <ns1:International_Phone_Code>34</ns1:International_Phone_Code>
+                <ns1:Area_Code>615</ns1:Area_Code>
+                <ns1:Phone_Number>902235</ns1:Phone_Number>
+                <ns1:Phone_Number_With_Country_Code>+34 (615) 902235</ns1:Phone_Number_With_Country_Code>
+                <ns1:Phone_Type>+34 (615) 902235</ns1:Phone_Type>
+            </ns1:Phone>
+            <ns1:Phone>
+                <ns1:Usage_Type>HOME</ns1:Usage_Type>
+                <ns1:Phone_Device_Type>Mobile_Device_Type</ns1:Phone_Device_Type>
+                <ns1:International_Phone_Code>34</ns1:International_Phone_Code>
+                <ns1:Area_Code>615</ns1:Area_Code>
+                <ns1:Phone_Number>902235</ns1:Phone_Number>
+                <ns1:Phone_Number_With_Country_Code>+34 (615) 902235</ns1:Phone_Number_With_Country_Code>
+                <ns1:Phone_Type>+34 (615) 902235</ns1:Phone_Type>
+            </ns1:Phone>
+            <ns1:Email>
+                <ns1:Usage_Type>WORK</ns1:Usage_Type>
+                <ns1:Email_Address>daniel.sanzcandillejo@gruposantander.com</ns1:Email_Address>
+            </ns1:Email>
+            <ns1:Email>
+                <ns1:Usage_Type>HOME</ns1:Usage_Type>
+                <ns1:Email_Address>danisanzc@hotmail.com</ns1:Email_Address>
+            </ns1:Email>
+        </ns1:Person_Communication>
+        <ns1:Person_Identification />
+        <ns1:Compensation_Plans>
+            <ns1:Position_ID>Pos0040308</ns1:Position_ID>
+            <ns1:Allowance_Plan>
+                <ns1:Compensation_Plan>ESP_F01_F03_F07_Comp_Beneficios_Sociales_Gross</ns1:Compensation_Plan>
+                <ns1:Amount ns1:priorValue="">832.01</ns1:Amount>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+                <ns1:Start_Date ns1:priorValue="">2020-08-01-07:00</ns1:Start_Date>
+            </ns1:Allowance_Plan>
+            <ns1:Salary_and_Hourly_Plan>
+                <ns1:Compensation_Plan>Salary</ns1:Compensation_Plan>
+                <ns1:Amount ns1:priorValue="">42000.0</ns1:Amount>
+                <ns1:Prorated_Amount ns1:priorValue="">42000.0</ns1:Prorated_Amount>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+                <ns1:Start_Date ns1:priorValue="">2019-01-01-08:00</ns1:Start_Date>
+            </ns1:Salary_and_Hourly_Plan>
+            <ns1:Bonus_Plan>
+                <ns1:Compensation_Plan>Bonus_Target_Amount_based</ns1:Compensation_Plan>
+                <ns1:Amount ns1:priorValue="">7500.0</ns1:Amount>
+                <ns1:Prorated_Amount>7500.0</ns1:Prorated_Amount>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+                <ns1:Start_Date ns1:priorValue="">2019-01-01-08:00</ns1:Start_Date>
+            </ns1:Bonus_Plan>
+            <ns1:Bonus_Plan>
+                <ns1:Compensation_Plan>HQ_Bonus_Amount_Plan</ns1:Compensation_Plan>
+                <ns1:Amount ns1:priorValue="">7500.0</ns1:Amount>
+                <ns1:Prorated_Amount>7500.0</ns1:Prorated_Amount>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+                <ns1:Start_Date ns1:priorValue="">2020-01-01-08:00</ns1:Start_Date>
+            </ns1:Bonus_Plan>
+        </ns1:Compensation_Plans>
+        <ns1:Payment_Election>
+            <ns1:Order ns1:PriorValue="">1</ns1:Order>
+            <ns1:Payment_Type>Direct_Deposit</ns1:Payment_Type>
+            <ns1:Country>ES</ns1:Country>
+            <ns1:Currency>EUR</ns1:Currency>
+            <ns1:Bank_Account_Nickname>Nómina</ns1:Bank_Account_Nickname>
+            <ns1:Bank_Account_Name>Nómina</ns1:Bank_Account_Name>
+            <ns1:Account_Number>2010169374</ns1:Account_Number>
+            <ns1:Account_Type>DDA</ns1:Account_Type>
+            <ns1:Bank_Name>Banco Santander</ns1:Bank_Name>
+            <ns1:IBAN>ES9400491770922010169374</ns1:IBAN>
+            <ns1:Bank_ID>0049</ns1:Bank_ID>
+            <ns1:Branch_ID>1770</ns1:Branch_ID>
+            <ns1:Check_Digit>92</ns1:Check_Digit>
+        </ns1:Payment_Election>
+        <ns1:Additional_Information />
+        <ns1:Transaction_Log>
+            <ns1:Is_Rescind_Or_Rescinded>false</ns1:Is_Rescind_Or_Rescinded>
+        </ns1:Transaction_Log>
+        <ns1:Weci>
+            <ns1:Preferred_Name>
+                <ns1:Country>ES</ns1:Country>
+                <ns1:First_Name>DANIEL JESUS</ns1:First_Name>
+                <ns1:Last_Name>SANZ</ns1:Last_Name>
+                <ns1:Secondary_Last_Name>CANDILEJO</ns1:Secondary_Last_Name>
+                <ns1:Title>Sr.</ns1:Title>
+                <ns1:General_Display_Name>DANIEL JESUS SANZ CANDILEJO</ns1:General_Display_Name>
+            </ns1:Preferred_Name>
+            <ns1:Marital_Status_ID>MARITAL_STATUS-6-13-Casado (M)</ns1:Marital_Status_ID>
+            <ns1:Cash_Range_Max>85,625.00 EUR Annual</ns1:Cash_Range_Max>
+            <ns1:Cash_Range_Min>46,237.50 EUR</ns1:Cash_Range_Min>
+            <ns1:Target_Bonus_Total_Amount>15000.0</ns1:Target_Bonus_Total_Amount>
+            <ns1:Country>Spain</ns1:Country>
+            <ns1:Job_Family_Group ns1:Descriptor="Management &amp; Control IT">
+                <ns1:Id>WID</ns1:Id>
+            </ns1:Job_Family_Group>
+            <ns1:Contract_Type ns1:Descriptor="Permanent Contract">
+                <ns1:Id>WID</ns1:Id>
+            </ns1:Contract_Type>
+            <ns1:Compensation_Grade_Profile ns1:Descriptor="ESP HQ13">
+                <ns1:Id>WID</ns1:Id>
+            </ns1:Compensation_Grade_Profile>
+            <ns1:Employee_Type ns1:Descriptor="Regular">
+                <ns1:Id>WID</ns1:Id>
+            </ns1:Employee_Type>
+            <ns1:Job_Family ns1:Descriptor="IT - Enterprise">
+                <ns1:Id>WID</ns1:Id>
+            </ns1:Job_Family>
+        </ns1:Weci>
+    </ns2:Employees>
+</ns2:Worker><ns2:Worker xmlns:weci="urn:com.workday/weci" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wtdf="urn:com.workday/weci/tdf" xmlns:ns1="http://Santander.com/Schemas/Integrations/CommonDataModel/CommonTypes" xmlns:ns2="http://Santander.com/Schemas/Integrations/CommonDataModel/PayrollIntegrations">
+    <ns2:Worker_Summary>
+        <ns2:WID>2eb4cc783e3d01bd7622f291c701ba96</ns2:WID>
+        <ns2:Employee_ID>100044789</ns2:Employee_ID>
+        <ns2:Name>Sr. RAMON URRUTIA FERNANDEZ DE PINEDO</ns2:Name>
+    </ns2:Worker_Summary>
+    <ns2:Employees ns1:Sequence="0">
+        <ns1:Summary>
+            <ns1:WID>2eb4cc783e3d01bd7622f291c701ba96</ns1:WID>
+            <ns1:Employee_ID />
+        </ns1:Summary>
+        <ns1:Derived_Event_Code>DTA</ns1:Derived_Event_Code>
+        <ns1:Effective_Moment>2021-05-23T00:00:00-07:00</ns1:Effective_Moment>
+        <ns1:Entry_Moment>2021-05-24T03:48:25.746-07:00</ns1:Entry_Moment>
+        <ns1:Worker_Status>
+            <ns1:Status>Active</ns1:Status>
+            <ns1:Active>true</ns1:Active>
+            <ns1:Active_Status_Date>2012-06-18-07:00</ns1:Active_Status_Date>
+            <ns1:Terminated>false</ns1:Terminated>
+            <ns1:Hire_Date>2012-06-18-07:00</ns1:Hire_Date>
+            <ns1:Original_Hire_Date ns1:priorValue="">2011-07-01-07:00</ns1:Original_Hire_Date>
+            <ns1:Is_Rehire>false</ns1:Is_Rehire>
+            <ns1:Continuous_Service_Date ns1:priorValue="">2011-07-01-07:00</ns1:Continuous_Service_Date>
+            <ns1:First_Day_of_Work ns1:priorValue="">2012-06-18-07:00</ns1:First_Day_of_Work>
+            <ns1:Seniority_Date ns1:priorValue="">2011-07-01-07:00</ns1:Seniority_Date>
+            <ns1:Regrettable_Termination>0</ns1:Regrettable_Termination>
+            <ns1:Not_Returning>0</ns1:Not_Returning>
+            <ns1:Return_Unknown>0</ns1:Return_Unknown>
+        </ns1:Worker_Status>
+        <ns1:Personal>
+            <ns1:Name>
+                <ns1:Country>ES</ns1:Country>
+                <ns1:First_Name>RAMON</ns1:First_Name>
+                <ns1:Last_Name>URRUTIA</ns1:Last_Name>
+                <ns1:Secondary_Last_Name>FERNANDEZ DE PINEDO</ns1:Secondary_Last_Name>
+                <ns1:Title>Sr.</ns1:Title>
+                <ns1:General_Display_Name>RAMON URRUTIA FERNANDEZ DE PINEDO</ns1:General_Display_Name>
+            </ns1:Name>
+            <ns1:Gender>Male</ns1:Gender>
+            <ns1:Date_of_Birth ns1:priorValue="">1979-10-27-07:00</ns1:Date_of_Birth>
+            <ns1:Country_of_Birth>ES</ns1:Country_of_Birth>
+            <ns1:City_of_Birth>PORTUGALETE</ns1:City_of_Birth>
+            <ns1:Nationality>ES</ns1:Nationality>
+            <ns1:Number_of_Payroll_Dependents ns1:priorValue="">0.0</ns1:Number_of_Payroll_Dependents>
+            <ns1:Preferred_Language>en_US</ns1:Preferred_Language>
+            <ns1:Preferred_Locale>es_ES</ns1:Preferred_Locale>
+            <ns1:Workday_Account>n94153@gruposantander.com</ns1:Workday_Account>
+        </ns1:Personal>
+        <ns1:Person_Communication />
+        <ns1:Person_Identification />
+        <ns1:Position ns1:isUpdated="true">
+            <ns1:Position_ID>ESP_28004029116</ns1:Position_ID>
+            <ns1:Primary_Job>true</ns1:Primary_Job>
+            <ns1:Business_Title>Management &amp; Control IT Manager I</ns1:Business_Title>
+            <ns1:Worker_Type>EE</ns1:Worker_Type>
+            <ns1:Position_Time_Type>Full_time</ns1:Position_Time_Type>
+            <ns1:Scheduled_Weekly_Hours>35.0</ns1:Scheduled_Weekly_Hours>
+            <ns1:Default_Weekly_Hours>35.0</ns1:Default_Weekly_Hours>
+            <ns1:Full_Time_Equivalent_Percentage>1.0</ns1:Full_Time_Equivalent_Percentage>
+            <ns1:Job_Classification>
+                <ns1:Job_Classification_Group>JOB_CLASSIFICATION_GROUP-6-2421</ns1:Job_Classification_Group>
+                <ns1:Job_Classification_ID>15</ns1:Job_Classification_ID>
+                <ns1:Job_Classiication ns1:priorValue="">15 HAY LEVEL SPAIN</ns1:Job_Classiication>
+                <ns1:Job_Classification_Description>15 HAY LEVEL SPAIN</ns1:Job_Classification_Description>
+                <ns1:Mapped_Value>ESP_15</ns1:Mapped_Value>
+            </ns1:Job_Classification>
+            <ns1:Work_Shift>ESP_Banco Santander SSCC_K_</ns1:Work_Shift>
+            <ns1:Management_Level>MANAGEMENT_LEVEL_ManagerI</ns1:Management_Level>
+            <ns1:Job_Profile>ESP_SANCO_W00397_1</ns1:Job_Profile>
+            <ns1:Job_Family>
+                <ns1:ID>000023_Management&amp;Control_IT</ns1:ID>
+                <ns1:Name>Management &amp; Control IT</ns1:Name>
+                <ns1:Mapped_Value>000023_Management&amp;Control_IT</ns1:Mapped_Value>
+            </ns1:Job_Family>
+            <ns1:Job_Family>
+                <ns1:ID>000006_IT_Enterprise</ns1:ID>
+                <ns1:Name>IT - Enterprise</ns1:Name>
+                <ns1:Mapped_Value>000006_IT_Enterprise</ns1:Mapped_Value>
+            </ns1:Job_Family>
+            <ns1:Business_Site>
+                <ns1:Location_ID>ESBOA3NP01</ns1:Location_ID>
+                <ns1:Location_Name>Pampa P01</ns1:Location_Name>
+                <ns1:Address_ID>ADDRESS_REFERENCE-6-873879</ns1:Address_ID>
+                <ns1:Address_Line_1>Cantabria</ns1:Address_Line_1>
+                <ns1:Address_Line_3>Av</ns1:Address_Line_3>
+                <ns1:Address_Line_5>s-n</ns1:Address_Line_5>
+                <ns1:City>Boadilla del Monte</ns1:City>
+                <ns1:Postal_Code>28660</ns1:Postal_Code>
+                <ns1:Country>ES</ns1:Country>
+                <ns1:Country_Region>ESP-M</ns1:Country_Region>
+                <ns1:State_Province>Madrid</ns1:State_Province>
+            </ns1:Business_Site>
+            <ns1:Supervisor>
+                <ns1:ID>100041581</ns1:ID>
+                <ns1:Name>Sr. JUAN JOSE JIMENEZ ARAGON</ns1:Name>
+            </ns1:Supervisor>
+            <ns1:Annual_Work_Period_Work_Percent_Of_Year>0.0</ns1:Annual_Work_Period_Work_Percent_Of_Year>
+            <ns1:Organization ns1:isAdded="true">
+                <ns1:Organization_ID>ESP_SANCO_9638</ns1:Organization_ID>
+                <ns1:Organization_Type>Custom_Organization_Type_Organizational_Structure</ns1:Organization_Type>
+                <ns1:Organization_Code>SANCO_9638</ns1:Organization_Code>
+                <ns1:Organization_Name>AREA RIESGOS NO FINANCIEROS</ns1:Organization_Name>
+                <ns1:Mapped_Value>ESP_SANCO_9638</ns1:Mapped_Value>
+            </ns1:Organization>
+            <ns1:Organization>
+                <ns1:Organization_ID>ESP_Product_Owner_Participant</ns1:Organization_ID>
+                <ns1:Organization_Type>Custom_Organization_Type_Agile_Role</ns1:Organization_Type>
+                <ns1:Organization_Name>Product Owner - Participant</ns1:Organization_Name>
+                <ns1:Mapped_Value>ESP_Product_Owner_Participant</ns1:Mapped_Value>
+            </ns1:Organization>
+            <ns1:Organization ns1:isDeleted="true">
+                <ns1:Organization_ID>ESP_SCH_9261</ns1:Organization_ID>
+                <ns1:Organization_Type>Cost_Center</ns1:Organization_Type>
+                <ns1:Organization_Code>SCH_9261</ns1:Organization_Code>
+                <ns1:Organization_Name>AREA T&amp;O CENTRO CORPORATIVO</ns1:Organization_Name>
+                <ns1:Mapped_Value>ESP_SCH_9261</ns1:Mapped_Value>
+            </ns1:Organization>
+            <ns1:Organization ns1:isAdded="true">
+                <ns1:Organization_ID>ESP_SCH_9638</ns1:Organization_ID>
+                <ns1:Organization_Type>Cost_Center</ns1:Organization_Type>
+                <ns1:Organization_Code>SCH_9638</ns1:Organization_Code>
+                <ns1:Organization_Name>AREA RIESGOS NO FINANCIEROS</ns1:Organization_Name>
+                <ns1:Mapped_Value>ESP_SCH_9638</ns1:Mapped_Value>
+            </ns1:Organization>
+            <ns1:Organization>
+                <ns1:Organization_ID>ESP_SCH</ns1:Organization_ID>
+                <ns1:Organization_Type>Company</ns1:Organization_Type>
+                <ns1:Organization_Code>SCH</ns1:Organization_Code>
+                <ns1:Organization_Name>Banco Santander, S.A.</ns1:Organization_Name>
+                <ns1:Mapped_Value>ESP_SCH</ns1:Mapped_Value>
+            </ns1:Organization>
+            <ns1:Organization>
+                <ns1:Organization_ID>ESP_Payroll_Company</ns1:Organization_ID>
+                <ns1:Organization_Type>External_Payroll_Company</ns1:Organization_Type>
+                <ns1:Organization_Name>ESP Payroll Company</ns1:Organization_Name>
+                <ns1:Mapped_Value>ESP_Payroll_Company</ns1:Mapped_Value>
+            </ns1:Organization>
+            <ns1:Organization>
+                <ns1:Organization_ID>HQ</ns1:Organization_ID>
+                <ns1:Organization_Type>Business_Unit</ns1:Organization_Type>
+                <ns1:Organization_Name>Headquarters (HQ)</ns1:Organization_Name>
+                <ns1:Mapped_Value>HQ</ns1:Mapped_Value>
+            </ns1:Organization>
+            <ns1:Organization>
+                <ns1:Organization_ID>ESP_SCH_BANCO_SANTANDER,_S.A.</ns1:Organization_ID>
+                <ns1:Organization_Type>Pay_Group</ns1:Organization_Type>
+                <ns1:Organization_Code>ESP SCH BANCO SANTANDER, S.A.</ns1:Organization_Code>
+                <ns1:Organization_Name>BANCO SANTANDER, S.A.</ns1:Organization_Name>
+                <ns1:Mapped_Value>ESP_SCH_BANCO_SANTANDER,_S.A.</ns1:Mapped_Value>
+            </ns1:Organization>
+            <ns1:Organization>
+                <ns1:Organization_ID>ESP_SCH_BANCO_SANTANDER_SA</ns1:Organization_ID>
+                <ns1:Organization_Type>Cost_Center_Hierarchy</ns1:Organization_Type>
+                <ns1:Organization_Code>SCH</ns1:Organization_Code>
+                <ns1:Organization_Name>SCH_BANCO SANTANDER, S.A.</ns1:Organization_Name>
+                <ns1:Mapped_Value>ESP_SCH_BANCO_SANTANDER_SA</ns1:Mapped_Value>
+            </ns1:Organization>
+            <ns1:Organization>
+                <ns1:Organization_ID>Not_Corporate</ns1:Organization_ID>
+                <ns1:Organization_Type>Custom_Organization_Type_Corporate_Segment</ns1:Organization_Type>
+                <ns1:Organization_Name>Not Corporate</ns1:Organization_Name>
+                <ns1:Mapped_Value>Not_Corporate</ns1:Mapped_Value>
+            </ns1:Organization>
+            <ns1:Organization>
+                <ns1:Organization_ID>Location Hierarchy_ESP_CGS - Ciudad Grupo Santander</ns1:Organization_ID>
+                <ns1:Organization_Type>Location_Hierarchy</ns1:Organization_Type>
+                <ns1:Organization_Name>CGS - Ciudad Grupo Santander</ns1:Organization_Name>
+                <ns1:Mapped_Value>Location Hierarchy_ESP_CGS - Ciudad Grupo Santander</ns1:Mapped_Value>
+            </ns1:Organization>
+            <ns1:Organization>
+                <ns1:Organization_ID>Company_Hierarchy_Spain</ns1:Organization_ID>
+                <ns1:Organization_Type>Company_Hierarchy</ns1:Organization_Type>
+                <ns1:Organization_Name>Spain</ns1:Organization_Name>
+                <ns1:Mapped_Value>Company_Hierarchy_Spain</ns1:Mapped_Value>
+            </ns1:Organization>
+            <ns1:Organization>
+                <ns1:Organization_ID>SUPORG300103</ns1:Organization_ID>
+                <ns1:Organization_Type>Supervisory</ns1:Organization_Type>
+                <ns1:Organization_Name>Workday</ns1:Organization_Name>
+                <ns1:Mapped_Value>SUPORG300103</ns1:Mapped_Value>
+            </ns1:Organization>
+            <ns1:Organization ns1:isDeleted="true">
+                <ns1:Organization_ID>ESP_SANCO_16038</ns1:Organization_ID>
+                <ns1:Organization_Type>Custom_Organization_Type_Organizational_Structure</ns1:Organization_Type>
+                <ns1:Organization_Code>SANCO_16038</ns1:Organization_Code>
+                <ns1:Organization_Name>Workday</ns1:Organization_Name>
+                <ns1:Mapped_Value>ESP_SANCO_16038</ns1:Mapped_Value>
+            </ns1:Organization>
+            <ns1:Organization>
+                <ns1:Organization_ID>HQ_T&amp;O-CorporateCenter_C4_RUI BARRENTO</ns1:Organization_ID>
+                <ns1:Organization_Type>Spain_Annual_Comp_Process</ns1:Organization_Type>
+                <ns1:Organization_Code>HQ_T&amp;O-CorporateCenter_C4_RUI BARRENTO</ns1:Organization_Code>
+                <ns1:Organization_Name>T&amp;O-CorporateCenter_C4_RUI BARRENTO</ns1:Organization_Name>
+                <ns1:Mapped_Value>HQ_T&amp;O-CorporateCenter_C4_RUI BARRENTO</ns1:Mapped_Value>
+            </ns1:Organization>
+            <ns1:Organization>
+                <ns1:Organization_ID>ESP_Product_Corporate_Center</ns1:Organization_ID>
+                <ns1:Organization_Type>Custom_Organization_Type_Product</ns1:Organization_Type>
+                <ns1:Organization_Name>T&amp;O - Corporate Center</ns1:Organization_Name>
+                <ns1:Mapped_Value>ESP_Product_Corporate_Center</ns1:Mapped_Value>
+            </ns1:Organization>
+            <ns1:Work_Space>ESBOA3NP014035</ns1:Work_Space>
+        </ns1:Position>
+        <ns1:Compensation_Plans>
+            <ns1:Position_ID>Pos0044789</ns1:Position_ID>
+            <ns1:Allowance_Plan>
+                <ns1:Compensation_Plan>ESP_F83_Economato_Carbon/Gas_Gross</ns1:Compensation_Plan>
+                <ns1:Amount ns1:priorValue="">152.59</ns1:Amount>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+                <ns1:Start_Date ns1:priorValue="">2020-04-01-07:00</ns1:Start_Date>
+            </ns1:Allowance_Plan>
+            <ns1:Allowance_Plan>
+                <ns1:Compensation_Plan>ESP_F87_Compensacion_Economato_Gross</ns1:Compensation_Plan>
+                <ns1:Amount ns1:priorValue="">237.7</ns1:Amount>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+                <ns1:Start_Date ns1:priorValue="">2020-04-01-07:00</ns1:Start_Date>
+            </ns1:Allowance_Plan>
+            <ns1:Allowance_Plan>
+                <ns1:Compensation_Plan>ESP_F01_F03_F07_Comp_Beneficios_Sociales_Gross</ns1:Compensation_Plan>
+                <ns1:Amount ns1:priorValue="">1137.31</ns1:Amount>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+                <ns1:Start_Date ns1:priorValue="">2020-08-01-07:00</ns1:Start_Date>
+            </ns1:Allowance_Plan>
+            <ns1:Salary_and_Hourly_Plan>
+                <ns1:Compensation_Plan>Salary</ns1:Compensation_Plan>
+                <ns1:Amount ns1:priorValue="">72000.0</ns1:Amount>
+                <ns1:Prorated_Amount ns1:priorValue="">72000.0</ns1:Prorated_Amount>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+                <ns1:Start_Date ns1:priorValue="">2019-01-01-08:00</ns1:Start_Date>
+            </ns1:Salary_and_Hourly_Plan>
+            <ns1:Bonus_Plan>
+                <ns1:Compensation_Plan>HQ_Bonus_Amount_Plan</ns1:Compensation_Plan>
+                <ns1:Amount ns1:priorValue="">21000.0</ns1:Amount>
+                <ns1:Prorated_Amount>21000.0</ns1:Prorated_Amount>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+                <ns1:Start_Date ns1:priorValue="">2020-01-01-08:00</ns1:Start_Date>
+            </ns1:Bonus_Plan>
+            <ns1:Bonus_Plan>
+                <ns1:Compensation_Plan>Bonus_Target_Amount_based</ns1:Compensation_Plan>
+                <ns1:Amount ns1:priorValue="">21000.0</ns1:Amount>
+                <ns1:Prorated_Amount>21000.0</ns1:Prorated_Amount>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+                <ns1:Start_Date ns1:priorValue="">2020-01-01-08:00</ns1:Start_Date>
+            </ns1:Bonus_Plan>
+        </ns1:Compensation_Plans>
+        <ns1:Payment_Election>
+            <ns1:Order ns1:PriorValue="">1</ns1:Order>
+            <ns1:Payment_Type>Direct_Deposit</ns1:Payment_Type>
+            <ns1:Country>ES</ns1:Country>
+            <ns1:Currency>EUR</ns1:Currency>
+            <ns1:Bank_Account_Nickname>Nómina</ns1:Bank_Account_Nickname>
+            <ns1:Bank_Account_Name>Nómina</ns1:Bank_Account_Name>
+            <ns1:Account_Number>2810134678</ns1:Account_Number>
+            <ns1:Account_Type>DDA</ns1:Account_Type>
+            <ns1:Bank_Name>Banco Santander</ns1:Bank_Name>
+            <ns1:IBAN>ES3200491770952810134678</ns1:IBAN>
+            <ns1:Bank_ID>0049</ns1:Bank_ID>
+            <ns1:Branch_ID>1770</ns1:Branch_ID>
+            <ns1:Check_Digit>95</ns1:Check_Digit>
+        </ns1:Payment_Election>
+        <ns1:Additional_Information />
+        <ns1:Transaction_Log>
+            <ns1:Is_Rescind_Or_Rescinded>false</ns1:Is_Rescind_Or_Rescinded>
+        </ns1:Transaction_Log>
+        <ns1:Weci>
+            <ns1:Preferred_Name>
+                <ns1:Country>ES</ns1:Country>
+                <ns1:First_Name>RAMON</ns1:First_Name>
+                <ns1:Last_Name>URRUTIA</ns1:Last_Name>
+                <ns1:Secondary_Last_Name>FERNANDEZ DE PINEDO</ns1:Secondary_Last_Name>
+                <ns1:Title>Sr.</ns1:Title>
+                <ns1:General_Display_Name>RAMON URRUTIA FERNANDEZ DE PINEDO</ns1:General_Display_Name>
+            </ns1:Preferred_Name>
+            <ns1:Marital_Status_ID>MARITAL_STATUS-6-13-Casado (M)</ns1:Marital_Status_ID>
+            <ns1:Cash_Range_Max>131,875.00 EUR Annual</ns1:Cash_Range_Max>
+            <ns1:Cash_Range_Min>71,212.50 EUR</ns1:Cash_Range_Min>
+            <ns1:Target_Bonus_Total_Amount>42000.0</ns1:Target_Bonus_Total_Amount>
+            <ns1:Country>Spain</ns1:Country>
+            <ns1:Job_Family_Group ns1:Descriptor="Management &amp; Control IT">
+                <ns1:Id>WID</ns1:Id>
+            </ns1:Job_Family_Group>
+            <ns1:Contract_Type ns1:Descriptor="Permanent Contract">
+                <ns1:Id>WID</ns1:Id>
+            </ns1:Contract_Type>
+            <ns1:Compensation_Grade_Profile ns1:Descriptor="ESP HQ15">
+                <ns1:Id>WID</ns1:Id>
+            </ns1:Compensation_Grade_Profile>
+            <ns1:Employee_Type ns1:Descriptor="Regular">
+                <ns1:Id>WID</ns1:Id>
+            </ns1:Employee_Type>
+            <ns1:Job_Family ns1:Descriptor="IT - Enterprise">
+                <ns1:Id>WID</ns1:Id>
+            </ns1:Job_Family>
+        </ns1:Weci>
+    </ns2:Employees>
+    <ns2:Employees ns1:Sequence="1">
+        <ns1:Summary>
+            <ns1:WID>2eb4cc783e3d01bd7622f291c701ba96</ns1:WID>
+            <ns1:Employee_ID />
+        </ns1:Summary>
+        <ns1:Derived_Event_Code>DTA</ns1:Derived_Event_Code>
+        <ns1:Effective_Moment>2021-05-24T03:49:45.923-07:00</ns1:Effective_Moment>
+        <ns1:Entry_Moment>2021-05-24T03:49:45.923-07:00</ns1:Entry_Moment>
+        <ns1:Worker_Status>
+            <ns1:Status>Active</ns1:Status>
+            <ns1:Active>true</ns1:Active>
+            <ns1:Active_Status_Date>2012-06-18-07:00</ns1:Active_Status_Date>
+            <ns1:Terminated>false</ns1:Terminated>
+            <ns1:Hire_Date>2012-06-18-07:00</ns1:Hire_Date>
+            <ns1:Original_Hire_Date ns1:priorValue="">2011-07-01-07:00</ns1:Original_Hire_Date>
+            <ns1:Is_Rehire>false</ns1:Is_Rehire>
+            <ns1:Continuous_Service_Date ns1:priorValue="">2011-07-01-07:00</ns1:Continuous_Service_Date>
+            <ns1:First_Day_of_Work ns1:priorValue="">2012-06-18-07:00</ns1:First_Day_of_Work>
+            <ns1:Seniority_Date ns1:priorValue="">2011-07-01-07:00</ns1:Seniority_Date>
+            <ns1:Regrettable_Termination>0</ns1:Regrettable_Termination>
+            <ns1:Not_Returning>0</ns1:Not_Returning>
+            <ns1:Return_Unknown>0</ns1:Return_Unknown>
+        </ns1:Worker_Status>
+        <ns1:Personal ns1:isUpdated="true">
+            <ns1:Name>
+                <ns1:Country>ES</ns1:Country>
+                <ns1:First_Name>RAMON</ns1:First_Name>
+                <ns1:Last_Name>URRUTIA</ns1:Last_Name>
+                <ns1:Secondary_Last_Name>FERNANDEZ DE PINEDO</ns1:Secondary_Last_Name>
+                <ns1:Title>Sr.</ns1:Title>
+                <ns1:General_Display_Name>RAMON URRUTIA FERNANDEZ DE PINEDO</ns1:General_Display_Name>
+            </ns1:Name>
+            <ns1:Gender>Male</ns1:Gender>
+            <ns1:Date_of_Birth ns1:priorValue="">1979-10-27-07:00</ns1:Date_of_Birth>
+            <ns1:Country_of_Birth>ES</ns1:Country_of_Birth>
+            <ns1:City_of_Birth ns1:priorValue="PORTUGALETE">PORTUGALETE TEST</ns1:City_of_Birth>
+            <ns1:Marital_Status_Date ns1:isAdded="true" ns1:priorValue="">2021-05-24-07:00</ns1:Marital_Status_Date>
+            <ns1:Nationality>ES</ns1:Nationality>
+            <ns1:Number_of_Payroll_Dependents ns1:priorValue="">0.0</ns1:Number_of_Payroll_Dependents>
+            <ns1:Preferred_Language>en_US</ns1:Preferred_Language>
+            <ns1:Preferred_Locale>es_ES</ns1:Preferred_Locale>
+            <ns1:Workday_Account>n94153@gruposantander.com</ns1:Workday_Account>
+        </ns1:Personal>
+        <ns1:Person_Communication />
+        <ns1:Person_Identification />
+        <ns1:Compensation_Plans>
+            <ns1:Position_ID>Pos0044789</ns1:Position_ID>
+            <ns1:Allowance_Plan>
+                <ns1:Compensation_Plan>ESP_F83_Economato_Carbon/Gas_Gross</ns1:Compensation_Plan>
+                <ns1:Amount ns1:priorValue="">152.59</ns1:Amount>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+                <ns1:Start_Date ns1:priorValue="">2020-04-01-07:00</ns1:Start_Date>
+            </ns1:Allowance_Plan>
+            <ns1:Allowance_Plan>
+                <ns1:Compensation_Plan>ESP_F87_Compensacion_Economato_Gross</ns1:Compensation_Plan>
+                <ns1:Amount ns1:priorValue="">237.7</ns1:Amount>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+                <ns1:Start_Date ns1:priorValue="">2020-04-01-07:00</ns1:Start_Date>
+            </ns1:Allowance_Plan>
+            <ns1:Allowance_Plan>
+                <ns1:Compensation_Plan>ESP_F01_F03_F07_Comp_Beneficios_Sociales_Gross</ns1:Compensation_Plan>
+                <ns1:Amount ns1:priorValue="">1137.31</ns1:Amount>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+                <ns1:Start_Date ns1:priorValue="">2020-08-01-07:00</ns1:Start_Date>
+            </ns1:Allowance_Plan>
+            <ns1:Salary_and_Hourly_Plan>
+                <ns1:Compensation_Plan>Salary</ns1:Compensation_Plan>
+                <ns1:Amount ns1:priorValue="">72000.0</ns1:Amount>
+                <ns1:Prorated_Amount ns1:priorValue="">72000.0</ns1:Prorated_Amount>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+                <ns1:Start_Date ns1:priorValue="">2019-01-01-08:00</ns1:Start_Date>
+            </ns1:Salary_and_Hourly_Plan>
+            <ns1:Bonus_Plan>
+                <ns1:Compensation_Plan>HQ_Bonus_Amount_Plan</ns1:Compensation_Plan>
+                <ns1:Amount ns1:priorValue="">21000.0</ns1:Amount>
+                <ns1:Prorated_Amount>21000.0</ns1:Prorated_Amount>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+                <ns1:Start_Date ns1:priorValue="">2020-01-01-08:00</ns1:Start_Date>
+            </ns1:Bonus_Plan>
+            <ns1:Bonus_Plan>
+                <ns1:Compensation_Plan>Bonus_Target_Amount_based</ns1:Compensation_Plan>
+                <ns1:Amount ns1:priorValue="">21000.0</ns1:Amount>
+                <ns1:Prorated_Amount>21000.0</ns1:Prorated_Amount>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+                <ns1:Start_Date ns1:priorValue="">2020-01-01-08:00</ns1:Start_Date>
+            </ns1:Bonus_Plan>
+        </ns1:Compensation_Plans>
+        <ns1:Payment_Election>
+            <ns1:Order ns1:PriorValue="">1</ns1:Order>
+            <ns1:Payment_Type>Direct_Deposit</ns1:Payment_Type>
+            <ns1:Country>ES</ns1:Country>
+            <ns1:Currency>EUR</ns1:Currency>
+            <ns1:Bank_Account_Nickname>Nómina</ns1:Bank_Account_Nickname>
+            <ns1:Bank_Account_Name>Nómina</ns1:Bank_Account_Name>
+            <ns1:Account_Number>2810134678</ns1:Account_Number>
+            <ns1:Account_Type>DDA</ns1:Account_Type>
+            <ns1:Bank_Name>Banco Santander</ns1:Bank_Name>
+            <ns1:IBAN>ES3200491770952810134678</ns1:IBAN>
+            <ns1:Bank_ID>0049</ns1:Bank_ID>
+            <ns1:Branch_ID>1770</ns1:Branch_ID>
+            <ns1:Check_Digit>95</ns1:Check_Digit>
+        </ns1:Payment_Election>
+        <ns1:Additional_Information />
+        <ns1:Transaction_Log>
+            <ns1:Is_Rescind_Or_Rescinded>false</ns1:Is_Rescind_Or_Rescinded>
+        </ns1:Transaction_Log>
+        <ns1:Weci>
+            <ns1:Preferred_Name>
+                <ns1:Country>ES</ns1:Country>
+                <ns1:First_Name>RAMON</ns1:First_Name>
+                <ns1:Last_Name>URRUTIA</ns1:Last_Name>
+                <ns1:Secondary_Last_Name>FERNANDEZ DE PINEDO</ns1:Secondary_Last_Name>
+                <ns1:Title>Sr.</ns1:Title>
+                <ns1:General_Display_Name>RAMON URRUTIA FERNANDEZ DE PINEDO</ns1:General_Display_Name>
+            </ns1:Preferred_Name>
+            <ns1:Marital_Status_ID>MARITAL_STATUS-6-8-Divorciado (D)</ns1:Marital_Status_ID>
+            <ns1:Cash_Range_Max>131,875.00 EUR Annual</ns1:Cash_Range_Max>
+            <ns1:Cash_Range_Min>71,212.50 EUR</ns1:Cash_Range_Min>
+            <ns1:Target_Bonus_Total_Amount>42000.0</ns1:Target_Bonus_Total_Amount>
+            <ns1:Country>Spain</ns1:Country>
+            <ns1:Job_Family_Group ns1:Descriptor="Management &amp; Control IT">
+                <ns1:Id>WID</ns1:Id>
+            </ns1:Job_Family_Group>
+            <ns1:Contract_Type ns1:Descriptor="Permanent Contract">
+                <ns1:Id>WID</ns1:Id>
+            </ns1:Contract_Type>
+            <ns1:Compensation_Grade_Profile ns1:Descriptor="ESP HQ15">
+                <ns1:Id>WID</ns1:Id>
+            </ns1:Compensation_Grade_Profile>
+            <ns1:Employee_Type ns1:Descriptor="Regular">
+                <ns1:Id>WID</ns1:Id>
+            </ns1:Employee_Type>
+            <ns1:Job_Family ns1:Descriptor="IT - Enterprise">
+                <ns1:Id>WID</ns1:Id>
+            </ns1:Job_Family>
+        </ns1:Weci>
+    </ns2:Employees>
+    <ns2:Employees ns1:Sequence="2">
+        <ns1:Summary>
+            <ns1:WID>2eb4cc783e3d01bd7622f291c701ba96</ns1:WID>
+            <ns1:Employee_ID />
+        </ns1:Summary>
+        <ns1:Derived_Event_Code>DTA</ns1:Derived_Event_Code>
+        <ns1:Effective_Moment>2021-05-26T00:00:00-07:00</ns1:Effective_Moment>
+        <ns1:Entry_Moment>2021-05-24T03:47:34.246-07:00</ns1:Entry_Moment>
+        <ns1:Worker_Status>
+            <ns1:Status>Active</ns1:Status>
+            <ns1:Active>true</ns1:Active>
+            <ns1:Active_Status_Date>2012-06-18-07:00</ns1:Active_Status_Date>
+            <ns1:Terminated>false</ns1:Terminated>
+            <ns1:Hire_Date>2012-06-18-07:00</ns1:Hire_Date>
+            <ns1:Original_Hire_Date ns1:priorValue="">2011-07-01-07:00</ns1:Original_Hire_Date>
+            <ns1:Is_Rehire>false</ns1:Is_Rehire>
+            <ns1:Continuous_Service_Date ns1:priorValue="">2011-07-01-07:00</ns1:Continuous_Service_Date>
+            <ns1:First_Day_of_Work ns1:priorValue="">2012-06-18-07:00</ns1:First_Day_of_Work>
+            <ns1:Seniority_Date ns1:priorValue="">2011-07-01-07:00</ns1:Seniority_Date>
+            <ns1:Regrettable_Termination>0</ns1:Regrettable_Termination>
+            <ns1:Not_Returning>0</ns1:Not_Returning>
+            <ns1:Return_Unknown>0</ns1:Return_Unknown>
+        </ns1:Worker_Status>
+        <ns1:Personal>
+            <ns1:Name>
+                <ns1:Country>ES</ns1:Country>
+                <ns1:First_Name>RAMON</ns1:First_Name>
+                <ns1:Last_Name>URRUTIA</ns1:Last_Name>
+                <ns1:Secondary_Last_Name>FERNANDEZ DE PINEDO</ns1:Secondary_Last_Name>
+                <ns1:Title>Sr.</ns1:Title>
+                <ns1:General_Display_Name>RAMON URRUTIA FERNANDEZ DE PINEDO</ns1:General_Display_Name>
+            </ns1:Name>
+            <ns1:Gender>Male</ns1:Gender>
+            <ns1:Date_of_Birth ns1:priorValue="">1979-10-27-07:00</ns1:Date_of_Birth>
+            <ns1:Country_of_Birth>ES</ns1:Country_of_Birth>
+            <ns1:City_of_Birth>PORTUGALETE TEST</ns1:City_of_Birth>
+            <ns1:Marital_Status_Date ns1:priorValue="">2021-05-24-07:00</ns1:Marital_Status_Date>
+            <ns1:Nationality>ES</ns1:Nationality>
+            <ns1:Number_of_Payroll_Dependents ns1:priorValue="">0.0</ns1:Number_of_Payroll_Dependents>
+            <ns1:Preferred_Language>en_US</ns1:Preferred_Language>
+            <ns1:Preferred_Locale>es_ES</ns1:Preferred_Locale>
+            <ns1:Workday_Account>n94153@gruposantander.com</ns1:Workday_Account>
+        </ns1:Personal>
+        <ns1:Person_Communication ns1:isUpdated="true">
+            <ns1:Address ns1:isUpdated="true">
+                <ns1:Address_Type>HOME</ns1:Address_Type>
+                <ns1:Address_ID>ADDRESS_REFERENCE-6-65107</ns1:Address_ID>
+                <ns1:Location_ID />
+                <ns1:Location_Name />
+                <ns1:Address_Line_1 ns1:priorValue="OBANOS">OBANOS EDIT TEST</ns1:Address_Line_1>
+                <ns1:Address_Line_3>CL</ns1:Address_Line_3>
+                <ns1:Address_Line_5 ns1:priorValue="2">2 EDIT TEST</ns1:Address_Line_5>
+                <ns1:Address_Line_8>3</ns1:Address_Line_8>
+                <ns1:Address_Line_9>D</ns1:Address_Line_9>
+                <ns1:City>Madrid</ns1:City>
+                <ns1:Postal_Code>28050</ns1:Postal_Code>
+                <ns1:Country>ES</ns1:Country>
+                <ns1:Country_Region>ESP-M</ns1:Country_Region>
+                <ns1:State_Province>Madrid</ns1:State_Province>
+                <ns1:Region_Subdivision_1>28079</ns1:Region_Subdivision_1>
+                <ns1:Usage>
+                    <ns1:Usage_Behavior_ID>Other_Home</ns1:Usage_Behavior_ID>
+                </ns1:Usage>
+            </ns1:Address>
+            <ns1:Address>
+                <ns1:Address_Type>WORK</ns1:Address_Type>
+                <ns1:Address_ID>ADDRESS_REFERENCE-6-873879</ns1:Address_ID>
+                <ns1:Location_ID />
+                <ns1:Location_Name />
+                <ns1:Address_Line_1>Cantabria</ns1:Address_Line_1>
+                <ns1:Address_Line_3>Av</ns1:Address_Line_3>
+                <ns1:Address_Line_5>s-n</ns1:Address_Line_5>
+                <ns1:City>Boadilla del Monte</ns1:City>
+                <ns1:Postal_Code>28660</ns1:Postal_Code>
+                <ns1:Country>ES</ns1:Country>
+                <ns1:Country_Region>ESP-M</ns1:Country_Region>
+                <ns1:State_Province>Madrid</ns1:State_Province>
+            </ns1:Address>
+            <ns1:Phone>
+                <ns1:Usage_Type>WORK</ns1:Usage_Type>
+                <ns1:Phone_Device_Type>Mobile_Device_Type</ns1:Phone_Device_Type>
+                <ns1:International_Phone_Code>34</ns1:International_Phone_Code>
+                <ns1:Area_Code>692</ns1:Area_Code>
+                <ns1:Phone_Number>661702</ns1:Phone_Number>
+                <ns1:Phone_Number_With_Country_Code>+34 (692) 661702</ns1:Phone_Number_With_Country_Code>
+                <ns1:Phone_Type>+34 (692) 661702</ns1:Phone_Type>
+            </ns1:Phone>
+            <ns1:Phone>
+                <ns1:Usage_Type>HOME</ns1:Usage_Type>
+                <ns1:Phone_Device_Type>Mobile_Device_Type</ns1:Phone_Device_Type>
+                <ns1:International_Phone_Code>34</ns1:International_Phone_Code>
+                <ns1:Area_Code>625</ns1:Area_Code>
+                <ns1:Phone_Number>704120</ns1:Phone_Number>
+                <ns1:Phone_Number_With_Country_Code>+34 (625) 704120</ns1:Phone_Number_With_Country_Code>
+                <ns1:Phone_Type>+34 (625) 704120</ns1:Phone_Type>
+            </ns1:Phone>
+            <ns1:Email>
+                <ns1:Usage_Type>WORK</ns1:Usage_Type>
+                <ns1:Email_Address>urfernandez@gruposantander.com</ns1:Email_Address>
+            </ns1:Email>
+            <ns1:Email>
+                <ns1:Usage_Type>HOME</ns1:Usage_Type>
+                <ns1:Email_Address>mon_urrutia@hotmail.com</ns1:Email_Address>
+            </ns1:Email>
+        </ns1:Person_Communication>
+        <ns1:Person_Identification />
+        <ns1:Compensation_Plans>
+            <ns1:Position_ID>Pos0044789</ns1:Position_ID>
+            <ns1:Allowance_Plan>
+                <ns1:Compensation_Plan>ESP_F83_Economato_Carbon/Gas_Gross</ns1:Compensation_Plan>
+                <ns1:Amount ns1:priorValue="">152.59</ns1:Amount>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+                <ns1:Start_Date ns1:priorValue="">2020-04-01-07:00</ns1:Start_Date>
+            </ns1:Allowance_Plan>
+            <ns1:Allowance_Plan>
+                <ns1:Compensation_Plan>ESP_F87_Compensacion_Economato_Gross</ns1:Compensation_Plan>
+                <ns1:Amount ns1:priorValue="">237.7</ns1:Amount>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+                <ns1:Start_Date ns1:priorValue="">2020-04-01-07:00</ns1:Start_Date>
+            </ns1:Allowance_Plan>
+            <ns1:Allowance_Plan>
+                <ns1:Compensation_Plan>ESP_F01_F03_F07_Comp_Beneficios_Sociales_Gross</ns1:Compensation_Plan>
+                <ns1:Amount ns1:priorValue="">1137.31</ns1:Amount>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+                <ns1:Start_Date ns1:priorValue="">2020-08-01-07:00</ns1:Start_Date>
+            </ns1:Allowance_Plan>
+            <ns1:Salary_and_Hourly_Plan>
+                <ns1:Compensation_Plan>Salary</ns1:Compensation_Plan>
+                <ns1:Amount ns1:priorValue="">72000.0</ns1:Amount>
+                <ns1:Prorated_Amount ns1:priorValue="">72000.0</ns1:Prorated_Amount>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+                <ns1:Start_Date ns1:priorValue="">2019-01-01-08:00</ns1:Start_Date>
+            </ns1:Salary_and_Hourly_Plan>
+            <ns1:Bonus_Plan>
+                <ns1:Compensation_Plan>HQ_Bonus_Amount_Plan</ns1:Compensation_Plan>
+                <ns1:Amount ns1:priorValue="">21000.0</ns1:Amount>
+                <ns1:Prorated_Amount>21000.0</ns1:Prorated_Amount>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+                <ns1:Start_Date ns1:priorValue="">2020-01-01-08:00</ns1:Start_Date>
+            </ns1:Bonus_Plan>
+            <ns1:Bonus_Plan>
+                <ns1:Compensation_Plan>Bonus_Target_Amount_based</ns1:Compensation_Plan>
+                <ns1:Amount ns1:priorValue="">21000.0</ns1:Amount>
+                <ns1:Prorated_Amount>21000.0</ns1:Prorated_Amount>
+                <ns1:Currency>EUR</ns1:Currency>
+                <ns1:Frequency>Annual</ns1:Frequency>
+                <ns1:Start_Date ns1:priorValue="">2020-01-01-08:00</ns1:Start_Date>
+            </ns1:Bonus_Plan>
+        </ns1:Compensation_Plans>
+        <ns1:Payment_Election>
+            <ns1:Order ns1:PriorValue="">1</ns1:Order>
+            <ns1:Payment_Type>Direct_Deposit</ns1:Payment_Type>
+            <ns1:Country>ES</ns1:Country>
+            <ns1:Currency>EUR</ns1:Currency>
+            <ns1:Bank_Account_Nickname>Nómina</ns1:Bank_Account_Nickname>
+            <ns1:Bank_Account_Name>Nómina</ns1:Bank_Account_Name>
+            <ns1:Account_Number>2810134678</ns1:Account_Number>
+            <ns1:Account_Type>DDA</ns1:Account_Type>
+            <ns1:Bank_Name>Banco Santander</ns1:Bank_Name>
+            <ns1:IBAN>ES3200491770952810134678</ns1:IBAN>
+            <ns1:Bank_ID>0049</ns1:Bank_ID>
+            <ns1:Branch_ID>1770</ns1:Branch_ID>
+            <ns1:Check_Digit>95</ns1:Check_Digit>
+        </ns1:Payment_Election>
+        <ns1:Additional_Information />
+        <ns1:Transaction_Log>
+            <ns1:Is_Rescind_Or_Rescinded>false</ns1:Is_Rescind_Or_Rescinded>
+        </ns1:Transaction_Log>
+        <ns1:Weci>
+            <ns1:Preferred_Name>
+                <ns1:Country>ES</ns1:Country>
+                <ns1:First_Name>RAMON</ns1:First_Name>
+                <ns1:Last_Name>URRUTIA</ns1:Last_Name>
+                <ns1:Secondary_Last_Name>FERNANDEZ DE PINEDO</ns1:Secondary_Last_Name>
+                <ns1:Title>Sr.</ns1:Title>
+                <ns1:General_Display_Name>RAMON URRUTIA FERNANDEZ DE PINEDO</ns1:General_Display_Name>
+            </ns1:Preferred_Name>
+            <ns1:Marital_Status_ID>MARITAL_STATUS-6-8-Divorciado (D)</ns1:Marital_Status_ID>
+            <ns1:Cash_Range_Max>131,875.00 EUR Annual</ns1:Cash_Range_Max>
+            <ns1:Cash_Range_Min>71,212.50 EUR</ns1:Cash_Range_Min>
+            <ns1:Target_Bonus_Total_Amount>42000.0</ns1:Target_Bonus_Total_Amount>
+            <ns1:Country>Spain</ns1:Country>
+            <ns1:Job_Family_Group ns1:Descriptor="Management &amp; Control IT">
+                <ns1:Id>WID</ns1:Id>
+            </ns1:Job_Family_Group>
+            <ns1:Contract_Type ns1:Descriptor="Permanent Contract">
+                <ns1:Id>WID</ns1:Id>
+            </ns1:Contract_Type>
+            <ns1:Compensation_Grade_Profile ns1:Descriptor="ESP HQ15">
+                <ns1:Id>WID</ns1:Id>
+            </ns1:Compensation_Grade_Profile>
+            <ns1:Employee_Type ns1:Descriptor="Regular">
+                <ns1:Id>WID</ns1:Id>
+            </ns1:Employee_Type>
+            <ns1:Job_Family ns1:Descriptor="IT - Enterprise">
+                <ns1:Id>WID</ns1:Id>
+            </ns1:Job_Family>
+        </ns1:Weci>
+    </ns2:Employees>
+</ns2:Worker></ns2:EMPLOYEE_DELTA_INTEGRATION>

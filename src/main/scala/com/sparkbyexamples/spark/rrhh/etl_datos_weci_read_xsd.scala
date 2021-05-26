@@ -33,7 +33,10 @@ object etl_datos_weci_read_xsd {
     //val dataDatePart = "2021-05-18-09-30"
     //val dataDatePart = "2021-05-19-11-48"
     //val dataDatePart = "2021-05-20-17-19"
-    val dataDatePart = "2021-05-20-17-19-38"
+    //val dataDatePart = "2021-05-20-17-19-38"
+    val dataDatePart = "2021-05-21-15-20-06"
+    //val dataDatePart = "2021-05-25-05-16-06"
+    //val dataDatePart = "2021-05-25-11-22-06"
 
     val rutaCvDatalakeWorker = s"src/main/resources/rrhh/example_weci_consolid_wd/data_date_part=$dataDatePart/*.xml"
     //val rutaWeciAllBetaXml = s"src/main/resources/rrhh/example_weci_consolid_wd/data_date_part=Beta/*.xml"
@@ -46,7 +49,8 @@ object etl_datos_weci_read_xsd {
 
     //val schema = XSDToSchema.read(Paths.get("src/main/resources/rrhh/example_weci_consolid_wd/schema-test/CDM_PayrollIntegrations.xsd"))
     //val schema = XSDToSchema.read(Paths.get("src/main/resources/rrhh/example_weci_consolid_wd/schema-test/CDM_CommonTypes.xsd"))
-    val schema = XSDToSchema.read(Paths.get("src/main/resources/rrhh/example_weci_consolid_wd/schema-test/CDM_CommonTypes_worker.xsd"))
+    //val schema = XSDToSchema.read(Paths.get("src/main/resources/rrhh/example_weci_consolid_wd/schema-test/CDM_CommonTypes.xsd"))
+
     //val xsdTest = s"src/main/resources/rrhh/example_weci_consolid_wd/schema-test/CDM_CommonTypes_worker.xsd"
 
     //1er ejemplo buscando las rutas en hdfs
@@ -64,18 +68,18 @@ object etl_datos_weci_read_xsd {
 
     //////////////////////////////////////////////////////////////////////////////
 
-    /*
+
+
     var df_TestPayRoll = spark.read
-      .schema(schema)
+      //.schema(schema)
       .format("com.databricks.spark.xml")
       .option("excludeAttribute", "false")
       //Importante esta opción permite convertir todos los campos del xml a string para no tener que trabajar con otro tipo de datos
       .option("inferSchema", "false")
       .option("ignoreNamespace", "true")
       ///////////////////////////////
-      //.option("rowTag", "ns:Employees")
-      //.option("rowTag", "ns:Employees")
-      .option("rowTag", "Summary")
+      //.option("rowTag", "ns2:EMPLOYEE_DELTA_INTEGRATION")
+      .option("rowTag", "ns2:Worker")
       .load(rutaCvDatalakeWorker)
 
 
@@ -83,7 +87,7 @@ object etl_datos_weci_read_xsd {
     df_TestPayRoll.printSchema()
     df_TestPayRoll.show()
 
-     */
+
 
     /*
 
@@ -114,6 +118,10 @@ object etl_datos_weci_read_xsd {
 
 
     //////////////////////////////////////////////////////////////////////////////
+
+    //En esta lógica comentada atacabamos los xml de los diferentes xsd y solo devolvía vaío el xml del 19
+
+    /*
 
     //Usar si son weci antiguos
     var df_TestPayRoll = spark.read
@@ -254,6 +262,8 @@ object etl_datos_weci_read_xsd {
     }
 
 
+
+     */
 
 
     //////////////////////////////////////////////////////////////////////////////
