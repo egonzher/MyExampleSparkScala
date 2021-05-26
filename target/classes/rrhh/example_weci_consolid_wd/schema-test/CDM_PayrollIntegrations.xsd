@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xs:schema xmlns="http://Santander.com/Schemas/Integrations/CommonDataModel/PayrollIntegrations" xmlns:ct="http://Santander.com/Schemas/Integrations/CommonDataModel/CommonTypes" xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://Santander.com/Schemas/Integrations/CommonDataModel/PayrollIntegrations">
+<xs:import namespace="http://Santander.com/Schemas/Integrations/CommonDataModel/CommonTypes" schemaLocation="./CDM_CommonTypes.xsd"/>
+
+   <xs:element name="EMPLOYEE_PAYROLL_INTEGRATION">
+      <xs:complexType>
+         <xs:sequence>
+         
+          <xs:element name="Summary"  type="Summary" minOccurs="1"/>
+    	
+    	  <xs:element name="Worker" type="WorkerType" minOccurs="0" maxOccurs="unbounded"/>
+    	</xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   
+                <xs:complexType name="Summary">
+                  <xs:sequence>
+                     <xs:element name="Integration_Event" type="xs:string" minOccurs="0"/>
+                     <xs:element name="Integration_Sent_On" type="xs:string" minOccurs="0"/>
+                     <xs:element name="Payroll_Company_ID" type="xs:string" minOccurs="0"/>
+                     <xs:element name="Payroll_Company_Name" type="xs:string" minOccurs="0"/>
+                     <xs:element name="Payroll_Company_Code" type="xs:string" minOccurs="0"/>
+                     <xs:element name="Pay_Group_ID" type="xs:string" minOccurs="0"/>
+                     <xs:element name="Pay_Group_Name" type="xs:string" minOccurs="0"/>
+                     <xs:element name="Pay_Group_Country" type="xs:string" minOccurs="0"/>
+                     <xs:element name="Pay_Group_Code" type="xs:string" minOccurs="0"/>
+                     <xs:element name="Pay_Period_Start" type="xs:date" minOccurs="0"/>
+                     <xs:element name="Pay_Period_End" type="xs:date" minOccurs="0"/>
+                     <xs:element name="Updated_From" type="xs:dateTime" minOccurs="0"/>
+                     <xs:element name="Updated_To" type="xs:dateTime" minOccurs="0"/>
+                     <xs:element name="Effective_From" type="xs:date" minOccurs="0"/>
+                     <xs:element name="Effective_To" type="xs:date" minOccurs="0"/>
+                     <xs:element name="Extended_Effective_To" type="xs:date" minOccurs="0"/>
+                     <xs:element name="Change_Detection" type="xs:string" minOccurs="0"/>
+                     <xs:element name="Extended_Change_Detection" type="xs:string" minOccurs="0"/>
+                     <xs:element name="First_Primary_Run_of_Pay_Period"
+                                  type="xs:boolean"
+                                  minOccurs="0"/>
+                     <xs:element name="First_Primary_Run_of_Extended_Pay_Period"
+                                  type="xs:boolean"
+                                  minOccurs="0"/>
+                     <xs:element name="Ad_Hoc_Run" type="xs:boolean" minOccurs="0"/>
+                     <xs:element name="Full_Snapshot" type="xs:boolean" minOccurs="0"/>
+                     <xs:element name="Worker_Count" type="xs:nonNegativeInteger" minOccurs="0"/>
+                     <xs:element name="Version" type="xs:string" minOccurs="0"/>
+                  </xs:sequence>
+               </xs:complexType> 
+  
+   <xs:complexType name="WorkerType">
+     		 	<xs:sequence>
+	         		<xs:element name="Worker_Summary" minOccurs="0">
+	            		<xs:complexType>
+	               			<xs:sequence>
+	               				<xs:element name="WID"
+	               					type="xs:string" minOccurs="0" />
+	               				<xs:element name="Employee_ID"
+	               					type="xs:string" minOccurs="1" />
+	               				<xs:element name="Name"
+	               					type="xs:string" minOccurs="0" maxOccurs="1"/>
+	               				<xs:element
+	               					name="Updated_From_Override" type="xs:dateTime"
+	               					minOccurs="0" />
+	               				<xs:element name="Payroll_Company_ID"
+	               					type="xs:string" minOccurs="0" maxOccurs="1">
+	               				</xs:element>
+	               				<xs:element
+	               					name="Payroll_Company_Name" type="xs:string"
+	               					minOccurs="0" maxOccurs="1">
+	               				</xs:element>
+	               				<xs:element name="Pay_Group_ID"
+	               					type="xs:string" minOccurs="0" maxOccurs="1">
+	               				</xs:element>
+	               				<xs:element name="Pay_Group_Name"
+	               					type="xs:string" minOccurs="0" maxOccurs="1">
+	               				</xs:element>
+	               				<xs:element name="Contain_Corrections_Or_Rescinds"
+	               					type="xs:boolean" minOccurs="0" maxOccurs="1">
+	               				</xs:element>
+	               			</xs:sequence>
+	            		</xs:complexType>
+			         </xs:element>
+	      			<xs:element maxOccurs="unbounded" minOccurs="0" name="Employees" type="ct:EmployeeElement_DataType"/>
+      			 </xs:sequence>
+   			</xs:complexType>
+
+   <xs:element name="EMPLOYEE_PAYSLIP_INTEGRATION">
+   		<xs:complexType>
+   			<xs:sequence>
+   				<xs:element name="External_Payslips"
+   					type="ct:External_Payslip_Type" maxOccurs="unbounded" minOccurs="0">
+   				</xs:element>
+   			</xs:sequence>
+   		</xs:complexType>
+
+   </xs:element>
+
+    <xs:element name="EMPLOYEE_PLANTILLAPREMIOS_INTEGRATION" >
+       		<xs:complexType>
+   			<xs:sequence>
+   				<xs:element name="Employee_Element"
+   					type="ct:EmployeeElement_DataType" maxOccurs="unbounded" minOccurs="0">
+   				</xs:element>
+   			</xs:sequence>
+   		</xs:complexType>
+    </xs:element>
+    
+    <xs:element name="EMPLOYEE_SEGURIDADGESTORES_INTEGRATION" >
+       		<xs:complexType>
+   			<xs:sequence>
+   				<xs:element name="Employee_Element"
+   					type="ct:EmployeeElement_DataType" maxOccurs="unbounded" minOccurs="0">
+   				</xs:element>
+   			</xs:sequence>
+   		</xs:complexType>
+    </xs:element>
+
+    <xs:element name="BENEFITS_INBOUND_INTEGRATION">
+    	<xs:complexType>
+    		<xs:sequence>
+    			<xs:element name="Benefits_Earnings_Deductions" type="ct:Benefits_Earnings_and_DeductionsType" minOccurs="0" maxOccurs="unbounded"></xs:element>
+    		</xs:sequence>
+    	</xs:complexType></xs:element>
+
+    <xs:element name="LEAVES_INBOUND_INTEGRATION">
+    	<xs:complexType>
+    		<xs:sequence>
+    			<xs:element name="Employees_Leaves_Data" type="ct:EmployeeElement_DataType" minOccurs="0" maxOccurs="unbounded"></xs:element>
+    		</xs:sequence>
+    	</xs:complexType>
+    </xs:element>
+</xs:schema>

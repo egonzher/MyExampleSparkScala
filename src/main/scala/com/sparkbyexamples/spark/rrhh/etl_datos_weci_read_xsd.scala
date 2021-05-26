@@ -4,7 +4,7 @@ import com.databricks.spark.xml.util.XSDToSchema
 import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.catalyst.dsl.expressions.{DslExpression, StringToAttributeConversionHelper}
 import org.apache.spark.sql.functions._
-import org.apache.spark.sql.types.{StringType, StructField, StructType}
+import org.apache.spark.sql.types.{ArrayType, IntegerType, StringType, StructField, StructType}
 
 import java.nio.file.Paths
 
@@ -37,8 +37,8 @@ object etl_datos_weci_read_xsd {
     //val dataDatePart = "2021-05-20-17-19-38"
     //val dataDatePart = "2021-05-21-15-20-06"
     //val dataDatePart = "2021-05-25-05-16-06"
-    val dataDatePart = "2021-05-25-11-22-06"
-    //val dataDatePart = "2021-05-26-15-33-06"
+    //val dataDatePart = "2021-05-25-11-22-06"
+    val dataDatePart = "2021-05-26-15-33-06"
 
     val rutaCvDatalakeWorker = s"src/main/resources/rrhh/example_weci_consolid_wd/data_date_part=$dataDatePart/*.xml"
     //val rutaWeciAllBetaXml = s"src/main/resources/rrhh/example_weci_consolid_wd/data_date_part=Beta/*.xml"
@@ -71,123 +71,62 @@ object etl_datos_weci_read_xsd {
     //////////////////////////////////////////////////////////////////////////////
 
 
+    var df_directo = spark.read
+      //.schema(schema)
+      .format("com.databricks.spark.xml")
+      .option("excludeAttribute", "false")
+      //Importante esta opción permite convertir todos los campos del xml a string para no tener que trabajar con otro tipo de datos
+      .option("inferSchema", "false")
+      .option("ignoreNamespace", "true")
+      ///////////////////////////////
+      .option("rowTag", "ns2:EMPLOYEE_DELTA_INTEGRATION")
+      .load(rutaCvDatalakeWorker)
+
+
+    //println("Imprimiendo el df de df_directo")
+    //df_directo.printSchema()
+    //df_directo.show()
+
+
+
+    val schemasssss = StructType(
+      Array(
+        StructField("Worker", ArrayType(StructType(Array(
+
+          StructField("Worker_Summary",StructType(Seq(
+            StructField("WID",StringType,true),
+          )))
+
+        ))))
+      )
+    )
+
+
+
+
     val schema = StructType(Seq(
       StructField("Worker",StructType(Seq(
-        StructField("Worker_Summary",StructType(Seq(
-          StructField("WID",StructType(Seq(
-            StructField("_VALUE",StringType,true),
-          )))))),
+
         StructField("Employees",StructType(Seq(
           StructField("Person_Identification",StructType(Seq(
             StructField("National_Identifier",StructType(Seq(// Name == legal_name en xml
               StructField("Country",StructType(Seq(
                 StructField("_VALUE",StringType,true),
-              ))),
-              StructField("National_ID_Type",StructType(Seq(
-                StructField("_VALUE",StringType,true),
-              ))),
-              StructField("National_Identifier",StructType(Seq(
-                StructField("_VALUE",StringType,true),
-              ))),
-              StructField("National_ID",StructType(Seq(
-                StructField("_VALUE",StringType,true),
-              ))),
-              StructField("First_Name",StructType(Seq(
-                StructField("_VALUE",StringType,true),
-              ))),
+              )))
             )))
-          ))),
-          StructField("Position",StructType(Seq(
-            StructField("Business_Title",StructType(Seq(
-              StructField("_VALUE",StringType,true),
-            )))))),
-          StructField("Personal",StructType(Seq(
-            StructField("Workday_Account",StructType(Seq(
-              StructField("_VALUE",StringType,true),
-            ))),
-            StructField("Date_of_Birth",StructType(Seq(
-              StructField("_VALUE",StringType,true),
-            ))),
-            StructField("Date_of_Death",StructType(Seq(
-              StructField("_VALUE",StringType,true),
-            ))),
-            StructField("Country_of_Birth",StructType(Seq(
-              StructField("_VALUE",StringType,true),
-            ))),
-            StructField("City_of_Birth",StructType(Seq(
-              StructField("_VALUE",StringType,true),
-            ))),
-            StructField("Region_of_Birth",StructType(Seq(
-              StructField("_VALUE",StringType,true),
-            ))),
-            StructField("Nationality",StructType(Seq(
-              StructField("_VALUE",StringType,true),
-            ))),
-            StructField("Preferred_Lenguage",StructType(Seq(
-              StructField("_VALUE",StringType,true),
-            ))),
-            StructField("Gender",StructType(Seq(
-              StructField("_VALUE",StringType,true),
-            ))),
-            StructField("Marital_Status",StructType(Seq(
-              StructField("_VALUE",StringType,true),
-            ))),
-            StructField("Marital_Status_Date",StructType(Seq(
-              StructField("_VALUE",StringType,true),
-            ))),
-            StructField("Name",StructType(Seq(// Name == legal_name en xml
-              StructField("First_Name",StructType(Seq(
-                StructField("_VALUE",StringType,true),
-              ))),
-              StructField("Middle_Name",StructType(Seq(
-                StructField("_VALUE",StringType,true),
-              ))),
-              StructField("Last_Name",StructType(Seq(
-                StructField("_VALUE",StringType,true),
-              ))),
-              StructField("Secondary_Last_Name",StructType(Seq(
-                StructField("_VALUE",StringType,true),
-              ))),
-            ))),
-            StructField("Disability_Status",StructType(Seq(// Name == legal_name en xml
-              StructField("Grade",StructType(Seq(
-                StructField("_VALUE",StringType,true),
-              ))),
-              StructField("Disability",StructType(Seq(
-                StructField("_VALUE",StringType,true),
-              ))),
-              StructField("Certification_Authority",StructType(Seq(
-                StructField("_VALUE",StringType,true),
-              ))),
-              StructField("Disability_Status_Date",StructType(Seq(
-                StructField("_VALUE",StringType,true),
-              ))),
-              StructField("End_Date",StructType(Seq(
-                StructField("_VALUE",StringType,true),
-              ))),
-              StructField("Date_Know",StructType(Seq(
-                StructField("_VALUE",StringType,true),
-              ))),
-            ))),
-          ))),
-          StructField("Worker_Status",StructType(Seq(
-            StructField("Active",StructType(Seq(
-              StructField("_VALUE",StringType,true),
-            ))),
-            StructField("Status",StructType(Seq(
-              StructField("_VALUE",StringType,true),
-            )))))),
-          StructField("Summary",StructType(Seq(
-            StructField("WID",StructType(Seq(
-              StructField("_VALUE",StringType,true),
-            ))),
-          ))))))
-      )))
+          )))
+        )))
+
+      ))),
+      StructField("Worker_Summary",StructType(Seq(
+          StructField("WID",StringType,true),
+        ))),
     ))
 
 
+
     var df_inicial = spark.read
-      .schema(schema)
+      .schema(schemasssss)
       .format("com.databricks.spark.xml")
       .option("excludeAttribute", "false")
       //Importante esta opción permite convertir todos los campos del xml a string para no tener que trabajar con otro tipo de datos
@@ -199,14 +138,19 @@ object etl_datos_weci_read_xsd {
 
 
     //println("Imprimiendo el df de df_inicial")
-    //df_inicial.printSchema()
-    //df_inicial.show()
+    df_inicial.printSchema()
+    df_inicial.show()
 
+    var df_WeciAllNivel2 = df_inicial
+      .withColumn("ID_WKD", explode_outer(col("`Worker`.`Worker_Summary`.`WID`")))
+    df_WeciAllNivel2.show()
 
     var df_final = df_inicial
       .selectExpr(
         "'' as EMPLID", // NO DATA XML
         "'' as ID_CORP_EXTERNAL_SYSTEM_ID", // NO DATA XML
+
+        /*
         "`Worker`.`Worker_Summary`.`WID`.`_VALUE` as ID_WKD",
         "`Worker`.`Employees`.`Personal`.`Workday_Account`.`_VALUE` as WD_ACC",
         "'' as EFFDT", // N/A
@@ -263,7 +207,7 @@ object etl_datos_weci_read_xsd {
         "'' as NUM_DISABLE_HIJOS_MAS_65",
 
 
-
+        //Campos por identificar
         "'' as HIGHEST_EDUC_LVL",
         "'' as CONTRACT_TYPE",
         "'' as CONTRACT_TYPE_LOCAL",
@@ -493,11 +437,13 @@ object etl_datos_weci_read_xsd {
         "'' as PERS_ADDR_STATE_DESCR",
         "'' as FEC_PROC"
 
+         */
+
       ).na.fill(" ").distinct()
 
-    println("Imprimiendo el df de df_final")
-    df_final.printSchema()
-    df_final.show()
+    //println("Imprimiendo el df de df_final")
+    //df_final.printSchema()
+    //df_final.show()
 
 
 
