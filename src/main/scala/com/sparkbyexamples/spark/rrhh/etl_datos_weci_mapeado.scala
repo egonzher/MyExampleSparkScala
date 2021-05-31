@@ -1503,7 +1503,7 @@ object etl_datos_weci_mapeado {
 
         "`Worker`.`Employees`.`Personal`.`Nationality`.`_VALUE` as Nationality",
         "`Worker`.`Employees`.`Personal`.`Nationality`.`_priorValue` as Nationality_priorValue",
-        "`Worker`.`Employees`.`Personal`.`Region_of_Birth`.`_isAdded` as BIRTHSTATE_isAdded",
+        "`Worker`.`Employees`.`Personal`.`Nationality`.`_isAdded` as Nationality_isAdded",
         "`Worker`.`Employees`.`Personal`.`Nationality`.`_isDeleted` as Nationality_isDeleted",
 
         "`Worker`.`Employees`.`Personal`.`Preferred_Lenguage`.`_VALUE` as PREF_LANG_LANG_CD",
@@ -1755,11 +1755,351 @@ object etl_datos_weci_mapeado {
 
     df_primerMapeo_payroll_local
       .selectExpr(
+        //Campos personalizados después del join
         "df_final2.data_date_part",
         "df_final2.ID_Empleado_Joins",
         "df_final2.ID_WKD",
         "df_Payroll.EMPLID",
-        "df_Local.ID_CORP_EXTERNAL_SYSTEM_ID")
+        "df_Local.ID_CORP_EXTERNAL_SYSTEM_ID",
+
+        //Resto de campos del df2 original
+        "WD_ACC",
+        "WD_ACC_priorValue",
+        "WD_ACC_isAdded",
+        "WD_ACC_isDeleted",
+
+        "ACTIVE_STATUS",
+        "ACTIVE_STATUS_priorValue",
+        "ACTIVE_STATUS_isAdded",
+        "ACTIVE_STATUS_isDeleted",
+
+        "EMPLOYEE_STATUS",
+        "EMPLOYEE_STATUS_priorValue",
+        "EMPLOYEE_STATUS_isAdded",
+        "EMPLOYEE_STATUS_isDeleted",
+
+        "FIRST_NAME",
+        "FIRST_NAME_priorValue",
+        "FIRST_NAME_isAdded",
+        "FIRST_NAME_isDeleted",
+
+        "MIDDLE_NAME",
+        "MIDDLE_NAME_priorValue",
+        "MIDDLE_NAME_isAdded",
+        "MIDDLE_NAME_isDeleted",
+
+        "LAST_NAME",
+        "LAST_NAME_priorValue",
+        "LAST_NAME_isAdded",
+        "LAST_NAME_isDeleted",
+
+        "SECOND_LAST_NAME",
+        "SECOND_LAST_NAME_priorValue",
+        "SECOND_LAST_NAME_isAdded",
+        "SECOND_LAST_NAME_isDeleted",
+
+        "NATIONAL_ID_COUNTRY",
+        "NATIONAL_ID_COUNTRY_priorValue",
+        "NATIONAL_ID_COUNTRY_isAdded",
+        "NATIONAL_ID_COUNTRY_isDeleted",
+
+        "NATIONAL_ID_TYPE",
+        "NATIONAL_ID_TYPE_priorValue",
+        "NATIONAL_ID_TYPE_isAdded",
+        "NATIONAL_ID_TYPE_isDeleted",
+
+        "NATIONAL_ID_TYPE_DESCR", // campo es un array ? Pocho
+        "NATIONAL_ID_TYPE_DESCR_priorValue", // campo es un array ? Pocho
+        "NATIONAL_ID_TYPE_DESCR_isAdded", // campo es un array ? Pocho
+        "NATIONAL_ID_TYPE_DESCR_isDeleted", // campo es un array ? Pocho
+
+        "NATIONAL_ID",
+        "NATIONAL_ID_priorValue",
+        "NATIONAL_ID_isAdded",
+        "NATIONAL_ID_isDeleted",
+
+        "VISA_ID_COUNTRY",
+        "VISA_ID_COUNTRY_priorValue",
+        "VISA_ID_COUNTRY_isAdded",
+        "VISA_ID_COUNTRY_isDeleted",
+
+        "VISA_ID_TYPE",
+        "VISA_ID_TYPE_priorValue",
+        "VISA_ID_TYPE_isAdded",
+        "VISA_ID_TYPE_isDeleted",
+
+        "VISA_ID",
+        "VISA_ID_priorValue",
+        "VISA_ID_isAdded",
+        "VISA_ID_isDeleted",
+
+        "PASSPORT_ID_COUNTRY",
+        "PASSPORT_ID_COUNTRY_priorValue",
+        "PASSPORT_ID_COUNTRY_isAdded",
+        "PASSPORT_ID_COUNTRY_isDeleted",
+
+        "PASSPORT_ID_TYPE",
+        "PASSPORT_ID_TYPE_priorValue",
+        "PASSPORT_ID_TYPE_isAdded",
+        "PASSPORT_ID_TYPE_isDeleted",
+
+        "PASSPORT_ID",
+        "PASSPORT_ID_priorValue",
+        "PASSPORT_ID_isAdded",
+        "PASSPORT_ID_isDeleted",
+
+        "BIRTHDATE",
+        "BIRTHDATE_priorValue",
+        "BIRTHDATE_isAdded",
+        "BIRTHDATE_isDeleted",
+
+        "DT_OF_DEATH",
+        "DT_OF_DEATH_priorValue",
+        "DT_OF_DEATH_isAdded",
+        "DT_OF_DEATH_isDeleted",
+
+        "BIRTHCOUNTRY",
+        "BIRTHCOUNTRY_priorValue",
+        "BIRTHCOUNTRY_isAdded",
+        "BIRTHCOUNTRY_isDeleted",
+
+        "BIRTHCITY_BIRTHPLACE",
+        "BIRTHCITY_BIRTHPLACE_priorValue",
+        "BIRTHCITY_BIRTHPLACE_isAdded",
+        "BIRTHCITY_BIRTHPLACE_isDeleted",
+
+        "BIRTHSTATE",
+        "BIRTHSTATE_priorValue",
+        "BIRTHSTATE_isAdded",
+        "BIRTHSTATE_isDeleted",
+
+        "Nationality",
+        "Nationality_priorValue",
+        "Nationality_isAdded",
+        "Nationality_isDeleted",
+
+        "PREF_LANG_LANG_CD",
+        "PREF_LANG_LANG_CD_priorValue",
+        "PREF_LANG_LANG_CD_isAdded",
+        "PREF_LANG_LANG_CD_isDeleted",
+
+        "GENDER",
+        "GENDER_priorValue",
+        "GENDER_isAdded",
+        "GENDER_isDeleted",
+
+        "MAR_STATUS",
+        "MAR_STATUS_priorValue",
+        "MAR_STATUS_isAdded",
+        "MAR_STATUS_isDeleted",
+
+        "MAR_STATUS_EFFDT",
+        "MAR_STATUS_EFFDT_priorValue",
+        "MAR_STATUS_EFFDT_isAdded",
+        "MAR_STATUS_EFFDT_isDeleted",
+
+        "DISABLE_DEGREE",
+        "DISABLE_DEGREE_priorValue",
+        "DISABLE_DEGREE_isAdded",
+        "DISABLE_DEGREE_isDeleted",
+
+        "DISABLE_DEGREE_DESCR",
+        "DISABLE_DEGREE_DESCR_priorValue",
+        "DISABLE_DEGREE_DESCR_isAdded",
+        "DISABLE_DEGREE_DESCR_isDeleted",
+
+        "DISABLE_CERT_AUTHORITY",
+        "DISABLE_CERT_AUTHORITY_priorValue",
+        "DISABLE_CERT_AUTHORITY_isAdded",
+        "DISABLE_CERT_AUTHORITY_isDeleted",
+
+        "DISABLE_EFFDT", // comprobar cuando tengamos datos reales
+        "DISABLE_EFFDT_priorValue", // comprobar cuando tengamos datos reales
+        "DISABLE_EFFDT_isAdded", // comprobar cuando tengamos datos reales
+        "DISABLE_EFFDT_isDeleted", // comprobar cuando tengamos datos reales
+
+        "DISABLE_END_EFFDT",
+        "DISABLE_END_EFFDT_priorValue",
+        "DISABLE_END_EFFDT_isAdded",
+        "DISABLE_END_EFFDT_isDeleted",
+
+        "DISABLE_KNOW_EFFDT",
+        "DISABLE_KNOW_EFFDT_priorValue",
+        "DISABLE_KNOW_EFFDT_isAdded",
+        "DISABLE_KNOW_EFFDT_isDeleted",
+
+        "CONTRACT_TYPE",
+        "CONTRACT_TYPE_priorValue",
+        "CONTRACT_TYPE_isAdded",
+        "CONTRACT_TYPE_isDeleted",
+
+        "CONTRACT_STATUS",
+        "CONTRACT_STATUS_priorValue",
+        "CONTRACT_STATUS_isAdded",
+        "CONTRACT_STATUS_isDeleted",
+
+
+        "CONTRACT_START_DT",
+        "CONTRACT_START_DT_priorValue",
+        "CONTRACT_START_DT_isAdded",
+        "CONTRACT_START_DT_isDeleted",
+
+        "CONTRACT_END_DT",
+        "CONTRACT_END_DT_priorValue",
+        "CONTRACT_END_DT_isAdded",
+        "CONTRACT_END_DT_isDeleted",
+
+        "TYME_TYPE",
+        "TYME_TYPE_priorValue",
+        "TYME_TYPE_isAdded",
+        "TYME_TYPE_isDeleted",
+
+        "COMPANY_EFFDT",
+        "COMPANY_EFFDT_priorValue",
+        "COMPANY_EFFDT_isAdded",
+        "COMPANY_EFFDT_isDeleted",
+
+        "HIRE_DT",
+        "HIRE_DT_priorValue",
+        "HIRE_DT_isAdded",
+        "HIRE_DT_isDeleted",
+
+        "HIRE_REASON",
+        "HIRE_REASON_priorValue",
+        "HIRE_REASON_isAdded",
+        "HIRE_REASON_isDeleted",
+
+        "CMPNY_SENIORITY_DT",
+        "CMPNY_SENIORITY_DT_priorValue",
+        "CMPNY_SENIORITY_DT_isAdded",
+        "CMPNY_SENIORITY_DT_isDeleted",
+
+        "ORIGINAL_HIRE_DT",
+        "ORIGINAL_HIRE_DT_priorValue",
+        "ORIGINAL_HIRE_DT_isAdded",
+        "ORIGINAL_HIRE_DT_isDeleted",
+
+        "CONTINUOUS_SERV_DT",
+        "CONTINUOUS_SERV_DT_priorValue",
+        "CONTINUOUS_SERV_DT_isAdded",
+        "CONTINUOUS_SERV_DT_isDeleted",
+
+        "TERMINATION_DT",
+        "TERMINATION_DT_priorValue",
+        "TERMINATION_DT_isAdded",
+        "TERMINATION_DT_isDeleted",
+
+        "TERMINATION_REASON",
+        "TERMINATION_REASON_priorValue",
+        "TERMINATION_REASON_isAdded",
+        "TERMINATION_REASON_isDeleted",
+
+        "TERMINATION_REASON_LOCAL",
+        "TERMINATION_REASON_LOCAL_priorValue",
+        "TERMINATION_REASON_LOCAL_isAdded",
+        "TERMINATION_REASON_LOCAL_isDeleted",
+
+        "RETIREMENT_DT",
+        "RETIREMENT_DT_priorValue",
+        "RETIREMENT_DT_isAdded",
+        "RETIREMENT_DT_isDeleted",
+
+        "MANAGEMENT_LEVEL",
+        "MANAGEMENT_LEVEL_priorValue",
+        "MANAGEMENT_LEVEL_isAdded",
+        "MANAGEMENT_LEVEL_isDeleted",
+
+        "JOBCODE", // WECI432 (code&&descr??)
+        "JOBCODE_priorValue", // WECI432 (code&&descr??)
+        "JOBCODE_isAdded", // WECI432 (code&&descr??)
+        "JOBCODE_isDeleted", // WECI432 (code&&descr??)
+
+        "JOBCODE_DESCR", // WECI432 (code&&descr??)
+        "JOBCODE_DESCR_priorValue", // WECI432 (code&&descr??)
+        "JOBCODE_DESCR_isAdded", // WECI432 (code&&descr??)
+        "JOBCODE_DESCR_isDeleted", // WECI432 (code&&descr??)
+
+        "POSITION_NBR",
+        "POSITION_NBR_priorValue",
+        "POSITION_NBR_isAdded",
+        "POSITION_NBR_isDeleted",
+
+        "POSITION_NBR_DESCR",
+        "POSITION_NBR_DESCR_priorValue",
+        "POSITION_NBR_DESCR_isAdded",
+        "POSITION_NBR_DESCR_isDeleted",
+
+        "MANAGER_ID",
+        "MANAGER_ID_priorValue",
+        "MANAGER_ID_isAdded",
+        "MANAGER_ID_isDeleted",
+
+        "SUPERVISOR_EFFDT", // null ID Supervisor ?
+        "SUPERVISOR_EFFDT_priorValue", // null ID Supervisor ?
+        "SUPERVISOR_EFFDT_isAdded", // null ID Supervisor ?
+        "SUPERVISOR_EFFDT_isDeleted", // null ID Supervisor ?
+
+        "SUPERVISORY", // null Name Supervisor?
+        "SUPERVISORY_priorValue", // null Name Supervisor?
+        "SUPERVISORY_isAdded", // null Name Supervisor?
+        "SUPERVISORY_isDeleted", // null Name Supervisor?
+
+        "COMPENSATION_GRADE",
+        "COMPENSATION_GRADE_priorValue",
+        "COMPENSATION_GRADE_isAdded",
+        "COMPENSATION_GRADE_isDeleted",
+
+        "JOB_CLASSIFICATION", // errata
+        "JOB_CLASSIFICATION_priorValue", // errata
+        "JOB_CLASSIFICATION_isAdded", // errata
+        "JOB_CLASSIFICATION_isDeleted", // errata
+
+        "COLLECTIVE_AGREEMENT",
+        "COLLECTIVE_AGREEMENT_priorValue",
+        "COLLECTIVE_AGREEMENT_isAdded",
+        "COLLECTIVE_AGREEMENT_isDeleted",
+
+        //"COLLECTIVE_AGREEMENT_FACTOR",
+        //"COLLECTIVE_AGREEMENT_FACTOR_priorValue",
+        //"COLLECTIVE_AGREEMENT_FACTOR_isAdded",
+        //"COLLECTIVE_AGREEMENT_FACTOR_isDeleted",
+
+        "COLLECTIVE_AGREEMENT_DT",
+        "COLLECTIVE_AGREEMENT_DT_priorValue",
+        "COLLECTIVE_AGREEMENT_DT_isAdded",
+        "COLLECTIVE_AGREEMENT_DT_isDeleted",
+
+        "TOTAL_BASE_PAY", // seguramente haya que pasarlo a array ( futuro )
+        "TOTAL_BASE_PAY_priorValue", // seguramente haya que pasarlo a array ( futuro )
+        "TOTAL_BASE_PAY_isAdded", // seguramente haya que pasarlo a array ( futuro )
+        "TOTAL_BASE_PAY_isDeleted", // seguramente haya que pasarlo a array ( futuro )
+
+        "TOTAL_BASE_PAY_CURRENCY", // seguramente haya que pasarlo a array ( futuro )
+        "TOTAL_BASE_PAY_CURRENCY_priorValue", // seguramente haya que pasarlo a array ( futuro )
+        "TOTAL_BASE_PAY_CURRENCY_isAdded", // seguramente haya que pasarlo a array ( futuro )
+        "TOTAL_BASE_PAY_CURRENCY_isDeleted", // seguramente haya que pasarlo a array ( futuro )
+
+        "BANK_ACC",
+        "BANK_ACC_priorValue",
+        "BANK_ACC_isAdded",
+        "BANK_ACC_isDeleted",
+
+        "BANK_IBAN",
+        "BANK_IBAN_priorValue",
+        "BANK_IBAN_isAdded",
+        "BANK_IBAN_isDeleted",
+
+        "LOCATION",
+        "LOCATION_priorValue",
+        "LOCATION_isAdded",
+        "LOCATION_isDeleted",
+
+        "LOCATION_NAME",
+        "LOCATION_NAME_priorValue",
+        "LOCATION_NAME_isAdded",
+        "LOCATION_NAME_isDeleted"
+
+      )
       .na.fill(" ").distinct()
       .show(100)
 
