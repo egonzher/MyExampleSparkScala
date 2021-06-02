@@ -3,7 +3,6 @@ package com.sparkbyexamples.spark.rrhh
 import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.functions._
 import org.apache.spark.sql.types.{ArrayType, StringType, StructField, StructType}
-import org.apache.spark.sql.expressions.Window
 
 
 object etl_datos_weci_mapeado {
@@ -36,993 +35,673 @@ object etl_datos_weci_mapeado {
     //val dataDatePart = "2021-05-20-17-19-38"
     //val dataDatePart = "2021-05-21-15-20-06"
     //val dataDatePart = "2021-05-25-05-16-06"
-    //val dataDatePart = "2021-05-25-11-22-06"
-    val dataDatePart = "2021-05-26-15-33-06"
+
+    //Solo funciona con estos después del joins
+    val dataDatePart = "2021-05-25-11-22-06"
+    //val dataDatePart = "2021-05-26-15-33-06"
 
 
     val rutaCvDatalakeWorker = s"src/main/resources/rrhh/example_weci_consolid_wd/data_date_part=$dataDatePart/*.xml"
     val rutaWeciAllBetaXml = s"src/main/resources/rrhh/example_weci_consolid_wd/data_date_part=Beta/*.xml"
     val rutaWeciAllPayRollXml = s"src/main/resources/rrhh/example_weci_consolid_wd/data_date_part=EMPLOYEE_DELTA_INTEGRATION/*.xml"
 
-    val schema = StructType(
+    val schema2 = StructType(
       Array(
         StructField("Worker", ArrayType(StructType(Array(
           StructField("Worker_Summary", StructType(Seq(
             StructField("WID", StructType(Seq(
               StructField("_VALUE", StringType, true),
+              StructField("_priorValue", StringType, true),
+              StructField("_isAdded", StringType, true),
+              StructField("_IsDeleted", StringType, true)
             ))),
             StructField("Employee_ID", StructType(Seq(
               StructField("_VALUE", StringType, true),
+              StructField("_priorValue", StringType, true),
+              StructField("_isAdded", StringType, true),
+              StructField("_IsDeleted", StringType, true)
             )))
           ))),
           StructField("Employees", StructType(Seq(
+            StructField("Weci", StructType(Seq(
+              StructField("Employee_Type", StructType(Seq(
+                StructField("Id", StringType, true),
+                StructField("_Descriptor", StringType, true)
+              ))),
+              StructField("Contingent_Worker_Type", StructType(Seq(
+                StructField("Id", StringType, true),
+                StructField("_Descriptor", StringType, true)
+              ))),
+              StructField("Contract_Type", StructType(Seq(
+                StructField("Id", StringType, true),
+                StructField("_Descriptor", StringType, true)
+              ))),
+              StructField("Job_Family_Group", StructType(Seq(
+                StructField("Id", StringType, true),
+                StructField("_Descriptor", StringType, true)
+              ))),
+              StructField("Compensation_Grade_Profile", StructType(Seq(
+                StructField("Id", StringType, true),
+                StructField("_Descriptor", StringType, true)
+              )))
+            ))),
+            StructField("Entry_Moment", StructType(Seq(
+              StructField("_VALUE", StringType, true)
+            ))),
+            StructField("Derived_Event_Code", StructType(Seq(
+              StructField("_VALUE", StringType, true)
+            ))),
             StructField("Person_Communication", StructType(Seq(
               StructField("Address", ArrayType(StructType(Array(
                 StructField("Address_Line_1", StructType(Seq(
                   StructField("_VALUE", StringType, true),
+                  StructField("_priorValue", StringType, true),
+                  StructField("_isAdded", StringType, true),
+                  StructField("_IsDeleted", StringType, true)
                 ))),
                 StructField("Address_Line_3", StructType(Seq(
                   StructField("_VALUE", StringType, true),
+                  StructField("_priorValue", StringType, true),
+                  StructField("_isAdded", StringType, true),
+                  StructField("_IsDeleted", StringType, true)
                 ))),
                 StructField("Address_Line_5", StructType(Seq(
                   StructField("_VALUE", StringType, true),
+                  StructField("_priorValue", StringType, true),
+                  StructField("_isAdded", StringType, true),
+                  StructField("_IsDeleted", StringType, true)
                 ))),
                 StructField("Address_Line_8", StructType(Seq(
                   StructField("_VALUE", StringType, true),
+                  StructField("_priorValue", StringType, true),
+                  StructField("_isAdded", StringType, true),
+                  StructField("_IsDeleted", StringType, true)
                 ))),
                 StructField("Address_Line_9", StructType(Seq(
                   StructField("_VALUE", StringType, true),
+                  StructField("_priorValue", StringType, true),
+                  StructField("_isAdded", StringType, true),
+                  StructField("_IsDeleted", StringType, true)
                 ))),
                 StructField("City", StructType(Seq(
                   StructField("_VALUE", StringType, true),
+                  StructField("_priorValue", StringType, true),
+                  StructField("_isAdded", StringType, true),
+                  StructField("_IsDeleted", StringType, true)
                 ))),
                 StructField("Postal_Code", StructType(Seq(
                   StructField("_VALUE", StringType, true),
+                  StructField("_priorValue", StringType, true),
+                  StructField("_isAdded", StringType, true),
+                  StructField("_IsDeleted", StringType, true)
                 ))),
                 StructField("Country", StructType(Seq(
                   StructField("_VALUE", StringType, true),
+                  StructField("_priorValue", StringType, true),
+                  StructField("_isAdded", StringType, true),
+                  StructField("_IsDeleted", StringType, true)
                 ))),
                 StructField("State_Province", StructType(Seq(
                   StructField("_VALUE", StringType, true),
+                  StructField("_priorValue", StringType, true),
+                  StructField("_isAdded", StringType, true),
+                  StructField("_IsDeleted", StringType, true)
                 ))),
                 StructField("Usage", StructType(Seq(
                   StructField("Usage_Behavior_ID", StructType(Seq(
                     StructField("_VALUE", StringType, true),
-                  ))),
-                ))),
+                    StructField("_priorValue", StringType, true),
+                    StructField("_isAdded", StringType, true),
+                    StructField("_IsDeleted", StringType, true)
+                  )))
+                )))
               )))),
               StructField("Phone", ArrayType(StructType(Array(
                 StructField("Usage_Type", StructType(Seq(
                   StructField("_VALUE", StringType, true),
+                  StructField("_priorValue", StringType, true),
+                  StructField("_isAdded", StringType, true),
+                  StructField("_IsDeleted", StringType, true)
                 ))),
                 StructField("Phone_Device_Type", StructType(Seq(
                   StructField("_VALUE", StringType, true),
+                  StructField("_priorValue", StringType, true),
+                  StructField("_isAdded", StringType, true),
+                  StructField("_IsDeleted", StringType, true)
                 ))),
                 StructField("International_Phone_Code", StructType(Seq(
                   StructField("_VALUE", StringType, true),
+                  StructField("_priorValue", StringType, true),
+                  StructField("_isAdded", StringType, true),
+                  StructField("_IsDeleted", StringType, true)
                 ))),
                 StructField("Phone_Number", StructType(Seq(
                   StructField("_VALUE", StringType, true),
-                ))),
+                  StructField("_priorValue", StringType, true),
+                  StructField("_isAdded", StringType, true),
+                  StructField("_IsDeleted", StringType, true)
+                )))
               )))),
               StructField("Email", ArrayType(StructType(Array(
                 StructField("Usage_Type", StructType(Seq(
                   StructField("_VALUE", StringType, true),
+                  StructField("_priorValue", StringType, true),
+                  StructField("_isAdded", StringType, true),
+                  StructField("_IsDeleted", StringType, true)
                 ))),
                 StructField("Email_Address", StructType(Seq(
                   StructField("_VALUE", StringType, true),
-                ))),
-              )))),
+                  StructField("_priorValue", StringType, true),
+                  StructField("_isAdded", StringType, true),
+                  StructField("_IsDeleted", StringType, true)
+                )))
+              ))))
             ))),
             StructField("Employee_Contract", StructType(Seq(
               StructField("Contract_Type", StructType(Seq(
                 StructField("_VALUE", StringType, true),
+                StructField("_priorValue", StringType, true),
+                StructField("_isAdded", StringType, true),
+                StructField("_IsDeleted", StringType, true)
               ))),
               StructField("Contract_Status", StructType(Seq(
                 StructField("_VALUE", StringType, true),
+                StructField("_priorValue", StringType, true),
+                StructField("_isAdded", StringType, true),
+                StructField("_IsDeleted", StringType, true)
               ))),
               StructField("Start_Date", StructType(Seq(
                 StructField("_VALUE", StringType, true),
+                StructField("_priorValue", StringType, true),
+                StructField("_isAdded", StringType, true),
+                StructField("_IsDeleted", StringType, true)
               ))),
               StructField("End_Date", StructType(Seq(
                 StructField("_VALUE", StringType, true),
-              ))),
+                StructField("_priorValue", StringType, true),
+                StructField("_isAdded", StringType, true),
+                StructField("_IsDeleted", StringType, true)
+              )))
             ))),
             StructField("Payment_Election", StructType(Seq(
               StructField("Bank_Account_Name", StructType(Seq(
                 StructField("_VALUE", StringType, true),
+                StructField("_priorValue", StringType, true),
+                StructField("_isAdded", StringType, true),
+                StructField("_IsDeleted", StringType, true)
               ))),
               StructField("IBAN", StructType(Seq(
                 StructField("_VALUE", StringType, true),
-              ))),
+                StructField("_priorValue", StringType, true),
+                StructField("_isAdded", StringType, true),
+                StructField("_IsDeleted", StringType, true)
+              )))
             ))),
             StructField("Compensation", StructType(Seq(
               StructField("Compensation_Grade", StructType(Seq(
                 StructField("_VALUE", StringType, true),
+                StructField("_priorValue", StringType, true),
+                StructField("_isAdded", StringType, true),
+                StructField("_IsDeleted", StringType, true)
               ))),
               StructField("Compensation_Summary_in_Annualized_Frequency", StructType(Seq(
                 StructField("Total_Base_Pay", StructType(Seq(
                   StructField("_VALUE", StringType, true),
+                  StructField("_priorValue", StringType, true),
+                  StructField("_isAdded", StringType, true),
+                  StructField("_IsDeleted", StringType, true)
                 ))),
                 StructField("Currency", StructType(Seq(
                   StructField("_VALUE", StringType, true),
+                  StructField("_priorValue", StringType, true),
+                  StructField("_isAdded", StringType, true),
+                  StructField("_IsDeleted", StringType, true)
                 ))),
                 StructField("Frecuency", StructType(Seq(
                   StructField("_VALUE", StringType, true),
-                ))),
-              ))),
+                  StructField("_priorValue", StringType, true),
+                  StructField("_isAdded", StringType, true),
+                  StructField("_IsDeleted", StringType, true)
+                )))
+              )))
             ))),
             StructField("Person_Identification", StructType(Seq(
               StructField("Visa_Identifier", StructType(Seq(
                 StructField("Country", StructType(Seq(
                   StructField("_VALUE", StringType, true),
+                  StructField("_priorValue", StringType, true),
+                  StructField("_isAdded", StringType, true),
+                  StructField("_IsDeleted", StringType, true)
                 ))),
                 StructField("Visa_ID_Type", StructType(Seq(
                   StructField("_VALUE", StringType, true),
+                  StructField("_priorValue", StringType, true),
+                  StructField("_isAdded", StringType, true),
+                  StructField("_IsDeleted", StringType, true)
                 ))),
                 StructField("Visa_ID", StructType(Seq(
                   StructField("_VALUE", StringType, true),
-                ))),
+                  StructField("_priorValue", StringType, true),
+                  StructField("_isAdded", StringType, true),
+                  StructField("_IsDeleted", StringType, true)
+                )))
               ))),
               StructField("Passport_Identifier", StructType(Seq(
                 StructField("Country", StructType(Seq(
                   StructField("_VALUE", StringType, true),
+                  StructField("_priorValue", StringType, true),
+                  StructField("_isAdded", StringType, true),
+                  StructField("_IsDeleted", StringType, true)
                 ))),
                 StructField("Passport_ID_Type", StructType(Seq(
                   StructField("_VALUE", StringType, true),
+                  StructField("_priorValue", StringType, true),
+                  StructField("_isAdded", StringType, true),
+                  StructField("_IsDeleted", StringType, true)
                 ))),
                 StructField("Passport_ID", StructType(Seq(
                   StructField("_VALUE", StringType, true),
-                ))),
+                  StructField("_priorValue", StringType, true),
+                  StructField("_isAdded", StringType, true),
+                  StructField("_IsDeleted", StringType, true)
+                )))
               ))),
               StructField("National_Identifier", ArrayType(StructType(Array(
                 StructField("Country", StructType(Seq(
                   StructField("_VALUE", StringType, true),
+                  StructField("_priorValue", StringType, true),
+                  StructField("_isAdded", StringType, true),
+                  StructField("_IsDeleted", StringType, true)
                 ))),
                 StructField("National_ID_Type", StructType(Seq(
                   StructField("_VALUE", StringType, true),
+                  StructField("_priorValue", StringType, true),
+                  StructField("_isAdded", StringType, true),
+                  StructField("_IsDeleted", StringType, true)
                 ))),
                 StructField("National_Identifier", StructType(Seq(
                   StructField("_VALUE", StringType, true),
+                  StructField("_priorValue", StringType, true),
+                  StructField("_isAdded", StringType, true),
+                  StructField("_IsDeleted", StringType, true)
                 ))),
                 StructField("National_ID", StructType(Seq(
                   StructField("_VALUE", StringType, true),
+                  StructField("_priorValue", StringType, true),
+                  StructField("_isAdded", StringType, true),
+                  StructField("_IsDeleted", StringType, true)
                 ))),
                 StructField("First_Name", StructType(Seq(
                   StructField("_VALUE", StringType, true),
-                ))),
+                  StructField("_priorValue", StringType, true),
+                  StructField("_isAdded", StringType, true),
+                  StructField("_IsDeleted", StringType, true)
+                )))
               )))),
               StructField("Other_Identifier", ArrayType(StructType(Array(
                 StructField("Custom_ID", StructType(Seq(
                   StructField("_VALUE", StringType, true),
+                  StructField("_priorValue", StringType, true),
+                  StructField("_isAdded", StringType, true),
+                  StructField("_IsDeleted", StringType, true)
                 ))),
                 StructField("Custom_ID_Type", StructType(Seq(
                   StructField("_VALUE", StringType, true),
-                ))),
-              )))),
+                  StructField("_priorValue", StringType, true),
+                  StructField("_isAdded", StringType, true),
+                  StructField("_IsDeleted", StringType, true)
+                )))
+              ))))
             ))),
-            StructField("Position", StructType(Seq(
+            StructField("Position", ArrayType(StructType(Array(
+              StructField("Default_Weekly_Hours", StructType(Seq(
+                StructField("_VALUE", StringType, true)
+              ))),
+              StructField("Business_Site", StructType(Seq(
+                StructField("Location_ID", StructType(Seq(
+                  StructField("_VALUE", StringType, true),
+                  StructField("_priorValue", StringType, true),
+                  StructField("_isAdded", StringType, true),
+                  StructField("_IsDeleted", StringType, true)
+                ))),
+                StructField("Location_Name", StructType(Seq(
+                  StructField("_VALUE", StringType, true),
+                  StructField("_priorValue", StringType, true),
+                  StructField("_isAdded", StringType, true),
+                  StructField("_IsDeleted", StringType, true)
+                )))
+              ))),
               StructField("Management_Level", StructType(Seq(
                 StructField("_VALUE", StringType, true),
+                StructField("_priorValue", StringType, true),
+                StructField("_isAdded", StringType, true),
+                StructField("_IsDeleted", StringType, true)
               ))),
               StructField("Job_Profile", StructType(Seq(
                 StructField("_VALUE", StringType, true),
+                StructField("_priorValue", StringType, true),
+                StructField("_isAdded", StringType, true),
+                StructField("_IsDeleted", StringType, true)
               ))),
               StructField("Position_ID", StructType(Seq(
                 StructField("_VALUE", StringType, true),
+                StructField("_priorValue", StringType, true),
+                StructField("_isAdded", StringType, true),
+                StructField("_IsDeleted", StringType, true)
               ))),
               StructField("Business_Title", StructType(Seq(
                 StructField("_VALUE", StringType, true),
+                StructField("_priorValue", StringType, true),
+                StructField("_isAdded", StringType, true),
+                StructField("_IsDeleted", StringType, true)
               ))),
               StructField("Probation_Start_Date", StructType(Seq(
                 StructField("_VALUE", StringType, true),
+                StructField("_priorValue", StringType, true),
+                StructField("_isAdded", StringType, true),
+                StructField("_IsDeleted", StringType, true)
               ))),
               StructField("Probation_End_Date", StructType(Seq(
                 StructField("_VALUE", StringType, true),
+                StructField("_priorValue", StringType, true),
+                StructField("_isAdded", StringType, true),
+                StructField("_IsDeleted", StringType, true)
               ))),
               StructField("Position_Time_Type", StructType(Seq(
                 StructField("_VALUE", StringType, true),
+                StructField("_priorValue", StringType, true),
+                StructField("_isAdded", StringType, true),
+                StructField("_IsDeleted", StringType, true)
               ))),
               StructField("Job_Family", ArrayType(StructType(Array(
                 StructField("ID", StructType(Seq(
                   StructField("_VALUE", StringType, true),
+                  StructField("_priorValue", StringType, true),
+                  StructField("_isAdded", StringType, true),
+                  StructField("_IsDeleted", StringType, true)
                 ))),
                 StructField("Name", StructType(Seq(
                   StructField("_VALUE", StringType, true),
-                ))),
+                  StructField("_priorValue", StringType, true),
+                  StructField("_isAdded", StringType, true),
+                  StructField("_IsDeleted", StringType, true)
+                )))
               )))),
               StructField("Job_Classification", StructType(Seq(
                 StructField("Job_Classiication", StructType(Seq(
                   StructField("_VALUE", StringType, true),
-                ))),
+                  StructField("_priorValue", StringType, true),
+                  StructField("_isAdded", StringType, true),
+                  StructField("_IsDeleted", StringType, true)
+                )))
               ))),
               StructField("Organization", StructType(Seq(
                 StructField("Organization_Type", StructType(Seq(
                   StructField("_VALUE", StringType, true),
+                  StructField("_priorValue", StringType, true),
+                  StructField("_isAdded", StringType, true),
+                  StructField("_IsDeleted", StringType, true)
                 ))),
                 StructField("Organization_Code", StructType(Seq(
                   StructField("_VALUE", StringType, true),
+                  StructField("_priorValue", StringType, true),
+                  StructField("_isAdded", StringType, true),
+                  StructField("_IsDeleted", StringType, true)
                 ))),
                 StructField("Organization_Name", StructType(Seq(
                   StructField("_VALUE", StringType, true),
-                ))),
+                  StructField("_priorValue", StringType, true),
+                  StructField("_isAdded", StringType, true),
+                  StructField("_IsDeleted", StringType, true)
+                )))
               ))),
               StructField("Supervisor", StructType(Seq(
                 StructField("ID", StructType(Seq(
                   StructField("_VALUE", StringType, true),
+                  StructField("_priorValue", StringType, true),
+                  StructField("_isAdded", StringType, true),
+                  StructField("_IsDeleted", StringType, true)
                 ))),
                 StructField("Name", StructType(Seq(
                   StructField("_VALUE", StringType, true),
-                ))),
-              ))),
-            ))),
+                  StructField("_priorValue", StringType, true),
+                  StructField("_isAdded", StringType, true),
+                  StructField("_IsDeleted", StringType, true)
+                )))
+              )))
+            )))),
             StructField("Personal", StructType(Seq(
               StructField("Workday_Account", StructType(Seq(
                 StructField("_VALUE", StringType, true),
+                StructField("_priorValue", StringType, true),
+                StructField("_isAdded", StringType, true),
+                StructField("_IsDeleted", StringType, true)
               ))),
               StructField("Date_of_Birth", StructType(Seq(
                 StructField("_VALUE", StringType, true),
+                StructField("_priorValue", StringType, true),
+                StructField("_isAdded", StringType, true),
+                StructField("_IsDeleted", StringType, true)
               ))),
               StructField("Date_of_Death", StructType(Seq(
                 StructField("_VALUE", StringType, true),
+                StructField("_priorValue", StringType, true),
+                StructField("_isAdded", StringType, true),
+                StructField("_IsDeleted", StringType, true)
               ))),
               StructField("Country_of_Birth", StructType(Seq(
                 StructField("_VALUE", StringType, true),
+                StructField("_priorValue", StringType, true),
+                StructField("_isAdded", StringType, true),
+                StructField("_IsDeleted", StringType, true)
               ))),
               StructField("City_of_Birth", StructType(Seq(
                 StructField("_VALUE", StringType, true),
+                StructField("_priorValue", StringType, true),
+                StructField("_isAdded", StringType, true),
+                StructField("_IsDeleted", StringType, true)
               ))),
               StructField("Region_of_Birth", StructType(Seq(
                 StructField("_VALUE", StringType, true),
+                StructField("_priorValue", StringType, true),
+                StructField("_isAdded", StringType, true),
+                StructField("_IsDeleted", StringType, true)
               ))),
               StructField("Nationality", StructType(Seq(
                 StructField("_VALUE", StringType, true),
+                StructField("_priorValue", StringType, true),
+                StructField("_isAdded", StringType, true),
+                StructField("_IsDeleted", StringType, true)
               ))),
               StructField("Preferred_Lenguage", StructType(Seq(
                 StructField("_VALUE", StringType, true),
+                StructField("_priorValue", StringType, true),
+                StructField("_isAdded", StringType, true),
+                StructField("_IsDeleted", StringType, true)
               ))),
               StructField("Gender", StructType(Seq(
                 StructField("_VALUE", StringType, true),
+                StructField("_priorValue", StringType, true),
+                StructField("_isAdded", StringType, true),
+                StructField("_IsDeleted", StringType, true)
               ))),
               StructField("Marital_Status", StructType(Seq(
                 StructField("_VALUE", StringType, true),
+                StructField("_priorValue", StringType, true),
+                StructField("_isAdded", StringType, true),
+                StructField("_IsDeleted", StringType, true)
               ))),
               StructField("Marital_Status_Date", StructType(Seq(
                 StructField("_VALUE", StringType, true),
+                StructField("_priorValue", StringType, true),
+                StructField("_isAdded", StringType, true),
+                StructField("_IsDeleted", StringType, true)
               ))),
               StructField("Name", StructType(Seq( // Name == legal_name en xml
                 StructField("First_Name", StructType(Seq(
                   StructField("_VALUE", StringType, true),
+                  StructField("_priorValue", StringType, true),
+                  StructField("_isAdded", StringType, true),
+                  StructField("_IsDeleted", StringType, true)
                 ))),
                 StructField("Middle_Name", StructType(Seq(
                   StructField("_VALUE", StringType, true),
+                  StructField("_priorValue", StringType, true),
+                  StructField("_isAdded", StringType, true),
+                  StructField("_IsDeleted", StringType, true)
                 ))),
                 StructField("Last_Name", StructType(Seq(
                   StructField("_VALUE", StringType, true),
+                  StructField("_priorValue", StringType, true),
+                  StructField("_isAdded", StringType, true),
+                  StructField("_IsDeleted", StringType, true)
                 ))),
                 StructField("Secondary_Last_Name", StructType(Seq(
                   StructField("_VALUE", StringType, true),
-                ))),
+                  StructField("_priorValue", StringType, true),
+                  StructField("_isAdded", StringType, true),
+                  StructField("_IsDeleted", StringType, true)
+                )))
               ))),
               StructField("Disability_Status", StructType(Seq(
                 StructField("Grade", StructType(Seq(
                   StructField("_VALUE", StringType, true),
+                  StructField("_priorValue", StringType, true),
+                  StructField("_isAdded", StringType, true),
+                  StructField("_IsDeleted", StringType, true)
                 ))),
                 StructField("Disability", StructType(Seq(
                   StructField("_VALUE", StringType, true),
+                  StructField("_priorValue", StringType, true),
+                  StructField("_isAdded", StringType, true),
+                  StructField("_IsDeleted", StringType, true)
                 ))),
                 StructField("Certification_Authority", StructType(Seq(
                   StructField("_VALUE", StringType, true),
+                  StructField("_priorValue", StringType, true),
+                  StructField("_isAdded", StringType, true),
+                  StructField("_IsDeleted", StringType, true)
                 ))),
                 StructField("Disability_Status_Date", StructType(Seq(
                   StructField("_VALUE", StringType, true),
+                  StructField("_priorValue", StringType, true),
+                  StructField("_isAdded", StringType, true),
+                  StructField("_IsDeleted", StringType, true)
                 ))),
                 StructField("End_Date", StructType(Seq(
                   StructField("_VALUE", StringType, true),
+                  StructField("_priorValue", StringType, true),
+                  StructField("_isAdded", StringType, true),
+                  StructField("_IsDeleted", StringType, true)
                 ))),
                 StructField("Date_Known", StructType(Seq(
                   StructField("_VALUE", StringType, true),
-                ))),
-              ))),
+                  StructField("_priorValue", StringType, true),
+                  StructField("_isAdded", StringType, true),
+                  StructField("_IsDeleted", StringType, true)
+                )))
+              )))
             ))),
             StructField("Worker_Status", StructType(Seq(
               StructField("Active", StructType(Seq(
                 StructField("_VALUE", StringType, true),
+                StructField("_priorValue", StringType, true),
+                StructField("_isAdded", StringType, true),
+                StructField("_IsDeleted", StringType, true)
               ))),
               StructField("Status", StructType(Seq(
                 StructField("_VALUE", StringType, true),
+                StructField("_priorValue", StringType, true),
+                StructField("_isAdded", StringType, true),
+                StructField("_IsDeleted", StringType, true)
               ))),
 
               StructField("Company_Service_Date", StructType(Seq(
                 StructField("_VALUE", StringType, true),
+                StructField("_priorValue", StringType, true),
+                StructField("_isAdded", StringType, true),
+                StructField("_IsDeleted", StringType, true)
               ))),
               StructField("Hire_Date", StructType(Seq(
                 StructField("_VALUE", StringType, true),
+                StructField("_priorValue", StringType, true),
+                StructField("_isAdded", StringType, true),
+                StructField("_IsDeleted", StringType, true)
               ))),
               StructField("Hire_Reason", StructType(Seq(
                 StructField("_VALUE", StringType, true),
+                StructField("_priorValue", StringType, true),
+                StructField("_isAdded", StringType, true),
+                StructField("_IsDeleted", StringType, true)
               ))),
               StructField("Seniority_Date", StructType(Seq(
                 StructField("_VALUE", StringType, true),
+                StructField("_priorValue", StringType, true),
+                StructField("_isAdded", StringType, true),
+                StructField("_IsDeleted", StringType, true)
               ))),
               StructField("Original_Hire_Date", StructType(Seq(
                 StructField("_VALUE", StringType, true),
+                StructField("_priorValue", StringType, true),
+                StructField("_isAdded", StringType, true),
+                StructField("_IsDeleted", StringType, true)
               ))),
               StructField("Continuous_Service_Date", StructType(Seq(
                 StructField("_VALUE", StringType, true),
+                StructField("_priorValue", StringType, true),
+                StructField("_isAdded", StringType, true),
+                StructField("_IsDeleted", StringType, true)
               ))),
               StructField("Termination_Date", StructType(Seq(
                 StructField("_VALUE", StringType, true),
+                StructField("_priorValue", StringType, true),
+                StructField("_isAdded", StringType, true),
+                StructField("_IsDeleted", StringType, true)
               ))),
               StructField("Primary_Termination_Reason", StructType(Seq(
                 StructField("_VALUE", StringType, true),
+                StructField("_priorValue", StringType, true),
+                StructField("_isAdded", StringType, true),
+                StructField("_IsDeleted", StringType, true)
               ))),
               StructField("Local_Termination_Reason", StructType(Seq(
                 StructField("_VALUE", StringType, true),
+                StructField("_priorValue", StringType, true),
+                StructField("_isAdded", StringType, true),
+                StructField("_IsDeleted", StringType, true)
               ))),
               StructField("Retirement_Date", StructType(Seq(
                 StructField("_VALUE", StringType, true),
-              ))),
+                StructField("_priorValue", StringType, true),
+                StructField("_isAdded", StringType, true),
+                StructField("_IsDeleted", StringType, true)
+              )))
             ))),
             StructField("Collective_Agreement", StructType(Seq(
               StructField("Collective_Agreement", StructType(Seq(
                 StructField("_VALUE", StringType, true),
+                StructField("_priorValue", StringType, true),
+                StructField("_isAdded", StringType, true),
+                StructField("_IsDeleted", StringType, true)
               ))),
               StructField("Collective_Agreement_Factor", StructType(Seq(
+                StructField("Factor", StringType, true),
+                StructField("Option", StringType, true),
                 StructField("_VALUE", StringType, true),
+                StructField("_priorValue", StringType, true),
+                StructField("_isAdded", StringType, true),
+                StructField("_IsDeleted", StringType, true)
               ))),
               StructField("Start_Date", StructType(Seq(
                 StructField("_VALUE", StringType, true),
-              ))),
-            ))),
-            StructField("Summary", StructType(Seq(
-              StructField("WID", StructType(Seq(
-                StructField("_VALUE", StringType, true),
-              ))),
+                StructField("_priorValue", StringType, true),
+                StructField("_isAdded", StringType, true),
+                StructField("_IsDeleted", StringType, true)
+              )))
             )))
           )))
         )))
         )))
-
-    val schema2 = StructType(
-      Array(
-        StructField("Worker", ArrayType(StructType(Array(
-          StructField("Worker_Summary",StructType(Seq(
-            StructField("WID",StructType(Seq(
-              StructField("_VALUE",StringType,true),
-              StructField("_priorValue",StringType,true),
-              StructField("_isAdded",StringType,true),
-              StructField("_IsDeleted",StringType,true),
-            ))),
-            StructField("Employee_ID",StructType(Seq(
-              StructField("_VALUE",StringType,true),
-              StructField("_priorValue",StringType,true),
-              StructField("_isAdded",StringType,true),
-              StructField("_IsDeleted",StringType,true),
-            ))),
-          ))),
-          StructField("Employees",StructType(Seq(
-            StructField("Person_Communication",StructType(Seq(
-              StructField("Address", ArrayType(StructType(Array(
-                StructField("Address_Line_1",StructType(Seq(
-                  StructField("_VALUE",StringType,true),
-                  StructField("_priorValue",StringType,true),
-                  StructField("_isAdded",StringType,true),
-                  StructField("_IsDeleted",StringType,true),
-                ))),
-                StructField("Address_Line_3",StructType(Seq(
-                  StructField("_VALUE",StringType,true),
-                  StructField("_priorValue",StringType,true),
-                  StructField("_isAdded",StringType,true),
-                  StructField("_IsDeleted",StringType,true),
-                ))),
-                StructField("Address_Line_5",StructType(Seq(
-                  StructField("_VALUE",StringType,true),
-                  StructField("_priorValue",StringType,true),
-                  StructField("_isAdded",StringType,true),
-                  StructField("_IsDeleted",StringType,true),
-                ))),
-                StructField("Address_Line_8",StructType(Seq(
-                  StructField("_VALUE",StringType,true),
-                  StructField("_priorValue",StringType,true),
-                  StructField("_isAdded",StringType,true),
-                  StructField("_IsDeleted",StringType,true),
-                ))),
-                StructField("Address_Line_9",StructType(Seq(
-                  StructField("_VALUE",StringType,true),
-                  StructField("_priorValue",StringType,true),
-                  StructField("_isAdded",StringType,true),
-                  StructField("_IsDeleted",StringType,true),
-                ))),
-                StructField("City",StructType(Seq(
-                  StructField("_VALUE",StringType,true),
-                  StructField("_priorValue",StringType,true),
-                  StructField("_isAdded",StringType,true),
-                  StructField("_IsDeleted",StringType,true),
-                ))),
-                StructField("Postal_Code",StructType(Seq(
-                  StructField("_VALUE",StringType,true),
-                  StructField("_priorValue",StringType,true),
-                  StructField("_isAdded",StringType,true),
-                  StructField("_IsDeleted",StringType,true),
-                ))),
-                StructField("Country",StructType(Seq(
-                  StructField("_VALUE",StringType,true),
-                  StructField("_priorValue",StringType,true),
-                  StructField("_isAdded",StringType,true),
-                  StructField("_IsDeleted",StringType,true),
-                ))),
-                StructField("State_Province",StructType(Seq(
-                  StructField("_VALUE",StringType,true),
-                  StructField("_priorValue",StringType,true),
-                  StructField("_isAdded",StringType,true),
-                  StructField("_IsDeleted",StringType,true),
-                ))),
-                StructField("Usage",StructType(Seq(
-                  StructField("Usage_Behavior_ID",StructType(Seq(
-                    StructField("_VALUE",StringType,true),
-                    StructField("_priorValue",StringType,true),
-                    StructField("_isAdded",StringType,true),
-                    StructField("_IsDeleted",StringType,true),
-                  ))),
-                ))),
-              )))),
-              StructField("Phone", ArrayType(StructType(Array(
-                StructField("Usage_Type",StructType(Seq(
-                  StructField("_VALUE",StringType,true),
-                  StructField("_priorValue",StringType,true),
-                  StructField("_isAdded",StringType,true),
-                  StructField("_IsDeleted",StringType,true),
-                ))),
-                StructField("Phone_Device_Type",StructType(Seq(
-                  StructField("_VALUE",StringType,true),
-                  StructField("_priorValue",StringType,true),
-                  StructField("_isAdded",StringType,true),
-                  StructField("_IsDeleted",StringType,true),
-                ))),
-                StructField("International_Phone_Code",StructType(Seq(
-                  StructField("_VALUE",StringType,true),
-                  StructField("_priorValue",StringType,true),
-                  StructField("_isAdded",StringType,true),
-                  StructField("_IsDeleted",StringType,true),
-                ))),
-                StructField("Phone_Number",StructType(Seq(
-                  StructField("_VALUE",StringType,true),
-                  StructField("_priorValue",StringType,true),
-                  StructField("_isAdded",StringType,true),
-                  StructField("_IsDeleted",StringType,true),
-                ))),
-              )))),
-              StructField("Email", ArrayType(StructType(Array(
-                StructField("Usage_Type",StructType(Seq(
-                  StructField("_VALUE",StringType,true),
-                  StructField("_priorValue",StringType,true),
-                  StructField("_isAdded",StringType,true),
-                  StructField("_IsDeleted",StringType,true),
-                ))),
-                StructField("Email_Address",StructType(Seq(
-                  StructField("_VALUE",StringType,true),
-                  StructField("_priorValue",StringType,true),
-                  StructField("_isAdded",StringType,true),
-                  StructField("_IsDeleted",StringType,true),
-                ))),
-              )))),
-            ))),
-            StructField("Employee_Contract",StructType(Seq(
-              StructField("Contract_Type",StructType(Seq(
-                StructField("_VALUE",StringType,true),
-                StructField("_priorValue",StringType,true),
-                StructField("_isAdded",StringType,true),
-                StructField("_IsDeleted",StringType,true),
-              ))),
-              StructField("Contract_Status",StructType(Seq(
-                StructField("_VALUE",StringType,true),
-                StructField("_priorValue",StringType,true),
-                StructField("_isAdded",StringType,true),
-                StructField("_IsDeleted",StringType,true),
-              ))),
-              StructField("Start_Date",StructType(Seq(
-                StructField("_VALUE",StringType,true),
-                StructField("_priorValue",StringType,true),
-                StructField("_isAdded",StringType,true),
-                StructField("_IsDeleted",StringType,true),
-              ))),
-              StructField("End_Date",StructType(Seq(
-                StructField("_VALUE",StringType,true),
-                StructField("_priorValue",StringType,true),
-                StructField("_isAdded",StringType,true),
-                StructField("_IsDeleted",StringType,true),
-              ))),
-            ))),
-            StructField("Payment_Election",StructType(Seq(
-              StructField("Bank_Account_Name",StructType(Seq(
-                StructField("_VALUE",StringType,true),
-                StructField("_priorValue",StringType,true),
-                StructField("_isAdded",StringType,true),
-                StructField("_IsDeleted",StringType,true),
-              ))),
-              StructField("IBAN",StructType(Seq(
-                StructField("_VALUE",StringType,true),
-                StructField("_priorValue",StringType,true),
-                StructField("_isAdded",StringType,true),
-                StructField("_IsDeleted",StringType,true),
-              ))),
-            ))),
-            StructField("Compensation",StructType(Seq(
-              StructField("Compensation_Grade",StructType(Seq(
-                StructField("_VALUE",StringType,true),
-                StructField("_priorValue",StringType,true),
-                StructField("_isAdded",StringType,true),
-                StructField("_IsDeleted",StringType,true),
-              ))),
-              StructField("Compensation_Summary_in_Annualized_Frequency",StructType(Seq(
-                StructField("Total_Base_Pay",StructType(Seq(
-                  StructField("_VALUE",StringType,true),
-                  StructField("_priorValue",StringType,true),
-                  StructField("_isAdded",StringType,true),
-                  StructField("_IsDeleted",StringType,true),
-                ))),
-                StructField("Currency",StructType(Seq(
-                  StructField("_VALUE",StringType,true),
-                  StructField("_priorValue",StringType,true),
-                  StructField("_isAdded",StringType,true),
-                  StructField("_IsDeleted",StringType,true),
-                ))),
-                StructField("Frecuency",StructType(Seq(
-                  StructField("_VALUE",StringType,true),
-                  StructField("_priorValue",StringType,true),
-                  StructField("_isAdded",StringType,true),
-                  StructField("_IsDeleted",StringType,true),
-                ))),
-              ))),
-            ))),
-            StructField("Person_Identification",StructType(Seq(
-              StructField("Visa_Identifier",StructType(Seq(
-                StructField("Country",StructType(Seq(
-                  StructField("_VALUE",StringType,true),
-                  StructField("_priorValue",StringType,true),
-                  StructField("_isAdded",StringType,true),
-                  StructField("_IsDeleted",StringType,true),
-                ))),
-                StructField("Visa_ID_Type",StructType(Seq(
-                  StructField("_VALUE",StringType,true),
-                  StructField("_priorValue",StringType,true),
-                  StructField("_isAdded",StringType,true),
-                  StructField("_IsDeleted",StringType,true),
-                ))),
-                StructField("Visa_ID",StructType(Seq(
-                  StructField("_VALUE",StringType,true),
-                  StructField("_priorValue",StringType,true),
-                  StructField("_isAdded",StringType,true),
-                  StructField("_IsDeleted",StringType,true),
-                ))),
-              ))),
-              StructField("Passport_Identifier",StructType(Seq(
-                StructField("Country",StructType(Seq(
-                  StructField("_VALUE",StringType,true),
-                  StructField("_priorValue",StringType,true),
-                  StructField("_isAdded",StringType,true),
-                  StructField("_IsDeleted",StringType,true),
-                ))),
-                StructField("Passport_ID_Type",StructType(Seq(
-                  StructField("_VALUE",StringType,true),
-                  StructField("_priorValue",StringType,true),
-                  StructField("_isAdded",StringType,true),
-                  StructField("_IsDeleted",StringType,true),
-                ))),
-                StructField("Passport_ID",StructType(Seq(
-                  StructField("_VALUE",StringType,true),
-                  StructField("_priorValue",StringType,true),
-                  StructField("_isAdded",StringType,true),
-                  StructField("_IsDeleted",StringType,true),
-                ))),
-              ))),
-              StructField("National_Identifier", ArrayType(StructType(Array(
-                StructField("Country",StructType(Seq(
-                  StructField("_VALUE",StringType,true),
-                  StructField("_priorValue",StringType,true),
-                  StructField("_isAdded",StringType,true),
-                  StructField("_IsDeleted",StringType,true),
-                ))),
-                StructField("National_ID_Type",StructType(Seq(
-                  StructField("_VALUE",StringType,true),
-                  StructField("_priorValue",StringType,true),
-                  StructField("_isAdded",StringType,true),
-                  StructField("_IsDeleted",StringType,true),
-                ))),
-                StructField("National_Identifier",StructType(Seq(
-                  StructField("_VALUE",StringType,true),
-                  StructField("_priorValue",StringType,true),
-                  StructField("_isAdded",StringType,true),
-                  StructField("_IsDeleted",StringType,true),
-                ))),
-                StructField("National_ID",StructType(Seq(
-                  StructField("_VALUE",StringType,true),
-                  StructField("_priorValue",StringType,true),
-                  StructField("_isAdded",StringType,true),
-                  StructField("_IsDeleted",StringType,true),
-                ))),
-                StructField("First_Name",StructType(Seq(
-                  StructField("_VALUE",StringType,true),
-                  StructField("_priorValue",StringType,true),
-                  StructField("_isAdded",StringType,true),
-                  StructField("_IsDeleted",StringType,true),
-                ))),
-              )))),
-              StructField("Other_Identifier", ArrayType(StructType(Array(
-                StructField("Custom_ID",StructType(Seq(
-                  StructField("_VALUE",StringType,true),
-                  StructField("_priorValue",StringType,true),
-                  StructField("_isAdded",StringType,true),
-                  StructField("_IsDeleted",StringType,true),
-                ))),
-                StructField("Custom_ID_Type",StructType(Seq(
-                  StructField("_VALUE",StringType,true),
-                  StructField("_priorValue",StringType,true),
-                  StructField("_isAdded",StringType,true),
-                  StructField("_IsDeleted",StringType,true),
-                ))),
-              )))),
-            ))),
-            StructField("Position", ArrayType(StructType(Array(
-              StructField("Business_Site",StructType(Seq(
-                StructField("Location_ID",StructType(Seq(
-                  StructField("_VALUE",StringType,true),
-                  StructField("_priorValue",StringType,true),
-                  StructField("_isAdded",StringType,true),
-                  StructField("_IsDeleted",StringType,true),
-                ))),
-                StructField("Location_Name",StructType(Seq(
-                  StructField("_VALUE",StringType,true),
-                  StructField("_priorValue",StringType,true),
-                  StructField("_isAdded",StringType,true),
-                  StructField("_IsDeleted",StringType,true),
-                ))),
-              ))),
-              StructField("Management_Level",StructType(Seq(
-                StructField("_VALUE",StringType,true),
-                StructField("_priorValue",StringType,true),
-                StructField("_isAdded",StringType,true),
-                StructField("_IsDeleted",StringType,true),
-              ))),
-              StructField("Job_Profile",StructType(Seq(
-                StructField("_VALUE",StringType,true),
-                StructField("_priorValue",StringType,true),
-                StructField("_isAdded",StringType,true),
-                StructField("_IsDeleted",StringType,true),
-              ))),
-              StructField("Position_ID",StructType(Seq(
-                StructField("_VALUE",StringType,true),
-                StructField("_priorValue",StringType,true),
-                StructField("_isAdded",StringType,true),
-                StructField("_IsDeleted",StringType,true),
-              ))),
-              StructField("Business_Title",StructType(Seq(
-                StructField("_VALUE",StringType,true),
-                StructField("_priorValue",StringType,true),
-                StructField("_isAdded",StringType,true),
-                StructField("_IsDeleted",StringType,true),
-              ))),
-              StructField("Probation_Start_Date",StructType(Seq(
-                StructField("_VALUE",StringType,true),
-                StructField("_priorValue",StringType,true),
-                StructField("_isAdded",StringType,true),
-                StructField("_IsDeleted",StringType,true),
-              ))),
-              StructField("Probation_End_Date",StructType(Seq(
-                StructField("_VALUE",StringType,true),
-                StructField("_priorValue",StringType,true),
-                StructField("_isAdded",StringType,true),
-                StructField("_IsDeleted",StringType,true),
-              ))),
-              StructField("Position_Time_Type",StructType(Seq(
-                StructField("_VALUE",StringType,true),
-                StructField("_priorValue",StringType,true),
-                StructField("_isAdded",StringType,true),
-                StructField("_IsDeleted",StringType,true),
-              ))),
-              StructField("Job_Family", ArrayType(StructType(Array(
-                StructField("ID",StructType(Seq(
-                  StructField("_VALUE",StringType,true),
-                  StructField("_priorValue",StringType,true),
-                  StructField("_isAdded",StringType,true),
-                  StructField("_IsDeleted",StringType,true),
-                ))),
-                StructField("Name",StructType(Seq(
-                  StructField("_VALUE",StringType,true),
-                  StructField("_priorValue",StringType,true),
-                  StructField("_isAdded",StringType,true),
-                  StructField("_IsDeleted",StringType,true),
-                ))),
-              )))),
-              StructField("Job_Classification",StructType(Seq(
-                StructField("Job_Classiication",StructType(Seq(
-                  StructField("_VALUE",StringType,true),
-                  StructField("_priorValue",StringType,true),
-                  StructField("_isAdded",StringType,true),
-                  StructField("_IsDeleted",StringType,true),
-                ))),
-              ))),
-              StructField("Organization",StructType(Seq(
-                StructField("Organization_Type",StructType(Seq(
-                  StructField("_VALUE",StringType,true),
-                  StructField("_priorValue",StringType,true),
-                  StructField("_isAdded",StringType,true),
-                  StructField("_IsDeleted",StringType,true),
-                ))),
-                StructField("Organization_Code",StructType(Seq(
-                  StructField("_VALUE",StringType,true),
-                  StructField("_priorValue",StringType,true),
-                  StructField("_isAdded",StringType,true),
-                  StructField("_IsDeleted",StringType,true),
-                ))),
-                StructField("Organization_Name",StructType(Seq(
-                  StructField("_VALUE",StringType,true),
-                  StructField("_priorValue",StringType,true),
-                  StructField("_isAdded",StringType,true),
-                  StructField("_IsDeleted",StringType,true),
-                ))),
-              ))),
-              StructField("Supervisor",StructType(Seq(
-                StructField("ID",StructType(Seq(
-                  StructField("_VALUE",StringType,true),
-                  StructField("_priorValue",StringType,true),
-                  StructField("_isAdded",StringType,true),
-                  StructField("_IsDeleted",StringType,true),
-                ))),
-                StructField("Name",StructType(Seq(
-                  StructField("_VALUE",StringType,true),
-                  StructField("_priorValue",StringType,true),
-                  StructField("_isAdded",StringType,true),
-                  StructField("_IsDeleted",StringType,true),
-                ))),
-              ))),
-            )))),
-            StructField("Personal",StructType(Seq(
-              StructField("Workday_Account",StructType(Seq(
-                StructField("_VALUE",StringType,true),
-                StructField("_priorValue",StringType,true),
-                StructField("_isAdded",StringType,true),
-                StructField("_IsDeleted",StringType,true),
-              ))),
-              StructField("Date_of_Birth",StructType(Seq(
-                StructField("_VALUE",StringType,true),
-                StructField("_priorValue",StringType,true),
-                StructField("_isAdded",StringType,true),
-                StructField("_IsDeleted",StringType,true),
-              ))),
-              StructField("Date_of_Death",StructType(Seq(
-                StructField("_VALUE",StringType,true),
-                StructField("_priorValue",StringType,true),
-                StructField("_isAdded",StringType,true),
-                StructField("_IsDeleted",StringType,true),
-              ))),
-              StructField("Country_of_Birth",StructType(Seq(
-                StructField("_VALUE",StringType,true),
-                StructField("_priorValue",StringType,true),
-                StructField("_isAdded",StringType,true),
-                StructField("_IsDeleted",StringType,true),
-              ))),
-              StructField("City_of_Birth",StructType(Seq(
-                StructField("_VALUE",StringType,true),
-                StructField("_priorValue",StringType,true),
-                StructField("_isAdded",StringType,true),
-                StructField("_IsDeleted",StringType,true),
-              ))),
-              StructField("Region_of_Birth",StructType(Seq(
-                StructField("_VALUE",StringType,true),
-                StructField("_priorValue",StringType,true),
-                StructField("_isAdded",StringType,true),
-                StructField("_IsDeleted",StringType,true),
-              ))),
-              StructField("Nationality",StructType(Seq(
-                StructField("_VALUE",StringType,true),
-                StructField("_priorValue",StringType,true),
-                StructField("_isAdded",StringType,true),
-                StructField("_IsDeleted",StringType,true),
-              ))),
-              StructField("Preferred_Lenguage",StructType(Seq(
-                StructField("_VALUE",StringType,true),
-                StructField("_priorValue",StringType,true),
-                StructField("_isAdded",StringType,true),
-                StructField("_IsDeleted",StringType,true),
-              ))),
-              StructField("Gender",StructType(Seq(
-                StructField("_VALUE",StringType,true),
-                StructField("_priorValue",StringType,true),
-                StructField("_isAdded",StringType,true),
-                StructField("_IsDeleted",StringType,true),
-              ))),
-              StructField("Marital_Status",StructType(Seq(
-                StructField("_VALUE",StringType,true),
-                StructField("_priorValue",StringType,true),
-                StructField("_isAdded",StringType,true),
-                StructField("_IsDeleted",StringType,true),
-              ))),
-              StructField("Marital_Status_Date",StructType(Seq(
-                StructField("_VALUE",StringType,true),
-                StructField("_priorValue",StringType,true),
-                StructField("_isAdded",StringType,true),
-                StructField("_IsDeleted",StringType,true),
-              ))),
-              StructField("Name",StructType(Seq(// Name == legal_name en xml
-                StructField("First_Name",StructType(Seq(
-                  StructField("_VALUE",StringType,true),
-                  StructField("_priorValue",StringType,true),
-                  StructField("_isAdded",StringType,true),
-                  StructField("_IsDeleted",StringType,true),
-                ))),
-                StructField("Middle_Name",StructType(Seq(
-                  StructField("_VALUE",StringType,true),
-                  StructField("_priorValue",StringType,true),
-                  StructField("_isAdded",StringType,true),
-                  StructField("_IsDeleted",StringType,true),
-                ))),
-                StructField("Last_Name",StructType(Seq(
-                  StructField("_VALUE",StringType,true),
-                  StructField("_priorValue",StringType,true),
-                  StructField("_isAdded",StringType,true),
-                  StructField("_IsDeleted",StringType,true),
-                ))),
-                StructField("Secondary_Last_Name",StructType(Seq(
-                  StructField("_VALUE",StringType,true),
-                  StructField("_priorValue",StringType,true),
-                  StructField("_isAdded",StringType,true),
-                  StructField("_IsDeleted",StringType,true),
-                ))),
-              ))),
-              StructField("Disability_Status",StructType(Seq(
-                StructField("Grade",StructType(Seq(
-                  StructField("_VALUE",StringType,true),
-                  StructField("_priorValue",StringType,true),
-                  StructField("_isAdded",StringType,true),
-                  StructField("_IsDeleted",StringType,true),
-                ))),
-                StructField("Disability",StructType(Seq(
-                  StructField("_VALUE",StringType,true),
-                  StructField("_priorValue",StringType,true),
-                  StructField("_isAdded",StringType,true),
-                  StructField("_IsDeleted",StringType,true),
-                ))),
-                StructField("Certification_Authority",StructType(Seq(
-                  StructField("_VALUE",StringType,true),
-                  StructField("_priorValue",StringType,true),
-                  StructField("_isAdded",StringType,true),
-                  StructField("_IsDeleted",StringType,true),
-                ))),
-                StructField("Disability_Status_Date",StructType(Seq(
-                  StructField("_VALUE",StringType,true),
-                  StructField("_priorValue",StringType,true),
-                  StructField("_isAdded",StringType,true),
-                  StructField("_IsDeleted",StringType,true),
-                ))),
-                StructField("End_Date",StructType(Seq(
-                  StructField("_VALUE",StringType,true),
-                  StructField("_priorValue",StringType,true),
-                  StructField("_isAdded",StringType,true),
-                  StructField("_IsDeleted",StringType,true),
-                ))),
-                StructField("Date_Known",StructType(Seq(
-                  StructField("_VALUE",StringType,true),
-                  StructField("_priorValue",StringType,true),
-                  StructField("_isAdded",StringType,true),
-                  StructField("_IsDeleted",StringType,true),
-                ))),
-              ))),
-            ))),
-            StructField("Worker_Status",StructType(Seq(
-              StructField("Active",StructType(Seq(
-                StructField("_VALUE",StringType,true),
-                StructField("_priorValue",StringType,true),
-                StructField("_isAdded",StringType,true),
-                StructField("_IsDeleted",StringType,true),
-              ))),
-              StructField("Status",StructType(Seq(
-                StructField("_VALUE",StringType,true),
-                StructField("_priorValue",StringType,true),
-                StructField("_isAdded",StringType,true),
-                StructField("_IsDeleted",StringType,true),
-              ))),
-
-              StructField("Company_Service_Date",StructType(Seq(
-                StructField("_VALUE",StringType,true),
-                StructField("_priorValue",StringType,true),
-                StructField("_isAdded",StringType,true),
-                StructField("_IsDeleted",StringType,true),
-              ))),
-              StructField("Hire_Date",StructType(Seq(
-                StructField("_VALUE",StringType,true),
-                StructField("_priorValue",StringType,true),
-                StructField("_isAdded",StringType,true),
-                StructField("_IsDeleted",StringType,true),
-              ))),
-              StructField("Hire_Reason",StructType(Seq(
-                StructField("_VALUE",StringType,true),
-                StructField("_priorValue",StringType,true),
-                StructField("_isAdded",StringType,true),
-                StructField("_IsDeleted",StringType,true),
-              ))),
-              StructField("Seniority_Date",StructType(Seq(
-                StructField("_VALUE",StringType,true),
-                StructField("_priorValue",StringType,true),
-                StructField("_isAdded",StringType,true),
-                StructField("_IsDeleted",StringType,true),
-              ))),
-              StructField("Original_Hire_Date",StructType(Seq(
-                StructField("_VALUE",StringType,true),
-                StructField("_priorValue",StringType,true),
-                StructField("_isAdded",StringType,true),
-                StructField("_IsDeleted",StringType,true),
-              ))),
-              StructField("Continuous_Service_Date",StructType(Seq(
-                StructField("_VALUE",StringType,true),
-                StructField("_priorValue",StringType,true),
-                StructField("_isAdded",StringType,true),
-                StructField("_IsDeleted",StringType,true),
-              ))),
-              StructField("Termination_Date",StructType(Seq(
-                StructField("_VALUE",StringType,true),
-                StructField("_priorValue",StringType,true),
-                StructField("_isAdded",StringType,true),
-                StructField("_IsDeleted",StringType,true),
-              ))),
-              StructField("Primary_Termination_Reason",StructType(Seq(
-                StructField("_VALUE",StringType,true),
-                StructField("_priorValue",StringType,true),
-                StructField("_isAdded",StringType,true),
-                StructField("_IsDeleted",StringType,true),
-              ))),
-              StructField("Local_Termination_Reason",StructType(Seq(
-                StructField("_VALUE",StringType,true),
-                StructField("_priorValue",StringType,true),
-                StructField("_isAdded",StringType,true),
-                StructField("_IsDeleted",StringType,true),
-              ))),
-              StructField("Retirement_Date",StructType(Seq(
-                StructField("_VALUE",StringType,true),
-                StructField("_priorValue",StringType,true),
-                StructField("_isAdded",StringType,true),
-                StructField("_IsDeleted",StringType,true),
-              ))),
-            ))),
-            StructField("Collective_Agreement",StructType(Seq(
-              StructField("Collective_Agreement",StructType(Seq(
-                StructField("_VALUE",StringType,true),
-                StructField("_priorValue",StringType,true),
-                StructField("_isAdded",StringType,true),
-                StructField("_IsDeleted",StringType,true),
-              ))),
-              StructField("Collective_Agreement_Factor",StructType(Seq(
-                StructField("_VALUE",StringType,true),
-                StructField("_priorValue",StringType,true),
-                StructField("_isAdded",StringType,true),
-                StructField("_IsDeleted",StringType,true),
-              ))),
-              StructField("Start_Date",StructType(Seq(
-                StructField("_VALUE",StringType,true),
-                StructField("_priorValue",StringType,true),
-                StructField("_isAdded",StringType,true),
-                StructField("_IsDeleted",StringType,true),
-              ))),
-            ))),
-          )))
-        )))
-        )))
-
-
-    var df_WeciReadXML = spark.read
-      .schema(schema)
-      .format("com.databricks.spark.xml")
-      .option("excludeAttribute", "false")
-      .option("inferSchema", "false")
-      .option("ignoreNamespace", "true")
-      .option("rowTag", "ns2:EMPLOYEE_DELTA_INTEGRATION")
-      .load(rutaWeciAllPayRollXml)
-
-
-    //println("Imprimiendo el df de df_WeciReadXML")
-    //df_WeciReadXML.printSchema()
-    //df_WeciReadXML.show()
 
     var df_WeciReadXML_FieldAll = spark.read
       .schema(schema2)
@@ -1031,8 +710,7 @@ object etl_datos_weci_mapeado {
       .option("inferSchema", "false")
       .option("ignoreNamespace", "true")
       .option("rowTag", "ns2:EMPLOYEE_DELTA_INTEGRATION")
-      .load(rutaWeciAllPayRollXml)
-
+      .load(rutaCvDatalakeWorker)
 
     //println("Imprimiendo el df de df_WeciReadXML_FieldAll")
     //df_WeciReadXML_FieldAll.printSchema()
@@ -1041,9 +719,9 @@ object etl_datos_weci_mapeado {
 
     //////////////////////////////////////////////////////////////////////////////
 
-    //En esta lógica tengo todos los campos weci del DFC con el esquema 1
+    //En esta lógica tengo todos los campos weci
 
-    var df_final = df_WeciReadXML
+    var df_final = df_WeciReadXML_FieldAll
       .withColumn("Worker", explode_outer(col("`Worker`")))
       .withColumn("Other_Identifier", explode_outer(col("`Worker`.`Employees`.`Person_Identification`.`Other_Identifier`")))
       .withColumn("National_Identifier", explode_outer(col("`Worker`.`Employees`.`Person_Identification`.`National_Identifier`")))
@@ -1244,7 +922,7 @@ object etl_datos_weci_mapeado {
         "'' as ADDITIONAL_JOB_CLASSIFICATION", // aditional field 3
         "`Worker`.`Employees`.`Collective_Agreement`.`Collective_Agreement`.`_VALUE` as COLLECTIVE_AGREEMENT",
         "'' as COLLECTIVE_AGREEMENT_DESCR", // null
-        //"`Worker`.`Employees`.`Collective_Agreement`.`Collective_Agreement_Factor`.`_VALUE` as COLLECTIVE_AGREEMENT_FACTOR",
+        "`Worker`.`Employees`.`Collective_Agreement`.`Collective_Agreement_Factor`.`Option` as COLLECTIVE_AGREEMENT_FACTOR",
         "`Worker`.`Employees`.`Collective_Agreement`.`Start_Date`.`_VALUE` as COLLECTIVE_AGREEMENT_DT",
         "'' as EMPL_CTG_DESCR", // null
         "'' as EMPL_CTG_EFFDT", // null
@@ -1355,7 +1033,7 @@ object etl_datos_weci_mapeado {
 
     //////////////////////////////////////////////////////////////////////////////
 
-    //En esta lógica tengo todos los campos weci del DFC con el esquema 2
+    //En esta lógica tengo todos los campos weci
 
     var df_final2 = df_WeciReadXML_FieldAll
       .withColumn("Worker", explode_outer(col("`Worker`")))
@@ -1363,6 +1041,7 @@ object etl_datos_weci_mapeado {
       .withColumn("National_Identifier", explode_outer(col("`Worker`.`Employees`.`Person_Identification`.`National_Identifier`")))
       .withColumn("Position", explode_outer(col("`Worker`.`Employees`.`Position`")))
       .withColumn("Job_Family", explode_outer(col("`Position`.`Job_Family`")))
+      .withColumn("HORAS_SEMANALES", explode_outer(col("`Worker`.`Employees`.`Position`.`Default_Weekly_Hours`.`_VALUE`")))
 
       // Estos 3 arrays de abajo son para las operaciones que tenemos que hacer luego
       //.withColumn("Address", explode_outer(col("`Person_Communication`.`Address`")))
@@ -1371,6 +1050,16 @@ object etl_datos_weci_mapeado {
       .selectExpr(
         //Los dos campos que no deben faltar
         s"'$dataDatePart' as data_date_part",
+        // Los nuevos campos que vayan saliendo los pongo aquí sin orden , luego se ordenaran en el dataframe final
+        "`Worker`.`Employees`.`Derived_Event_Code`.`_VALUE` as ACTION",
+        "`Worker`.`Employees`.`Entry_Moment`.`_VALUE` as ACTION_EFFDT",
+        "`Worker`.`Employees`.`Weci`.`Employee_Type`.`_Descriptor` as EMPLOYEE_TYPE",
+        "`Worker`.`Employees`.`Weci`.`Contingent_Worker_Type`.`_Descriptor` as CONTINGENT_WORKER_TYPE",
+        "`Worker`.`Employees`.`Weci`.`Contract_Type`.`_Descriptor` as CONTRACT_TYPE_LOCAL",
+        "`Worker`.`Employees`.`Weci`.`Job_Family_Group`.`_Descriptor` as JOB_FAMILY_GROUP",
+        "`Worker`.`Employees`.`Weci`.`Compensation_Grade_Profile`.`_Descriptor` as COMP_GRADE_PROFILE",
+        "`HORAS_SEMANALES` as HORAS_SEMANALES",
+
         "`Worker`.`Worker_Summary`.`Employee_ID`.`_VALUE` as ID_Empleado_Joins",
         "`Other_Identifier`.`Custom_ID_Type`.`_VALUE` as afterLogical", //Se utiliza para aplicar la lógica después
 
@@ -1687,10 +1376,10 @@ object etl_datos_weci_mapeado {
         "`Worker`.`Employees`.`Collective_Agreement`.`Collective_Agreement`.`_isAdded` as COLLECTIVE_AGREEMENT_isAdded",
         "`Worker`.`Employees`.`Collective_Agreement`.`Collective_Agreement`.`_isDeleted` as COLLECTIVE_AGREEMENT_isDeleted",
 
-        //"`Worker`.`Employees`.`Collective_Agreement`.`Collective_Agreement_Factor`.`_VALUE` as COLLECTIVE_AGREEMENT_FACTOR",
-        //"`Worker`.`Employees`.`Collective_Agreement`.`Collective_Agreement_Factor`.`_priorValue` as COLLECTIVE_AGREEMENT_FACTOR_priorValue",
-        //"`Worker`.`Employees`.`Collective_Agreement`.`Collective_Agreement_Factor`.`_isAdded` as COLLECTIVE_AGREEMENT_FACTOR_isAdded",
-        //"`Worker`.`Employees`.`Collective_Agreement`.`Collective_Agreement_Factor`.`_isDeleted` as COLLECTIVE_AGREEMENT_FACTOR_isDeleted",
+        "`Worker`.`Employees`.`Collective_Agreement`.`Collective_Agreement_Factor`.`Option` as COLLECTIVE_AGREEMENT_FACTOR",
+        "`Worker`.`Employees`.`Collective_Agreement`.`Collective_Agreement_Factor`.`_priorValue` as COLLECTIVE_AGREEMENT_FACTOR_priorValue",
+        "`Worker`.`Employees`.`Collective_Agreement`.`Collective_Agreement_Factor`.`_isAdded` as COLLECTIVE_AGREEMENT_FACTOR_isAdded",
+        "`Worker`.`Employees`.`Collective_Agreement`.`Collective_Agreement_Factor`.`_isDeleted` as COLLECTIVE_AGREEMENT_FACTOR_isDeleted",
 
         "`Worker`.`Employees`.`Collective_Agreement`.`Start_Date`.`_VALUE` as COLLECTIVE_AGREEMENT_DT",
         "`Worker`.`Employees`.`Collective_Agreement`.`Start_Date`.`_priorValue` as COLLECTIVE_AGREEMENT_DT_priorValue",
@@ -1725,42 +1414,54 @@ object etl_datos_weci_mapeado {
         "`Position`.`Business_Site`.`Location_Name`.`_VALUE` as LOCATION_NAME",
         "`Position`.`Business_Site`.`Location_Name`.`_priorValue` as LOCATION_NAME_priorValue",
         "`Position`.`Business_Site`.`Location_Name`.`_isAdded` as LOCATION_NAME_isAdded",
-        "`Position`.`Business_Site`.`Location_Name`.`_isDeleted` as LOCATION_NAME_isDeleted",
+        "`Position`.`Business_Site`.`Location_Name`.`_isDeleted` as LOCATION_NAME_isDeleted"
 
       ).na.fill(" ").distinct()
 
-    println("Imprimiendo el df de df_final2")
+    //println("Imprimiendo el df de df_final2")
     //df_final2.printSchema()
     //df_final2.show(100)
 
     var df_Local = df_final2
       .selectExpr(
-      "ID_WKD",
-      "if(ID_CORP_EXTERNAL_SYSTEM_ID Like '%Local_ID%',EMPLID,'N/A-XML') as ID_CORP_EXTERNAL_SYSTEM_ID")
+        "ID_WKD",
+        "if(ID_CORP_EXTERNAL_SYSTEM_ID Like '%Local_ID%',EMPLID,'NA-XML') as ID_CORP_EXTERNAL_SYSTEM_ID")
       .na.fill(" ").distinct()
 
+    df_Local = df_Local.filter(not(col("ID_CORP_EXTERNAL_SYSTEM_ID").contains("NA-XML")))
     //df_Local.show(100)
 
     var df_Payroll = df_final2
       .selectExpr(
-      "ID_WKD",
-      "if(ID_CORP_EXTERNAL_SYSTEM_ID Like '%Payroll_ID%',EMPLID,'N/A-XML') as EMPLID")
+        "ID_WKD",
+        "if(ID_CORP_EXTERNAL_SYSTEM_ID Like '%Payroll_ID%',EMPLID,'NA-XML') as EMPLID")
       .na.fill(" ").distinct()
 
+    df_Payroll = df_Payroll.filter(not(col("EMPLID").contains("NA-XML")))
     //df_Payroll.show(100)
 
-    var df_primerMapeo_payroll_local = df_final2.as("df_final2")
-      .join(df_Local.as("df_Local"), expr("df_final2.ID_WKD=df_Local.ID_WKD") ,"left")
-      .join(df_Payroll.as("df_Payroll"), expr("df_final2.ID_WKD=df_Payroll.ID_WKD") ,"left")
-
-    df_primerMapeo_payroll_local
+    var df_primerMapeo_payroll_local = df_Payroll.as("df_Payroll")
+      .join(df_Local.as("df_Local"), expr("df_Payroll.ID_WKD=df_Local.ID_WKD"), "left")
+      .join(df_final2.as("df_final2"), expr("df_Payroll.ID_WKD=df_final2.ID_WKD"), "left")
       .selectExpr(
-        //Campos personalizados después del join
+        //Campos personalizados
         "df_final2.data_date_part",
-        "df_final2.ID_Empleado_Joins",
+        //"df_final2.ID_Empleado_Joins",
+
+        //Campos del join
         "df_final2.ID_WKD",
         "df_Payroll.EMPLID",
         "df_Local.ID_CORP_EXTERNAL_SYSTEM_ID",
+
+        //Campos nuevos identificados por Fer
+        //"ACTION",
+        //"ACTION_EFFDT",
+        //"EMPLOYEE_TYPE",
+        //"CONTINGENT_WORKER_TYPE",
+        //"CONTRACT_TYPE_LOCAL",
+        //"JOB_FAMILY_GROUP",
+        //"COMP_GRADE_PROFILE",
+        //"HORAS_SEMANALES",
 
         //Resto de campos del df2 original
         "WD_ACC",
@@ -1768,6 +1469,8 @@ object etl_datos_weci_mapeado {
         "WD_ACC_isAdded",
         "WD_ACC_isDeleted",
 
+        "ACTION",
+        "ACTION_EFFDT",
         "ACTIVE_STATUS",
         "ACTIVE_STATUS_priorValue",
         "ACTIVE_STATUS_isAdded",
@@ -1777,6 +1480,9 @@ object etl_datos_weci_mapeado {
         "EMPLOYEE_STATUS_priorValue",
         "EMPLOYEE_STATUS_isAdded",
         "EMPLOYEE_STATUS_isDeleted",
+
+        "EMPLOYEE_TYPE",
+        "CONTINGENT_WORKER_TYPE",
 
         "FIRST_NAME",
         "FIRST_NAME_priorValue",
@@ -1929,6 +1635,9 @@ object etl_datos_weci_mapeado {
         "DISABLE_KNOW_EFFDT_isDeleted",
 
         "CONTRACT_TYPE",
+
+        "CONTRACT_TYPE_LOCAL",
+
         "CONTRACT_TYPE_priorValue",
         "CONTRACT_TYPE_isAdded",
         "CONTRACT_TYPE_isDeleted",
@@ -2004,6 +1713,8 @@ object etl_datos_weci_mapeado {
         "RETIREMENT_DT_isAdded",
         "RETIREMENT_DT_isDeleted",
 
+        "JOB_FAMILY_GROUP",
+
         "MANAGEMENT_LEVEL",
         "MANAGEMENT_LEVEL_priorValue",
         "MANAGEMENT_LEVEL_isAdded",
@@ -2044,6 +1755,8 @@ object etl_datos_weci_mapeado {
         "SUPERVISORY_isAdded", // null Name Supervisor?
         "SUPERVISORY_isDeleted", // null Name Supervisor?
 
+        "COMP_GRADE_PROFILE",
+
         "COMPENSATION_GRADE",
         "COMPENSATION_GRADE_priorValue",
         "COMPENSATION_GRADE_isAdded",
@@ -2059,15 +1772,17 @@ object etl_datos_weci_mapeado {
         "COLLECTIVE_AGREEMENT_isAdded",
         "COLLECTIVE_AGREEMENT_isDeleted",
 
-        //"COLLECTIVE_AGREEMENT_FACTOR",
-        //"COLLECTIVE_AGREEMENT_FACTOR_priorValue",
-        //"COLLECTIVE_AGREEMENT_FACTOR_isAdded",
-        //"COLLECTIVE_AGREEMENT_FACTOR_isDeleted",
+        "COLLECTIVE_AGREEMENT_FACTOR",
+        "COLLECTIVE_AGREEMENT_FACTOR_priorValue",
+        "COLLECTIVE_AGREEMENT_FACTOR_isAdded",
+        "COLLECTIVE_AGREEMENT_FACTOR_isDeleted",
 
         "COLLECTIVE_AGREEMENT_DT",
         "COLLECTIVE_AGREEMENT_DT_priorValue",
         "COLLECTIVE_AGREEMENT_DT_isAdded",
         "COLLECTIVE_AGREEMENT_DT_isDeleted",
+
+        "HORAS_SEMANALES",
 
         "TOTAL_BASE_PAY", // seguramente haya que pasarlo a array ( futuro )
         "TOTAL_BASE_PAY_priorValue", // seguramente haya que pasarlo a array ( futuro )
@@ -2098,11 +1813,302 @@ object etl_datos_weci_mapeado {
         "LOCATION_NAME_priorValue",
         "LOCATION_NAME_isAdded",
         "LOCATION_NAME_isDeleted"
-
       )
       .na.fill(" ").distinct()
-      .show(100)
 
+    //df_primerMapeo_payroll_local.show(100)
+    //df_primerMapeo_payroll_local.printSchema()
+
+    var df_redy = df_primerMapeo_payroll_local
+      .selectExpr(
+        //Todos los campos mapeados de weci
+        "EMPLID",
+        "ID_CORP_EXTERNAL_SYSTEM_ID",
+        "ID_WKD",
+        "WD_ACC",
+        "'' as EFFDT", // N/A
+        "'' as EFFSEQ", // Calculado
+        "ACTION",
+        "'' as ACTION_DESCR", // null
+        "ACTION_EFFDT",
+        "'' as ACTION_REASON", // null
+        "ACTIVE_STATUS",
+        "EMPLOYEE_STATUS",
+        "'' as EMPL_STATUS_EFFDT", // N/A
+        "'' as WORKER_TYPE", // n/A ID
+        "EMPLOYEE_TYPE",
+        "CONTINGENT_WORKER_TYPE",
+        "FIRST_NAME",
+        "MIDDLE_NAME",
+        "LAST_NAME",
+        "SECOND_LAST_NAME",
+        "NATIONAL_ID_COUNTRY",
+        "NATIONAL_ID_TYPE",
+        "NATIONAL_ID_TYPE_DESCR", // campo es un array ? Pocho
+        "NATIONAL_ID",
+        "VISA_ID_COUNTRY",
+        "VISA_ID_TYPE",
+        "VISA_ID",
+        "PASSPORT_ID_COUNTRY",
+        "PASSPORT_ID_TYPE",
+        "PASSPORT_ID",
+        "BIRTHDATE",
+        "'' as AGE", // CALCULATED
+        "'' as ACT_AGE", // CALCULATED
+        "DT_OF_DEATH",
+        "BIRTHCOUNTRY",
+        "BIRTHCITY_BIRTHPLACE",
+        "BIRTHSTATE",
+        "Nationality",
+        "'' as NATIONALITY_DESCR", // N/A
+        "PREF_LANG_LANG_CD",
+        "'' as LANG_CD_DESCR",  // N/A
+        "GENDER",
+        "'' as GENDER_DESCR",  // N/A
+        "MAR_STATUS",
+        "'' as MAR_STATUS_DESCR",  // N/A
+        "MAR_STATUS_EFFDT",
+        "DISABLE_DEGREE",
+        "DISABLE_DEGREE_DESCR",
+        "DISABLE_CERT_AUTHORITY",
+        "DISABLE_EFFDT", // comprobar cuando tengamos datos reales
+        "DISABLE_END_EFFDT",
+        "DISABLE_KNOW_EFFDT",
+        "'' as EMPLID_CONYUGE", // null
+        "'' as NUM_DISABLE_HIJOS_33_65", // null
+        "'' as NUM_DISABLE_HIJOS_MAS_65", // null
+        "'' as HIGHEST_EDUC_LVL", // null
+        "CONTRACT_TYPE",
+        "CONTRACT_TYPE_LOCAL", // Aditional 5 ?
+        "CONTRACT_STATUS",
+        "CONTRACT_START_DT",
+        "CONTRACT_END_DT",
+        "'' as CONTRACT_TYPE_DESCR", // null
+        "'' as PROBATION_N_DAYS", // Operacion ? datos start // end
+        "TYME_TYPE",
+        "'' as JORNADA_EFFDT", // null
+        "'' as COMPANY", // operacion
+        "'' as COMPANY_DESCR", // operacion
+        "'' as COUNTRY_COMPANY", // null
+        "'' as COUNTRY_COMPANY_DESCR", // null
+        "COMPANY_EFFDT",
+        "HIRE_DT",
+        "HIRE_REASON",
+        "CMPNY_SENIORITY_DT",
+        "ORIGINAL_HIRE_DT",
+        "CONTINUOUS_SERV_DT",
+        "'' as ZINGRESOBANCA_FI", // null
+        "TERMINATION_DT",
+        "TERMINATION_REASON",
+        "TERMINATION_REASON_LOCAL",
+        "RETIREMENT_DT",
+        "'' as GBL_MRT", // aditional field
+        "'' as GBL_MRT_START_DT", // aditional field
+        "'' as GBL_MRT_END_DT", // aditional field
+        "'' as LCL_MRT", // aditional field
+        "'' as LCL_MRT_START_DT", // aditional field
+        "'' as LCL_MRT_END_DT", // aditional field
+        "'' as DEPTID", // operacion ??
+        "'' as DEPTID_DESCR", // operacion  ??
+        "'' as DEPT_TYPE", // aditional field
+        "'' as DEPT_ENTRY_DT", // revisar en WD
+        "'' as DEPTID_SUP", // null
+        "'' as POS_LVL_1_CODE", // inicio JOIN
+        "'' as POS_LVL_1_NAME",
+        "'' as POS_LVL_2_CODE",
+        "'' as POS_LVL_2_NAME",
+        "'' as POS_LVL_3_CODE",
+        "'' as POS_LVL_3_NAME",
+        "'' as POS_LVL_4_CODE",
+        "'' as POS_LVL_4_NAME",
+        "'' as POS_LVL_5_CODE",
+        "'' as POS_LVL_5_NAME",
+        "'' as POS_LVL_6_CODE",
+        "'' as POS_LVL_6_NAME",
+        "'' as POS_LVL_7_CODE",
+        "'' as POS_LVL_7_NAME",
+        "'' as POS_LVL_8_CODE",
+        "'' as POS_LVL_8_NAME",
+        "'' as POS_LVL_9_CODE",
+        "'' as POS_LVL_9_NAME",
+        "'' as POS_LVL_10_CODE",
+        "'' as POS_LVL_10_NAME",
+        "'' as POS_LVL_11_CODE",
+        "'' as POS_LVL_11_NAME",
+        "'' as POS_LVL_12_CODE",
+        "'' as POS_LVL_12_NAME",
+        "'' as POS_LVL_13_CODE",
+        "'' as POS_LVL_13_NAME",
+        "'' as POS_LVL_14_CODE",
+        "'' as POS_LVL_14_NAME",
+        "'' as POS_LVL_15_CODE",
+        "'' as POS_LVL_15_NAME",
+        "'' as POS_LVL_16_CODE",
+        "'' as POS_LVL_16_NAME",
+        "'' as POS_LVL_17_CODE",
+        "'' as POS_LVL_17_NAME",
+        "'' as POS_LVL_18_CODE",
+        "'' as POS_LVL_18_NAME",
+        "'' as POS_LVL_19_CODE",
+        "'' as POS_LVL_19_NAME",
+        "'' as POS_LVL_20_CODE",
+        "'' as POS_LVL_20_NAME", // Fin JOIN
+        "JOB_FAMILY_GROUP",
+        "'' as JOB_FAMILY", // operation job famility
+        "MANAGEMENT_LEVEL",
+        "'' as MANAGEMENT_LEVEL_DESCR", // N/A
+        "JOBCODE",
+        "JOBCODE_DESCR",
+        "'' as JOB_ENTRY_DT", // null
+        "POSITION_NBR",
+        "POSITION_NBR_DESCR",
+        "'' as POSITION_ENTRY_DT", // N/A
+        "'' as BUSINESS_UNIT", // operation with position organization
+        "'' as BUSINESS_UNIT_DESCR", // operation with position organization
+        "'' as PRODUCT", // operation with position organization
+        "'' as AGILE_ROLE", // operation with position organization
+        "MANAGER_ID",
+        "'' as MANAGER_NAME", // calculated field N/a
+        "'' as MANAGER_MAIL", // calculated field N/a
+        "'' as MANAGER_PHONE", // calculated field N/a
+        "'' as MNGR_FUNCT_ID", // aditional  field aditional 4
+        "SUPERVISOR_EFFDT",
+        "SUPERVISORY",
+        "'' as MANAGEMENT_CHAIN_LEVEL1", // inicio Join
+        "'' as MANAGEMENT_CHAIN_LEVEL2",
+        "'' as MANAGEMENT_CHAIN_LEVEL3",
+        "'' as MANAGEMENT_CHAIN_LEVEL4",
+        "'' as MANAGEMENT_CHAIN_LEVEL5",
+        "'' as MANAGEMENT_CHAIN_LEVEL6",
+        "'' as MANAGEMENT_CHAIN_LEVEL7",
+        "'' as MANAGEMENT_CHAIN_LEVEL8",
+        "'' as MANAGEMENT_CHAIN_LEVEL9",
+        "'' as MANAGEMENT_CHAIN_LEVEL10",
+        "'' as MANAGEMENT_CHAIN_LEVEL11",
+        "'' as MANAGEMENT_CHAIN_LEVEL12",
+        "'' as MANAGEMENT_CHAIN_LEVEL13",
+        "'' as MANAGEMENT_CHAIN_LEVEL14",
+        "'' as MANAGEMENT_CHAIN_LEVEL15",
+        "'' as MANAGEMENT_CHAIN_LEVEL16",
+        "'' as MANAGEMENT_CHAIN_LEVEL17",
+        "'' as MANAGEMENT_CHAIN_LEVEL18",
+        "'' as MANAGEMENT_CHAIN_LEVEL19",
+        "'' as MANAGEMENT_CHAIN_LEVEL20", // fin join
+        "COMP_GRADE_PROFILE",
+        "COMPENSATION_GRADE",
+        "'' as MIN_SALARY_RANGE", // N/A ID
+        "'' as MAX_SALARY_RANGE", // N/A ID
+        "JOB_CLASSIFICATION",
+        "'' as JOB_CLASSIFICATION_EFFDT", // null
+        "'' as PAY_GROUP", // operation
+        "'' as ADDITIONAL_JOB_CLASSIFICATION", // aditional field 3
+        "COLLECTIVE_AGREEMENT",
+        "'' as COLLECTIVE_AGREEMENT_DESCR", // null
+        "COLLECTIVE_AGREEMENT_FACTOR",
+        "COLLECTIVE_AGREEMENT_DT",
+        "'' as EMPL_CTG_DESCR", // null
+        "'' as EMPL_CTG_EFFDT", // null
+        "'' as ZGADP_GRADOEMPL", // null
+        "'' as ZGADP_GRADOEMPL_EFFDT", // null
+        "'' as COST_CENTER", // operation
+        "'' as COST_CENTER_NAME", // operation
+        "'' as ZCCOSTE_FENTRADA_EFFDT", // null
+        "'' as ZGADP_BANCOPROC", // null
+        "'' as CORP_SEGMENT", // operation
+        "'' as SETID_DT_ALTA", // null
+        "'' as CORP_SEGMENT_DT", // operation
+        "'' as IND_PODERES", // bloque null
+        "'' as IND_PODERES_EFFDT",
+        "'' as Z02_DIVISION",
+        "'' as MOTIVO_ALTA_HR",
+        "'' as MOTIVO_ALTA_HR_DESCR",
+        "'' as MOTIVO_ALTA_HR_EFFDT",
+        "'' as ESCALA_JEFATURA_DT",
+        "'' as ESCALA_JEFATURA_EFFDT",
+        "'' as TRIENIOS_DT",
+        "'' as TRIENIOS_EFFDT",
+        "'' as TRIENIOS_JEFATURA_DT",
+        "'' as TRIENIOS_JEFATURA_EFFDT",
+        "'' as ESCALA_ADMIN_DT",
+        "'' as ESCALA_ADMIN_EFFDT",
+        "HORAS_SEMANALES",
+        "'' as HORAS_JORNADA_EFFDT",
+        "'' as PORC_REDUC_JORNADA",
+        "'' as REDUC_JORNADA_FINI",
+        "'' as REDUC_JORNADA_FESTIMADA",
+        "'' as REDUC_JORNADA_FCONFIRMADA",
+        "'' as REDUC_JORNADA_TYPE",
+        "'' as REDUC_JORNADA_REASON", // Fin bloque null
+        "TOTAL_BASE_PAY",
+        "TOTAL_BASE_PAY_CURRENCY",
+        "'' as ANNUAL_BASE_SALARY_EFFDT", // null
+        "'' as TOTAL_FIXED_COMP", // operation
+        "'' as TOTAL_VAR_COMP", // aditional field 8
+        "'' as TOTAL_REWARDS", // N/A operation
+        "BANK_ACC",
+        "BANK_IBAN",
+        "'' as ANTICIPO_PDTE_IMPORTE", // inicio bloque null
+        "'' as ANTICIPO_PDTE_MONEDA",
+        "'' as ANTICIPO_MOTIVO",
+        "'' as ANTICIPO_MOTIVO_DESCR",
+        "'' as ANTICIPO_TIPO",
+        "'' as ANTICIPO_TIPO_DESCR",
+        "'' as ANTICIPO_PDTE_EFFDT",
+        "'' as PRESTAMO_VIV_PDTE",
+        "'' as PRESTAMO_VIV_PDTE_EFFDT",
+        "'' as CREDITO_REDZP_TIPO",
+        "'' as CREDITO_REDZP_TIPO_DESCR",
+        "'' as CREDITO_REDZP_TIPO_EFFDT",
+        "'' as CREDITO_REDZP_IMP",
+        "'' as CREDITO_REDZP_IMP_EFFDT",
+        "'' as IND_CR_REDZV",
+        "'' as IND_CR_REDZV_EFFDT",
+        "'' as IND_PR_REDZV",
+        "'' as IND_PR_REDZV_EFFDT",
+        "'' as PLURIEMPLEO_PORC",
+        "'' as PLURIEMPLEO_EFFDT",
+        "'' as IND_RETEN_JUD",
+        "'' as IND_RETEN_JUD_EFFDT",
+        "'' as AMBITO",
+        "'' as AMBITO_DESCR",
+        "'' as Z_PART_TIME_REASON",
+        "'' as ZBANK_SENIORITY_DT", // fin bloque null
+        "LOCATION",
+        "LOCATION_NAME",
+        "'' as LOCATION_ADDR", // null
+        "'' as POSTAL", // null
+        "'' as CITY", // null
+        "'' as STATE", // null
+        "'' as PHONE_PERSLAND_PREF", // calculo hacen falta weci 218-19-20-22-25-26
+        "'' as PHONE_PERSLAND_NUM", // calculo
+        "'' as PHONE_BUSSLAND_PREF", // calculo
+        "'' as PHONE_BUSSLAND_NUM", // calculo
+        "'' as PHONE_PERSMOB_PREF", // calculo
+        "'' as PHONE_PERSMOB_NUM", // calculo
+        "'' as PHONE_BUSSMOB_PREF", // calculo
+        "'' as PHONE_BUSSMOB_NUM", // calculo
+        "'' as MAIL_PW", // calculo
+        "'' as MAIL_PERS", // calculo
+        "'' as HRBP", // null
+        "'' as HRBP_Name", // null
+        "'' as HRBP_MAIL", // null
+        "'' as HRBP_PHONE", // null
+        "'' as PERS_ADDR_COUNTRY", // operaciones hasta el final  217 + 209
+        "'' as PERS_ADDR_TYPE", // 217 + 185
+        "'' as PERS_ADDR_NAME", // 217 + 183
+        "'' as PERS_ADDR_NUMBER", // 217 + 187
+        "'' as PERS_ADDR_FLOOR", // 217 + 190
+        "'' as PERS_ADDR_DOOR", // 217 + 191
+        "'' as PERS_ADDR_STAIRWELL", // 217 + 189
+        "'' as PERS_ADDR_CITY", // 217 + 192
+        "'' as PERS_ADDR_POSTAL", // 217 + 208
+        "'' as PERS_ADDR_STATE_ID", // 217 + 211
+        "'' as PERS_ADDR_STATE_DESCR", // 217 + 211 +  (Verificar code&&descr)
+        s"'$dataDatePart' as FEC_PROC"
+
+      ).na.fill(" ").distinct()
+
+    df_redy.show(100)
 
   } //End Main
 
