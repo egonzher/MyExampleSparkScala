@@ -2,8 +2,7 @@ package com.sparkbyexamples.spark.rrhh
 
 import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.functions._
-import org.apache.spark.sql.types.{ArrayType, StringType, StructField, StructType}
-
+import org.apache.spark.sql.types.{ArrayType, DateType, StringType, StructField, StructType}
 
 object etl_datos_weci_mapeado {
   def main(args: Array[String]): Unit = {
@@ -37,11 +36,36 @@ object etl_datos_weci_mapeado {
     //val dataDatePart = "2021-05-25-05-16-06"
 
     //Solo funciona con estos después del joins
-    val dataDatePart = "2021-05-25-11-22-06"
-    //val dataDatePart = "2021-05-26-15-33-06"
+    //val dataDatePart = "2021-05-25-11-22-06"
+    val dataDatePart = "2021-05-26-15-33-06"
 
 
-    val rutaCvDatalakeWorker = s"src/main/resources/rrhh/example_weci_consolid_wd/data_date_part=$dataDatePart/*.xml"
+    // Lista de descripciones Action_DESC
+    // campos ordenados por orden segun documento Weci
+    val Action_Desc = List(
+      "Worker hired or rehired upon completion of hire business process.",
+      "Rescind hire transaction.",
+      "Data change.",
+      "No longer employed. Employee status change from active to terminated.",
+      "Correct termination event. Correcting the termination event by moving it to an earlier effective date generates this event. Status changes from active to terminated.",
+      "Rescind the termination event. Correcting the termination date by moving it to a future effective date generates this event. Status changes from terminated to active.",
+      "Worker transfers into supervisory organization when no value is entered for the Restrict Results By Orgs launch parameter. Enter Supervisory in the Organization Type for Organization attribute. Otherwise, the integration won't generate XFR staffing events.",
+      "Worker transfers into a supervisory organization when values are entered for the Restrict Results By Orgs launch parameter. Enter Supervisory in the Organization Type for Organization attribute. Otherwise, the integration won't generate XFR-IN staffing events.",
+      "Worker transfers out of a supervisory organization when values are entered for the Restrict Results By Orgs launch parameter. Enter Supervisory in the Organization Type for Organization attribute. Otherwise, the integration won't generate XFR-OUT staffing events.",
+      "Leave of absence.",
+      "Rescind leave of absence.",
+      "Correction to leave end date or type of leave of absence.",
+      "Return from leave of absence.",
+      "Correction to end date of leave of absence.",
+      "Continuous leave of absence. A worker returns from leave and immediately goes on leave again. The leave must be back-to-back and can be any type of leave. Example: a worker returns from parental leave on the 15th and goes on personal leave on the 16th."
+    )
+
+    val currentAge = udf{ (dob: java.sql.Date) =>
+      import java.time.{LocalDate, Period}
+      Period.between(dob.toLocalDate, LocalDate.now).getYears
+    }
+
+    val ruta = s"src/main/resources/rrhh/example_weci_consolid_wd/data_date_part=$dataDatePart/*.xml"
     val rutaWeciAllBetaXml = s"src/main/resources/rrhh/example_weci_consolid_wd/data_date_part=Beta/*.xml"
     val rutaWeciAllPayRollXml = s"src/main/resources/rrhh/example_weci_consolid_wd/data_date_part=EMPLOYEE_DELTA_INTEGRATION/*.xml"
 
@@ -63,7 +87,17 @@ object etl_datos_weci_mapeado {
             )))
           ))),
           StructField("Employees", StructType(Seq(
+            StructField("Derived_Event_Code", StringType, true),
+            StructField("Effective_Moment", StringType, true),
             StructField("Weci", StructType(Seq(
+              StructField("Marital_Status_ID", StructType(Seq(
+                StructField("_VALUE", StringType, true),
+                StructField("_priorValue", StringType, true),
+                StructField("_isAdded", StringType, true),
+                StructField("_IsDeleted", StringType, true)
+              ))),
+              StructField("Cash_Range_Max", StringType, true),
+              StructField("Cash_Range_Min", StringType, true),
               StructField("Employee_Type", StructType(Seq(
                 StructField("Id", StringType, true),
                 StructField("_Descriptor", StringType, true)
@@ -86,9 +120,6 @@ object etl_datos_weci_mapeado {
               )))
             ))),
             StructField("Entry_Moment", StructType(Seq(
-              StructField("_VALUE", StringType, true)
-            ))),
-            StructField("Derived_Event_Code", StructType(Seq(
               StructField("_VALUE", StringType, true)
             ))),
             StructField("Person_Communication", StructType(Seq(
@@ -354,6 +385,7 @@ object etl_datos_weci_mapeado {
               ))))
             ))),
             StructField("Position", ArrayType(StructType(Array(
+              StructField("Worker_Type", StringType, true),
               StructField("Default_Weekly_Hours", StructType(Seq(
                 StructField("_VALUE", StringType, true)
               ))),
@@ -478,7 +510,7 @@ object etl_datos_weci_mapeado {
                 StructField("_IsDeleted", StringType, true)
               ))),
               StructField("Date_of_Birth", StructType(Seq(
-                StructField("_VALUE", StringType, true),
+                StructField("_VALUE", DateType, true),
                 StructField("_priorValue", StringType, true),
                 StructField("_isAdded", StringType, true),
                 StructField("_IsDeleted", StringType, true)
@@ -507,25 +539,19 @@ object etl_datos_weci_mapeado {
                 StructField("_isAdded", StringType, true),
                 StructField("_IsDeleted", StringType, true)
               ))),
-              StructField("Nationality", StructType(Seq(
+              StructField("NATIONALITY", StructType(Seq(
                 StructField("_VALUE", StringType, true),
                 StructField("_priorValue", StringType, true),
                 StructField("_isAdded", StringType, true),
                 StructField("_IsDeleted", StringType, true)
               ))),
-              StructField("Preferred_Lenguage", StructType(Seq(
+              StructField("Preferred_Language", StructType(Seq(
                 StructField("_VALUE", StringType, true),
                 StructField("_priorValue", StringType, true),
                 StructField("_isAdded", StringType, true),
                 StructField("_IsDeleted", StringType, true)
               ))),
               StructField("Gender", StructType(Seq(
-                StructField("_VALUE", StringType, true),
-                StructField("_priorValue", StringType, true),
-                StructField("_isAdded", StringType, true),
-                StructField("_IsDeleted", StringType, true)
-              ))),
-              StructField("Marital_Status", StructType(Seq(
                 StructField("_VALUE", StringType, true),
                 StructField("_priorValue", StringType, true),
                 StructField("_isAdded", StringType, true),
@@ -603,6 +629,12 @@ object etl_datos_weci_mapeado {
               )))
             ))),
             StructField("Worker_Status", StructType(Seq(
+              StructField("Active_Status_Date", StructType(Seq(
+                StructField("_VALUE", StringType, true),
+                StructField("_priorValue", StringType, true),
+                StructField("_isAdded", StringType, true),
+                StructField("_IsDeleted", StringType, true)
+              ))),
               StructField("Active", StructType(Seq(
                 StructField("_VALUE", StringType, true),
                 StructField("_priorValue", StringType, true),
@@ -710,7 +742,7 @@ object etl_datos_weci_mapeado {
       .option("inferSchema", "false")
       .option("ignoreNamespace", "true")
       .option("rowTag", "ns2:EMPLOYEE_DELTA_INTEGRATION")
-      .load(rutaCvDatalakeWorker)
+      .load(ruta)
 
     //println("Imprimiendo el df de df_WeciReadXML_FieldAll")
     //df_WeciReadXML_FieldAll.printSchema()
@@ -720,6 +752,7 @@ object etl_datos_weci_mapeado {
     //////////////////////////////////////////////////////////////////////////////
 
     //En esta lógica tengo todos los campos weci
+
 
     var df_final = df_WeciReadXML_FieldAll
       .withColumn("Worker", explode_outer(col("`Worker`")))
@@ -737,19 +770,19 @@ object etl_datos_weci_mapeado {
 
         //Todos los campos mapeados de weci
         //"`Other_Identifier`.`Custom_ID`.`_VALUE` as EMPLID",
-        //"`Other_Identifier`.`Custom_ID_Type`.`_VALUE` as ID_CORP_EXTERNAL_SYSTEM_ID", // preguntar duda
+        //"`Other_Identifier`.`Custom_ID_Type`.`_VALUE` as ID_CORP", // preguntar duda
         "`Worker`.`Worker_Summary`.`WID`.`_VALUE` as ID_WKD",
         "`Worker`.`Employees`.`Personal`.`Workday_Account`.`_VALUE` as WD_ACC",
         "'' as EFFDT", // N/A
         "'' as EFFSEQ", // Calculado
-        "'' as ACTION", // N/A
+
+        "`Worker`.`Employees`.`Derived_Event_Code` as ACTION", // N/A
         "'' as ACTION_DESCR", // null
-        "'' as ACTION_EFFDT", // N/A
-        "'' as ACTION_REASON", // null
+        "`Worker`.`Employees`.`Entry_Moment`.`_VALUE` as ACTION_EFFDT",
         "`Worker`.`Employees`.`Worker_Status`.`Active`.`_VALUE` as ACTIVE_STATUS",
         "`Worker`.`Employees`.`Worker_Status`.`Status`.`_VALUE` as EMPLOYEE_STATUS",
-        "'' as EMPL_STATUS_EFFDT", // N/A
-        "'' as WORKER_TYPE", // n/A ID
+        "`Worker`.`Employees`.`Worker_Status`.`Active_Status_Date` as EMPL_STATUS_EFFDT",
+        "`Worker`.`Employees`.`Position`.`Worker_Type` as WORKER_TYPE",
         "'' as EMPLOYEE_TYPE", // null
         "'' as CONTINGENT_WORKER_TYPE", // null
         "`Worker`.`Employees`.`Personal`.`Name`.`First_Name`.`_VALUE` as FIRST_NAME",
@@ -771,15 +804,15 @@ object etl_datos_weci_mapeado {
         "'' as ACT_AGE", // CALCULATED
         "`Worker`.`Employees`.`Personal`.`Date_of_Death`.`_VALUE` as DT_OF_DEATH",
         "`Worker`.`Employees`.`Personal`.`Country_of_Birth`.`_VALUE` as BIRTHCOUNTRY",
-        "`Worker`.`Employees`.`Personal`.`City_of_Birth`.`_VALUE` as BIRTHCITY_BIRTHPLACE",
+        "`Worker`.`Employees`.`Personal`.`City_of_Birth`.`_VALUE` as BIRTHCITY",
         "`Worker`.`Employees`.`Personal`.`Region_of_Birth`.`_VALUE` as BIRTHSTATE",
-        "`Worker`.`Employees`.`Personal`.`Nationality`.`_VALUE` as Nationality",
+        "`Worker`.`Employees`.`Personal`.`NATIONALITY`.`_VALUE` as NATIONALITY",
         "'' as NATIONALITY_DESCR", // N/A
-        "`Worker`.`Employees`.`Personal`.`Preferred_Lenguage`.`_VALUE` as PREF_LANG_LANG_CD",
+        "`Worker`.`Employees`.`Personal`.`Preferred_Language`.`_VALUE` as PREF_LANG",
         "'' as LANG_CD_DESCR",
         "`Worker`.`Employees`.`Personal`.`Gender`.`_VALUE` as GENDER",
         "'' as GENDER_DESCR",
-        "`Worker`.`Employees`.`Personal`.`Marital_Status`.`_VALUE` as MAR_STATUS",
+        "`Worker`.`Employees`.`Weci`.`Marital_Status_ID`.`_VALUE` as MAR_STATUS",
         "'' as MAR_STATUS_DESCR",
         "`Worker`.`Employees`.`Personal`.`Marital_Status_Date`.`_VALUE` as MAR_STATUS_EFFDT",
         "`Worker`.`Employees`.`Personal`.`Disability_Status`.`Grade`.`_VALUE` as DISABLE_DEGREE",
@@ -788,7 +821,6 @@ object etl_datos_weci_mapeado {
         "`Worker`.`Employees`.`Personal`.`Disability_Status`.`Disability_Status_Date`.`_VALUE` as DISABLE_EFFDT", // comprobar cuando tengamos datos reales
         "`Worker`.`Employees`.`Personal`.`Disability_Status`.`End_Date`.`_VALUE` as DISABLE_END_EFFDT",
         "`Worker`.`Employees`.`Personal`.`Disability_Status`.`Date_Known`.`_VALUE` as DISABLE_KNOW_EFFDT",
-        "'' as EMPLID_CONYUGE", // null
         "'' as NUM_DISABLE_HIJOS_33_65", // null
         "'' as NUM_DISABLE_HIJOS_MAS_65", // null
         "'' as HIGHEST_EDUC_LVL", // null
@@ -800,7 +832,6 @@ object etl_datos_weci_mapeado {
         "'' as CONTRACT_TYPE_DESCR", // null
         "'' as PROBATION_N_DAYS", // Operacion ? datos start // end
         "`Worker`.`Employees`.`position`.`Position_Time_Type`.`_VALUE` as TYME_TYPE",
-        "'' as JORNADA_EFFDT", // null
         "'' as COMPANY", // operacion
         "'' as COMPANY_DESCR", // operacion
         "'' as COUNTRY_COMPANY", // null
@@ -914,8 +945,8 @@ object etl_datos_weci_mapeado {
          */
         "'' as COMP_GRADE_PROFILE", // aditional field  7
         "`Worker`.`Employees`.`Compensation`.`Compensation_Grade`.`_VALUE` as COMPENSATION_GRADE",
-        "'' as MIN_SALARY_RANGE", // N/A ID
-        "'' as MAX_SALARY_RANGE", // N/A ID
+        "`Worker`.`Employees`.`Weci`.`Cash_Range_Min` as MIN_SALARY_RANGE",
+        "`Worker`.`Employees`.`Weci`.`Cash_Range_Max` as MAX_SALARY_RANGE",
         "`Worker`.`Employees`.`Position`.`Job_Classification`.`Job_Classiication`.`_VALUE` as JOB_CLASSIFICATION", // errata
         "'' as JOB_CLASSIFICATION_EFFDT", // null
         "'' as PAY_GROUP", // operation
@@ -933,11 +964,9 @@ object etl_datos_weci_mapeado {
         "'' as ZCCOSTE_FENTRADA_EFFDT", // null
         "'' as ZGADP_BANCOPROC", // null
         "'' as CORP_SEGMENT", // operation
-        "'' as SETID_DT_ALTA", // null
         "'' as CORP_SEGMENT_DT", // operation
         "'' as IND_PODERES", // bloque null
         "'' as IND_PODERES_EFFDT",
-        "'' as Z02_DIVISION",
         "'' as MOTIVO_ALTA_HR",
         "'' as MOTIVO_ALTA_HR_DESCR",
         "'' as MOTIVO_ALTA_HR_EFFDT",
@@ -1025,7 +1054,6 @@ object etl_datos_weci_mapeado {
         "'' as FEC_PROC" // null
       ).na.fill(" ").distinct()
 
-
     //println("Imprimiendo el df de df_final")
     //df_final.printSchema()
     //df_final.show()
@@ -1033,7 +1061,7 @@ object etl_datos_weci_mapeado {
 
     //////////////////////////////////////////////////////////////////////////////
 
-    //En esta lógica tengo todos los campos weci
+    //En esta lógica tengo todos los campos weci con isAdded y demás agregados
 
     var df_final2 = df_WeciReadXML_FieldAll
       .withColumn("Worker", explode_outer(col("`Worker`")))
@@ -1042,16 +1070,19 @@ object etl_datos_weci_mapeado {
       .withColumn("Position", explode_outer(col("`Worker`.`Employees`.`Position`")))
       .withColumn("Job_Family", explode_outer(col("`Position`.`Job_Family`")))
       .withColumn("HORAS_SEMANALES", explode_outer(col("`Worker`.`Employees`.`Position`.`Default_Weekly_Hours`.`_VALUE`")))
-
       // Estos 3 arrays de abajo son para las operaciones que tenemos que hacer luego
       //.withColumn("Address", explode_outer(col("`Person_Communication`.`Address`")))
       //.withColumn("Phone", explode_outer(col("`Address`.`Phone`")))
       //.withColumn("Email", explode_outer(col("`Address`.`Email`")))
+      // Sentencia para la descipción de acction_description
+      .withColumn("ACTION", (col("`Worker`.`Employees`.`Derived_Event_Code`")))
+      .withColumn("Worker_Status", (col("`Worker`.`Employees`.`Worker_Status`")))
       .selectExpr(
         //Los dos campos que no deben faltar
         s"'$dataDatePart' as data_date_part",
         // Los nuevos campos que vayan saliendo los pongo aquí sin orden , luego se ordenaran en el dataframe final
-        "`Worker`.`Employees`.`Derived_Event_Code`.`_VALUE` as ACTION",
+        "ACTION",
+        "'' as ACTION_DESCR",
         "`Worker`.`Employees`.`Entry_Moment`.`_VALUE` as ACTION_EFFDT",
         "`Worker`.`Employees`.`Weci`.`Employee_Type`.`_Descriptor` as EMPLOYEE_TYPE",
         "`Worker`.`Employees`.`Weci`.`Contingent_Worker_Type`.`_Descriptor` as CONTINGENT_WORKER_TYPE",
@@ -1059,6 +1090,14 @@ object etl_datos_weci_mapeado {
         "`Worker`.`Employees`.`Weci`.`Job_Family_Group`.`_Descriptor` as JOB_FAMILY_GROUP",
         "`Worker`.`Employees`.`Weci`.`Compensation_Grade_Profile`.`_Descriptor` as COMP_GRADE_PROFILE",
         "`HORAS_SEMANALES` as HORAS_SEMANALES",
+        "`Worker`.`Employees`.`Weci`.`Cash_Range_Min` as MIN_SALARY_RANGE",
+        "`Worker`.`Employees`.`Weci`.`Cash_Range_Max` as MAX_SALARY_RANGE",
+        "`Position`.`Worker_Type` as WORKER_TYPE",
+        "`Worker_Status`.`Active_Status_Date` as EMPL_STATUS_EFFDT",
+
+
+
+
 
         "`Worker`.`Worker_Summary`.`Employee_ID`.`_VALUE` as ID_Empleado_Joins",
         "`Other_Identifier`.`Custom_ID_Type`.`_VALUE` as afterLogical", //Se utiliza para aplicar la lógica después
@@ -1070,10 +1109,10 @@ object etl_datos_weci_mapeado {
         "`Other_Identifier`.`Custom_ID`.`_isAdded` as EMPLID_isAdded",
         "`Other_Identifier`.`Custom_ID`.`_isDeleted` as EMPLID_isDeleted",
 
-        "`Other_Identifier`.`Custom_ID_Type`.`_VALUE` as ID_CORP_EXTERNAL_SYSTEM_ID", //Mete ruido reguntar duda
-        "`Other_Identifier`.`Custom_ID_Type`.`_priorValue` as ID_CORP_EXTERNAL_SYSTEM_ID_priorValue", // preguntar duda
-        "`Other_Identifier`.`Custom_ID_Type`.`_isAdded` as ID_CORP_EXTERNAL_SYSTEM_ID_isAdded", // preguntar duda
-        "`Other_Identifier`.`Custom_ID_Type`.`_isDeleted` as ID_CORP_EXTERNAL_SYSTEM_ID_isDeleted", // preguntar duda
+        "`Other_Identifier`.`Custom_ID_Type`.`_VALUE` as ID_CORP", //Mete ruido reguntar duda
+        "`Other_Identifier`.`Custom_ID_Type`.`_priorValue` as ID_CORP_priorValue", // preguntar duda
+        "`Other_Identifier`.`Custom_ID_Type`.`_isAdded` as ID_CORP_isAdded", // preguntar duda
+        "`Other_Identifier`.`Custom_ID_Type`.`_isDeleted` as ID_CORP_isDeleted", // preguntar duda
 
         "`Worker`.`Worker_Summary`.`Employee_ID`.`_VALUE` as ID_WKD",
         "`Worker`.`Worker_Summary`.`Employee_ID`.`_priorValue` as ID_WKD_priorValue",
@@ -1180,35 +1219,35 @@ object etl_datos_weci_mapeado {
         "`Worker`.`Employees`.`Personal`.`Country_of_Birth`.`_isAdded` as BIRTHCOUNTRY_isAdded",
         "`Worker`.`Employees`.`Personal`.`Country_of_Birth`.`_isDeleted` as BIRTHCOUNTRY_isDeleted",
 
-        "`Worker`.`Employees`.`Personal`.`City_of_Birth`.`_VALUE` as BIRTHCITY_BIRTHPLACE",
-        "`Worker`.`Employees`.`Personal`.`City_of_Birth`.`_priorValue` as BIRTHCITY_BIRTHPLACE_priorValue",
-        "`Worker`.`Employees`.`Personal`.`City_of_Birth`.`_isAdded` as BIRTHCITY_BIRTHPLACE_isAdded",
-        "`Worker`.`Employees`.`Personal`.`City_of_Birth`.`_isDeleted` as BIRTHCITY_BIRTHPLACE_isDeleted",
+        "`Worker`.`Employees`.`Personal`.`City_of_Birth`.`_VALUE` as BIRTHCITY",
+        "`Worker`.`Employees`.`Personal`.`City_of_Birth`.`_priorValue` as BIRTHCITY_priorValue",
+        "`Worker`.`Employees`.`Personal`.`City_of_Birth`.`_isAdded` as BIRTHCITY_isAdded",
+        "`Worker`.`Employees`.`Personal`.`City_of_Birth`.`_isDeleted` as BIRTHCITY_isDeleted",
 
         "`Worker`.`Employees`.`Personal`.`Region_of_Birth`.`_VALUE` as BIRTHSTATE",
         "`Worker`.`Employees`.`Personal`.`Region_of_Birth`.`_priorValue` as BIRTHSTATE_priorValue",
         "`Worker`.`Employees`.`Personal`.`Region_of_Birth`.`_isAdded` as BIRTHSTATE_isAdded",
         "`Worker`.`Employees`.`Personal`.`Region_of_Birth`.`_isDeleted` as BIRTHSTATE_isDeleted",
 
-        "`Worker`.`Employees`.`Personal`.`Nationality`.`_VALUE` as Nationality",
-        "`Worker`.`Employees`.`Personal`.`Nationality`.`_priorValue` as Nationality_priorValue",
-        "`Worker`.`Employees`.`Personal`.`Nationality`.`_isAdded` as Nationality_isAdded",
-        "`Worker`.`Employees`.`Personal`.`Nationality`.`_isDeleted` as Nationality_isDeleted",
+        "`Worker`.`Employees`.`Personal`.`NATIONALITY`.`_VALUE` as NATIONALITY",
+        "`Worker`.`Employees`.`Personal`.`NATIONALITY`.`_priorValue` as NATIONALITY_priorValue",
+        "`Worker`.`Employees`.`Personal`.`NATIONALITY`.`_isAdded` as NATIONALITY_isAdded",
+        "`Worker`.`Employees`.`Personal`.`NATIONALITY`.`_isDeleted` as NATIONALITY_isDeleted",
 
-        "`Worker`.`Employees`.`Personal`.`Preferred_Lenguage`.`_VALUE` as PREF_LANG_LANG_CD",
-        "`Worker`.`Employees`.`Personal`.`Preferred_Lenguage`.`_priorValue` as PREF_LANG_LANG_CD_priorValue",
-        "`Worker`.`Employees`.`Personal`.`Preferred_Lenguage`.`_isAdded` as PREF_LANG_LANG_CD_isAdded",
-        "`Worker`.`Employees`.`Personal`.`Preferred_Lenguage`.`_isDeleted` as PREF_LANG_LANG_CD_isDeleted",
+        "`Worker`.`Employees`.`Personal`.`Preferred_Language`.`_VALUE` as PREF_LANG",
+        "`Worker`.`Employees`.`Personal`.`Preferred_Language`.`_priorValue` as PREF_LANG_priorValue",
+        "`Worker`.`Employees`.`Personal`.`Preferred_Language`.`_isAdded` as PREF_LANG_isAdded",
+        "`Worker`.`Employees`.`Personal`.`Preferred_Language`.`_isDeleted` as PREF_LANG_isDeleted",
 
         "`Worker`.`Employees`.`Personal`.`Gender`.`_VALUE` as GENDER",
         "`Worker`.`Employees`.`Personal`.`Gender`.`_priorValue` as GENDER_priorValue",
         "`Worker`.`Employees`.`Personal`.`Gender`.`_isAdded` as GENDER_isAdded",
         "`Worker`.`Employees`.`Personal`.`Gender`.`_isDeleted` as GENDER_isDeleted",
 
-        "`Worker`.`Employees`.`Personal`.`Marital_Status`.`_VALUE` as MAR_STATUS",
-        "`Worker`.`Employees`.`Personal`.`Marital_Status`.`_priorValue` as MAR_STATUS_priorValue",
-        "`Worker`.`Employees`.`Personal`.`Marital_Status`.`_isAdded` as MAR_STATUS_isAdded",
-        "`Worker`.`Employees`.`Personal`.`Marital_Status`.`_isDeleted` as MAR_STATUS_isDeleted",
+        "`Worker`.`Employees`.`Weci`.`Marital_Status_ID`.`_VALUE` as MAR_STATUS",
+        "`Worker`.`Employees`.`Weci`.`Marital_Status_ID`.`_priorValue` as MAR_STATUS_priorValue",
+        "`Worker`.`Employees`.`Weci`.`Marital_Status_ID`.`_isAdded` as MAR_STATUS_isAdded",
+        "`Worker`.`Employees`.`Weci`.`Marital_Status_ID`.`_isDeleted` as MAR_STATUS_isDeleted",
 
         "`Worker`.`Employees`.`Personal`.`Marital_Status_Date`.`_VALUE` as MAR_STATUS_EFFDT",
         "`Worker`.`Employees`.`Personal`.`Marital_Status_Date`.`_priorValue` as MAR_STATUS_EFFDT_priorValue",
@@ -1422,19 +1461,33 @@ object etl_datos_weci_mapeado {
     //df_final2.printSchema()
     //df_final2.show(100)
 
+    var df_cuts_and_age = df_final2
+      //.withColumn("AGE",months_between(current_date,col("BIRTHDATE")/12))
+      .withColumn("CurrentAge", when(col("BirthDate").isNotNull, currentAge(col("BirthDate"))))
+      .select(split(col("MAR_STATUS"),"-").getItem(3).as("Marital"),
+        split(col("COMPENSATION_GRADE"),"_").getItem(2).as("Grade"),
+        split(col("MANAGEMENT_LEVEL"),"_").getItem(2).as("Management"),
+        col("ID_WKD"),
+        col("CurrentAge")
+      )
+    df_cuts_and_age.show()
+
+    //var df_age = df_final2
+    //.withColumn("AGE",months_between(current_date,col("BIRTHDATE")/12))
+
     var df_Local = df_final2
       .selectExpr(
         "ID_WKD",
-        "if(ID_CORP_EXTERNAL_SYSTEM_ID Like '%Local_ID%',EMPLID,'NA-XML') as ID_CORP_EXTERNAL_SYSTEM_ID")
+        "if(ID_CORP Like '%Local_ID%',EMPLID,'NA-XML') as ID_CORP")
       .na.fill(" ").distinct()
 
-    df_Local = df_Local.filter(not(col("ID_CORP_EXTERNAL_SYSTEM_ID").contains("NA-XML")))
+    df_Local = df_Local.filter(not(col("ID_CORP").contains("NA-XML")))
     //df_Local.show(100)
 
     var df_Payroll = df_final2
       .selectExpr(
         "ID_WKD",
-        "if(ID_CORP_EXTERNAL_SYSTEM_ID Like '%Payroll_ID%',EMPLID,'NA-XML') as EMPLID")
+        "if(ID_CORP Like '%Payroll_ID%',EMPLID,'NA-XML') as EMPLID")
       .na.fill(" ").distinct()
 
     df_Payroll = df_Payroll.filter(not(col("EMPLID").contains("NA-XML")))
@@ -1443,6 +1496,8 @@ object etl_datos_weci_mapeado {
     var df_primerMapeo_payroll_local = df_Payroll.as("df_Payroll")
       .join(df_Local.as("df_Local"), expr("df_Payroll.ID_WKD=df_Local.ID_WKD"), "left")
       .join(df_final2.as("df_final2"), expr("df_Payroll.ID_WKD=df_final2.ID_WKD"), "left")
+      .join(df_cuts_and_age.as("df_cuts_and_age"), expr("df_Payroll.ID_WKD=df_cuts_and_age.ID_WKD"), "left")
+      .withColumn("CurrentAge",col("CurrentAge").cast("String"))
       .selectExpr(
         //Campos personalizados
         "df_final2.data_date_part",
@@ -1451,7 +1506,7 @@ object etl_datos_weci_mapeado {
         //Campos del join
         "df_final2.ID_WKD",
         "df_Payroll.EMPLID",
-        "df_Local.ID_CORP_EXTERNAL_SYSTEM_ID",
+        "df_Local.ID_CORP",
 
         //Campos nuevos identificados por Fer
         //"ACTION",
@@ -1462,7 +1517,11 @@ object etl_datos_weci_mapeado {
         //"JOB_FAMILY_GROUP",
         //"COMP_GRADE_PROFILE",
         //"HORAS_SEMANALES",
-
+        "MIN_SALARY_RANGE",
+        "MAX_SALARY_RANGE",
+        "WORKER_TYPE",
+        "EMPL_STATUS_EFFDT",
+        "`CurrentAge` as AGE",
         //Resto de campos del df2 original
         "WD_ACC",
         "WD_ACC_priorValue",
@@ -1569,32 +1628,32 @@ object etl_datos_weci_mapeado {
         "BIRTHCOUNTRY_isAdded",
         "BIRTHCOUNTRY_isDeleted",
 
-        "BIRTHCITY_BIRTHPLACE",
-        "BIRTHCITY_BIRTHPLACE_priorValue",
-        "BIRTHCITY_BIRTHPLACE_isAdded",
-        "BIRTHCITY_BIRTHPLACE_isDeleted",
+        "BIRTHCITY",
+        "BIRTHCITY_priorValue",
+        "BIRTHCITY_isAdded",
+        "BIRTHCITY_isDeleted",
 
         "BIRTHSTATE",
         "BIRTHSTATE_priorValue",
         "BIRTHSTATE_isAdded",
         "BIRTHSTATE_isDeleted",
 
-        "Nationality",
-        "Nationality_priorValue",
-        "Nationality_isAdded",
-        "Nationality_isDeleted",
+        "NATIONALITY",
+        "NATIONALITY_priorValue",
+        "NATIONALITY_isAdded",
+        "NATIONALITY_isDeleted",
 
-        "PREF_LANG_LANG_CD",
-        "PREF_LANG_LANG_CD_priorValue",
-        "PREF_LANG_LANG_CD_isAdded",
-        "PREF_LANG_LANG_CD_isDeleted",
+        "PREF_LANG",
+        "PREF_LANG_priorValue",
+        "PREF_LANG_isAdded",
+        "PREF_LANG_isDeleted",
 
         "GENDER",
         "GENDER_priorValue",
         "GENDER_isAdded",
         "GENDER_isDeleted",
 
-        "MAR_STATUS",
+        "`Marital` as MAR_STATUS",
         "MAR_STATUS_priorValue",
         "MAR_STATUS_isAdded",
         "MAR_STATUS_isDeleted",
@@ -1715,7 +1774,7 @@ object etl_datos_weci_mapeado {
 
         "JOB_FAMILY_GROUP",
 
-        "MANAGEMENT_LEVEL",
+        "`Management` as MANAGEMENT_LEVEL",
         "MANAGEMENT_LEVEL_priorValue",
         "MANAGEMENT_LEVEL_isAdded",
         "MANAGEMENT_LEVEL_isDeleted",
@@ -1757,7 +1816,7 @@ object etl_datos_weci_mapeado {
 
         "COMP_GRADE_PROFILE",
 
-        "COMPENSATION_GRADE",
+        "`Grade` as COMPENSATION_GRADE",
         "COMPENSATION_GRADE_priorValue",
         "COMPENSATION_GRADE_isAdded",
         "COMPENSATION_GRADE_isDeleted",
@@ -1820,22 +1879,37 @@ object etl_datos_weci_mapeado {
     //df_primerMapeo_payroll_local.printSchema()
 
     var df_redy = df_primerMapeo_payroll_local
+      .withColumn("ACTION_DESCR", when(col("ACTION") === "HIR",Action_Desc(0))
+        .when(col("ACTION") === "HIR-R",Action_Desc(1))
+        .when(col("ACTION") === "DTA",Action_Desc(2))
+        .when(col("ACTION") === "TERM",Action_Desc(3))
+        .when(col("ACTION") === "TERM-C",Action_Desc(4))
+        .when(col("ACTION") === "TERM-R",Action_Desc(5))
+        .when(col("ACTION") === "XFR",Action_Desc(6))
+        .when(col("ACTION") === "XFR-IN",Action_Desc(7))
+        .when(col("ACTION") === "XFR-OUT",Action_Desc(8))
+        .when(col("ACTION") === "LOA",Action_Desc(9))
+        .when(col("ACTION") === "LOA-R",Action_Desc(10))
+        .when(col("ACTION") === "LOA-C",Action_Desc(11))
+        .when(col("ACTION") === "RFL",Action_Desc(12))
+        .when(col("ACTION") === "RFL-R",Action_Desc(13))
+        .when(col("ACTION") === "CONT-LOA",Action_Desc(14))
+        .otherwise("Unknown"))
       .selectExpr(
         //Todos los campos mapeados de weci
         "EMPLID",
-        "ID_CORP_EXTERNAL_SYSTEM_ID",
+        "ID_CORP",
         "ID_WKD",
         "WD_ACC",
         "'' as EFFDT", // N/A
         "'' as EFFSEQ", // Calculado
         "ACTION",
-        "'' as ACTION_DESCR", // null
+        "ACTION_DESCR",
         "ACTION_EFFDT",
-        "'' as ACTION_REASON", // null
         "ACTIVE_STATUS",
         "EMPLOYEE_STATUS",
-        "'' as EMPL_STATUS_EFFDT", // N/A
-        "'' as WORKER_TYPE", // n/A ID
+        "EMPL_STATUS_EFFDT",
+        "WORKER_TYPE",
         "EMPLOYEE_TYPE",
         "CONTINGENT_WORKER_TYPE",
         "FIRST_NAME",
@@ -1853,15 +1927,15 @@ object etl_datos_weci_mapeado {
         "PASSPORT_ID_TYPE",
         "PASSPORT_ID",
         "BIRTHDATE",
-        "'' as AGE", // CALCULATED
+        "AGE", // CALCULATED
         "'' as ACT_AGE", // CALCULATED
         "DT_OF_DEATH",
         "BIRTHCOUNTRY",
-        "BIRTHCITY_BIRTHPLACE",
+        "BIRTHCITY",
         "BIRTHSTATE",
-        "Nationality",
+        "NATIONALITY",
         "'' as NATIONALITY_DESCR", // N/A
-        "PREF_LANG_LANG_CD",
+        "PREF_LANG",
         "'' as LANG_CD_DESCR",  // N/A
         "GENDER",
         "'' as GENDER_DESCR",  // N/A
@@ -1874,7 +1948,6 @@ object etl_datos_weci_mapeado {
         "DISABLE_EFFDT", // comprobar cuando tengamos datos reales
         "DISABLE_END_EFFDT",
         "DISABLE_KNOW_EFFDT",
-        "'' as EMPLID_CONYUGE", // null
         "'' as NUM_DISABLE_HIJOS_33_65", // null
         "'' as NUM_DISABLE_HIJOS_MAS_65", // null
         "'' as HIGHEST_EDUC_LVL", // null
@@ -1886,7 +1959,6 @@ object etl_datos_weci_mapeado {
         "'' as CONTRACT_TYPE_DESCR", // null
         "'' as PROBATION_N_DAYS", // Operacion ? datos start // end
         "TYME_TYPE",
-        "'' as JORNADA_EFFDT", // null
         "'' as COMPANY", // operacion
         "'' as COMPANY_DESCR", // operacion
         "'' as COUNTRY_COMPANY", // null
@@ -1996,8 +2068,8 @@ object etl_datos_weci_mapeado {
         "'' as MANAGEMENT_CHAIN_LEVEL20", // fin join
         "COMP_GRADE_PROFILE",
         "COMPENSATION_GRADE",
-        "'' as MIN_SALARY_RANGE", // N/A ID
-        "'' as MAX_SALARY_RANGE", // N/A ID
+        "MIN_SALARY_RANGE",
+        "MAX_SALARY_RANGE",
         "JOB_CLASSIFICATION",
         "'' as JOB_CLASSIFICATION_EFFDT", // null
         "'' as PAY_GROUP", // operation
@@ -2015,11 +2087,9 @@ object etl_datos_weci_mapeado {
         "'' as ZCCOSTE_FENTRADA_EFFDT", // null
         "'' as ZGADP_BANCOPROC", // null
         "'' as CORP_SEGMENT", // operation
-        "'' as SETID_DT_ALTA", // null
         "'' as CORP_SEGMENT_DT", // operation
         "'' as IND_PODERES", // bloque null
         "'' as IND_PODERES_EFFDT",
-        "'' as Z02_DIVISION",
         "'' as MOTIVO_ALTA_HR",
         "'' as MOTIVO_ALTA_HR_DESCR",
         "'' as MOTIVO_ALTA_HR_EFFDT",
@@ -2042,7 +2112,7 @@ object etl_datos_weci_mapeado {
         "TOTAL_BASE_PAY",
         "TOTAL_BASE_PAY_CURRENCY",
         "'' as ANNUAL_BASE_SALARY_EFFDT", // null
-        "'' as TOTAL_FIXED_COMP", // operation
+        "'' as TOTAL_FIXED_COMP", // operation Frequency - Total Base Pay"
         "'' as TOTAL_VAR_COMP", // aditional field 8
         "'' as TOTAL_REWARDS", // N/A operation
         "BANK_ACC",
@@ -2109,6 +2179,7 @@ object etl_datos_weci_mapeado {
       ).na.fill(" ").distinct()
 
     df_redy.show(100)
+
 
   } //End Main
 
