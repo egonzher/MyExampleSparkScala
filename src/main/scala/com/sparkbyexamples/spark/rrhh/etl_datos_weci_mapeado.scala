@@ -39,6 +39,10 @@ object etl_datos_weci_mapeado {
     //val dataDatePart = "2021-05-25-11-22-06"
     val dataDatePart = "2021-05-26-15-33-06"
 
+    val ruta = s"src/main/resources/rrhh/example_weci_consolid_wd/data_date_part=$dataDatePart/*.xml"
+    val rutaWeciAllBetaXml = s"src/main/resources/rrhh/example_weci_consolid_wd/data_date_part=Beta/*.xml"
+    val rutaWeciAllPayRollXml = s"src/main/resources/rrhh/example_weci_consolid_wd/data_date_part=EMPLOYEE_DELTA_INTEGRATION/*.xml"
+
 
     // Lista de descripciones Action_DESC
     // campos ordenados por orden segun documento Weci
@@ -64,10 +68,6 @@ object etl_datos_weci_mapeado {
       import java.time.{LocalDate, Period}
       Period.between(dob.toLocalDate, LocalDate.now).getYears
     }
-
-    val ruta = s"src/main/resources/rrhh/example_weci_consolid_wd/data_date_part=$dataDatePart/*.xml"
-    val rutaWeciAllBetaXml = s"src/main/resources/rrhh/example_weci_consolid_wd/data_date_part=Beta/*.xml"
-    val rutaWeciAllPayRollXml = s"src/main/resources/rrhh/example_weci_consolid_wd/data_date_part=EMPLOYEE_DELTA_INTEGRATION/*.xml"
 
     val schema2 = StructType(
       Array(
@@ -1077,6 +1077,7 @@ object etl_datos_weci_mapeado {
       // Sentencia para la descipción de acction_description
       .withColumn("ACTION", (col("`Worker`.`Employees`.`Derived_Event_Code`")))
       .withColumn("Worker_Status", (col("`Worker`.`Employees`.`Worker_Status`")))
+      .withColumn("EMPL_STATUS_EFFDT", (col("`Worker_Status`.`Active_Status_Date`")))
       .selectExpr(
         //Los dos campos que no deben faltar
         s"'$dataDatePart' as data_date_part",
@@ -1093,11 +1094,7 @@ object etl_datos_weci_mapeado {
         "`Worker`.`Employees`.`Weci`.`Cash_Range_Min` as MIN_SALARY_RANGE",
         "`Worker`.`Employees`.`Weci`.`Cash_Range_Max` as MAX_SALARY_RANGE",
         "`Position`.`Worker_Type` as WORKER_TYPE",
-        "`Worker_Status`.`Active_Status_Date` as EMPL_STATUS_EFFDT",
-
-
-
-
+        "EMPL_STATUS_EFFDT",
 
         "`Worker`.`Worker_Summary`.`Employee_ID`.`_VALUE` as ID_Empleado_Joins",
         "`Other_Identifier`.`Custom_ID_Type`.`_VALUE` as afterLogical", //Se utiliza para aplicar la lógica después
